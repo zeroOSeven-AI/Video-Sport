@@ -1,10 +1,9 @@
-import json
 import os
+import json
 import time
-import xml.etree.ElementTree as ET
-from datetime import UTC, datetime
-
 import requests
+import xml.etree.ElementTree as ET
+from datetime import datetime, UTC
 
 OUTPUT_FOLDER = "YouTube"
 DELAY_SECONDS = 1
@@ -12,27 +11,27 @@ DELAY_SECONDS = 1
 SOURCES = {
     "formula_1": {
         "name": "Formula 1",
-        "id": "UCB_qrNyFAFJGdxK69F8S3FQ"
+        "id": "UCB_qr75-ydFVKSF9Dmo6izg"
     },
     "the_race": {
         "name": "The Race",
-        "id": "UC9suvGlsc2EFr7SIsgWInXQ"
+        "id": "UCaTxfj0BzL-MaCy-YUqPRoQ"
     },
     "driver61": {
         "name": "Driver61",
-        "id": "UCJpChgSOTKT9wdxw5fJ53gQ"
+        "id": "UCtbLA0YM6EpwUQhFUyPQU9Q"
     },
     "p1_matt_tommy": {
         "name": "P1 with Matt & Tommy",
-        "id": "UCRXn6VOfHAt8zNf8D3ndFcw"
+        "id": "UCD5jAyCSDRR5yTgswfDbK8w"
     },
     "autosport": {
         "name": "Autosport",
-        "id": "UCZ0SstM3sS_vD_f6v798pDw"
+        "id": "UCxuksozHJD_f1w9nVa6UhAw"
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
-        "id": "UCgN40g9_RE93nNfX-vS_uRw"
+        "id": "UC3kxJQ9RfaS5CKeYbbFMi4Q"
     }
 }
 
@@ -43,117 +42,74 @@ NAMESPACES = {
 }
 
 
-def fetch_via_rss(slug: str, info: dict) -> None:
-    """
-    Fetch the latest videos from a YouTube RSS feed
-    and save them as a JSON file.
-    """
-    channel_id = info["id"]
-    channel_name = info["name"]
+def fetch_channel(slug, info):
+    print(f"Processing: {info['name']}")
 
-    print(f"Processing: {channel_name}")
-
-    rss_url = (
-        f"https://www.youtube.com/feeds/videos.xml"
-        f"?channel_id={channel_id}"
-    )
+    rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={info['id']}"
 
     try:
-        response = requests.get(rss_url, timeout=10)
-        response.raise_for_status()
+        r = requests.get(rss_url, timeout=10)
+        r.raise_for_status()
 
-        root = ET.fromstring(response.content)
+        root = ET.fromstring(r.content)
 
         video_ids = []
-        video_details = []
+        videos = []
 
         entries = root.findall("atom:entry", NAMESPACES)[:10]
 
         for entry in entries:
-            video_id = entry.find("yt:videoId", NAMESPACES)
+            vid = entry.find("yt:videoId", NAMESPACES)
             title = entry.find("atom:title", NAMESPACES)
             published = entry.find("atom:published", NAMESPACES)
 
-            thumbnail_url = ""
+            thumbnail = ""
+            media = entry.find("media:group", NAMESPACES)
+            if media is not None:
+                thumbs = media.findall("media:thumbnail", NAMESPACES)
+                if thumbs:
+                    thumbnail = thumbs[0].attrib.get("url", "")
 
-            media_group = entry.find("media:group", NAMESPACES)
-            if media_group is not None:
-                thumbnails = media_group.findall(
-                    "media:thumbnail",
-                    NAMESPACES
-                )
-
-                if thumbnails:
-                    thumbnail_url = thumbnails[0].attrib.get("url", "")
-
-            if video_id is None or not video_id.text:
+            if vid is None or not vid.text:
                 continue
 
-            video_ids.append(video_id.text)
+            video_ids.append(vid.text)
 
-            video_details.append({
-                "video_id": video_id.text,
+            videos.append({
+                "video_id": vid.text,
                 "title": title.text if title is not None else "",
-                "published_at": (
-                    published.text if published is not None else ""
-                ),
-                "thumbnail": thumbnail_url
+                "published_at": published.text if published is not None else "",
+                "thumbnail": thumbnail
             })
 
-        embed_url = ""
-
+        embed = ""
         if video_ids:
-            embed_url = (
-                f"https://www.youtube.com/embed/{video_ids[0]}"
-                f"?playlist={','.join(video_ids)}"
-            )
+            embed = f"https://www.youtube.com/embed/{video_ids[0]}?playlist={','.join(video_ids)}"
 
-        output_data = {
-            "source_name": channel_name,
-            "channel_id": channel_id,
+        output = {
+            "source": info["name"],
+            "channel_id": info["id"],
             "updated_at": datetime.now(UTC).isoformat(),
             "video_ids": video_ids,
-            "playlist_embed_url": embed_url,
-            "videos": video_details
+            "playlist_embed_url": embed,
+            "videos": videos
         }
 
         os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-        output_file = os.path.join(
-            OUTPUT_FOLDER,
-            f"{slug}.json"
-        )
+        with open(f"{OUTPUT_FOLDER}/{slug}.json", "w", encoding="utf-8") as f:
+            json.dump(output, f, indent=4, ensure_ascii=False)
 
-        with open(output_file, "w", encoding="utf-8") as file:
-            json.dump(
-                output_data,
-                file,
-                indent=4,
-                ensure_ascii=False
-            )
+        print(f"OK: {info['name']} ({len(video_ids)} videos)")
 
-        print(
-            f"Saved {len(video_ids)} videos "
-            f"to {output_file}"
-        )
-
-    except requests.RequestException as error:
-        print(f"Network error ({channel_name}): {error}")
-
-    except ET.ParseError as error:
-        print(f"XML parsing error ({channel_name}): {error}")
-
-    except Exception as error:
-        print(f"Unexpected error ({channel_name}): {error}")
+    except Exception as e:
+        print(f"ERROR {info['name']}: {e}")
 
 
-def main() -> None:
-    """Process all configured YouTube channels."""
-
-    for index, (slug, info) in enumerate(SOURCES.items()):
-        fetch_via_rss(slug, info)
-
-        if index < len(SOURCES) - 1:
+def main():
+    for i, (slug, info) in enumerate(SOURCES.items()):
+        fetch_channel(slug, info)
+        if i < len(SOURCES) - 1:
             time.sleep(DELAY_SECONDS)
 
 
