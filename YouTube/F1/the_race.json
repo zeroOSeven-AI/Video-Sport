@@ -2,8 +2,9 @@
     "source": "The Race",
     "source_key": "the_race",
     "channel_id": "UCaTxfj0BzL-MaCy-YUqPRoQ",
-    "updated_at": "2026-06-18T15:55:40.519322+00:00",
+    "updated_at": "2026-06-18T18:37:46.542838+00:00",
     "video_ids": [
+        "Yvlx9kKYszg",
         "p5lYyZYfYR0",
         "6KQbm9Z9yUU",
         "0CrCRZKGGJQ",
@@ -12,11 +13,21 @@
         "lI20hdGY6A0",
         "g7jngDdPXYY",
         "L4mICuLymQw",
-        "WlmVz1DKvTI",
-        "-lhqOrMFaGM"
+        "WlmVz1DKvTI"
     ],
-    "playlist_embed_url": "https://www.youtube.com/embed/p5lYyZYfYR0?playlist=p5lYyZYfYR0,6KQbm9Z9yUU,0CrCRZKGGJQ,Uz8t0d6ua8I,fkw7CgjKSRM,lI20hdGY6A0,g7jngDdPXYY,L4mICuLymQw,WlmVz1DKvTI,-lhqOrMFaGM",
+    "playlist_embed_url": "https://www.youtube.com/embed/Yvlx9kKYszg?playlist=Yvlx9kKYszg,p5lYyZYfYR0,6KQbm9Z9yUU,0CrCRZKGGJQ,Uz8t0d6ua8I,fkw7CgjKSRM,lI20hdGY6A0,g7jngDdPXYY,L4mICuLymQw,WlmVz1DKvTI",
     "videos": [
+        {
+            "video_id": "Yvlx9kKYszg",
+            "title": "👀 Tech WAR with Ferrari’s trick F1 wheel rims",
+            "published_at": "2026-06-18T16:30:26+00:00",
+            "published_at_ts": 1781800226,
+            "thumbnail": "https://i.ytimg.com/vi/Yvlx9kKYszg/hqdefault.jpg",
+            "tags": [],
+            "channel": "The Race",
+            "source_key": "the_race",
+            "link": "https://www.youtube.com/watch?v=Yvlx9kKYszg"
+        },
         {
             "video_id": "p5lYyZYfYR0",
             "title": "How Ferrari's mastered F1's new hidden development war",
@@ -115,17 +126,6 @@
             "channel": "The Race",
             "source_key": "the_race",
             "link": "https://www.youtube.com/watch?v=WlmVz1DKvTI"
-        },
-        {
-            "video_id": "-lhqOrMFaGM",
-            "title": "The stunning reason F1's changed Monaco result",
-            "published_at": "2026-06-12T16:03:15+00:00",
-            "published_at_ts": 1781280195,
-            "thumbnail": "https://i.ytimg.com/vi/-lhqOrMFaGM/hqdefault.jpg",
-            "tags": [],
-            "channel": "The Race",
-            "source_key": "the_race",
-            "link": "https://www.youtube.com/watch?v=-lhqOrMFaGM"
         }
     ]
 }

@@ -2,8 +2,9 @@
     "source": "P1 with Matt & Tommy",
     "source_key": "p1_matt_tommy",
     "channel_id": "UCD5jAyCSDRR5yTgswfDbK8w",
-    "updated_at": "2026-06-18T15:55:42.744894+00:00",
+    "updated_at": "2026-06-18T18:37:48.609907+00:00",
     "video_ids": [
+        "OleuNL_rSJ4",
         "eN9D-wdcLUI",
         "69JiKjcsfHc",
         "x9lJiEO7n_8",
@@ -12,11 +13,21 @@
         "aEhKY2hiJZ0",
         "0jVk2QviEog",
         "jnOgSY-BhV4",
-        "btnF7QNeoOM",
-        "iHTVV7CZE6g"
+        "btnF7QNeoOM"
     ],
-    "playlist_embed_url": "https://www.youtube.com/embed/eN9D-wdcLUI?playlist=eN9D-wdcLUI,69JiKjcsfHc,x9lJiEO7n_8,zPtSYzkeVYc,v-y_AvE0vk4,aEhKY2hiJZ0,0jVk2QviEog,jnOgSY-BhV4,btnF7QNeoOM,iHTVV7CZE6g",
+    "playlist_embed_url": "https://www.youtube.com/embed/OleuNL_rSJ4?playlist=OleuNL_rSJ4,eN9D-wdcLUI,69JiKjcsfHc,x9lJiEO7n_8,zPtSYzkeVYc,v-y_AvE0vk4,aEhKY2hiJZ0,0jVk2QviEog,jnOgSY-BhV4,btnF7QNeoOM",
     "videos": [
+        {
+            "video_id": "OleuNL_rSJ4",
+            "title": "Could it cost them? 😯",
+            "published_at": "2026-06-18T16:46:28+00:00",
+            "published_at_ts": 1781801188,
+            "thumbnail": "https://i.ytimg.com/vi/OleuNL_rSJ4/hqdefault.jpg",
+            "tags": [],
+            "channel": "P1 with Matt & Tommy",
+            "source_key": "p1_matt_tommy",
+            "link": "https://www.youtube.com/watch?v=OleuNL_rSJ4"
+        },
         {
             "video_id": "eN9D-wdcLUI",
             "title": "Our F1 Driver Ratings for the 2026 Barcelona-Catalunya Grand Prix",
@@ -123,17 +134,6 @@
             "channel": "P1 with Matt & Tommy",
             "source_key": "p1_matt_tommy",
             "link": "https://www.youtube.com/watch?v=btnF7QNeoOM"
-        },
-        {
-            "video_id": "iHTVV7CZE6g",
-            "title": "Will he stay another season? 🥲",
-            "published_at": "2026-06-13T22:25:50+00:00",
-            "published_at_ts": 1781389550,
-            "thumbnail": "https://i.ytimg.com/vi/iHTVV7CZE6g/hqdefault.jpg",
-            "tags": [],
-            "channel": "P1 with Matt & Tommy",
-            "source_key": "p1_matt_tommy",
-            "link": "https://www.youtube.com/watch?v=iHTVV7CZE6g"
         }
     ]
 }
