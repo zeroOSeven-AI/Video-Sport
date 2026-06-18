@@ -41,6 +41,26 @@ NAMESPACES = {
     "media": "http://search.yahoo.com/mrss/"
 }
 
+FILTERS = {
+    "highlights": ["highlights", "race highlights", "best bits"],
+    "onboard": ["onboard", "on board"],
+    "race": ["race", "grand prix"],
+    "qualifying": ["qualifying", "qualy", "q1", "q2", "q3"]
+}
+
+
+def classify_video(title: str):
+    title = title.lower()
+    tags = []
+
+    for category, keywords in FILTERS.items():
+        for kw in keywords:
+            if kw in title:
+                tags.append(category)
+                break
+
+    return tags
+
 
 def fetch_channel(slug, info):
     print(f"Processing: {info['name']}")
@@ -73,13 +93,17 @@ def fetch_channel(slug, info):
             if vid is None or not vid.text:
                 continue
 
+            title_text = title.text if title is not None else ""
+            tags = classify_video(title_text)
+
             video_ids.append(vid.text)
 
             videos.append({
                 "video_id": vid.text,
-                "title": title.text if title is not None else "",
+                "title": title_text,
                 "published_at": published.text if published is not None else "",
-                "thumbnail": thumbnail
+                "thumbnail": thumbnail,
+                "tags": tags
             })
 
         embed = ""
