@@ -1,0 +1,7 @@
+[project]
+name = "video-sport-scraper"
+version = "0.1.0"
+description = "F1 YouTube playlist scraper for GitHub Actions"
+dependencies = [
+    "requests>=2.31.0",
+]
