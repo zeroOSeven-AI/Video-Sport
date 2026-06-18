@@ -2,8 +2,9 @@
     "source": "Sky Sports F1",
     "source_key": "sky_sports_f1",
     "channel_id": "UC3kxJQ9RfaS5CKeYbbFMi4Q",
-    "updated_at": "2026-06-18T11:16:25.069622+00:00",
+    "updated_at": "2026-06-18T15:55:44.996086+00:00",
     "video_ids": [
+        "2qmU0rQgVMg",
         "CfTn3A0TGDk",
         "UbZVw6dXnJk",
         "HHjHI3mwlls",
@@ -12,11 +13,21 @@
         "6XxvFBl9084",
         "jUXUzdRiV0s",
         "5PcMg1L9j6g",
-        "u3n9PBUK_-I",
-        "RvkZ_xHBz3Y"
+        "u3n9PBUK_-I"
     ],
-    "playlist_embed_url": "https://www.youtube.com/embed/CfTn3A0TGDk?playlist=CfTn3A0TGDk,UbZVw6dXnJk,HHjHI3mwlls,7EHgJ02LRXg,hqGfZG9WudM,6XxvFBl9084,jUXUzdRiV0s,5PcMg1L9j6g,u3n9PBUK_-I,RvkZ_xHBz3Y",
+    "playlist_embed_url": "https://www.youtube.com/embed/2qmU0rQgVMg?playlist=2qmU0rQgVMg,CfTn3A0TGDk,UbZVw6dXnJk,HHjHI3mwlls,7EHgJ02LRXg,hqGfZG9WudM,6XxvFBl9084,jUXUzdRiV0s,5PcMg1L9j6g,u3n9PBUK_-I",
     "videos": [
+        {
+            "video_id": "2qmU0rQgVMg",
+            "title": "Ever wondered how the SkyPad works? 🤔🏎️",
+            "published_at": "2026-06-18T14:25:21+00:00",
+            "published_at_ts": 1781792721,
+            "thumbnail": "https://i.ytimg.com/vi/2qmU0rQgVMg/hqdefault.jpg",
+            "tags": [],
+            "channel": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "link": "https://www.youtube.com/watch?v=2qmU0rQgVMg"
+        },
         {
             "video_id": "CfTn3A0TGDk",
             "title": "RELIVE the moment Lewis Hamilton's first Grand Prix win for Ferrari 🥺🔴",
@@ -121,17 +132,6 @@
             "channel": "Sky Sports F1",
             "source_key": "sky_sports_f1",
             "link": "https://www.youtube.com/watch?v=u3n9PBUK_-I"
-        },
-        {
-            "video_id": "RvkZ_xHBz3Y",
-            "title": "Lando Norris says it was special to see Lewis Hamilton win for Ferrari as a fan 🥹  #f1",
-            "published_at": "2026-06-14T20:31:37+00:00",
-            "published_at_ts": 1781469097,
-            "thumbnail": "https://i.ytimg.com/vi/RvkZ_xHBz3Y/hqdefault.jpg",
-            "tags": [],
-            "channel": "Sky Sports F1",
-            "source_key": "sky_sports_f1",
-            "link": "https://www.youtube.com/watch?v=RvkZ_xHBz3Y"
         }
     ]
 }

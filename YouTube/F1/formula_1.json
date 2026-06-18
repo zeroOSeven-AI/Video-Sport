@@ -2,8 +2,9 @@
     "source": "Formula 1",
     "source_key": "formula_1",
     "channel_id": "UCB_qr75-ydFVKSF9Dmo6izg",
-    "updated_at": "2026-06-18T11:16:19.720966+00:00",
+    "updated_at": "2026-06-18T15:55:39.476591+00:00",
     "video_ids": [
+        "XhdtWO6dAxo",
         "uQoORWy0-Us",
         "-fKC_WsYEmM",
         "d2EA-tHfXP0",
@@ -12,11 +13,21 @@
         "fn-n_xirnFc",
         "AJ77kZT8mCY",
         "qsBio9h_Wzo",
-        "7LKUdXpNKu0",
-        "cNvWbrIGwHs"
+        "7LKUdXpNKu0"
     ],
-    "playlist_embed_url": "https://www.youtube.com/embed/uQoORWy0-Us?playlist=uQoORWy0-Us,-fKC_WsYEmM,d2EA-tHfXP0,oD08E83BZXs,Efba6HKsRa0,fn-n_xirnFc,AJ77kZT8mCY,qsBio9h_Wzo,7LKUdXpNKu0,cNvWbrIGwHs",
+    "playlist_embed_url": "https://www.youtube.com/embed/XhdtWO6dAxo?playlist=XhdtWO6dAxo,uQoORWy0-Us,-fKC_WsYEmM,d2EA-tHfXP0,oD08E83BZXs,Efba6HKsRa0,fn-n_xirnFc,AJ77kZT8mCY,qsBio9h_Wzo,7LKUdXpNKu0",
     "videos": [
+        {
+            "video_id": "XhdtWO6dAxo",
+            "title": "The F1 Pit Wall Explained | Globant",
+            "published_at": "2026-06-18T15:00:01+00:00",
+            "published_at_ts": 1781794801,
+            "thumbnail": "https://i.ytimg.com/vi/XhdtWO6dAxo/hqdefault.jpg",
+            "tags": [],
+            "channel": "Formula 1",
+            "source_key": "formula_1",
+            "link": "https://www.youtube.com/watch?v=XhdtWO6dAxo"
+        },
         {
             "video_id": "uQoORWy0-Us",
             "title": "Chasing The Dream | 2026 Barcelona-Catalunya Grand Prix | F2 Behind The Scenes",
@@ -122,17 +133,6 @@
             "channel": "Formula 1",
             "source_key": "formula_1",
             "link": "https://www.youtube.com/watch?v=7LKUdXpNKu0"
-        },
-        {
-            "video_id": "cNvWbrIGwHs",
-            "title": "Lewis Hamilton Enjoying Every Moment 🍾🙌",
-            "published_at": "2026-06-16T07:00:03+00:00",
-            "published_at_ts": 1781593203,
-            "thumbnail": "https://i.ytimg.com/vi/cNvWbrIGwHs/hqdefault.jpg",
-            "tags": [],
-            "channel": "Formula 1",
-            "source_key": "formula_1",
-            "link": "https://www.youtube.com/watch?v=cNvWbrIGwHs"
         }
     ]
 }
