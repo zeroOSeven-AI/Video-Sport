@@ -1,0 +1,80 @@
+{
+    "source": "Formula 1",
+    "channel_id": "UCB_qr75-ydFVKSF9Dmo6izg",
+    "updated_at": "2026-06-18T10:50:43.591397+00:00",
+    "video_ids": [
+        "uQoORWy0-Us",
+        "-fKC_WsYEmM",
+        "d2EA-tHfXP0",
+        "oD08E83BZXs",
+        "Efba6HKsRa0",
+        "fn-n_xirnFc",
+        "AJ77kZT8mCY",
+        "qsBio9h_Wzo",
+        "7LKUdXpNKu0",
+        "cNvWbrIGwHs"
+    ],
+    "playlist_embed_url": "https://www.youtube.com/embed/uQoORWy0-Us?playlist=uQoORWy0-Us,-fKC_WsYEmM,d2EA-tHfXP0,oD08E83BZXs,Efba6HKsRa0,fn-n_xirnFc,AJ77kZT8mCY,qsBio9h_Wzo,7LKUdXpNKu0,cNvWbrIGwHs",
+    "videos": [
+        {
+            "video_id": "uQoORWy0-Us",
+            "title": "Chasing The Dream | 2026 Barcelona-Catalunya Grand Prix | F2 Behind The Scenes",
+            "published_at": "2026-06-17T18:00:21+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/uQoORWy0-Us/hqdefault.jpg"
+        },
+        {
+            "video_id": "-fKC_WsYEmM",
+            "title": "At Home In Monaco With Ollie Bearman | Off The Grid",
+            "published_at": "2026-06-17T17:00:07+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/-fKC_WsYEmM/hqdefault.jpg"
+        },
+        {
+            "video_id": "d2EA-tHfXP0",
+            "title": "13 F1 Drivers Who Changed Teams And Won AGAIN!",
+            "published_at": "2026-06-17T14:00:21+00:00",
+            "thumbnail": "https://i1.ytimg.com/vi/d2EA-tHfXP0/hqdefault.jpg"
+        },
+        {
+            "video_id": "oD08E83BZXs",
+            "title": "Tom Kristensen: The Best Who Never Raced In F1? | F1 Beyond The Grid Podcast",
+            "published_at": "2026-06-17T11:00:12+00:00",
+            "thumbnail": "https://i4.ytimg.com/vi/oD08E83BZXs/hqdefault.jpg"
+        },
+        {
+            "video_id": "Efba6HKsRa0",
+            "title": "When That Special Day Becomes Extra Special! 😂❤️",
+            "published_at": "2026-06-16T18:00:13+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/Efba6HKsRa0/hqdefault.jpg"
+        },
+        {
+            "video_id": "fn-n_xirnFc",
+            "title": "A Closer Look At Lewis Hamilton vs Mercedes In Barcelona | Jolyon Palmer's F1 TV Analysis",
+            "published_at": "2026-06-16T17:00:21+00:00",
+            "thumbnail": "https://i3.ytimg.com/vi/fn-n_xirnFc/hqdefault.jpg"
+        },
+        {
+            "video_id": "AJ77kZT8mCY",
+            "title": "Top 10 Onboards | 2026 Barcelona-Catalunya Grand Prix | Qatar Airways",
+            "published_at": "2026-06-16T16:00:19+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/AJ77kZT8mCY/hqdefault.jpg"
+        },
+        {
+            "video_id": "qsBio9h_Wzo",
+            "title": "Novak Djokovic Waving The Chequered Flag 🎾🏁",
+            "published_at": "2026-06-16T11:00:16+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/qsBio9h_Wzo/hqdefault.jpg"
+        },
+        {
+            "video_id": "7LKUdXpNKu0",
+            "title": "Aaand Breathe! 😮‍💨💪 A HUGE Day For Lewis Hamilton 😎",
+            "published_at": "2026-06-16T09:00:06+00:00",
+            "thumbnail": "https://i4.ytimg.com/vi/7LKUdXpNKu0/hqdefault.jpg"
+        },
+        {
+            "video_id": "cNvWbrIGwHs",
+            "title": "Lewis Hamilton Enjoying Every Moment 🍾🙌",
+            "published_at": "2026-06-16T07:00:03+00:00",
+            "thumbnail": "https://i4.ytimg.com/vi/cNvWbrIGwHs/hqdefault.jpg"
+        }
+    ]
+}

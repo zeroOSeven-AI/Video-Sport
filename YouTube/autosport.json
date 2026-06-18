@@ -1,0 +1,80 @@
+{
+    "source": "Autosport",
+    "channel_id": "UCxuksozHJD_f1w9nVa6UhAw",
+    "updated_at": "2026-06-18T10:50:48.236608+00:00",
+    "video_ids": [
+        "IuQ4X5dtKX0",
+        "GO8fPINnphU",
+        "Gph-GfUYZUg",
+        "1og9Q7dPfmE",
+        "PBbROYg4zao",
+        "AhWlIOoxmys",
+        "MHEz99AJrgM",
+        "zDt6FnTAdPQ",
+        "KFZRmF675rA",
+        "XaefMcACltk"
+    ],
+    "playlist_embed_url": "https://www.youtube.com/embed/IuQ4X5dtKX0?playlist=IuQ4X5dtKX0,GO8fPINnphU,Gph-GfUYZUg,1og9Q7dPfmE,PBbROYg4zao,AhWlIOoxmys,MHEz99AJrgM,zDt6FnTAdPQ,KFZRmF675rA,XaefMcACltk",
+    "videos": [
+        {
+            "video_id": "IuQ4X5dtKX0",
+            "title": "Top 10 F1 drivers of the 1950s | Autosport Retro",
+            "published_at": "2026-06-17T08:00:14+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/IuQ4X5dtKX0/hqdefault.jpg"
+        },
+        {
+            "video_id": "GO8fPINnphU",
+            "title": "Lewis Hamilton Back On Top | F1 Barcelona GP 2026 Review",
+            "published_at": "2026-06-15T17:28:36+00:00",
+            "thumbnail": "https://i4.ytimg.com/vi/GO8fPINnphU/hqdefault.jpg"
+        },
+        {
+            "video_id": "Gph-GfUYZUg",
+            "title": "The Story Behind Hamilton’s First Ferrari Win | 2026 Barcelona GP Sunday",
+            "published_at": "2026-06-14T20:13:38+00:00",
+            "thumbnail": "https://i4.ytimg.com/vi/Gph-GfUYZUg/hqdefault.jpg"
+        },
+        {
+            "video_id": "1og9Q7dPfmE",
+            "title": "The George Russell and Lewis Hamilton Reset | 2026 Barcelona GP Saturday",
+            "published_at": "2026-06-13T20:55:36+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/1og9Q7dPfmE/hqdefault.jpg"
+        },
+        {
+            "video_id": "PBbROYg4zao",
+            "title": "Wolff reacts to Red Bull's engine news, Gasly gets Monaco podium back | 2026 Barcelona GP Friday",
+            "published_at": "2026-06-12T22:15:09+00:00",
+            "thumbnail": "https://i1.ytimg.com/vi/PBbROYg4zao/hqdefault.jpg"
+        },
+        {
+            "video_id": "AhWlIOoxmys",
+            "title": "F1’s ADUO shock explained: Red Bull a victim of the system? | 2026 Barcelona GP Thursday",
+            "published_at": "2026-06-11T21:17:55+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/AhWlIOoxmys/hqdefault.jpg"
+        },
+        {
+            "video_id": "MHEz99AJrgM",
+            "title": "Antonelli Dominates Monaco! | Monaco Grand Prix Review",
+            "published_at": "2026-06-08T14:26:00+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/MHEz99AJrgM/hqdefault.jpg"
+        },
+        {
+            "video_id": "zDt6FnTAdPQ",
+            "title": "Merc wins twice, with Kimi and ADUO, unusual penalties explained | 2026 Monaco Grand Prix Sunday",
+            "published_at": "2026-06-07T22:27:23+00:00",
+            "thumbnail": "https://i3.ytimg.com/vi/zDt6FnTAdPQ/hqdefault.jpg"
+        },
+        {
+            "video_id": "KFZRmF675rA",
+            "title": "Why Antonelli is beating Russell, Hamilton puzzled by the Ferrari | 2026 Monaco Grand Prix Saturday",
+            "published_at": "2026-06-06T21:06:19+00:00",
+            "thumbnail": "https://i4.ytimg.com/vi/KFZRmF675rA/hqdefault.jpg"
+        },
+        {
+            "video_id": "XaefMcACltk",
+            "title": "Ferrari's key strengths in Monaco, Verstappen a surprising outsider? | 2026 Monaco Grand Prix Friday",
+            "published_at": "2026-06-05T20:49:17+00:00",
+            "thumbnail": "https://i1.ytimg.com/vi/XaefMcACltk/hqdefault.jpg"
+        }
+    ]
+}
