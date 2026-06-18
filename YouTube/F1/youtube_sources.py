@@ -5,7 +5,7 @@ import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime, UTC
 
-OUTPUT_FOLDER = "YouTube"
+OUTPUT_FOLDER = "YouTube/F1"
 DELAY_SECONDS = 1
 
 SOURCES = {
