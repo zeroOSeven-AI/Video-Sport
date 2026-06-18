@@ -35,7 +35,7 @@ jobs:
     - name: Run fetch script
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-      run: python YouTube/youtube_sources.py
+      run: python YouTube/F1/youtube_sources.py
 
     - name: Commit and push changes safely
       run: |
