@@ -1,10 +1,13 @@
 import os
 import json
+import time
 import requests
 from datetime import datetime
 
 # Configuration
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+OUTPUT_FOLDER = "YouTube"
+DELAY_SECONDS = 3  # Time to wait between each channel request
 
 # Dictionary of sources with their clean filenames and YouTube Channel IDs
 SOURCES = {
@@ -18,7 +21,6 @@ SOURCES = {
 
 def fetch_and_save_channel(slug, info):
     print(f"Processing source: {info['name']}")
-    # Fetching the last 10 videos from the channel
     url = f"https://www.googleapis.com/youtube/v3/search?key={YOUTUBE_API_KEY}&channelId={info['id']}&part=id,snippet&order=date&maxResults=10&type=video"
     
     try:
@@ -41,11 +43,10 @@ def fetch_and_save_channel(slug, info):
                 "thumbnail": item["snippet"]["thumbnails"]["high"]["url"]
             })
             
-        # Creating a custom playlist embed URL using the video IDs separated by commas
+        # Creating a custom playlist embed URL
         ids_csv = ",".join(video_ids)
         embed_url = f"https://www.youtube.com/embed/{video_ids[0]}?playlist={ids_csv}" if video_ids else ""
         
-        # Structure for this specific channel's JSON
         output_data = {
             "source_name": info["name"],
             "channel_id": info["id"],
@@ -55,8 +56,11 @@ def fetch_and_save_channel(slug, info):
             "videos": video_details
         }
         
-        # Save to its own separate JSON file
-        filename = f"{slug}.json"
+        # Ensure the output directory exists
+        os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+        
+        # Save to the specific YouTube folder
+        filename = os.path.join(OUTPUT_FOLDER, f"{slug}.json")
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(output_data, f, indent=4, ensure_ascii=False)
         print(f"Successfully saved {filename}")
@@ -69,9 +73,14 @@ def main():
         print("Missing YOUTUBE_API_KEY environment variable.")
         return
 
-    # Loop through each source and create its independent JSON file
-    for slug, info in SOURCES.items():
+    # Loop through each source with a delay in between
+    for i, (slug, info) in enumerate(SOURCES.items()):
         fetch_and_save_channel(slug, info)
+        
+        # If it's not the last channel, wait for a few seconds before the next request
+        if i < len(SOURCES) - 1:
+            print(f"Waiting {DELAY_SECONDS} seconds before the next request...")
+            time.sleep(DELAY_SECONDS)
 
 if __name__ == "__main__":
     main()
