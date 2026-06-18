@@ -42,24 +42,29 @@ NAMESPACES = {
 }
 
 FILTERS = {
-    "highlights": ["highlights", "race highlights", "best bits"],
+    "highlights": ["highlights", "best moments"],
     "onboard": ["onboard", "on board"],
-    "race": ["race", "grand prix"],
+    "race": ["grand prix", "race"],
     "qualifying": ["qualifying", "qualy", "q1", "q2", "q3"]
 }
 
 
 def classify_video(title: str):
-    title = title.lower()
+    title_low = title.lower()
     tags = []
 
     for category, keywords in FILTERS.items():
-        for kw in keywords:
-            if kw in title:
-                tags.append(category)
-                break
+        if any(kw in title_low for kw in keywords):
+            tags.append(category)
 
     return tags
+
+
+def parse_time_to_ts(date_str):
+    try:
+        return int(datetime.fromisoformat(date_str.replace("Z", "+00:00")).timestamp())
+    except:
+        return 0
 
 
 def fetch_channel(slug, info):
@@ -83,17 +88,14 @@ def fetch_channel(slug, info):
             title = entry.find("atom:title", NAMESPACES)
             published = entry.find("atom:published", NAMESPACES)
 
-            thumbnail = ""
-            media = entry.find("media:group", NAMESPACES)
-            if media is not None:
-                thumbs = media.findall("media:thumbnail", NAMESPACES)
-                if thumbs:
-                    thumbnail = thumbs[0].attrib.get("url", "")
-
             if vid is None or not vid.text:
                 continue
 
-            title_text = title.text if title is not None else ""
+            title_text = title.text if title is not None else "Untitled"
+            published_text = published.text if published is not None else ""
+
+            thumbnail = f"https://i.ytimg.com/vi/{vid.text}/hqdefault.jpg"
+
             tags = classify_video(title_text)
 
             video_ids.append(vid.text)
@@ -101,17 +103,26 @@ def fetch_channel(slug, info):
             videos.append({
                 "video_id": vid.text,
                 "title": title_text,
-                "published_at": published.text if published is not None else "",
+                "published_at": published_text,
+                "published_at_ts": parse_time_to_ts(published_text),
                 "thumbnail": thumbnail,
-                "tags": tags
+                "tags": tags,
+                "channel": info["name"],
+                "source_key": slug,
+                "link": f"https://www.youtube.com/watch?v={vid.text}"
             })
 
+        # EMBED FIX (always safe)
         embed = ""
         if video_ids:
-            embed = f"https://www.youtube.com/embed/{video_ids[0]}?playlist={','.join(video_ids)}"
+            embed = (
+                f"https://www.youtube.com/embed/{video_ids[0]}"
+                f"?playlist={','.join(video_ids)}"
+            )
 
         output = {
             "source": info["name"],
+            "source_key": slug,
             "channel_id": info["id"],
             "updated_at": datetime.now(UTC).isoformat(),
             "video_ids": video_ids,
