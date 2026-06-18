@@ -2,13 +2,13 @@ import os
 import json
 import time
 import requests
+import xml.etree.ElementTree as ET
 from datetime import datetime
 
-# Configuration
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 OUTPUT_FOLDER = "YouTube"
-DELAY_SECONDS = 2
+DELAY_SECONDS = 1  # Može biti minimalan jer RSS ne blokira
 
+# Koristimo iste ID-eve kanala, ali ovaj put za RSS feed
 SOURCES = {
     "formula_1": {"name": "Formula 1", "id": "UCB_qrNyFAFJGdxK69F8S3FQ"},
     "the_race": {"name": "The Race", "id": "UC9suvGlsc2EFr7SIsgWInXQ"},
@@ -18,66 +18,65 @@ SOURCES = {
     "sky_sports_f1": {"name": "Sky Sports F1", "id": "UCgN40g9_RE93nNfX-vS_uRw"}
 }
 
-def get_real_uploads_playlist(channel_id):
-    # Dynamically fetch the correct uploads playlist ID from YouTube
-    url = f"https://www.googleapis.com/youtube/v3/channels?key={YOUTUBE_API_KEY}&id={channel_id}&part=contentDetails"
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            items = data.get("items", [])
-            if items:
-                return items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
-    except Exception as e:
-        print(f"Failed to fetch playlist ID for {channel_id}: {str(e)}")
-    return None
-
-def fetch_and_save_channel(slug, info):
-    print(f"Processing source: {info['name']}")
+def fetch_via_rss(slug, info):
+    print(f"Processing source via RSS: {info['name']}")
+    channel_id = info["id"]
     
-    # 1. Get the dynamic, real playlist ID
-    uploads_playlist_id = get_real_uploads_playlist(info["id"])
-    
-    if not uploads_playlist_id:
-        print(f"Could not resolve uploads playlist for {info['name']}. Skipping.")
-        return
-
-    # 2. Fetch videos from that verified playlist
-    url = f"https://www.googleapis.com/youtube/v3/playlistItems?key={YOUTUBE_API_KEY}&playlistId={uploads_playlist_id}&part=snippet,contentDetails&maxResults=10"
+    # Službeni javni RSS URL za bilo koji YouTube kanal
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         if response.status_code != 200:
-            print(f"Error fetching videos for {info['name']}: {response.text}")
+            print(f"Error fetching RSS for {info['name']}: {response.status_code}")
             return
             
-        data = response.json()
+        # Parsiranje XML strukture feeda
+        root = ET.fromstring(response.content)
+        
+        # XML Namespaces koje YouTube koristi unutar feeda
+        namespaces = {
+            'atom': 'http://www.w3.org/2005/Atom',
+            'yt': 'http://www.youtube.com/xml/schemas/2015',
+            'media': 'http://search.yahoo.com/mrss/'
+        }
+        
         video_ids = []
         video_details = []
         
-        for item in data.get("items", []):
-            snippet = item.get("snippet", {})
-            v_id = item.get("contentDetails", {}).get("videoId") or snippet.get("resourceId", {}).get("videoId")
+        # Prolazak kroz unose (videa) unutar feeda (uzimamo maksimalno 10)
+        entries = root.findall('atom:entry', namespaces)[:10]
+        
+        for entry in entries:
+            v_id = entry.find('yt:videoId', namespaces)
+            title = entry.find('atom:title', namespaces)
+            published = entry.find('atom:published', namespaces)
             
-            if v_id:
-                video_ids.append(v_id)
-                thumbnails = snippet.get("thumbnails", {})
-                thumbnail_url = thumbnails.get("high", {}).get("url") or thumbnails.get("default", {}).get("url", "")
-                
+            # Traženje thumbnaila unutar media:group oznake
+            media_group = entry.find('media:group', namespaces)
+            thumbnail_url = ""
+            if media_group is not None:
+                thumbnail = media_group.find('media:thumbnail', namespaces)
+                if thumbnail is not None:
+                    thumbnail_url = thumbnail.attrib.get('url', '')
+            
+            if v_id is not None and v_id.text:
+                vid_text = v_id.text
+                video_ids.append(vid_text)
                 video_details.append({
-                    "video_id": v_id,
-                    "title": snippet.get("title"),
-                    "published_at": snippet.get("publishedAt"),
+                    "video_id": vid_text,
+                    "title": title.text if title is not None else "",
+                    "published_at": published.text if published is not None else "",
                     "thumbnail": thumbnail_url
                 })
-            
+        
+        # Generiranje URL-a za ugradnju playliste
         ids_csv = ",".join(video_ids)
         embed_url = f"https://www.youtube.com/embed/{video_ids[0]}?playlist={ids_csv}" if video_ids else ""
         
         output_data = {
             "source_name": info["name"],
-            "channel_id": info["id"],
-            "playlist_id": uploads_playlist_id,
+            "channel_id": channel_id,
             "updated_at": datetime.utcnow().isoformat() + "Z",
             "video_ids": video_ids,
             "playlist_embed_url": embed_url,
@@ -94,14 +93,10 @@ def fetch_and_save_channel(slug, info):
         print(f"Exception while processing {info['name']}: {str(e)}")
 
 def main():
-    if not YOUTUBE_API_KEY:
-        print("Missing YOUTUBE_API_KEY environment variable.")
-        return
-
     for i, (slug, info) in enumerate(SOURCES.items()):
-        fetch_and_save_channel(slug, info)
+        fetch_via_rss(slug, info)
         if i < len(SOURCES) - 1:
-            time.sleep(DELAY_SECONDS)
+            time.趣味_sleep = time.sleep(DELAY_SECONDS)
 
 if __name__ == "__main__":
     main()
