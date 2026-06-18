@@ -2,11 +2,11 @@ name: Fetch Latest F1 YouTube Playlists
 
 on:
   schedule:
-    # Runs every 4 hours (at minute 25 to avoid heavy global traffic on the hour)
+    # Pokreće se svaka 4 sata (na 25. minutu kako bi se izbjeglo zagušenje na puni sat)
     - cron: '25 */4 * * *'
-  workflow_dispatch: # Allows you to trigger this manually from the GitHub Actions tab
+  workflow_dispatch: # Omogućuje ti ručno pokretanje iz GitHub Actions tab-a
 
-# Prevents concurrent runs from making conflicting git pushes
+# Sprječava istovremeno pokretanje više workflowa koji bi mogli izazvati konflikte kod pushanja
 concurrency:
   group: youtube-fetch-${{ github.ref }}
   cancel-in-progress: true
@@ -22,12 +22,12 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
-        cache: 'pip' # Automatically caches dependencies for faster subsequent runs
+        cache: 'pip' # Sada radi savršeno jer si dodao datoteku s ovisnostima!
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests
+        pip install -r requirements.txt
 
     - name: Create YouTube directory if missing
       run: mkdir -p YouTube
@@ -35,21 +35,21 @@ jobs:
     - name: Run fetch script
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-      run: python youtube_sources.py
+      run: python fetch_sources.py
 
     - name: Commit and push changes safely
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # Stage only JSON files inside the YouTube directory
+        # Dodaj samo JSON datoteke unutar YouTube mape
         git add YouTube/*.json
         
-        # Check if there are actual modifications staged
+        # Provjeri ima li stvarnih promjena u JSON datotekama
         if git diff --staged --quiet; then
-          print("No changes detected in YouTube video feeds. Skipping commit.")
+          echo "No changes detected in YouTube video feeds. Skipping commit."
         else
-          print("New videos detected! Committing updates...")
+          echo "New videos detected! Committing updates..."
           git commit -m "Automated update: Fresh YouTube playlist feeds"
           git push
         fi
