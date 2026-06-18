@@ -6,9 +6,8 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 OUTPUT_FOLDER = "YouTube"
-DELAY_SECONDS = 1  # Može biti minimalan jer RSS ne blokira
+DELAY_SECONDS = 1
 
-# Koristimo iste ID-eve kanala, ali ovaj put za RSS feed
 SOURCES = {
     "formula_1": {"name": "Formula 1", "id": "UCB_qrNyFAFJGdxK69F8S3FQ"},
     "the_race": {"name": "The Race", "id": "UC9suvGlsc2EFr7SIsgWInXQ"},
@@ -22,7 +21,7 @@ def fetch_via_rss(slug, info):
     print(f"Processing source via RSS: {info['name']}")
     channel_id = info["id"]
     
-    # Službeni javni RSS URL za bilo koji YouTube kanal
+    # Pravi YouTube RSS URL
     url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     
     try:
@@ -31,10 +30,8 @@ def fetch_via_rss(slug, info):
             print(f"Error fetching RSS for {info['name']}: {response.status_code}")
             return
             
-        # Parsiranje XML strukture feeda
         root = ET.fromstring(response.content)
         
-        # XML Namespaces koje YouTube koristi unutar feeda
         namespaces = {
             'atom': 'http://www.w3.org/2005/Atom',
             'yt': 'http://www.youtube.com/xml/schemas/2015',
@@ -44,7 +41,6 @@ def fetch_via_rss(slug, info):
         video_ids = []
         video_details = []
         
-        # Prolazak kroz unose (videa) unutar feeda (uzimamo maksimalno 10)
         entries = root.findall('atom:entry', namespaces)[:10]
         
         for entry in entries:
@@ -52,7 +48,6 @@ def fetch_via_rss(slug, info):
             title = entry.find('atom:title', namespaces)
             published = entry.find('atom:published', namespaces)
             
-            # Traženje thumbnaila unutar media:group oznake
             media_group = entry.find('media:group', namespaces)
             thumbnail_url = ""
             if media_group is not None:
@@ -70,7 +65,7 @@ def fetch_via_rss(slug, info):
                     "thumbnail": thumbnail_url
                 })
         
-        # Generiranje URL-a za ugradnju playliste
+        # Pravi YouTube embed URL za prilagođenu playlistu
         ids_csv = ",".join(video_ids)
         embed_url = f"https://www.youtube.com/embed/{video_ids[0]}?playlist={ids_csv}" if video_ids else ""
         
@@ -96,7 +91,7 @@ def main():
     for i, (slug, info) in enumerate(SOURCES.items()):
         fetch_via_rss(slug, info)
         if i < len(SOURCES) - 1:
-            time.趣味_sleep = time.sleep(DELAY_SECONDS)
+            time.sleep(DELAY_SECONDS)
 
 if __name__ == "__main__":
     main()
