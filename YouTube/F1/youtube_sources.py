@@ -4,46 +4,58 @@ import time
 import requests
 from datetime import datetime, timezone
 
+# =========================
+# CONFIG
+# =========================
+
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 OUTPUT_DIR = "YouTube/F1"
 
-MAX_RESULTS = 20
+MAX_RESULTS = 25
 
 # =========================
-# SOURCES
+# SOURCES (PRIORITY SYSTEM)
 # =========================
+
 SOURCES = {
     "formula_1": {
         "name": "Formula 1",
         "channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
-        "priority": 3
+        "priority": 3,
+        "logo": "logo/formula_1.png"
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
         "channel_id": "UC3kxJQ9RfaS5CKeYbbFMi4Q",
-        "priority": 3
+        "priority": 3,
+        "logo": "logo/sky_sports_f1.png"
     },
     "the_race": {
         "name": "The Race",
         "channel_id": "UC4Q9T9R3Gq3V7h0b9vQwq0Q",
-        "priority": 2
+        "priority": 2,
+        "logo": "logo/the_race.png"
     }
 }
 
 # =========================
-# HTTP SAFE CALL
+# HTTP
 # =========================
+
 def yt_get(url):
     try:
         r = requests.get(url, timeout=15)
         if not r.ok:
-            print("YT ERROR:", r.status_code, r.text[:200])
+            print("YT ERROR:", r.status_code)
             return {}
         return r.json()
     except Exception as e:
         print("REQUEST FAILED:", e)
         return {}
 
+# =========================
+# HELPERS
+# =========================
 
 def iso_to_ts(iso):
     try:
@@ -53,46 +65,57 @@ def iso_to_ts(iso):
 
 
 def channel_to_uploads(channel_id):
-    return "UU" + channel_id[2:] if channel_id.startswith("UC") else channel_id
+    return "UU" + channel_id[2:]
 
 
 # =========================
-# CLASSIFY
+# CLASSIFY ENGINE (v3)
 # =========================
+
 def classify(title):
     t = title.lower()
+
     tags = []
 
-    if "highlights" in t or "recap" in t:
+    # STRICT highlights
+    if any(k in t for k in ["highlights", "best moments", "recap"]):
         tags.append("highlights")
 
-    if "race" in t or "grand prix" in t:
+    # race content
+    if "grand prix" in t or "race" in t:
         tags.append("race")
 
-    if "onboard" in t:
-        tags.append("onboard")
-
-    if "qualifying" in t or "q1" in t or "q2" in t or "q3" in t:
+    # qualifying
+    if any(k in t for k in ["qualifying", "q1", "q2", "q3"]):
         tags.append("qualifying")
 
-    return tags or ["other"]
+    # onboard
+    if "onboard" in t or "on board" in t:
+        tags.append("onboard")
+
+    # news fallback
+    if not tags:
+        tags.append("news")
+
+    return tags
 
 
-def is_highlight(tags):
-    return "highlights" in tags or "race" in tags
+def is_highlight(v):
+    return "highlights" in v["tags"]
 
 
 # =========================
-# FETCH VIDEOS
+# FETCH PLAYLIST VIDEOS
 # =========================
-def fetch_videos(source_key, source):
-    playlist_id = channel_to_uploads(source["channel_id"])
+
+def fetch_videos(key, src):
+    playlist = channel_to_uploads(src["channel_id"])
 
     url = (
         "https://www.googleapis.com/youtube/v3/playlistItems"
         f"?part=snippet,contentDetails"
         f"&maxResults={MAX_RESULTS}"
-        f"&playlistId={playlist_id}"
+        f"&playlistId={playlist}"
         f"&key={API_KEY}"
     )
 
@@ -104,24 +127,31 @@ def fetch_videos(source_key, source):
         sn = item.get("snippet", {})
         cd = item.get("contentDetails", {})
 
-        video_id = cd.get("videoId")
-        if not video_id:
+        vid = cd.get("videoId")
+        if not vid:
             continue
 
         title = sn.get("title", "")
         published = sn.get("publishedAt", "")
 
+        tags = classify(title)
+
         videos.append({
-            "video_id": video_id,
+            "video_id": vid,
             "title": title,
             "published_at": published,
             "published_ts": iso_to_ts(published),
-            "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
-            "source": source["name"],
-            "source_key": source_key,
-            "priority": source["priority"],
-            "tags": classify(title),
-            "link": f"https://www.youtube.com/watch?v={video_id}"
+            "thumbnail": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
+
+            "source": src["name"],
+            "source_key": key,
+            "priority": src["priority"],
+            "logo": src["logo"],
+
+            "tags": tags,
+            "type": "highlight" if is_highlight({"tags": tags}) else "video",
+
+            "link": f"https://www.youtube.com/watch?v={vid}"
         })
 
     return videos
@@ -130,39 +160,50 @@ def fetch_videos(source_key, source):
 # =========================
 # HIGHLIGHTS BUILDER
 # =========================
+
 def build_highlights(videos):
-    highlights = {}
+    result = {}
 
     for v in videos:
-        if not is_highlight(v["tags"]):
+        if v["type"] != "highlight":
             continue
 
         src = v["source"]
 
-        if src not in highlights:
-            highlights[src] = {
+        if src not in result:
+            result[src] = {
                 "source": src,
                 "priority": v["priority"],
+                "logo": v["logo"],
                 "videos": []
             }
 
-        highlights[src]["videos"].append(v)
+        result[src]["videos"].append(v)
 
-    # sort videos per source
-    for src in highlights.values():
-        src["videos"].sort(
-            key=lambda x: (-x["priority"], -x["published_ts"])
-        )
+    for s in result.values():
+        s["videos"].sort(key=lambda x: (-x["priority"], -x["published_ts"]))
 
-    # sort sources
-    return dict(
-        sorted(highlights.items(), key=lambda x: -x[1]["priority"])
-    )
+    return dict(sorted(result.items(), key=lambda x: -x[1]["priority"]))
+
+
+# =========================
+# NEWS BUILDER
+# =========================
+
+def build_news(videos):
+    news = []
+
+    for v in videos:
+        if v["type"] != "highlight":
+            news.append(v)
+
+    return sorted(news, key=lambda x: -x["published_ts"])
 
 
 # =========================
 # MAIN
 # =========================
+
 def main():
     if not API_KEY:
         raise Exception("Missing YOUTUBE_API_KEY")
@@ -171,40 +212,41 @@ def main():
 
     all_videos = []
 
-    # =========================
-    # FETCH ALL SOURCES
-    # =========================
     for key, src in SOURCES.items():
-        print(f"Fetching {src['name']}")
+        print("Fetching:", src["name"])
 
         videos = fetch_videos(key, src)
 
-        for v in videos:
-            v["source_name"] = src["name"]
-
         all_videos.extend(videos)
 
-        # save per-channel JSON
+        # per-channel JSON
         with open(f"{OUTPUT_DIR}/{key}.json", "w", encoding="utf-8") as f:
             json.dump({
                 "source": src["name"],
+                "logo": src["logo"],
+                "priority": src["priority"],
+                "updated_at": datetime.now(timezone.utc).isoformat(),
                 "videos": sorted(videos, key=lambda x: -x["published_ts"])
             }, f, indent=4, ensure_ascii=False)
 
         time.sleep(1)
 
     # =========================
-    # HIGHLIGHTS ONLY OUTPUT
+    # GLOBAL OUTPUTS (v3 UI READY)
     # =========================
-    highlights_data = {
+
+    output = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "categories": build_highlights(all_videos)
+
+        "highlights": build_highlights(all_videos),
+        "news": build_news(all_videos),
+        "all": sorted(all_videos, key=lambda x: -x["published_ts"])
     }
 
-    with open(f"{OUTPUT_DIR}/highlights.json", "w", encoding="utf-8") as f:
-        json.dump(highlights_data, f, indent=4, ensure_ascii=False)
+    with open(f"{OUTPUT_DIR}/feed.json", "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=4, ensure_ascii=False)
 
-    print("DONE -> per-channel JSON + highlights.json")
+    print("DONE -> feed.json ready (v3 UI structure)")
 
 
 if __name__ == "__main__":
