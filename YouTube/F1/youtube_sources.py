@@ -25,7 +25,7 @@ PRIORITY_CHANNELS = {
 PLAYLISTS = {
     "formula_1": {
         "name": "Formula 1",
-        "playlist_id": "UUaTxfj0BzL-MaCy-YUqPRoQ"
+        "playlist_id": "UCX6OQ3DkcsbYNE6H8uQQuVA"
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
