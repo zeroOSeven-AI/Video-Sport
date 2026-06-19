@@ -25,15 +25,15 @@ PRIORITY_CHANNELS = {
 PLAYLISTS = {
     "formula_1": {
         "name": "Formula 1",
-        "playlist_id": "PLfoNZDHitwjVvR3NMD7SstGgL6ZpB8E9b"
+        "playlist_id": "UUaTxfj0BzL-MaCy-YUqPRoQ"
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
-        "playlist_id": "PLQzS0xX0_b74L_u9_M98c8vKrc2_e_u7I"
+        "playlist_id": "UU6uC_99A5N9_pPh_Z-Gco7Q"
     },
     "the_race": {
         "name": "The Race",
-        "playlist_id": "UUaTxfj0BzL-MaCy-YUqPRoQ"
+        "playlist_id": "UUMpZ8C_6X_zN490NIn7n2oA"
     }
 }
 
