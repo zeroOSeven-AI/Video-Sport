@@ -36,6 +36,8 @@ jobs:
         run: mkdir -p YouTube
 
       - name: Run fetch script
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python YouTube/F1/youtube_sources.py
 
       - name: Commit and push updates
