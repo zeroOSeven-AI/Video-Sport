@@ -4,13 +4,8 @@ import time
 import requests
 from datetime import datetime, timezone
 
-# =========================
-# CONFIG
-# =========================
-
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 OUTPUT_DIR = "YouTube/F1"
-
 MAX_RESULTS_PER_PLAYLIST = 20
 
 PRIORITY_CHANNELS = {
@@ -22,18 +17,21 @@ PRIORITY_CHANNELS = {
     "P1 with Matt & Tommy": 1
 }
 
+# =========================
+# CHANNELS (UC IDs)
+# =========================
 PLAYLISTS = {
     "formula_1": {
         "name": "Formula 1",
-        "playlist_id": "UCX6OQ3DkcsbYNE6H8uQQuVA"
+        "channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA"
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
-        "playlist_id": "UC3kxJQ9RfaS5CKeYbbFMi4Q"
+        "channel_id": "UC3kxJQ9RfaS5CKeYbbFMi4Q"
     },
     "the_race": {
         "name": "The Race",
-        "playlist_id": "UU4Q9T9R3Gq3V7h0b9vQwq0Q"
+        "channel_id": "UC4Q9T9R3Gq3V7h0b9vQwq0Q"
     }
 }
 
@@ -43,7 +41,9 @@ PLAYLISTS = {
 
 def yt_get(url):
     r = requests.get(url, timeout=15)
-    r.raise_for_status()
+    if not r.ok:
+        print("YT ERROR:", r.status_code, r.text[:200])
+        return {}
     return r.json()
 
 
@@ -52,6 +52,13 @@ def iso_to_ts(iso):
         return int(datetime.fromisoformat(iso.replace("Z", "+00:00")).timestamp())
     except:
         return 0
+
+
+# 🔥 FIX: channel → uploads playlist
+def channel_to_uploads_playlist(channel_id: str) -> str:
+    if channel_id.startswith("UC"):
+        return "UU" + channel_id[2:]
+    return channel_id
 
 
 def get_videos_from_playlist(playlist_id):
@@ -68,18 +75,16 @@ def get_videos_from_playlist(playlist_id):
     videos = []
 
     for item in data.get("items", []):
-        sn = item["snippet"]
-        cd = item["contentDetails"]
+        sn = item.get("snippet", {})
+        cd = item.get("contentDetails", {})
+
+        video_id = cd.get("videoId")
+        if not video_id:
+            continue
 
         title = sn.get("title", "")
         published = sn.get("publishedAt", "")
         channel = sn.get("videoOwnerChannelTitle", "unknown")
-        video_id = cd.get("videoId")
-
-        if not video_id:
-            continue
-
-        priority = PRIORITY_CHANNELS.get(channel, 0)
 
         videos.append({
             "video_id": video_id,
@@ -88,7 +93,7 @@ def get_videos_from_playlist(playlist_id):
             "published_ts": iso_to_ts(published),
             "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
             "channel": channel,
-            "priority": priority,
+            "priority": PRIORITY_CHANNELS.get(channel, 0),
             "tags": classify(title),
             "link": f"https://www.youtube.com/watch?v={video_id}"
         })
@@ -98,15 +103,15 @@ def get_videos_from_playlist(playlist_id):
 
 def classify(title):
     t = title.lower()
-
     tags = []
-    if any(x in t for x in ["highlights", "recap"]):
+
+    if "highlights" in t:
         tags.append("highlights")
-    if any(x in t for x in ["onboard", "on board"]):
+    if "onboard" in t:
         tags.append("onboard")
-    if any(x in t for x in ["qualifying", "q1", "q2", "q3"]):
+    if "qualifying" in t:
         tags.append("qualifying")
-    if any(x in t for x in ["race", "grand prix"]):
+    if "race" in t:
         tags.append("race")
 
     return tags
@@ -117,9 +122,8 @@ def classify(title):
 # =========================
 
 def main():
-
     if not API_KEY:
-        raise Exception("Missing YOUTUBE_API_KEY (GitHub Secret)")
+        raise Exception("Missing YOUTUBE_API_KEY")
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -128,7 +132,12 @@ def main():
     for key, pl in PLAYLISTS.items():
         print(f"Fetching {pl['name']}")
 
-        videos = get_videos_from_playlist(pl["playlist_id"])
+        channel_id = pl["channel_id"]
+
+        # 🔥 FIX: UC → UU playlist
+        playlist_id = channel_to_uploads_playlist(channel_id)
+
+        videos = get_videos_from_playlist(playlist_id)
 
         for v in videos:
             v["source_key"] = key
@@ -138,16 +147,8 @@ def main():
 
         time.sleep(1)
 
-    # =========================
-    # PRIORITY SORT
-    # =========================
-
-    all_videos.sort(
-        key=lambda x: (
-            -x["priority"],
-            -x["published_ts"]
-        )
-    )
+    # sort
+    all_videos.sort(key=lambda x: (-x["priority"], -x["published_ts"]))
 
     output = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
