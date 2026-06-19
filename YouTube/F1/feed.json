@@ -1,5 +1,5 @@
 {
-    "updated_at": "2026-06-19T15:45:05.270413+00:00",
+    "updated_at": "2026-06-19T18:11:05.353250+00:00",
     "highlights": {
         "Sky Sports F1": {
             "source": "Sky Sports F1",
@@ -22,28 +22,27 @@
                     ],
                     "type": "highlight",
                     "link": "https://www.youtube.com/watch?v=EZeApLXpQAY"
-                },
-                {
-                    "video_id": "Wz9bzKkEyX0",
-                    "title": "Russell pips Hamilton as Leclerc crashes out! | Barcelona-Catalunya GP Qualifying Highlights",
-                    "published_at": "2026-06-13T15:51:34Z",
-                    "published_ts": 1781365894,
-                    "thumbnail": "https://i.ytimg.com/vi/Wz9bzKkEyX0/hqdefault.jpg",
-                    "source": "Sky Sports F1",
-                    "source_key": "sky_sports_f1",
-                    "priority": 3,
-                    "logo": "logo/sky_sports_f1.png",
-                    "tags": [
-                        "highlights",
-                        "qualifying"
-                    ],
-                    "type": "highlight",
-                    "link": "https://www.youtube.com/watch?v=Wz9bzKkEyX0"
                 }
             ]
         }
     },
     "news": [
+        {
+            "video_id": "ZEB7GJYcVXo",
+            "title": "How do F1 teams use tyre wear indicators to aid their pit stop decisions? 🤔",
+            "published_at": "2026-06-19T16:31:44Z",
+            "published_ts": 1781886704,
+            "thumbnail": "https://i.ytimg.com/vi/ZEB7GJYcVXo/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=ZEB7GJYcVXo"
+        },
         {
             "video_id": "2qmU0rQgVMg",
             "title": "Ever wondered how the SkyPad works? 🤔🏎️",
@@ -479,22 +478,6 @@
             "link": "https://www.youtube.com/watch?v=xCl2gndzFqE"
         },
         {
-            "video_id": "A9TikdsD5eg",
-            "title": "500 Million Subscriber Livestream!",
-            "published_at": "2026-06-12T15:12:07Z",
-            "published_ts": 1781277127,
-            "thumbnail": "https://i.ytimg.com/vi/A9TikdsD5eg/hqdefault.jpg",
-            "source": "Formula 1",
-            "source_key": "formula_1",
-            "priority": 3,
-            "logo": "logo/formula_1.png",
-            "tags": [
-                "news"
-            ],
-            "type": "video",
-            "link": "https://www.youtube.com/watch?v=A9TikdsD5eg"
-        },
-        {
             "video_id": "GpQSUjNsNm0",
             "title": "7 Days Stranded in The Arctic",
             "published_at": "2026-05-30T16:00:02Z",
@@ -813,9 +796,41 @@
             ],
             "type": "video",
             "link": "https://www.youtube.com/watch?v=6W_841xoprg"
+        },
+        {
+            "video_id": "VIJLIo5yT1I",
+            "title": "Don’t Eat The Spicy Yoshi Egg",
+            "published_at": "2026-04-10T16:00:00Z",
+            "published_ts": 1775836800,
+            "thumbnail": "https://i.ytimg.com/vi/VIJLIo5yT1I/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=VIJLIo5yT1I"
         }
     ],
     "all": [
+        {
+            "video_id": "ZEB7GJYcVXo",
+            "title": "How do F1 teams use tyre wear indicators to aid their pit stop decisions? 🤔",
+            "published_at": "2026-06-19T16:31:44Z",
+            "published_ts": 1781886704,
+            "thumbnail": "https://i.ytimg.com/vi/ZEB7GJYcVXo/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=ZEB7GJYcVXo"
+        },
         {
             "video_id": "2qmU0rQgVMg",
             "title": "Ever wondered how the SkyPad works? 🤔🏎️",
@@ -1252,23 +1267,6 @@
             "link": "https://www.youtube.com/watch?v=__fmDj0ZJ1Q"
         },
         {
-            "video_id": "Wz9bzKkEyX0",
-            "title": "Russell pips Hamilton as Leclerc crashes out! | Barcelona-Catalunya GP Qualifying Highlights",
-            "published_at": "2026-06-13T15:51:34Z",
-            "published_ts": 1781365894,
-            "thumbnail": "https://i.ytimg.com/vi/Wz9bzKkEyX0/hqdefault.jpg",
-            "source": "Sky Sports F1",
-            "source_key": "sky_sports_f1",
-            "priority": 3,
-            "logo": "logo/sky_sports_f1.png",
-            "tags": [
-                "highlights",
-                "qualifying"
-            ],
-            "type": "highlight",
-            "link": "https://www.youtube.com/watch?v=Wz9bzKkEyX0"
-        },
-        {
             "video_id": "xCl2gndzFqE",
             "title": "POV: You Time Traveled Back to 2016",
             "published_at": "2026-06-12T16:00:05Z",
@@ -1283,22 +1281,6 @@
             ],
             "type": "video",
             "link": "https://www.youtube.com/watch?v=xCl2gndzFqE"
-        },
-        {
-            "video_id": "A9TikdsD5eg",
-            "title": "500 Million Subscriber Livestream!",
-            "published_at": "2026-06-12T15:12:07Z",
-            "published_ts": 1781277127,
-            "thumbnail": "https://i.ytimg.com/vi/A9TikdsD5eg/hqdefault.jpg",
-            "source": "Formula 1",
-            "source_key": "formula_1",
-            "priority": 3,
-            "logo": "logo/formula_1.png",
-            "tags": [
-                "news"
-            ],
-            "type": "video",
-            "link": "https://www.youtube.com/watch?v=A9TikdsD5eg"
         },
         {
             "video_id": "GpQSUjNsNm0",
@@ -1619,6 +1601,22 @@
             ],
             "type": "video",
             "link": "https://www.youtube.com/watch?v=6W_841xoprg"
+        },
+        {
+            "video_id": "VIJLIo5yT1I",
+            "title": "Don’t Eat The Spicy Yoshi Egg",
+            "published_at": "2026-04-10T16:00:00Z",
+            "published_ts": 1775836800,
+            "thumbnail": "https://i.ytimg.com/vi/VIJLIo5yT1I/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=VIJLIo5yT1I"
         }
     ]
 }

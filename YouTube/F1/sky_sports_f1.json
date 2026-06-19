@@ -2,8 +2,24 @@
     "source": "Sky Sports F1",
     "logo": "logo/sky_sports_f1.png",
     "priority": 3,
-    "updated_at": "2026-06-19T15:45:03.157839+00:00",
+    "updated_at": "2026-06-19T18:11:03.241776+00:00",
     "videos": [
+        {
+            "video_id": "ZEB7GJYcVXo",
+            "title": "How do F1 teams use tyre wear indicators to aid their pit stop decisions? 🤔",
+            "published_at": "2026-06-19T16:31:44Z",
+            "published_ts": 1781886704,
+            "thumbnail": "https://i.ytimg.com/vi/ZEB7GJYcVXo/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=ZEB7GJYcVXo"
+        },
         {
             "video_id": "2qmU0rQgVMg",
             "title": "Ever wondered how the SkyPad works? 🤔🏎️",
@@ -390,23 +406,6 @@
             ],
             "type": "video",
             "link": "https://www.youtube.com/watch?v=wJ6gJHMc9Os"
-        },
-        {
-            "video_id": "Wz9bzKkEyX0",
-            "title": "Russell pips Hamilton as Leclerc crashes out! | Barcelona-Catalunya GP Qualifying Highlights",
-            "published_at": "2026-06-13T15:51:34Z",
-            "published_ts": 1781365894,
-            "thumbnail": "https://i.ytimg.com/vi/Wz9bzKkEyX0/hqdefault.jpg",
-            "source": "Sky Sports F1",
-            "source_key": "sky_sports_f1",
-            "priority": 3,
-            "logo": "logo/sky_sports_f1.png",
-            "tags": [
-                "highlights",
-                "qualifying"
-            ],
-            "type": "highlight",
-            "link": "https://www.youtube.com/watch?v=Wz9bzKkEyX0"
         }
     ]
 }

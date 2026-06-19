@@ -2,7 +2,7 @@
     "source": "Formula 1",
     "logo": "logo/formula_1.png",
     "priority": 3,
-    "updated_at": "2026-06-19T15:45:01.941746+00:00",
+    "updated_at": "2026-06-19T18:11:01.565676+00:00",
     "videos": [
         {
             "video_id": "r9aWeGqp43s",
@@ -67,22 +67,6 @@
             ],
             "type": "video",
             "link": "https://www.youtube.com/watch?v=xCl2gndzFqE"
-        },
-        {
-            "video_id": "A9TikdsD5eg",
-            "title": "500 Million Subscriber Livestream!",
-            "published_at": "2026-06-12T15:12:07Z",
-            "published_ts": 1781277127,
-            "thumbnail": "https://i.ytimg.com/vi/A9TikdsD5eg/hqdefault.jpg",
-            "source": "Formula 1",
-            "source_key": "formula_1",
-            "priority": 3,
-            "logo": "logo/formula_1.png",
-            "tags": [
-                "news"
-            ],
-            "type": "video",
-            "link": "https://www.youtube.com/watch?v=A9TikdsD5eg"
         },
         {
             "video_id": "GpQSUjNsNm0",
@@ -403,6 +387,22 @@
             ],
             "type": "video",
             "link": "https://www.youtube.com/watch?v=6W_841xoprg"
+        },
+        {
+            "video_id": "VIJLIo5yT1I",
+            "title": "Don’t Eat The Spicy Yoshi Egg",
+            "published_at": "2026-04-10T16:00:00Z",
+            "published_ts": 1775836800,
+            "thumbnail": "https://i.ytimg.com/vi/VIJLIo5yT1I/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=VIJLIo5yT1I"
         }
     ]
 }
