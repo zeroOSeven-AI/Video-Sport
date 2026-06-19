@@ -1,0 +1,87 @@
+{
+    "updated_at": "2026-06-19T11:50:49.458285+00:00",
+    "categories": {
+        "Sky Sports F1": {
+            "source": "Sky Sports F1",
+            "priority": 3,
+            "videos": [
+                {
+                    "video_id": "CfTn3A0TGDk",
+                    "title": "RELIVE the moment Lewis Hamilton's first Grand Prix win for Ferrari 🥺🔴",
+                    "published_at": "2026-06-18T06:53:52Z",
+                    "published_ts": 1781765632,
+                    "thumbnail": "https://i.ytimg.com/vi/CfTn3A0TGDk/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "tags": [
+                        "race"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=CfTn3A0TGDk",
+                    "source_name": "Sky Sports F1"
+                },
+                {
+                    "video_id": "7EHgJ02LRXg",
+                    "title": "'I didn't fit in the car!' | George Russell celebrates 100 races at Mercedes",
+                    "published_at": "2026-06-15T14:51:21Z",
+                    "published_ts": 1781535081,
+                    "thumbnail": "https://i.ytimg.com/vi/7EHgJ02LRXg/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "tags": [
+                        "race"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=7EHgJ02LRXg",
+                    "source_name": "Sky Sports F1"
+                },
+                {
+                    "video_id": "6XxvFBl9084",
+                    "title": "Novak Djokovic stars as Nico Rosberg & Karun Chandhok take on the Barcelona Grand Prix Grid Walk! 🇪🇸",
+                    "published_at": "2026-06-15T10:43:00Z",
+                    "published_ts": 1781520180,
+                    "thumbnail": "https://i.ytimg.com/vi/6XxvFBl9084/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "tags": [
+                        "race"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=6XxvFBl9084",
+                    "source_name": "Sky Sports F1"
+                },
+                {
+                    "video_id": "WPRIaXrF1PQ",
+                    "title": "Charles Leclerc reacts to RETIRING from Barcelona-Catalunya Grand Prix! ❌",
+                    "published_at": "2026-06-14T17:00:05Z",
+                    "published_ts": 1781456405,
+                    "thumbnail": "https://i.ytimg.com/vi/WPRIaXrF1PQ/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "tags": [
+                        "race"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=WPRIaXrF1PQ",
+                    "source_name": "Sky Sports F1"
+                },
+                {
+                    "video_id": "EZeApLXpQAY",
+                    "title": "Hamilton claims special first Ferrari GP win! | Barcelona Grand Prix Extended Highlights | F1 2026",
+                    "published_at": "2026-06-14T16:17:14Z",
+                    "published_ts": 1781453834,
+                    "thumbnail": "https://i.ytimg.com/vi/EZeApLXpQAY/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=EZeApLXpQAY",
+                    "source_name": "Sky Sports F1"
+                }
+            ]
+        }
+    }
+}
