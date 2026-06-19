@@ -29,7 +29,7 @@ PLAYLISTS = {
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
-        "playlist_id": "UU6uC_99A5N9_pPh_Z-Gco7Q"
+        "playlist_id": "UC3kxJQ9RfaS5CKeYbbFMi4Q"
     },
     "the_race": {
         "name": "The Race",
