@@ -119,7 +119,7 @@ def classify(title):
 def main():
 
     if not API_KEY:
-        raise Exception("Missing YT_API_KEY (GitHub Secret)")
+        raise Exception("Missing YOUTUBE_API_KEY (GitHub Secret)")
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
