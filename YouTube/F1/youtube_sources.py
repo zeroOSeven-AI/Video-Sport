@@ -33,7 +33,7 @@ PLAYLISTS = {
     },
     "the_race": {
         "name": "The Race",
-        "playlist_id": "UUMpZ8C_6X_zN490NIn7n2oA"
+        "playlist_id": "UU4Q9T9R3Gq3V7h0b9vQwq0Q"
     }
 }
 
