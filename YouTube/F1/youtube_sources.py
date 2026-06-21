@@ -4,18 +4,10 @@ import time
 import requests
 from datetime import datetime, timezone
 
-# =========================
-# CONFIG
-# =========================
-
 API_KEY = os.getenv("YOUTUBE_API_KEY")
+
 OUTPUT_DIR = "YouTube/F1"
-
 MAX_RESULTS = 25
-
-# =========================
-# SOURCES (PRIORITY SYSTEM)
-# =========================
 
 SOURCES = {
     "formula_1": {
@@ -38,84 +30,123 @@ SOURCES = {
     }
 }
 
-# =========================
-# HTTP
-# =========================
 
 def yt_get(url):
     try:
-        r = requests.get(url, timeout=15)
+        r = requests.get(url, timeout=20)
+
         if not r.ok:
             print("YT ERROR:", r.status_code)
+            print(r.text)
             return {}
+
         return r.json()
+
     except Exception as e:
         print("REQUEST FAILED:", e)
         return {}
 
-# =========================
-# HELPERS
-# =========================
 
 def iso_to_ts(iso):
     try:
-        return int(datetime.fromisoformat(iso.replace("Z", "+00:00")).timestamp())
+        return int(
+            datetime.fromisoformat(
+                iso.replace("Z", "+00:00")
+            ).timestamp()
+        )
     except:
         return 0
 
 
-def channel_to_uploads(channel_id):
-    return "UU" + channel_id[2:]
+def get_uploads_playlist(channel_id):
+    url = (
+        "https://www.googleapis.com/youtube/v3/channels"
+        f"?part=snippet,contentDetails"
+        f"&id={channel_id}"
+        f"&key={API_KEY}"
+    )
 
+    data = yt_get(url)
 
-# =========================
-# CLASSIFY ENGINE (v3)
-# =========================
+    items = data.get("items", [])
+
+    if not items:
+        print("CHANNEL NOT FOUND:", channel_id)
+        return None
+
+    channel = items[0]
+
+    title = channel["snippet"]["title"]
+
+    uploads = (
+        channel["contentDetails"]
+        ["relatedPlaylists"]
+        ["uploads"]
+    )
+
+    print("\n" + "=" * 70)
+    print("CHANNEL VERIFIED")
+    print("TITLE:", title)
+    print("CHANNEL ID:", channel_id)
+    print("UPLOADS:", uploads)
+    print("=" * 70)
+
+    return uploads
+
 
 def classify(title):
     t = title.lower()
 
     tags = []
 
-    # STRICT highlights
-    if any(k in t for k in ["highlights", "best moments", "recap"]):
+    if any(x in t for x in [
+        "highlights",
+        "race highlights",
+        "extended highlights",
+        "best moments",
+        "recap"
+    ]):
         tags.append("highlights")
 
-    # race content
-    if "grand prix" in t or "race" in t:
+    if any(x in t for x in [
+        "grand prix",
+        "race"
+    ]):
         tags.append("race")
 
-    # qualifying
-    if any(k in t for k in ["qualifying", "q1", "q2", "q3"]):
+    if any(x in t for x in [
+        "qualifying",
+        "q1",
+        "q2",
+        "q3"
+    ]):
         tags.append("qualifying")
 
-    # onboard
-    if "onboard" in t or "on board" in t:
+    if any(x in t for x in [
+        "onboard",
+        "on board"
+    ]):
         tags.append("onboard")
 
-    # news fallback
     if not tags:
         tags.append("news")
 
     return tags
 
 
-def is_highlight(v):
-    return "highlights" in v["tags"]
+def fetch_videos(source_key, source):
+    uploads_playlist = get_uploads_playlist(
+        source["channel_id"]
+    )
 
-
-# =========================
-# FETCH PLAYLIST VIDEOS
-# =========================
-
-def fetch_videos(key, src):
-    playlist = channel_to_uploads(src["channel_id"])
+    if not uploads_playlist:
+        return []
 
     url = (
         "https://www.googleapis.com/youtube/v3/playlistItems"
         f"?part=snippet,contentDetails"
+        f"&playlistId={uploads_playlist}"
         f"&maxResults={MAX_RESULTS}"
-        f"&playlistId={playlist}"
         f"&key={API_KEY}"
     )
 
@@ -124,129 +155,159 @@ def fetch_videos(key, src):
     videos = []
 
     for item in data.get("items", []):
-        sn = item.get("snippet", {})
-        cd = item.get("contentDetails", {})
+        snippet = item.get("snippet", {})
+        content = item.get("contentDetails", {})
 
-        vid = cd.get("videoId")
-        if not vid:
+        video_id = content.get("videoId")
+
+        if not video_id:
             continue
 
-        title = sn.get("title", "")
-        published = sn.get("publishedAt", "")
+        title = snippet.get("title", "")
+        published = snippet.get("publishedAt", "")
 
         tags = classify(title)
 
         videos.append({
-            "video_id": vid,
+            "video_id": video_id,
             "title": title,
             "published_at": published,
             "published_ts": iso_to_ts(published),
-            "thumbnail": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
-
-            "source": src["name"],
-            "source_key": key,
-            "priority": src["priority"],
-            "logo": src["logo"],
-
+            "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
+            "source": source["name"],
+            "source_key": source_key,
+            "priority": source["priority"],
+            "logo": source["logo"],
             "tags": tags,
-            "type": "highlight" if is_highlight({"tags": tags}) else "video",
-
-            "link": f"https://www.youtube.com/watch?v={vid}"
+            "type": "highlight" if "highlights" in tags else "video",
+            "link": f"https://www.youtube.com/watch?v={video_id}"
         })
+
+    videos.sort(
+        key=lambda x: x["published_ts"],
+        reverse=True
+    )
+
+    print("\nFETCHED:", source["name"])
+    print("VIDEOS :", len(videos))
+
+    for v in videos[:5]:
+        print("\nTITLE :", v["title"])
+        print("DATE  :", v["published_at"])
+        print("VIDEO :", v["video_id"])
 
     return videos
 
 
-# =========================
-# HIGHLIGHTS BUILDER
-# =========================
-
 def build_highlights(videos):
     result = {}
 
-    for v in videos:
-        if v["type"] != "highlight":
+    for video in videos:
+        if video["type"] != "highlight":
             continue
 
-        src = v["source"]
+        src = video["source"]
 
         if src not in result:
             result[src] = {
                 "source": src,
-                "priority": v["priority"],
-                "logo": v["logo"],
+                "priority": video["priority"],
+                "logo": video["logo"],
                 "videos": []
             }
 
-        result[src]["videos"].append(v)
+        result[src]["videos"].append(video)
 
-    for s in result.values():
-        s["videos"].sort(key=lambda x: (-x["priority"], -x["published_ts"]))
+    return result
 
-    return dict(sorted(result.items(), key=lambda x: -x[1]["priority"]))
-
-
-# =========================
-# NEWS BUILDER
-# =========================
 
 def build_news(videos):
-    news = []
+    return sorted(
+        [
+            v for v in videos
+            if v["type"] != "highlight"
+        ],
+        key=lambda x: x["published_ts"],
+        reverse=True
+    )
 
-    for v in videos:
-        if v["type"] != "highlight":
-            news.append(v)
-
-    return sorted(news, key=lambda x: -x["published_ts"])
-
-
-# =========================
-# MAIN
-# =========================
 
 def main():
     if not API_KEY:
         raise Exception("Missing YOUTUBE_API_KEY")
 
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(
+        OUTPUT_DIR,
+        exist_ok=True
+    )
 
     all_videos = []
 
-    for key, src in SOURCES.items():
-        print("Fetching:", src["name"])
-
-        videos = fetch_videos(key, src)
+    for key, source in SOURCES.items():
+        videos = fetch_videos(
+            key,
+            source
+        )
 
         all_videos.extend(videos)
 
-        # per-channel JSON
-        with open(f"{OUTPUT_DIR}/{key}.json", "w", encoding="utf-8") as f:
-            json.dump({
-                "source": src["name"],
-                "logo": src["logo"],
-                "priority": src["priority"],
-                "updated_at": datetime.now(timezone.utc).isoformat(),
-                "videos": sorted(videos, key=lambda x: -x["published_ts"])
-            }, f, indent=4, ensure_ascii=False)
+        with open(
+            f"{OUTPUT_DIR}/{key}.json",
+            "w",
+            encoding="utf-8"
+        ) as f:
+            json.dump(
+                {
+                    "source": source["name"],
+                    "logo": source["logo"],
+                    "priority": source["priority"],
+                    "updated_at": datetime.now(
+                        timezone.utc
+                    ).isoformat(),
+                    "videos": videos
+                },
+                f,
+                indent=4,
+                ensure_ascii=False
+            )
 
         time.sleep(1)
 
-    # =========================
-    # GLOBAL OUTPUTS (v3 UI READY)
-    # =========================
+    all_videos.sort(
+        key=lambda x: x["published_ts"],
+        reverse=True
+    )
 
-    output = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-
+    feed = {
+        "updated_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "total_videos": len(all_videos),
         "highlights": build_highlights(all_videos),
         "news": build_news(all_videos),
-        "all": sorted(all_videos, key=lambda x: -x["published_ts"])
+        "all": all_videos
     }
 
-    with open(f"{OUTPUT_DIR}/feed.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=4, ensure_ascii=False)
+    with open(
+        f"{OUTPUT_DIR}/feed.json",
+        "w",
+        encoding="utf-8"
+    ) as f:
+        json.dump(
+            feed,
+            f,
+            indent=4,
+            ensure_ascii=False
+        )
 
-    print("DONE -> feed.json ready (v3 UI structure)")
+    print("\n" + "=" * 70)
+    print("SCRAPE COMPLETE")
+    print("TOTAL VIDEOS:", len(all_videos))
+
+    if all_videos:
+        print("LATEST:", all_videos[0]["title"])
+
+    print("=" * 70)
 
 
 if __name__ == "__main__":
