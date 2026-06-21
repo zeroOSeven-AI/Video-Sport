@@ -4,39 +4,37 @@ import time
 import requests
 from datetime import datetime, timezone
 
-# =========================
-# CONFIG
-# =========================
-
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 OUTPUT_DIR = "YouTube/F1"
 MAX_RESULTS = 25
 
+
 # =========================
-# SOURCES (PRIORITY SYSTEM)
+# PLAYLIST SOURCES (FIXED APPROACH)
 # =========================
 
 SOURCES = {
     "formula_1": {
         "name": "Formula 1",
-        "channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "playlist_id": "PLj7RD7nCnlE3G9WeItHi-ZA0figXsX3Ky",
         "priority": 3,
         "logo": "logo/formula_1.png"
     },
     "sky_sports_f1": {
         "name": "Sky Sports F1",
-        "channel_id": "UC3kxJQ9RfaS5CKeYbbFMi4Q",
+        "playlist_id": "PLo5BbNWSTIgirAVUnnvyejFVyuZ_QIWsd",
         "priority": 3,
         "logo": "logo/sky_sports_f1.png"
     },
     "the_race": {
-        "name": "The Race",
-        "channel_id": "UC4Q9T9R3Gq3V7h0b9vQwq0Q",
+        "name": "The Race F1",
+        "playlist_id": "PLtElEI41NT-nT4c0F09iqxPm-nTCQldFk",
         "priority": 2,
         "logo": "logo/the_race.png"
     }
 }
+
 
 # =========================
 # HTTP
@@ -46,16 +44,16 @@ def yt_get(url):
     try:
         r = requests.get(url, timeout=20)
         if not r.ok:
-            print("YT ERROR:", r.status_code)
-            print(r.text)
+            print("YT ERROR:", r.status_code, r.text[:200])
             return {}
         return r.json()
     except Exception as e:
         print("REQUEST FAILED:", e)
         return {}
 
+
 # =========================
-# HELPERS
+# TIME
 # =========================
 
 def iso_to_ts(iso):
@@ -65,102 +63,54 @@ def iso_to_ts(iso):
         return 0
 
 
-def get_uploads_playlist(channel_id):
-    """
-    FIX: correct YouTube channel -> uploads playlist resolution
-    """
-    url = (
-        "https://www.googleapis.com/youtube/v3/channels"
-        f"?part=contentDetails,snippet"
-        f"&id={channel_id}"
-        f"&key={API_KEY}"
-    )
-
-    data = yt_get(url)
-    items = data.get("items", [])
-
-    if not items:
-        print("CHANNEL NOT FOUND:", channel_id)
-        return None
-
-    ch = items[0]
-
-    title = ch["snippet"]["title"]
-    uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
-
-    print("\n" + "=" * 60)
-    print("CHANNEL VERIFIED")
-    print("TITLE:", title)
-    print("CHANNEL ID:", channel_id)
-    print("UPLOADS:", uploads)
-    print("=" * 60)
-
-    return uploads
-
 # =========================
-# CLASSIFY (CLEANER v2)
+# CLASSIFIER (CLEAN F1 FILTER)
 # =========================
 
 def classify(title):
     t = title.lower()
     tags = []
 
-    if any(k in t for k in [
-        "highlights", "best moments", "recap", "race highlights"
+    # highlights = HOME content
+    if any(x in t for x in [
+        "highlights",
+        "extended highlights",
+        "best moments",
+        "race highlights"
     ]):
         tags.append("highlights")
 
-    if any(k in t for k in [
-        "grand prix", "race", "gp"
-    ]):
+    # race content
+    if "grand prix" in t or "race" in t:
         tags.append("race")
 
-    if any(k in t for k in [
-        "qualifying", "q1", "q2", "q3"
-    ]):
+    # qualifying
+    if "qualifying" in t or "q1" in t or "q2" in t or "q3" in t:
         tags.append("qualifying")
 
-    if any(k in t for k in [
-        "onboard", "on board"
-    ]):
+    # onboard
+    if "onboard" in t:
         tags.append("onboard")
 
-    # STRICTER FILTER (removes garbage content like challenges)
-    if any(k in t for k in [
-        "challenge",
-        "mrbeast",
-        "youtube legends",
-        "win $",
-        "giveaway"
-    ]):
-        tags.append("noise")
-
+    # clean fallback
     if not tags:
         tags.append("news")
 
     return tags
 
 
-def is_valid_video(v):
-    # filter garbage content
-    if "noise" in v["tags"]:
-        return False
-    return True
-
 # =========================
-# FETCH VIDEOS
+# FETCH PLAYLIST
 # =========================
 
-def fetch_videos(key, src):
-    uploads = get_uploads_playlist(src["channel_id"])
-    if not uploads:
-        return []
+def fetch_playlist_videos(source_key, source):
+    playlist_id = source["playlist_id"]
 
     url = (
         "https://www.googleapis.com/youtube/v3/playlistItems"
         f"?part=snippet,contentDetails"
-        f"&playlistId={uploads}"
         f"&maxResults={MAX_RESULTS}"
+        f"&playlistId={playlist_id}"
         f"&key={API_KEY}"
     )
 
@@ -168,14 +118,12 @@ def fetch_videos(key, src):
 
     videos = []
 
-    print("\nFETCHING:", src["name"])
-
     for item in data.get("items", []):
         sn = item.get("snippet", {})
         cd = item.get("contentDetails", {})
 
-        vid = cd.get("videoId")
-        if not vid:
+        video_id = cd.get("videoId")
+        if not video_id:
             continue
 
         title = sn.get("title", "")
@@ -184,45 +132,46 @@ def fetch_videos(key, src):
         tags = classify(title)
 
         video = {
-            "video_id": vid,
+            "video_id": video_id,
             "title": title,
             "published_at": published,
             "published_ts": iso_to_ts(published),
-            "thumbnail": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
 
-            "source": src["name"],
-            "source_key": key,
-            "priority": src["priority"],
-            "logo": src["logo"],
+            "thumbnail": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
+
+            "source": source["name"],
+            "source_key": source_key,
+            "priority": source["priority"],
+            "logo": source["logo"],
 
             "tags": tags,
             "type": "highlight" if "highlights" in tags else "video",
 
-            "link": f"https://www.youtube.com/watch?v={vid}"
+            "link": f"https://www.youtube.com/watch?v={video_id}"
         }
 
-        # DEBUG OUTPUT (IMPORTANT)
+        # DEBUG (IMPORTANT FOR YOU)
         print("\nVIDEO DEBUG:")
         print("TITLE:", title)
         print("TAGS:", tags)
-        print("ID:", vid)
+        print("ID:", video_id)
 
-        if is_valid_video(video):
-            videos.append(video)
+        videos.append(video)
 
     videos.sort(key=lambda x: -x["published_ts"])
 
-    print("\nFETCHED:", src["name"])
+    print("\nFETCHED:", source["name"])
     print("VIDEOS:", len(videos))
 
     return videos
 
+
 # =========================
-# BUILDERS
+# HOME (HIGHLIGHTS)
 # =========================
 
 def build_highlights(videos):
-    out = {}
+    result = {}
 
     for v in videos:
         if v["type"] != "highlight":
@@ -230,24 +179,33 @@ def build_highlights(videos):
 
         src = v["source"]
 
-        if src not in out:
-            out[src] = {
+        if src not in result:
+            result[src] = {
                 "source": src,
                 "priority": v["priority"],
                 "logo": v["logo"],
                 "videos": []
             }
 
-        out[src]["videos"].append(v)
+        result[src]["videos"].append(v)
 
-    return dict(sorted(out.items(), key=lambda x: -x[1]["priority"]))
+    # sort inside each source
+    for s in result.values():
+        s["videos"].sort(key=lambda x: -x["published_ts"])
 
+    return result
+
+
+# =========================
+# NEWS (ALL NON-HIGHLIGHTS)
+# =========================
 
 def build_news(videos):
     return sorted(
         [v for v in videos if v["type"] != "highlight"],
         key=lambda x: -x["published_ts"]
     )
+
 
 # =========================
 # MAIN
@@ -261,19 +219,19 @@ def main():
 
     all_videos = []
 
-    for key, src in SOURCES.items():
-        vids = fetch_videos(key, src)
+    for key, source in SOURCES.items():
 
-        all_videos.extend(vids)
+        videos = fetch_playlist_videos(key, source)
 
-        # per-channel dump
+        all_videos.extend(videos)
+
+        # per-source file
         with open(f"{OUTPUT_DIR}/{key}.json", "w", encoding="utf-8") as f:
             json.dump({
-                "source": src["name"],
-                "logo": src["logo"],
-                "priority": src["priority"],
+                "source": source["name"],
+                "priority": source["priority"],
                 "updated_at": datetime.now(timezone.utc).isoformat(),
-                "videos": vids
+                "videos": videos
             }, f, indent=4, ensure_ascii=False)
 
         time.sleep(1)
@@ -284,8 +242,13 @@ def main():
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "total_videos": len(all_videos),
 
+        # HOME UI
         "highlights": build_highlights(all_videos),
+
+        # NEWS UI
         "news": build_news(all_videos),
+
+        # RAW
         "all": all_videos
     }
 
@@ -295,8 +258,10 @@ def main():
     print("\n" + "=" * 60)
     print("SCRAPE COMPLETE")
     print("TOTAL VIDEOS:", len(all_videos))
+
     if all_videos:
         print("LATEST:", all_videos[0]["title"])
+
     print("=" * 60)
 
 
