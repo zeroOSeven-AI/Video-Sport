@@ -1,0 +1,1906 @@
+{
+    "updated_at": "2026-06-21T09:59:10.503567+00:00",
+    "total_videos": 55,
+    "highlights": {
+        "Formula 1": {
+            "source": "Formula 1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "videos": [
+                {
+                    "video_id": "Ey8j_BlLvFM",
+                    "title": "Race Highlights | 2026 Barcelona-Catalunya Grand Prix",
+                    "published_at": "2026-06-14T16:07:43Z",
+                    "published_ts": 1781453263,
+                    "thumbnail": "https://i.ytimg.com/vi/Ey8j_BlLvFM/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=Ey8j_BlLvFM"
+                },
+                {
+                    "video_id": "Q2fMM4H9bWY",
+                    "title": "Qualifying Highlights | 2026 Barcelona-Catalunya Grand Prix",
+                    "published_at": "2026-06-13T16:31:44Z",
+                    "published_ts": 1781368304,
+                    "thumbnail": "https://i.ytimg.com/vi/Q2fMM4H9bWY/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=Q2fMM4H9bWY"
+                },
+                {
+                    "video_id": "ipOT9ruRobc",
+                    "title": "Race Highlights | 2026 Monaco Grand Prix",
+                    "published_at": "2026-06-07T17:32:11Z",
+                    "published_ts": 1780853531,
+                    "thumbnail": "https://i.ytimg.com/vi/ipOT9ruRobc/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=ipOT9ruRobc"
+                },
+                {
+                    "video_id": "xmk0j-HdgwY",
+                    "title": "Qualifying Highlights | 2026 Monaco Grand Prix",
+                    "published_at": "2026-06-06T16:02:22Z",
+                    "published_ts": 1780761742,
+                    "thumbnail": "https://i.ytimg.com/vi/xmk0j-HdgwY/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=xmk0j-HdgwY"
+                },
+                {
+                    "video_id": "QrRh2vOJQbw",
+                    "title": "Race Highlights | 2026 Canadian Grand Prix",
+                    "published_at": "2026-05-25T00:03:05Z",
+                    "published_ts": 1779667385,
+                    "thumbnail": "https://i.ytimg.com/vi/QrRh2vOJQbw/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=QrRh2vOJQbw"
+                },
+                {
+                    "video_id": "rjLDgDc0td4",
+                    "title": "Qualifying Highlights | 2026 Canadian Grand Prix",
+                    "published_at": "2026-05-23T23:07:25Z",
+                    "published_ts": 1779577645,
+                    "thumbnail": "https://i.ytimg.com/vi/rjLDgDc0td4/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=rjLDgDc0td4"
+                },
+                {
+                    "video_id": "l3aB-W19bnc",
+                    "title": "Sprint Highlights | 2026 Canadian Grand Prix",
+                    "published_at": "2026-05-23T17:39:33Z",
+                    "published_ts": 1779557973,
+                    "thumbnail": "https://i.ytimg.com/vi/l3aB-W19bnc/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=l3aB-W19bnc"
+                },
+                {
+                    "video_id": "d2urQDKqZhU",
+                    "title": "Sprint Qualifying Highlights | 2026 Canadian Grand Prix",
+                    "published_at": "2026-05-23T00:42:00Z",
+                    "published_ts": 1779496920,
+                    "thumbnail": "https://i.ytimg.com/vi/d2urQDKqZhU/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=d2urQDKqZhU"
+                },
+                {
+                    "video_id": "5gYys4GL7S0",
+                    "title": "Race Highlights | 2026 Miami Grand Prix",
+                    "published_at": "2026-05-03T20:06:31Z",
+                    "published_ts": 1777838791,
+                    "thumbnail": "https://i.ytimg.com/vi/5gYys4GL7S0/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=5gYys4GL7S0"
+                },
+                {
+                    "video_id": "83GJM1S0FnE",
+                    "title": "Qualifying Highlights | 2026 Miami Grand Prix",
+                    "published_at": "2026-05-02T22:27:27Z",
+                    "published_ts": 1777760847,
+                    "thumbnail": "https://i.ytimg.com/vi/83GJM1S0FnE/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=83GJM1S0FnE"
+                },
+                {
+                    "video_id": "0XlphgCNbwQ",
+                    "title": "Sprint Highlights | 2026 Miami Grand Prix",
+                    "published_at": "2026-05-02T18:48:57Z",
+                    "published_ts": 1777747737,
+                    "thumbnail": "https://i.ytimg.com/vi/0XlphgCNbwQ/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=0XlphgCNbwQ"
+                },
+                {
+                    "video_id": "zV_UPEsZl-s",
+                    "title": "Sprint Qualifying Highlights | 2026 Miami Grand Prix",
+                    "published_at": "2026-05-01T22:47:06Z",
+                    "published_ts": 1777675626,
+                    "thumbnail": "https://i.ytimg.com/vi/zV_UPEsZl-s/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=zV_UPEsZl-s"
+                },
+                {
+                    "video_id": "oAtYfF0_4-I",
+                    "title": "Race Highlights | 2026 Japanese Grand Prix",
+                    "published_at": "2026-03-29T08:30:55Z",
+                    "published_ts": 1774773055,
+                    "thumbnail": "https://i.ytimg.com/vi/oAtYfF0_4-I/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=oAtYfF0_4-I"
+                },
+                {
+                    "video_id": "oZH_7pYJPTE",
+                    "title": "Qualifying Highlights | 2026 Japanese Grand Prix",
+                    "published_at": "2026-03-28T11:51:55Z",
+                    "published_ts": 1774698715,
+                    "thumbnail": "https://i.ytimg.com/vi/oZH_7pYJPTE/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=oZH_7pYJPTE"
+                },
+                {
+                    "video_id": "t8HpVlineX4",
+                    "title": "Race Highlights | 2026 Chinese Grand Prix",
+                    "published_at": "2026-03-15T10:37:36Z",
+                    "published_ts": 1773571056,
+                    "thumbnail": "https://i.ytimg.com/vi/t8HpVlineX4/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=t8HpVlineX4"
+                },
+                {
+                    "video_id": "75-_kMm0mb8",
+                    "title": "Qualifying Highlights | 2026 Chinese Grand Prix",
+                    "published_at": "2026-03-14T09:24:19Z",
+                    "published_ts": 1773480259,
+                    "thumbnail": "https://i.ytimg.com/vi/75-_kMm0mb8/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=75-_kMm0mb8"
+                },
+                {
+                    "video_id": "ynRZQ9EBfRI",
+                    "title": "Sprint Highlights | 2026 Chinese Grand Prix",
+                    "published_at": "2026-03-14T09:24:02Z",
+                    "published_ts": 1773480242,
+                    "thumbnail": "https://i.ytimg.com/vi/ynRZQ9EBfRI/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=ynRZQ9EBfRI"
+                },
+                {
+                    "video_id": "-LnHUI4DxRs",
+                    "title": "Sprint Qualifying Highlights | 2026 Chinese Grand Prix",
+                    "published_at": "2026-03-13T10:34:28Z",
+                    "published_ts": 1773398068,
+                    "thumbnail": "https://i.ytimg.com/vi/-LnHUI4DxRs/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=-LnHUI4DxRs"
+                },
+                {
+                    "video_id": "lL_d84cN1UY",
+                    "title": "Race Highlights | 2026 Australian Grand Prix",
+                    "published_at": "2026-03-08T07:32:37Z",
+                    "published_ts": 1772955157,
+                    "thumbnail": "https://i.ytimg.com/vi/lL_d84cN1UY/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=lL_d84cN1UY"
+                },
+                {
+                    "video_id": "QztBs3IZBHk",
+                    "title": "Qualifying Highlights | 2026 Australian Grand Prix",
+                    "published_at": "2026-03-07T09:32:25Z",
+                    "published_ts": 1772875945,
+                    "thumbnail": "https://i.ytimg.com/vi/QztBs3IZBHk/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=QztBs3IZBHk"
+                }
+            ]
+        },
+        "Sky Sports F1": {
+            "source": "Sky Sports F1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "videos": [
+                {
+                    "video_id": "YohoFcIa38k",
+                    "title": "Who MASTERED the rain to take pole in Silverstone? 🌧 | British GP Qualifying Highlights",
+                    "published_at": "2025-03-11T14:19:52Z",
+                    "published_ts": 1741702792,
+                    "thumbnail": "https://i.ytimg.com/vi/YohoFcIa38k/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=YohoFcIa38k"
+                },
+                {
+                    "video_id": "VJifaiPt-Qo",
+                    "title": "EXTENDED HIGHLIGHTS! Who claimed the win in Austria? 🇦🇹 | 2024 Austrian Grand Prix",
+                    "published_at": "2025-03-11T14:19:36Z",
+                    "published_ts": 1741702776,
+                    "thumbnail": "https://i.ytimg.com/vi/VJifaiPt-Qo/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=VJifaiPt-Qo"
+                },
+                {
+                    "video_id": "YAYrM_fhVMw",
+                    "title": "Who took pole at the Red Bull Ring? ⏱🇦🇹  | 2024 Austrian Grand Prix Qualifying Highlights",
+                    "published_at": "2025-03-11T14:19:24Z",
+                    "published_ts": 1741702764,
+                    "thumbnail": "https://i.ytimg.com/vi/YAYrM_fhVMw/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=YAYrM_fhVMw"
+                },
+                {
+                    "video_id": "yalRYMiIe7M",
+                    "title": "Who claimed the Sprint win in Austria? ⚡🇦🇹 | 2024 Austrian Grand Prix Sprint Highlights",
+                    "published_at": "2025-03-11T14:19:14Z",
+                    "published_ts": 1741702754,
+                    "thumbnail": "https://i.ytimg.com/vi/yalRYMiIe7M/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=yalRYMiIe7M"
+                },
+                {
+                    "video_id": "xHN3MD0LPks",
+                    "title": "Who took Sprint Pole in Austria 🔥 | 2024 Austrian Grand Prix Sprint Qualifying Highlights",
+                    "published_at": "2025-03-11T14:19:05Z",
+                    "published_ts": 1741702745,
+                    "thumbnail": "https://i.ytimg.com/vi/xHN3MD0LPks/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=xHN3MD0LPks"
+                },
+                {
+                    "video_id": "2Xsh_WZyXK0",
+                    "title": "Who'll take the win in Barcelona? 🏆 | Spanish GP Highlights",
+                    "published_at": "2025-03-11T14:18:50Z",
+                    "published_ts": 1741702730,
+                    "thumbnail": "https://i.ytimg.com/vi/2Xsh_WZyXK0/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=2Xsh_WZyXK0"
+                },
+                {
+                    "video_id": "-9K9gclJrck",
+                    "title": "LANDO TAKES POLE FROM VERSTAPPEN! | Spanish GP Qualifying Highlights",
+                    "published_at": "2025-03-11T14:18:37Z",
+                    "published_ts": 1741702717,
+                    "thumbnail": "https://i.ytimg.com/vi/-9K9gclJrck/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=-9K9gclJrck"
+                },
+                {
+                    "video_id": "C3mey2ER9aU",
+                    "title": "HIGHLIGHTS! Who mastered the rain in Montreal? 🇨🇦 | 2024 Canadian Grand Prix Highlights",
+                    "published_at": "2025-03-11T14:17:15Z",
+                    "published_ts": 1741702635,
+                    "thumbnail": "https://i.ytimg.com/vi/C3mey2ER9aU/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=C3mey2ER9aU"
+                },
+                {
+                    "video_id": "I-i8NfhHU1k",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Monaco Grand Prix Highlights",
+                    "published_at": "2025-03-11T14:16:51Z",
+                    "published_ts": 1741702611,
+                    "thumbnail": "https://i.ytimg.com/vi/I-i8NfhHU1k/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=I-i8NfhHU1k"
+                },
+                {
+                    "video_id": "lOPAERPbaJ4",
+                    "title": "Who is on pole in Monaco? 🇲🇨 | Monaco Grand Prix Qualifying Highlights",
+                    "published_at": "2025-03-11T14:16:37Z",
+                    "published_ts": 1741702597,
+                    "thumbnail": "https://i.ytimg.com/vi/lOPAERPbaJ4/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=lOPAERPbaJ4"
+                },
+                {
+                    "video_id": "oWR_UxLFU00",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Emilia-Romagna Grand Prix Highlights",
+                    "published_at": "2025-03-11T14:16:21Z",
+                    "published_ts": 1741702581,
+                    "thumbnail": "https://i.ytimg.com/vi/oWR_UxLFU00/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=oWR_UxLFU00"
+                },
+                {
+                    "video_id": "YBMNNU-wfDc",
+                    "title": "HIGHLIGHTS! Who took pole for the Miami Sprint? ⚡",
+                    "published_at": "2025-03-11T14:15:19Z",
+                    "published_ts": 1741702519,
+                    "thumbnail": "https://i.ytimg.com/vi/YBMNNU-wfDc/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=YBMNNU-wfDc"
+                },
+                {
+                    "video_id": "4_w0v7FWVSY",
+                    "title": "HIGHLIGHTS! Who takes POLE in Shanghai? 🇨🇳 | Chinese Grand Prix Qualifying Highlights",
+                    "published_at": "2025-03-11T14:15:01Z",
+                    "published_ts": 1741702501,
+                    "thumbnail": "https://i.ytimg.com/vi/4_w0v7FWVSY/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=4_w0v7FWVSY"
+                },
+                {
+                    "video_id": "Rn8yy3NuTdI",
+                    "title": "HIGHLIGHTS! Who took pole in CHAOTIC Chinese Grand Prix Sprint Qualifying 🌧",
+                    "published_at": "2025-03-11T14:14:46Z",
+                    "published_ts": 1741702486,
+                    "thumbnail": "https://i.ytimg.com/vi/Rn8yy3NuTdI/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=Rn8yy3NuTdI"
+                },
+                {
+                    "video_id": "nmZgitdrLaQ",
+                    "title": "Who takes pole in Suzuka? 🌸| Japanese Grand Prix Qualifying Highlights",
+                    "published_at": "2025-03-11T14:14:25Z",
+                    "published_ts": 1741702465,
+                    "thumbnail": "https://i.ytimg.com/vi/nmZgitdrLaQ/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=nmZgitdrLaQ"
+                },
+                {
+                    "video_id": "BALS1dIY43w",
+                    "title": "HIGHLIGHTS! Who'll take pole in Imola? 🏎🇮🇹 | 2024 Emilia-Romagna Grand Prix Qualifying Highlights",
+                    "published_at": "2025-03-11T14:14:12Z",
+                    "published_ts": 1741702452,
+                    "thumbnail": "https://i.ytimg.com/vi/BALS1dIY43w/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=BALS1dIY43w"
+                },
+                {
+                    "video_id": "m0dhwQT_LY8",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Miami Grand Prix Highlights",
+                    "published_at": "2025-03-11T14:13:44Z",
+                    "published_ts": 1741702424,
+                    "thumbnail": "https://i.ytimg.com/vi/m0dhwQT_LY8/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=m0dhwQT_LY8"
+                },
+                {
+                    "video_id": "teqjS7R7f7w",
+                    "title": "HIGHLIGHTS! Who'll take pole in the 305? 🌴🇺🇸 | 2024 Miami Grand Prix Qualifying Highlights",
+                    "published_at": "2025-03-11T14:13:23Z",
+                    "published_ts": 1741702403,
+                    "thumbnail": "https://i.ytimg.com/vi/teqjS7R7f7w/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=teqjS7R7f7w"
+                },
+                {
+                    "video_id": "7GyWLqRmO4A",
+                    "title": "EXTENDED HIGHLIGHTS! Miami Grand Prix Sprint Highlights",
+                    "published_at": "2025-03-11T14:13:12Z",
+                    "published_ts": 1741702392,
+                    "thumbnail": "https://i.ytimg.com/vi/7GyWLqRmO4A/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=7GyWLqRmO4A"
+                },
+                {
+                    "video_id": "ZvJr9nYKZjg",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Chinese Grand Prix 🏁",
+                    "published_at": "2025-03-11T14:12:58Z",
+                    "published_ts": 1741702378,
+                    "thumbnail": "https://i.ytimg.com/vi/ZvJr9nYKZjg/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=ZvJr9nYKZjg"
+                },
+                {
+                    "video_id": "FL71WyfsyZo",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Chinese Grand Prix Sprint 🏁",
+                    "published_at": "2025-03-11T14:12:48Z",
+                    "published_ts": 1741702368,
+                    "thumbnail": "https://i.ytimg.com/vi/FL71WyfsyZo/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=FL71WyfsyZo"
+                },
+                {
+                    "video_id": "Y94k0Qm6TRg",
+                    "title": "EXTENDED HIGHLIGHTS! Japanese Grand Prix 🇯🇵",
+                    "published_at": "2025-03-11T14:12:30Z",
+                    "published_ts": 1741702350,
+                    "thumbnail": "https://i.ytimg.com/vi/Y94k0Qm6TRg/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=Y94k0Qm6TRg"
+                },
+                {
+                    "video_id": "obN0aU6nWDo",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Australian Grand Prix 🏁",
+                    "published_at": "2025-03-11T14:12:21Z",
+                    "published_ts": 1741702341,
+                    "thumbnail": "https://i.ytimg.com/vi/obN0aU6nWDo/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=obN0aU6nWDo"
+                },
+                {
+                    "video_id": "50pkbG3EEEE",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Saudi Arabian Grand Prix 🇸🇦",
+                    "published_at": "2025-03-11T14:12:05Z",
+                    "published_ts": 1741702325,
+                    "thumbnail": "https://i.ytimg.com/vi/50pkbG3EEEE/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=50pkbG3EEEE"
+                },
+                {
+                    "video_id": "Ow-dS5KWtsI",
+                    "title": "EXTENDED HIGHLIGHTS! 2024 Bahrain Grand Prix 🏁",
+                    "published_at": "2025-03-11T14:11:38Z",
+                    "published_ts": 1741702298,
+                    "thumbnail": "https://i.ytimg.com/vi/Ow-dS5KWtsI/hqdefault.jpg",
+                    "source": "Sky Sports F1",
+                    "source_key": "sky_sports_f1",
+                    "priority": 3,
+                    "logo": "logo/sky_sports_f1.png",
+                    "tags": [
+                        "highlights",
+                        "race"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=Ow-dS5KWtsI"
+                }
+            ]
+        }
+    },
+    "news": [
+        {
+            "video_id": "XssrUVkyB10",
+            "title": "Red Bull's aggressive changes to the car F1 rivals have tried to copy",
+            "published_at": "2023-02-23T12:59:17Z",
+            "published_ts": 1677157157,
+            "thumbnail": "https://i.ytimg.com/vi/XssrUVkyB10/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=XssrUVkyB10"
+        },
+        {
+            "video_id": "ROWml5uC6bc",
+            "title": "The daunting target for Alpine’s bold 2023 F1 car",
+            "published_at": "2023-02-17T01:37:13Z",
+            "published_ts": 1676597833,
+            "thumbnail": "https://i.ytimg.com/vi/ROWml5uC6bc/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=ROWml5uC6bc"
+        },
+        {
+            "video_id": "6TmwWOidaNk",
+            "title": "Mercedes' big F1 2023 car decisions - and why it's hinting at sidepod changes",
+            "published_at": "2023-02-15T16:35:42Z",
+            "published_ts": 1676478942,
+            "thumbnail": "https://i.ytimg.com/vi/6TmwWOidaNk/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=6TmwWOidaNk"
+        },
+        {
+            "video_id": "vjEyECCvX_A",
+            "title": "How Ferrari has 'completely redesigned' its F1 car for 2023",
+            "published_at": "2023-02-14T18:33:15Z",
+            "published_ts": 1676399595,
+            "thumbnail": "https://i.ytimg.com/vi/vjEyECCvX_A/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=vjEyECCvX_A"
+        },
+        {
+            "video_id": "gbuzN5Y9reQ",
+            "title": "The 'aggressive' first Aston Martin F1 car from its big Red Bull signing",
+            "published_at": "2023-02-14T01:28:44Z",
+            "published_ts": 1676338124,
+            "thumbnail": "https://i.ytimg.com/vi/gbuzN5Y9reQ/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=gbuzN5Y9reQ"
+        },
+        {
+            "video_id": "okRHK2Oe6Mo",
+            "title": "McLaren's surprising revelation at its 2023 F1 car launch",
+            "published_at": "2023-02-13T18:43:20Z",
+            "published_ts": 1676313800,
+            "thumbnail": "https://i.ytimg.com/vi/okRHK2Oe6Mo/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=okRHK2Oe6Mo"
+        },
+        {
+            "video_id": "Emmv_NujPxM",
+            "title": "Why AlphaTauri refuses to make its 2023 F1 car a Red Bull copy",
+            "published_at": "2023-02-12T02:43:05Z",
+            "published_ts": 1676169785,
+            "thumbnail": "https://i.ytimg.com/vi/Emmv_NujPxM/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=Emmv_NujPxM"
+        },
+        {
+            "video_id": "vk0fgZD41gM",
+            "title": "What Haas's 'massive rework' tells us about Ferrari's 2023 F1 car",
+            "published_at": "2023-02-11T19:50:25Z",
+            "published_ts": 1676145025,
+            "thumbnail": "https://i.ytimg.com/vi/vk0fgZD41gM/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=vk0fgZD41gM"
+        },
+        {
+            "video_id": "D04urkmME1c",
+            "title": "The Red Bull/Ferrari influence on Alfa Romeo's 'brave' 2023 F1 car",
+            "published_at": "2023-02-07T15:34:21Z",
+            "published_ts": 1675784061,
+            "thumbnail": "https://i.ytimg.com/vi/D04urkmME1c/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=D04urkmME1c"
+        },
+        {
+            "video_id": "q2atrxEZqDs",
+            "title": "What to expect as Haas starts ‘new era’ in F1 2023",
+            "published_at": "2023-01-31T14:03:32Z",
+            "published_ts": 1675173812,
+            "thumbnail": "https://i.ytimg.com/vi/q2atrxEZqDs/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=q2atrxEZqDs"
+        }
+    ],
+    "all": [
+        {
+            "video_id": "Ey8j_BlLvFM",
+            "title": "Race Highlights | 2026 Barcelona-Catalunya Grand Prix",
+            "published_at": "2026-06-14T16:07:43Z",
+            "published_ts": 1781453263,
+            "thumbnail": "https://i.ytimg.com/vi/Ey8j_BlLvFM/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=Ey8j_BlLvFM"
+        },
+        {
+            "video_id": "Q2fMM4H9bWY",
+            "title": "Qualifying Highlights | 2026 Barcelona-Catalunya Grand Prix",
+            "published_at": "2026-06-13T16:31:44Z",
+            "published_ts": 1781368304,
+            "thumbnail": "https://i.ytimg.com/vi/Q2fMM4H9bWY/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=Q2fMM4H9bWY"
+        },
+        {
+            "video_id": "ipOT9ruRobc",
+            "title": "Race Highlights | 2026 Monaco Grand Prix",
+            "published_at": "2026-06-07T17:32:11Z",
+            "published_ts": 1780853531,
+            "thumbnail": "https://i.ytimg.com/vi/ipOT9ruRobc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=ipOT9ruRobc"
+        },
+        {
+            "video_id": "xmk0j-HdgwY",
+            "title": "Qualifying Highlights | 2026 Monaco Grand Prix",
+            "published_at": "2026-06-06T16:02:22Z",
+            "published_ts": 1780761742,
+            "thumbnail": "https://i.ytimg.com/vi/xmk0j-HdgwY/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=xmk0j-HdgwY"
+        },
+        {
+            "video_id": "QrRh2vOJQbw",
+            "title": "Race Highlights | 2026 Canadian Grand Prix",
+            "published_at": "2026-05-25T00:03:05Z",
+            "published_ts": 1779667385,
+            "thumbnail": "https://i.ytimg.com/vi/QrRh2vOJQbw/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=QrRh2vOJQbw"
+        },
+        {
+            "video_id": "rjLDgDc0td4",
+            "title": "Qualifying Highlights | 2026 Canadian Grand Prix",
+            "published_at": "2026-05-23T23:07:25Z",
+            "published_ts": 1779577645,
+            "thumbnail": "https://i.ytimg.com/vi/rjLDgDc0td4/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=rjLDgDc0td4"
+        },
+        {
+            "video_id": "l3aB-W19bnc",
+            "title": "Sprint Highlights | 2026 Canadian Grand Prix",
+            "published_at": "2026-05-23T17:39:33Z",
+            "published_ts": 1779557973,
+            "thumbnail": "https://i.ytimg.com/vi/l3aB-W19bnc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=l3aB-W19bnc"
+        },
+        {
+            "video_id": "d2urQDKqZhU",
+            "title": "Sprint Qualifying Highlights | 2026 Canadian Grand Prix",
+            "published_at": "2026-05-23T00:42:00Z",
+            "published_ts": 1779496920,
+            "thumbnail": "https://i.ytimg.com/vi/d2urQDKqZhU/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=d2urQDKqZhU"
+        },
+        {
+            "video_id": "5gYys4GL7S0",
+            "title": "Race Highlights | 2026 Miami Grand Prix",
+            "published_at": "2026-05-03T20:06:31Z",
+            "published_ts": 1777838791,
+            "thumbnail": "https://i.ytimg.com/vi/5gYys4GL7S0/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=5gYys4GL7S0"
+        },
+        {
+            "video_id": "83GJM1S0FnE",
+            "title": "Qualifying Highlights | 2026 Miami Grand Prix",
+            "published_at": "2026-05-02T22:27:27Z",
+            "published_ts": 1777760847,
+            "thumbnail": "https://i.ytimg.com/vi/83GJM1S0FnE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=83GJM1S0FnE"
+        },
+        {
+            "video_id": "0XlphgCNbwQ",
+            "title": "Sprint Highlights | 2026 Miami Grand Prix",
+            "published_at": "2026-05-02T18:48:57Z",
+            "published_ts": 1777747737,
+            "thumbnail": "https://i.ytimg.com/vi/0XlphgCNbwQ/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=0XlphgCNbwQ"
+        },
+        {
+            "video_id": "zV_UPEsZl-s",
+            "title": "Sprint Qualifying Highlights | 2026 Miami Grand Prix",
+            "published_at": "2026-05-01T22:47:06Z",
+            "published_ts": 1777675626,
+            "thumbnail": "https://i.ytimg.com/vi/zV_UPEsZl-s/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=zV_UPEsZl-s"
+        },
+        {
+            "video_id": "oAtYfF0_4-I",
+            "title": "Race Highlights | 2026 Japanese Grand Prix",
+            "published_at": "2026-03-29T08:30:55Z",
+            "published_ts": 1774773055,
+            "thumbnail": "https://i.ytimg.com/vi/oAtYfF0_4-I/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=oAtYfF0_4-I"
+        },
+        {
+            "video_id": "oZH_7pYJPTE",
+            "title": "Qualifying Highlights | 2026 Japanese Grand Prix",
+            "published_at": "2026-03-28T11:51:55Z",
+            "published_ts": 1774698715,
+            "thumbnail": "https://i.ytimg.com/vi/oZH_7pYJPTE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=oZH_7pYJPTE"
+        },
+        {
+            "video_id": "t8HpVlineX4",
+            "title": "Race Highlights | 2026 Chinese Grand Prix",
+            "published_at": "2026-03-15T10:37:36Z",
+            "published_ts": 1773571056,
+            "thumbnail": "https://i.ytimg.com/vi/t8HpVlineX4/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=t8HpVlineX4"
+        },
+        {
+            "video_id": "75-_kMm0mb8",
+            "title": "Qualifying Highlights | 2026 Chinese Grand Prix",
+            "published_at": "2026-03-14T09:24:19Z",
+            "published_ts": 1773480259,
+            "thumbnail": "https://i.ytimg.com/vi/75-_kMm0mb8/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=75-_kMm0mb8"
+        },
+        {
+            "video_id": "ynRZQ9EBfRI",
+            "title": "Sprint Highlights | 2026 Chinese Grand Prix",
+            "published_at": "2026-03-14T09:24:02Z",
+            "published_ts": 1773480242,
+            "thumbnail": "https://i.ytimg.com/vi/ynRZQ9EBfRI/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=ynRZQ9EBfRI"
+        },
+        {
+            "video_id": "-LnHUI4DxRs",
+            "title": "Sprint Qualifying Highlights | 2026 Chinese Grand Prix",
+            "published_at": "2026-03-13T10:34:28Z",
+            "published_ts": 1773398068,
+            "thumbnail": "https://i.ytimg.com/vi/-LnHUI4DxRs/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=-LnHUI4DxRs"
+        },
+        {
+            "video_id": "lL_d84cN1UY",
+            "title": "Race Highlights | 2026 Australian Grand Prix",
+            "published_at": "2026-03-08T07:32:37Z",
+            "published_ts": 1772955157,
+            "thumbnail": "https://i.ytimg.com/vi/lL_d84cN1UY/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=lL_d84cN1UY"
+        },
+        {
+            "video_id": "QztBs3IZBHk",
+            "title": "Qualifying Highlights | 2026 Australian Grand Prix",
+            "published_at": "2026-03-07T09:32:25Z",
+            "published_ts": 1772875945,
+            "thumbnail": "https://i.ytimg.com/vi/QztBs3IZBHk/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=QztBs3IZBHk"
+        },
+        {
+            "video_id": "YohoFcIa38k",
+            "title": "Who MASTERED the rain to take pole in Silverstone? 🌧 | British GP Qualifying Highlights",
+            "published_at": "2025-03-11T14:19:52Z",
+            "published_ts": 1741702792,
+            "thumbnail": "https://i.ytimg.com/vi/YohoFcIa38k/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=YohoFcIa38k"
+        },
+        {
+            "video_id": "VJifaiPt-Qo",
+            "title": "EXTENDED HIGHLIGHTS! Who claimed the win in Austria? 🇦🇹 | 2024 Austrian Grand Prix",
+            "published_at": "2025-03-11T14:19:36Z",
+            "published_ts": 1741702776,
+            "thumbnail": "https://i.ytimg.com/vi/VJifaiPt-Qo/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=VJifaiPt-Qo"
+        },
+        {
+            "video_id": "YAYrM_fhVMw",
+            "title": "Who took pole at the Red Bull Ring? ⏱🇦🇹  | 2024 Austrian Grand Prix Qualifying Highlights",
+            "published_at": "2025-03-11T14:19:24Z",
+            "published_ts": 1741702764,
+            "thumbnail": "https://i.ytimg.com/vi/YAYrM_fhVMw/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=YAYrM_fhVMw"
+        },
+        {
+            "video_id": "yalRYMiIe7M",
+            "title": "Who claimed the Sprint win in Austria? ⚡🇦🇹 | 2024 Austrian Grand Prix Sprint Highlights",
+            "published_at": "2025-03-11T14:19:14Z",
+            "published_ts": 1741702754,
+            "thumbnail": "https://i.ytimg.com/vi/yalRYMiIe7M/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=yalRYMiIe7M"
+        },
+        {
+            "video_id": "xHN3MD0LPks",
+            "title": "Who took Sprint Pole in Austria 🔥 | 2024 Austrian Grand Prix Sprint Qualifying Highlights",
+            "published_at": "2025-03-11T14:19:05Z",
+            "published_ts": 1741702745,
+            "thumbnail": "https://i.ytimg.com/vi/xHN3MD0LPks/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=xHN3MD0LPks"
+        },
+        {
+            "video_id": "2Xsh_WZyXK0",
+            "title": "Who'll take the win in Barcelona? 🏆 | Spanish GP Highlights",
+            "published_at": "2025-03-11T14:18:50Z",
+            "published_ts": 1741702730,
+            "thumbnail": "https://i.ytimg.com/vi/2Xsh_WZyXK0/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=2Xsh_WZyXK0"
+        },
+        {
+            "video_id": "-9K9gclJrck",
+            "title": "LANDO TAKES POLE FROM VERSTAPPEN! | Spanish GP Qualifying Highlights",
+            "published_at": "2025-03-11T14:18:37Z",
+            "published_ts": 1741702717,
+            "thumbnail": "https://i.ytimg.com/vi/-9K9gclJrck/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=-9K9gclJrck"
+        },
+        {
+            "video_id": "C3mey2ER9aU",
+            "title": "HIGHLIGHTS! Who mastered the rain in Montreal? 🇨🇦 | 2024 Canadian Grand Prix Highlights",
+            "published_at": "2025-03-11T14:17:15Z",
+            "published_ts": 1741702635,
+            "thumbnail": "https://i.ytimg.com/vi/C3mey2ER9aU/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=C3mey2ER9aU"
+        },
+        {
+            "video_id": "I-i8NfhHU1k",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Monaco Grand Prix Highlights",
+            "published_at": "2025-03-11T14:16:51Z",
+            "published_ts": 1741702611,
+            "thumbnail": "https://i.ytimg.com/vi/I-i8NfhHU1k/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=I-i8NfhHU1k"
+        },
+        {
+            "video_id": "lOPAERPbaJ4",
+            "title": "Who is on pole in Monaco? 🇲🇨 | Monaco Grand Prix Qualifying Highlights",
+            "published_at": "2025-03-11T14:16:37Z",
+            "published_ts": 1741702597,
+            "thumbnail": "https://i.ytimg.com/vi/lOPAERPbaJ4/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=lOPAERPbaJ4"
+        },
+        {
+            "video_id": "oWR_UxLFU00",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Emilia-Romagna Grand Prix Highlights",
+            "published_at": "2025-03-11T14:16:21Z",
+            "published_ts": 1741702581,
+            "thumbnail": "https://i.ytimg.com/vi/oWR_UxLFU00/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=oWR_UxLFU00"
+        },
+        {
+            "video_id": "YBMNNU-wfDc",
+            "title": "HIGHLIGHTS! Who took pole for the Miami Sprint? ⚡",
+            "published_at": "2025-03-11T14:15:19Z",
+            "published_ts": 1741702519,
+            "thumbnail": "https://i.ytimg.com/vi/YBMNNU-wfDc/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=YBMNNU-wfDc"
+        },
+        {
+            "video_id": "4_w0v7FWVSY",
+            "title": "HIGHLIGHTS! Who takes POLE in Shanghai? 🇨🇳 | Chinese Grand Prix Qualifying Highlights",
+            "published_at": "2025-03-11T14:15:01Z",
+            "published_ts": 1741702501,
+            "thumbnail": "https://i.ytimg.com/vi/4_w0v7FWVSY/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=4_w0v7FWVSY"
+        },
+        {
+            "video_id": "Rn8yy3NuTdI",
+            "title": "HIGHLIGHTS! Who took pole in CHAOTIC Chinese Grand Prix Sprint Qualifying 🌧",
+            "published_at": "2025-03-11T14:14:46Z",
+            "published_ts": 1741702486,
+            "thumbnail": "https://i.ytimg.com/vi/Rn8yy3NuTdI/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=Rn8yy3NuTdI"
+        },
+        {
+            "video_id": "nmZgitdrLaQ",
+            "title": "Who takes pole in Suzuka? 🌸| Japanese Grand Prix Qualifying Highlights",
+            "published_at": "2025-03-11T14:14:25Z",
+            "published_ts": 1741702465,
+            "thumbnail": "https://i.ytimg.com/vi/nmZgitdrLaQ/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=nmZgitdrLaQ"
+        },
+        {
+            "video_id": "BALS1dIY43w",
+            "title": "HIGHLIGHTS! Who'll take pole in Imola? 🏎🇮🇹 | 2024 Emilia-Romagna Grand Prix Qualifying Highlights",
+            "published_at": "2025-03-11T14:14:12Z",
+            "published_ts": 1741702452,
+            "thumbnail": "https://i.ytimg.com/vi/BALS1dIY43w/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=BALS1dIY43w"
+        },
+        {
+            "video_id": "m0dhwQT_LY8",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Miami Grand Prix Highlights",
+            "published_at": "2025-03-11T14:13:44Z",
+            "published_ts": 1741702424,
+            "thumbnail": "https://i.ytimg.com/vi/m0dhwQT_LY8/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=m0dhwQT_LY8"
+        },
+        {
+            "video_id": "teqjS7R7f7w",
+            "title": "HIGHLIGHTS! Who'll take pole in the 305? 🌴🇺🇸 | 2024 Miami Grand Prix Qualifying Highlights",
+            "published_at": "2025-03-11T14:13:23Z",
+            "published_ts": 1741702403,
+            "thumbnail": "https://i.ytimg.com/vi/teqjS7R7f7w/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=teqjS7R7f7w"
+        },
+        {
+            "video_id": "7GyWLqRmO4A",
+            "title": "EXTENDED HIGHLIGHTS! Miami Grand Prix Sprint Highlights",
+            "published_at": "2025-03-11T14:13:12Z",
+            "published_ts": 1741702392,
+            "thumbnail": "https://i.ytimg.com/vi/7GyWLqRmO4A/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=7GyWLqRmO4A"
+        },
+        {
+            "video_id": "ZvJr9nYKZjg",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Chinese Grand Prix 🏁",
+            "published_at": "2025-03-11T14:12:58Z",
+            "published_ts": 1741702378,
+            "thumbnail": "https://i.ytimg.com/vi/ZvJr9nYKZjg/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=ZvJr9nYKZjg"
+        },
+        {
+            "video_id": "FL71WyfsyZo",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Chinese Grand Prix Sprint 🏁",
+            "published_at": "2025-03-11T14:12:48Z",
+            "published_ts": 1741702368,
+            "thumbnail": "https://i.ytimg.com/vi/FL71WyfsyZo/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=FL71WyfsyZo"
+        },
+        {
+            "video_id": "Y94k0Qm6TRg",
+            "title": "EXTENDED HIGHLIGHTS! Japanese Grand Prix 🇯🇵",
+            "published_at": "2025-03-11T14:12:30Z",
+            "published_ts": 1741702350,
+            "thumbnail": "https://i.ytimg.com/vi/Y94k0Qm6TRg/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=Y94k0Qm6TRg"
+        },
+        {
+            "video_id": "obN0aU6nWDo",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Australian Grand Prix 🏁",
+            "published_at": "2025-03-11T14:12:21Z",
+            "published_ts": 1741702341,
+            "thumbnail": "https://i.ytimg.com/vi/obN0aU6nWDo/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=obN0aU6nWDo"
+        },
+        {
+            "video_id": "50pkbG3EEEE",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Saudi Arabian Grand Prix 🇸🇦",
+            "published_at": "2025-03-11T14:12:05Z",
+            "published_ts": 1741702325,
+            "thumbnail": "https://i.ytimg.com/vi/50pkbG3EEEE/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=50pkbG3EEEE"
+        },
+        {
+            "video_id": "Ow-dS5KWtsI",
+            "title": "EXTENDED HIGHLIGHTS! 2024 Bahrain Grand Prix 🏁",
+            "published_at": "2025-03-11T14:11:38Z",
+            "published_ts": 1741702298,
+            "thumbnail": "https://i.ytimg.com/vi/Ow-dS5KWtsI/hqdefault.jpg",
+            "source": "Sky Sports F1",
+            "source_key": "sky_sports_f1",
+            "priority": 3,
+            "logo": "logo/sky_sports_f1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=Ow-dS5KWtsI"
+        },
+        {
+            "video_id": "XssrUVkyB10",
+            "title": "Red Bull's aggressive changes to the car F1 rivals have tried to copy",
+            "published_at": "2023-02-23T12:59:17Z",
+            "published_ts": 1677157157,
+            "thumbnail": "https://i.ytimg.com/vi/XssrUVkyB10/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=XssrUVkyB10"
+        },
+        {
+            "video_id": "ROWml5uC6bc",
+            "title": "The daunting target for Alpine’s bold 2023 F1 car",
+            "published_at": "2023-02-17T01:37:13Z",
+            "published_ts": 1676597833,
+            "thumbnail": "https://i.ytimg.com/vi/ROWml5uC6bc/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=ROWml5uC6bc"
+        },
+        {
+            "video_id": "6TmwWOidaNk",
+            "title": "Mercedes' big F1 2023 car decisions - and why it's hinting at sidepod changes",
+            "published_at": "2023-02-15T16:35:42Z",
+            "published_ts": 1676478942,
+            "thumbnail": "https://i.ytimg.com/vi/6TmwWOidaNk/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=6TmwWOidaNk"
+        },
+        {
+            "video_id": "vjEyECCvX_A",
+            "title": "How Ferrari has 'completely redesigned' its F1 car for 2023",
+            "published_at": "2023-02-14T18:33:15Z",
+            "published_ts": 1676399595,
+            "thumbnail": "https://i.ytimg.com/vi/vjEyECCvX_A/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=vjEyECCvX_A"
+        },
+        {
+            "video_id": "gbuzN5Y9reQ",
+            "title": "The 'aggressive' first Aston Martin F1 car from its big Red Bull signing",
+            "published_at": "2023-02-14T01:28:44Z",
+            "published_ts": 1676338124,
+            "thumbnail": "https://i.ytimg.com/vi/gbuzN5Y9reQ/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=gbuzN5Y9reQ"
+        },
+        {
+            "video_id": "okRHK2Oe6Mo",
+            "title": "McLaren's surprising revelation at its 2023 F1 car launch",
+            "published_at": "2023-02-13T18:43:20Z",
+            "published_ts": 1676313800,
+            "thumbnail": "https://i.ytimg.com/vi/okRHK2Oe6Mo/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=okRHK2Oe6Mo"
+        },
+        {
+            "video_id": "Emmv_NujPxM",
+            "title": "Why AlphaTauri refuses to make its 2023 F1 car a Red Bull copy",
+            "published_at": "2023-02-12T02:43:05Z",
+            "published_ts": 1676169785,
+            "thumbnail": "https://i.ytimg.com/vi/Emmv_NujPxM/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=Emmv_NujPxM"
+        },
+        {
+            "video_id": "vk0fgZD41gM",
+            "title": "What Haas's 'massive rework' tells us about Ferrari's 2023 F1 car",
+            "published_at": "2023-02-11T19:50:25Z",
+            "published_ts": 1676145025,
+            "thumbnail": "https://i.ytimg.com/vi/vk0fgZD41gM/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=vk0fgZD41gM"
+        },
+        {
+            "video_id": "D04urkmME1c",
+            "title": "The Red Bull/Ferrari influence on Alfa Romeo's 'brave' 2023 F1 car",
+            "published_at": "2023-02-07T15:34:21Z",
+            "published_ts": 1675784061,
+            "thumbnail": "https://i.ytimg.com/vi/D04urkmME1c/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=D04urkmME1c"
+        },
+        {
+            "video_id": "q2atrxEZqDs",
+            "title": "What to expect as Haas starts ‘new era’ in F1 2023",
+            "published_at": "2023-01-31T14:03:32Z",
+            "published_ts": 1675173812,
+            "thumbnail": "https://i.ytimg.com/vi/q2atrxEZqDs/hqdefault.jpg",
+            "source": "The Race F1",
+            "source_key": "the_race",
+            "priority": 2,
+            "logo": "logo/the_race.png",
+            "tags": [
+                "news"
+            ],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=q2atrxEZqDs"
+        }
+    ]
+}
