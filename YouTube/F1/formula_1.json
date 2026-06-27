@@ -1,8 +1,26 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-06-27T17:33:24.454788+00:00",
+    "updated_at": "2026-06-27T21:32:24.770587+00:00",
     "videos": [
+        {
+            "video_id": "sZb7_vNeA9o",
+            "title": "Qualifying Highlights | 2026 Austrian Grand Prix",
+            "published_at": "2026-06-27T20:30:21Z",
+            "published_ts": 1782592221,
+            "thumbnail": "https://i.ytimg.com/vi/sZb7_vNeA9o/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=sZb7_vNeA9o"
+        },
         {
             "video_id": "Ey8j_BlLvFM",
             "title": "Race Highlights | 2026 Barcelona-Catalunya Grand Prix",
