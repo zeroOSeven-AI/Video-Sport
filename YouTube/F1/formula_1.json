@@ -1,8 +1,25 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-06-28T14:18:44.804504+00:00",
+    "updated_at": "2026-06-28T17:37:51.998487+00:00",
     "videos": [
+        {
+            "video_id": "usP9O0zFVaA",
+            "title": "Race Highlights | 2026 Austrian Grand Prix",
+            "published_at": "2026-06-28T15:26:20Z",
+            "published_ts": 1782660380,
+            "thumbnail": "https://i.ytimg.com/vi/usP9O0zFVaA/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=usP9O0zFVaA"
+        },
         {
             "video_id": "sZb7_vNeA9o",
             "title": "Qualifying Highlights | 2026 Austrian Grand Prix",
