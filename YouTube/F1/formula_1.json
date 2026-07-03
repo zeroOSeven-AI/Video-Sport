@@ -1,8 +1,26 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-07-03T14:34:23.353740+00:00",
+    "updated_at": "2026-07-03T17:52:19.002928+00:00",
     "videos": [
+        {
+            "video_id": "WN6mB8Acs2Y",
+            "title": "Sprint Qualifying Highlights | 2026 British Grand Prix",
+            "published_at": "2026-07-03T16:58:34Z",
+            "published_ts": 1783097914,
+            "thumbnail": "https://i.ytimg.com/vi/WN6mB8Acs2Y/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=WN6mB8Acs2Y"
+        },
         {
             "video_id": "usP9O0zFVaA",
             "title": "Race Highlights | 2026 Austrian Grand Prix",
