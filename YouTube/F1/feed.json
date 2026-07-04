@@ -1,12 +1,30 @@
 {
-    "updated_at": "2026-07-04T17:30:39.074857+00:00",
-    "total_videos": 59,
+    "updated_at": "2026-07-04T21:15:31.128668+00:00",
+    "total_videos": 60,
     "highlights": {
         "Formula 1": {
             "source": "Formula 1",
             "priority": 3,
             "logo": "logo/formula_1.png",
             "videos": [
+                {
+                    "video_id": "rx41vYOBLFE",
+                    "title": "Qualifying Highlights | 2026 British Grand Prix",
+                    "published_at": "2026-07-04T19:33:41Z",
+                    "published_ts": 1783193621,
+                    "thumbnail": "https://i.ytimg.com/vi/rx41vYOBLFE/hqdefault.jpg",
+                    "source": "Formula 1",
+                    "source_key": "formula_1",
+                    "priority": 3,
+                    "logo": "logo/formula_1.png",
+                    "tags": [
+                        "highlights",
+                        "race",
+                        "qualifying"
+                    ],
+                    "type": "highlight",
+                    "link": "https://www.youtube.com/watch?v=rx41vYOBLFE"
+                },
                 {
                     "video_id": "v52utVGuAxQ",
                     "title": "Sprint Highlights | 2026 British Grand Prix",
@@ -1031,6 +1049,24 @@
         }
     ],
     "all": [
+        {
+            "video_id": "rx41vYOBLFE",
+            "title": "Qualifying Highlights | 2026 British Grand Prix",
+            "published_at": "2026-07-04T19:33:41Z",
+            "published_ts": 1783193621,
+            "thumbnail": "https://i.ytimg.com/vi/rx41vYOBLFE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=rx41vYOBLFE"
+        },
         {
             "video_id": "v52utVGuAxQ",
             "title": "Sprint Highlights | 2026 British Grand Prix",
