@@ -1,8 +1,25 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-07-04T10:27:53.059928+00:00",
+    "updated_at": "2026-07-04T14:02:40.217425+00:00",
     "videos": [
+        {
+            "video_id": "v52utVGuAxQ",
+            "title": "Sprint Highlights | 2026 British Grand Prix",
+            "published_at": "2026-07-04T12:46:14Z",
+            "published_ts": 1783169174,
+            "thumbnail": "https://i.ytimg.com/vi/v52utVGuAxQ/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=v52utVGuAxQ"
+        },
         {
             "video_id": "WN6mB8Acs2Y",
             "title": "Sprint Qualifying Highlights | 2026 British Grand Prix",
