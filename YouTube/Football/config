@@ -1,1 +1,46 @@
-
+{
+  "leagues": [
+    {
+      "name": "Premier League",
+      "id": 9,
+      "season": 39301,
+      "importance": 1.5
+    },
+    {
+      "name": "Bundesliga",
+      "id": 1,
+      "season": 39285,
+      "importance": 1.3
+    },
+    {
+      "name": "LaLiga",
+      "id": 10,
+      "season": 39319,
+      "importance": 1.3
+    },
+    {
+      "name": "Serie A",
+      "id": 13,
+      "season": 39325,
+      "importance": 1.3
+    },
+    {
+      "name": "Ligue 1",
+      "id": 23,
+      "season": 39245,
+      "importance": 1.1
+    },
+    {
+      "name": "HNL",
+      "id": 120,
+      "season": 39272,
+      "importance": 1.0
+    },
+    {
+      "name": "Champions League",
+      "id": 5,
+      "season": 39356,
+      "importance": 1.6
+    }
+  ]
+}
