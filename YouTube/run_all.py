@@ -18,6 +18,14 @@ from quota_manager import (
 
 BASE = Path(__file__).resolve().parent
 
+print("RADNA MAPA:", Path.cwd())
+print("BASE:", BASE)
+print("FOOTBALL CONFIG:", BASE / "Football" / "config.json")
+print("FOOTBALL CONFIG POSTOJI:",
+      (BASE / "Football" / "config.json").exists())
+print("F1 CONFIG POSTOJI:",
+      (BASE / "F1" / "config.json").exists())
+
 API_URL = "https://www.googleapis.com/youtube/v3/search"
 
 API_KEY = os.environ.get("YOUTUBE_API_KEY")
