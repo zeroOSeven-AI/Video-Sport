@@ -1,36 +1,36 @@
 import json
-import os
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent
+CONFIG_FILE = BASE / "quota_config.json"
+STATE_FILE = BASE / "quota_state.json"
 
 PACIFIC = ZoneInfo("America/Los_Angeles")
 UTC = ZoneInfo("UTC")
 
-CONFIG_FILE = "quota_config.json"
-STATE_FILE = "quota_state.json"
 
-
-def load_json(path, default):
-    if not os.path.exists(path):
+def read_json(path, default):
+    if not path.exists():
         return default
 
-    with open(path, "r", encoding="utf-8") as f:
+    with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def save_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+def write_json(path, data):
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def today_pacific():
-    return datetime.now(PACIFIC).date().isoformat()
+def load_config():
+    return read_json(CONFIG_FILE, {})
 
 
 def load_state():
-    state = load_json(STATE_FILE, {})
-
-    today = today_pacific()
+    state = read_json(STATE_FILE, {})
+    today = datetime.now(PACIFIC).date().isoformat()
 
     if state.get("date") != today:
         state = {
@@ -46,13 +46,10 @@ def load_state():
     return state
 
 
-def priority_for_candidate(candidate, now):
-    event_time = candidate["event_time"]
-
-    if isinstance(event_time, str):
-        event_time = datetime.fromisoformat(
-            event_time.replace("Z", "+00:00")
-        )
+def priority(candidate, now):
+    event_time = datetime.fromisoformat(
+        candidate["event_time"].replace("Z", "+00:00")
+    )
 
     if event_time.tzinfo is None:
         event_time = event_time.replace(tzinfo=UTC)
@@ -61,120 +58,78 @@ def priority_for_candidate(candidate, now):
     distance = abs(minutes)
 
     if distance <= 30:
-        priority = 100
+        score = 100
     elif distance <= 120:
-        priority = 75
-    elif minutes > 120 and minutes <= 240:
-        priority = 45
-    elif minutes < -120 and minutes >= -360:
-        priority = 30
+        score = 75
+    elif 120 < minutes <= 240:
+        score = 45
+    elif -360 <= minutes < -120:
+        score = 30
     else:
-        priority = 10
+        score = 10
 
-    importance = candidate.get("importance", 1.0)
-
-    return priority * importance
+    return score * float(candidate.get("importance", 1))
 
 
-def select_candidates(candidates, config, state, now):
-    daily_cap = config["daily_limit"] - config["reserve"]
-    remaining = max(0, daily_cap - state["total_used"])
-
-    max_per_run = min(
-        config["max_per_run"],
-        remaining
+def select_candidates(candidates, state, config, now):
+    cap = max(
+        0,
+        config["daily_limit"] - config["reserve"]
+        - state["total_used"]
     )
 
-    if max_per_run <= 0:
+    slots = min(config["max_per_run"], cap)
+
+    if slots == 0:
         return []
 
-    used = state["domain_used"]
-
-    active_domains = {
-        c["domain"] for c in candidates
-    }
-
     floors = config["domain_floor"]
+    active = {c["domain"] for c in candidates}
 
     def score(candidate):
         domain = candidate["domain"]
-
-        base = priority_for_candidate(candidate, now)
-
+        used = state["domain_used"].get(domain, 0)
         floor = floors.get(domain, 0)
-        domain_used = used.get(domain, 0)
 
-        fairness_boost = 0
+        fairness = 35 if domain in active and used < floor else 0
 
-        if domain in active_domains and domain_used < floor:
-            fairness_boost = 35
+        return priority(candidate, now) + fairness
 
-        return base + fairness_boost
-
-    ranked = sorted(
-        candidates,
-        key=score,
-        reverse=True
-    )
+    ranked = sorted(candidates, key=score, reverse=True)
 
     selected = []
-    selected_keys = set()
-
     cooldown = timedelta(
         minutes=config["cooldown_minutes"]
     )
 
     for candidate in ranked:
-        if len(selected) >= max_per_run:
+        if len(selected) >= slots:
             break
 
-        domain = candidate["domain"]
         key = candidate["key"]
+        last = state["last_query"].get(key)
 
-        if key in selected_keys:
-            continue
-
-        last_query = state["last_query"].get(key)
-
-        if last_query:
-            last_time = datetime.fromisoformat(last_query)
+        if last:
+            last_time = datetime.fromisoformat(last)
 
             if now - last_time < cooldown:
                 continue
 
         selected.append(candidate)
-        selected_keys.add(key)
 
     return selected
 
 
-def record_usage(state, candidate, now):
+def record_success(state, candidate, now):
     domain = candidate["domain"]
-    key = candidate["key"]
 
     state["total_used"] += 1
 
     state["domain_used"].setdefault(domain, 0)
     state["domain_used"][domain] += 1
 
-    state["last_query"][key] = now.isoformat()
+    state["last_query"][candidate["key"]] = now.isoformat()
 
 
-def run_quota_selection(candidates):
-    config = load_json(CONFIG_FILE, {})
-    state = load_state()
-
-    now = datetime.now(UTC)
-
-    selected = select_candidates(
-        candidates,
-        config,
-        state,
-        now
-    )
-
-    return selected, state, now
-
-
-def save_usage(state):
-    save_json(STATE_FILE, state)
+def save_state(state):
+    write_json(STATE_FILE, state)
