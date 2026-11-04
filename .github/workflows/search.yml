@@ -18,7 +18,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Video-Sport/YouTube
+        working-directory: YouTube
 
     steps:
       - name: Checkout repository
