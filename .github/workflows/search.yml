@@ -1,1 +1,49 @@
+name: Football and F1 YouTube Discovery
 
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: football-f1-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run discovery
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python run_all.py
+
+      - name: Commit results and quota state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add quota_state.json
+          git add Football/youtube_football.jsonl
+          git add F1/youtube_f1.jsonl
+
+          git diff --cached --quiet || git commit -m "Update YouTube highlights"
+          git push
