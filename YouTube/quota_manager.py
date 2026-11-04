@@ -1,135 +1,188 @@
+
 import json
+from pathlib import Path
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
-from pathlib import Path
 
-BASE = Path(__file__).resolve().parent
-CONFIG_FILE = BASE / "quota_config.json"
-STATE_FILE = BASE / "quota_state.json"
+BASE_DIR = Path(__file__).resolve().parent
+STATE_FILE = BASE_DIR / "quota_state.json"
+CONFIG_FILE = BASE_DIR / "quota_config.json"
 
 PACIFIC = ZoneInfo("America/Los_Angeles")
-UTC = ZoneInfo("UTC")
-
-
-def read_json(path, default):
-    if not path.exists():
-        return default
-
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def write_json(path, data):
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def load_config():
-    return read_json(CONFIG_FILE, {})
+    with CONFIG_FILE.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def today():
+    return datetime.now(PACIFIC).date().isoformat()
 
 
 def load_state():
-    state = read_json(STATE_FILE, {})
-    today = datetime.now(PACIFIC).date().isoformat()
+    if STATE_FILE.exists():
+        try:
+            state = json.loads(
+                STATE_FILE.read_text(encoding="utf-8")
+            )
+        except (json.JSONDecodeError, OSError):
+            state = {}
+    else:
+        state = {}
 
-    if state.get("date") != today:
+    if state.get("date") != today():
         state = {
-            "date": today,
+            "date": today(),
             "total_used": 0,
             "domain_used": {
                 "Football": 0,
                 "F1": 0
             },
-            "last_query": {}
+            "last_query": {},
+            "last_fallback": {}
         }
+
+    state.setdefault("total_used", 0)
+    state.setdefault("domain_used", {})
+    state.setdefault("last_query", {})
+    state.setdefault("last_fallback", {})
 
     return state
 
 
-def priority(candidate, now):
-    event_time = datetime.fromisoformat(
-        candidate["event_time"].replace("Z", "+00:00")
+def save_state(state):
+    STATE_FILE.write_text(
+        json.dumps(state, indent=2, ensure_ascii=False),
+        encoding="utf-8"
     )
 
-    if event_time.tzinfo is None:
-        event_time = event_time.replace(tzinfo=UTC)
 
-    minutes = (event_time - now).total_seconds() / 60
-    distance = abs(minutes)
-
-    if distance <= 30:
-        score = 100
-    elif distance <= 120:
-        score = 75
-    elif 120 < minutes <= 240:
-        score = 45
-    elif -360 <= minutes < -120:
-        score = 30
-    else:
-        score = 10
-
-    return score * float(candidate.get("importance", 1))
+def remaining_quota(state, config):
+    limit = config["daily_limit"] - config["reserve"]
+    return max(0, limit - state["total_used"])
 
 
-def select_candidates(candidates, state, config, now):
-    cap = max(
-        0,
-        config["daily_limit"] - config["reserve"]
-        - state["total_used"]
-    )
-
-    slots = min(config["max_per_run"], cap)
-
-    if slots == 0:
-        return []
-
-    floors = config["domain_floor"]
-    active = {c["domain"] for c in candidates}
-
-    def score(candidate):
-        domain = candidate["domain"]
-        used = state["domain_used"].get(domain, 0)
-        floor = floors.get(domain, 0)
-
-        fairness = 35 if domain in active and used < floor else 0
-
-        return priority(candidate, now) + fairness
-
-    ranked = sorted(candidates, key=score, reverse=True)
-
-    selected = []
-    cooldown = timedelta(
-        minutes=config["cooldown_minutes"]
-    )
-
-    for candidate in ranked:
-        if len(selected) >= slots:
-            break
-
-        key = candidate["key"]
-        last = state["last_query"].get(key)
-
-        if last:
-            last_time = datetime.fromisoformat(last)
-
-            if now - last_time < cooldown:
-                continue
-
-        selected.append(candidate)
-
-    return selected
+def can_search(state, config):
+    return remaining_quota(state, config) > 0
 
 
-def record_success(state, candidate, now):
-    domain = candidate["domain"]
+def record_success(state, domain, query_key):
+    """
+    Pozvati nakon uspješnog search.list zahtjeva.
+    Jedan poziv = jedan search.list zahtjev.
+    """
 
     state["total_used"] += 1
 
     state["domain_used"].setdefault(domain, 0)
     state["domain_used"][domain] += 1
 
-    state["last_query"][candidate["key"]] = now.isoformat()
+    state["last_query"][query_key] = (
+        datetime.now(PACIFIC).isoformat()
+    )
+
+    save_state(state)
 
 
-def save_state(state):
-    write_json(STATE_FILE, state)
+def cooldown_passed(state, query_key, minutes):
+    previous = state["last_query"].get(query_key)
+
+    if not previous:
+        return True
+
+    try:
+        last = datetime.fromisoformat(previous)
+    except ValueError:
+        return True
+
+    now = datetime.now(PACIFIC)
+
+    if last.tzinfo is None:
+        last = last.replace(tzinfo=PACIFIC)
+
+    return now - last >= timedelta(minutes=minutes)
+
+
+def select_candidates(candidates, state, config):
+    """
+    Kandidat treba imati:
+      domain: Football ili F1
+      key: jedinstveni ključ pretrage
+      importance: važnost događaja
+      event_time: ISO datum/vrijeme ili None
+
+    Dodatna polja kandidata ostaju sačuvana.
+    """
+
+    available = remaining_quota(state, config)
+
+    slots = min(
+        available,
+        config.get("max_per_run", 8)
+    )
+
+    if slots <= 0:
+        return []
+
+    now = datetime.now(PACIFIC)
+    eligible = []
+
+    cooldown = config.get("cooldown_minutes", 180)
+
+    for candidate in candidates:
+        key = candidate.get("key")
+
+        if not key:
+            continue
+
+        if not cooldown_passed(state, key, cooldown):
+            continue
+
+        domain = candidate.get("domain", "Football")
+        importance = float(candidate.get("importance", 1.0))
+
+        score = importance * 10
+
+        event_time = candidate.get("event_time")
+
+        if event_time:
+            try:
+                event = datetime.fromisoformat(event_time)
+
+                if event.tzinfo is None:
+                    event = event.replace(tzinfo=PACIFIC)
+
+                hours = (event - now).total_seconds() / 3600
+
+                if 0 <= hours <= 1:
+                    score += 100
+                elif 0 <= hours <= 3:
+                    score += 70
+                elif 0 <= hours <= 6:
+                    score += 40
+                elif -3 <= hours < 0:
+                    score += 80
+                elif -6 <= hours < -3:
+                    score += 30
+
+            except (ValueError, TypeError):
+                pass
+
+        if domain == "F1":
+            score += 5
+
+        candidate["_score"] = score
+        eligible.append(candidate)
+
+    eligible.sort(
+        key=lambda item: item["_score"],
+        reverse=True
+    )
+
+    selected = eligible[:slots]
+
+    for candidate in selected:
+        candidate.pop("_score", None)
+
+    return selected
