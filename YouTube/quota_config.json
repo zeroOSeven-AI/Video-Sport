@@ -1,12 +1,18 @@
 {
   "daily_limit": 100,
-  "reserve": 15,
+  "reserve": 10,
   "max_per_run": 8,
-  "cooldown_minutes": 30,
-  "domain_floor": {
-    "Football": 20,
-    "F1": 10
-  },
+  "cooldown_minutes": 180,
   "event_window_hours_before": 6,
-  "event_window_hours_after": 6
+  "event_window_hours_after": 3,
+  "f1_race_budget": 10,
+  "fallback_budget": 10,
+  "fallback_cooldown_hours": 12,
+  "fallback_leagues": [
+    "Premier League",
+    "LaLiga",
+    "Bundesliga",
+    "Serie A",
+    "Champions League"
+  ]
 }
