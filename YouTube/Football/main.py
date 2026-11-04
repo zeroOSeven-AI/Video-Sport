@@ -1,3 +1,4 @@
+
 import json
 import requests
 import re
@@ -5,8 +6,12 @@ import re
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
+
 BASE = Path(__file__).resolve().parent
+YOUTUBE_DIR = BASE.parent
+
 CONFIG_FILE = BASE / "config.json"
+QUOTA_CONFIG_FILE = YOUTUBE_DIR / "quota_config.json"
 
 FEED_URL = (
     "https://feedmonster.onefootball.com/feeds/il/en/"
@@ -25,6 +30,17 @@ HEADERS = {
 
 def load_config():
     with CONFIG_FILE.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_quota_config():
+    if not QUOTA_CONFIG_FILE.exists():
+        return {
+            "event_window_hours_before": 6,
+            "event_window_hours_after": 3
+        }
+
+    with QUOTA_CONFIG_FILE.open("r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -56,8 +72,18 @@ def parse_time(value):
         return None
 
 
+def normalize_name(value):
+    if not value:
+        return ""
+
+    return re.sub(
+        r"\s+",
+        " ",
+        str(value).strip().casefold()
+    )
+
+
 def find_matchday_ids(data):
-    """Pronalazi ID-jeve matchday objekata u feedu."""
     found = set()
 
     def walk(obj):
@@ -65,15 +91,15 @@ def find_matchday_ids(data):
             for key, value in obj.items():
                 normalized = key.lower().replace("_", "")
 
-                if normalized in (
-                    "matchdayid",
-                    "matchday_id"
-                ):
-                    if value is not None:
-                        found.add(str(value))
+                if normalized == "matchdayid" and value is not None:
+                    found.add(str(value))
 
-                if normalized == "matchday" and isinstance(value, dict):
+                if (
+                    normalized == "matchday"
+                    and isinstance(value, dict)
+                ):
                     matchday_id = value.get("id")
+
                     if matchday_id is not None:
                         found.add(str(matchday_id))
 
@@ -84,7 +110,8 @@ def find_matchday_ids(data):
                 walk(item)
 
     walk(data)
-    return list(found)
+
+    return sorted(found)
 
 
 def get_team_name(team):
@@ -103,11 +130,6 @@ def get_team_name(team):
 
 
 def extract_matches(data):
-    """
-    Pokušava pronaći utakmice u različitim OneFootball
-    JSON strukturama. Polja treba potvrditi prema stvarnom
-    odgovoru endpointa.
-    """
     matches = []
 
     def walk(obj):
@@ -158,10 +180,11 @@ def extract_matches(data):
 
     for match in matches:
         key = (
-            match["home"].lower(),
-            match["away"].lower(),
+            normalize_name(match["home"]),
+            normalize_name(match["away"]),
             match["event_time"].isoformat()
         )
+
         unique[key] = match
 
     return list(unique.values())
@@ -171,39 +194,66 @@ def valid_channel_id(channel_id):
     if not isinstance(channel_id, str):
         return False
 
-    if not channel_id.startswith("UC"):
-        return False
-
-    if channel_id.startswith("UC_CHANNEL_ID_"):
-        return False
-
-    return bool(re.fullmatch(r"UC[A-Za-z0-9_-]{20,}", channel_id))
+    # Standardni format: UC + 22 znaka.
+    return bool(
+        re.fullmatch(r"UC[A-Za-z0-9_-]{22}", channel_id)
+    )
 
 
 def get_sources(config, league_name):
-    return [
-        source
-        for source in config.get("youtube_sources", [])
-        if source.get("enabled") is True
-        and source.get("league_name") == league_name
-        and valid_channel_id(source.get("channel_id"))
-    ]
+    target = normalize_name(league_name)
+
+    sources = []
+
+    for source in config.get("youtube_sources", []):
+        if source.get("enabled") is not True:
+            continue
+
+        source_league = normalize_name(
+            source.get("league_name")
+        )
+
+        if source_league != target:
+            continue
+
+        channel_id = source.get("channel_id")
+
+        if not valid_channel_id(channel_id):
+            continue
+
+        sources.append(source)
+
+    return sources
 
 
 def candidates(now=None):
     config = load_config()
+    quota_config = load_quota_config()
 
     if now is None:
         now = datetime.now(timezone.utc)
 
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+
     now = now.astimezone(timezone.utc)
 
-    before = timedelta(hours=6)
-    after = timedelta(hours=6)
+    before = timedelta(
+        hours=float(
+            quota_config.get("event_window_hours_before", 6)
+        )
+    )
+
+    after = timedelta(
+        hours=float(
+            quota_config.get("event_window_hours_after", 3)
+        )
+    )
 
     result = []
+    seen = set()
 
-    for league in config["leagues"]:
+    for league in config.get("leagues", []):
         league_name = league["name"]
 
         sources = get_sources(config, league_name)
@@ -222,6 +272,7 @@ def candidates(now=None):
 
         try:
             feed = get_json(feed_url)
+
         except Exception as exc:
             print(
                 f"[Football] Greška feeda {league_name}: {exc}"
@@ -230,6 +281,12 @@ def candidates(now=None):
 
         matchday_ids = find_matchday_ids(feed)
 
+        if not matchday_ids:
+            print(
+                f"[Football] Nema matchday ID-jeva: {league_name}"
+            )
+            continue
+
         for matchday_id in matchday_ids:
             try:
                 matchday = get_json(
@@ -237,6 +294,7 @@ def candidates(now=None):
                         matchday_id=matchday_id
                     )
                 )
+
             except Exception as exc:
                 print(
                     f"[Football] Matchday {matchday_id}: {exc}"
@@ -245,40 +303,86 @@ def candidates(now=None):
 
             matches = extract_matches(matchday)
 
-            for match in matches:
-                event_time = match["event_time"]
+            active_matches = [
+                match for match in matches
+                if now - after <= match["event_time"] <= now + before
+            ]
 
-                if not now - after <= event_time <= now + before:
+            if not active_matches:
+                continue
+
+            for source in sources:
+                channel_id = source["channel_id"]
+
+                # Jedna grupirana pretraga za matchday i kanal.
+                match_names = [
+                    f'"{match["home"]}" "{match["away"]}"'
+                    for match in active_matches
+                ]
+
+                query = (
+                    f"({' OR '.join(match_names)}) "
+                    f'"{league_name}" highlights'
+                )
+
+                match_keys = sorted(
+                    match["event_time"].isoformat()
+                    + ":"
+                    + normalize_name(match["home"])
+                    + ":"
+                    + normalize_name(match["away"])
+                    for match in active_matches
+                )
+
+                key = (
+                    f"football:{league_name}:"
+                    f"{matchday_id}:{channel_id}"
+                )
+
+                if key in seen:
                     continue
 
-                home = match["home"]
-                away = match["away"]
+                seen.add(key)
 
-                for source in sources:
-                    query = (
-                        f'"{home}" "{away}" '
-                        f'{league_name} highlights'
+                # Najvažnija utakmica određuje prioritet.
+                importance = float(
+                    league.get("importance", 1.0)
+                )
+
+                closest_match = min(
+                    active_matches,
+                    key=lambda match: abs(
+                        (match["event_time"] - now).total_seconds()
                     )
+                )
 
-                    key = (
-                        f"football:{league_name}:"
-                        f"{home}:{away}:"
-                        f"{event_time.isoformat()}:"
-                        f"{source['channel_id']}"
-                    )
-
-                    result.append({
-                        "domain": "Football",
-                        "key": key,
-                        "query": query,
-                        "channel_id": source["channel_id"],
-                        "source_name": source["name"],
-                        "league": league_name,
-                        "event_name": f"{home} - {away}",
-                        "event_time": event_time.isoformat(),
-                        "importance": float(
-                            league.get("importance", 1.0)
+                result.append({
+                    "domain": "Football",
+                    "key": key,
+                    "query": query,
+                    "channel_id": channel_id,
+                    "source_name": source.get(
+                        "name",
+                        league_name
+                    ),
+                    "league": league_name,
+                    "matchday_id": str(matchday_id),
+                    "event_name": (
+                        f"{len(active_matches)} utakmica: "
+                        + ", ".join(
+                            f'{m["home"]} - {m["away"]}'
+                            for m in active_matches
                         )
-                    })
+                    ),
+                    "event_time": (
+                        closest_match["event_time"].isoformat()
+                    ),
+                    "event_times": match_keys,
+                    "importance": importance
+                })
+
+    print(
+        f"[Football] Kandidata: {len(result)}"
+    )
 
     return result
