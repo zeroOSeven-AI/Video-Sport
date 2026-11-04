@@ -1,1 +1,17 @@
-
+{
+  "youtube_sources": [
+    {
+      "name": "Formula 1 Official",
+      "channel_id": "UCB_qr75-ydFVKSF9Dmo6izg",
+      "enabled": true
+    }
+  ],
+  "sessions": [
+    "FirstPractice",
+    "SecondPractice",
+    "ThirdPractice",
+    "Sprint",
+    "Qualifying",
+    "Race"
+  ]
+}
