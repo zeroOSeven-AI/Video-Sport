@@ -2,9 +2,11 @@
   "daily_limit": 100,
   "reserve": 15,
   "max_per_run": 8,
+  "cooldown_minutes": 30,
   "domain_floor": {
     "Football": 20,
     "F1": 10
   },
-  "cooldown_minutes": 20
+  "event_window_hours_before": 6,
+  "event_window_hours_after": 6
 }
