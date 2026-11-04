@@ -2,45 +2,173 @@
   "leagues": [
     {
       "name": "Premier League",
+      "short": "EPL",
       "id": 9,
       "season": 39301,
-      "importance": 1.5
+      "importance": 1.5,
+      "aliases": ["premier league"]
     },
     {
       "name": "Bundesliga",
+      "short": "GER",
       "id": 1,
       "season": 39285,
-      "importance": 1.3
+      "importance": 1.3,
+      "aliases": ["bundesliga"]
     },
     {
       "name": "LaLiga",
+      "short": "ESP",
       "id": 10,
       "season": 39319,
-      "importance": 1.3
+      "importance": 1.3,
+      "aliases": ["laliga", "la liga"]
     },
     {
       "name": "Serie A",
+      "short": "ITA",
       "id": 13,
       "season": 39325,
-      "importance": 1.3
+      "importance": 1.3,
+      "aliases": ["serie a"]
     },
     {
       "name": "Ligue 1",
+      "short": "FRA",
       "id": 23,
       "season": 39245,
-      "importance": 1.1
+      "importance": 1.1,
+      "aliases": ["ligue 1"]
+    },
+    {
+      "name": "Liga Portugal",
+      "short": "POR",
+      "id": 35,
+      "season": 39316,
+      "importance": 1.1,
+      "aliases": ["liga portugal", "primeira liga"]
+    },
+    {
+      "name": "Eredivisie",
+      "short": "NED",
+      "id": 36,
+      "season": 39255,
+      "importance": 1.1,
+      "aliases": ["eredivisie"]
+    },
+    {
+      "name": "Süper Lig",
+      "short": "TUR",
+      "id": 8,
+      "season": 39311,
+      "importance": 1.1,
+      "aliases": ["süper lig", "super lig"]
     },
     {
       "name": "HNL",
+      "short": "CRO",
       "id": 120,
       "season": 39272,
-      "importance": 1.0
+      "importance": 1.0,
+      "aliases": ["hnl", "prva hnl", "supersport hnl", "hrvatska liga"]
     },
     {
       "name": "Champions League",
+      "short": "UCL",
       "id": 5,
       "season": 39356,
-      "importance": 1.6
+      "importance": 1.6,
+      "aliases": ["champions league", "liga prvaka"]
+    },
+    {
+      "name": "Europa League",
+      "short": "UEL",
+      "id": 7,
+      "season": 39357,
+      "importance": 1.4,
+      "aliases": ["europa league", "europska liga"]
+    },
+    {
+      "name": "Conference League",
+      "short": "UECL",
+      "id": 2762,
+      "season": 39358,
+      "importance": 1.2,
+      "aliases": ["conference league"]
+    }
+  ],
+  "youtube_sources": [
+    {
+      "name": "Premier League Official",
+      "league_name": "Premier League",
+      "channel_id": "UCNAf1k0yIjyGu3k9BwAg3lg",
+      "enabled": true
+    },
+    {
+      "name": "Bundesliga Official",
+      "league_name": "Bundesliga",
+      "channel_id": "UC6UL29enLNe4xmWfUzm7Cjg",
+      "enabled": true
+    },
+    {
+      "name": "LALIGA EA SPORTS",
+      "league_name": "LaLiga",
+      "channel_id": "UC14UlmYlSNiQCBe9Eookf_A",
+      "enabled": true
+    },
+    {
+      "name": "Serie A Official",
+      "league_name": "Serie A",
+      "channel_id": "UCBJeMCIeGG4XNFk57Z4M1gQ",
+      "enabled": true
+    },
+    {
+      "name": "Ligue 1 McDonald's",
+      "league_name": "Ligue 1",
+      "channel_id": "UC58_wznnp2-rZ-p55v2i9vA",
+      "enabled": true
+    },
+    {
+      "name": "Liga Portugal Official",
+      "league_name": "Liga Portugal",
+      "channel_id": "UC_CHANNEL_ID_POR",
+      "enabled": true
+    },
+    {
+      "name": "Eredivisie Official",
+      "league_name": "Eredivisie",
+      "channel_id": "UC_CHANNEL_ID_NED",
+      "enabled": true
+    },
+    {
+      "name": "Süper Lig / beIN SPORTS Türkiye",
+      "league_name": "Süper Lig",
+      "channel_id": "UC_CHANNEL_ID_TUR",
+      "enabled": true
+    },
+    {
+      "name": "SuperSport HNL / MaxSport",
+      "league_name": "HNL",
+      "channel_id": "UC_CHANNEL_ID_CRO",
+      "enabled": true
+    },
+    {
+      "name": "UEFA Official",
+      "league_name": "Champions League",
+      "channel_id": "UCfhr44Y0zRjvh0R8rJtD1gQ",
+      "enabled": true
+    },
+    {
+      "name": "UEFA Europa League",
+      "league_name": "Europa League",
+      "channel_id": "UCfhr44Y0zRjvh0R8rJtD1gQ",
+      "enabled": true
+    },
+    {
+      "name": "UEFA Conference League",
+      "league_name": "Conference League",
+      "channel_id": "UCfhr44Y0zRjvh0R8rJtD1gQ",
+      "enabled": true
     }
   ]
 }
