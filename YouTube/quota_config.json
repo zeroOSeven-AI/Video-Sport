@@ -6,7 +6,7 @@
   "event_window_hours_before": 6,
   "event_window_hours_after": 3,
   "f1_race_budget": 10,
-  "fallback_budget": 10,
+  "fallback_budget": 100,
   "fallback_cooldown_hours": 12,
   "fallback_leagues": [
     "Premier League",
