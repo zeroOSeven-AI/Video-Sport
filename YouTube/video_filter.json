@@ -10,10 +10,6 @@
       "youtube shorts",
       "#ytshorts"
     ],
-    "check_fields": [
-      "title",
-      "description"
-    ],
     "require_include_keyword": true
   },
   "football": {
@@ -33,6 +29,7 @@
       "résumé",
       "resume",
       "résumé du match",
+      "resume du match",
       "buts",
       "resumen",
       "resumen del partido",
@@ -86,7 +83,10 @@
       "análise",
       "analise",
       "interview",
-      "interviews"
+      "interviews",
+      "reaction video",
+      "match preview",
+      "transfer"
     ],
     "categories": {
       "highlights": [
@@ -136,10 +136,12 @@
       "full race",
       "grand prix highlights",
       "grand prix full race",
+      "grand prix race",
       "qualifying highlights",
       "qualifying recap",
       "full qualifying",
       "qualifying",
+      "race",
       "rennhighlights",
       "rennzusammenfassung",
       "zusammenfassung",
@@ -149,8 +151,6 @@
       "sintesi gara",
       "highlights gara",
       "resumo da corrida",
-      "análise da classificação",
-      "analise da classificacao",
       "qualifications highlights",
       "course highlights"
     ],
@@ -182,7 +182,10 @@
       "behind the scenes",
       "news",
       "rumour",
-      "rumor"
+      "rumor",
+      "reaction video",
+      "explained",
+      "technology"
     ],
     "categories": {
       "qualifying": [
@@ -196,6 +199,8 @@
         "full race",
         "race recap",
         "grand prix full race",
+        "grand prix race",
+        "race",
         "rennzusammenfassung",
         "résumé de course",
         "resume de course",
