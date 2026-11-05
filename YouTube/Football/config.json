@@ -148,10 +148,10 @@
       "enabled": true
     },
     {
-      "name": "SuperSport HNL / MaxSport",
+      "name": "MAXSport",
       "league_name": "HNL",
-      "channel_id": "",
-      "enabled": false
+      "channel_id": "UCdZuGHA8fV0oKQRCE4AYV0A",
+      "enabled": true
     },
     {
       "name": "UEFA Official",
