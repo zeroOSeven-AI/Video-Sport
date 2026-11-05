@@ -14,7 +14,7 @@
       "title",
       "description"
     ],
-    "require_include_keyword": true
+    "require_include_keyword": false
   },
   "football": {
     "include_keywords": [
