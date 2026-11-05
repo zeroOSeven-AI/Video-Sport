@@ -13,7 +13,8 @@
     "check_fields": [
       "title",
       "description"
-    ]
+    ],
+    "require_include_keyword": true
   },
   "football": {
     "include_keywords": [
@@ -37,6 +38,7 @@
       "spielanalyse",
       "tore",
       "résumé",
+      "resume",
       "résumé du match",
       "analyse",
       "analyse tactique",
@@ -45,6 +47,7 @@
       "resumen del partido",
       "goles",
       "análisis",
+      "analisis",
       "sintesi",
       "sintesi partita",
       "analisi",
@@ -52,7 +55,20 @@
       "resumo",
       "resumo do jogo",
       "golos",
-      "análise"
+      "análise",
+      "analise",
+      "samenvatting",
+      "wedstrijdverslag",
+      "wedstrijdoverzicht",
+      "maç özeti",
+      "mac ozeti",
+      "maç özeti",
+      "maç analizi",
+      "gol özeti",
+      "sažetak",
+      "sazetak",
+      "analiza utakmice",
+      "pregled utakmice"
     ],
     "exclude_keywords": [
       "watch along",
@@ -72,8 +88,66 @@
       "compilation",
       "livestream",
       "live stream",
-      "press conference"
-    ]
+      "press conference",
+      "basın toplantısı",
+      "basin toplantisi"
+    ],
+    "categories": {
+      "highlights": [
+        "highlights",
+        "extended highlights",
+        "match highlights",
+        "zusammenfassung",
+        "résumé",
+        "resume",
+        "resumen",
+        "sintesi",
+        "resumo",
+        "samenvatting",
+        "maç özeti",
+        "mac ozeti",
+        "sažetak",
+        "sazetak"
+      ],
+      "goals": [
+        "all goals",
+        "every goal",
+        "goals",
+        "tore",
+        "buts",
+        "goles",
+        "gol",
+        "golos"
+      ],
+      "analysis": [
+        "analysis",
+        "tactical analysis",
+        "post match analysis",
+        "post-match analysis",
+        "analyse",
+        "spielanalyse",
+        "análisis",
+        "analisis",
+        "analisi",
+        "análise",
+        "analise",
+        "maç analizi",
+        "mac analizi",
+        "analiza utakmice"
+      ],
+      "review": [
+        "match recap",
+        "game recap",
+        "match review",
+        "spielbericht",
+        "resumen del partido",
+        "sintesi partita",
+        "resumo do jogo",
+        "wedstrijdverslag",
+        "wedstrijdoverzicht",
+        "pregled utakmice"
+      ]
+    }
   },
   "f1": {
     "include_keywords": [
@@ -100,11 +174,17 @@
       "rennanalyse",
       "analyse",
       "résumé de course",
+      "resume de course",
       "analyse de course",
       "resumen de carrera",
       "análisis de carrera",
+      "analisis de carrera",
       "sintesi gara",
-      "analisi gara"
+      "analisi gara",
+      "highlights gara",
+      "resumo da corrida",
+      "análise da corrida",
+      "analise da corrida"
     ],
     "exclude_keywords": [
       "watch along",
@@ -124,6 +204,54 @@
       "compilation",
       "livestream",
       "live stream"
-    ]
+    ],
+    "categories": {
+      "highlights": [
+        "race highlights",
+        "highlights",
+        "best moments",
+        "key moments",
+        "rennhighlights",
+        "zusammenfassung",
+        "résumé de course",
+        "resume de course",
+        "resumen de carrera",
+        "sintesi gara",
+        "highlights gara",
+        "resumo da corrida"
+      ],
+      "race": [
+        "full race",
+        "race recap",
+        "race review",
+        "grand prix review",
+        "rennzusammenfassung"
+      ],
+      "analysis": [
+        "race analysis",
+        "technical analysis",
+        "post race analysis",
+        "post-race analysis",
+        "rennanalyse",
+        "analyse de course",
+        "análisis de carrera",
+        "analisis de carrera",
+        "analisi gara",
+        "análise da corrida",
+        "analise da corrida"
+      ],
+      "qualifying": [
+        "qualifying highlights",
+        "qualifying recap",
+        "qualifying"
+      ],
+      "onboard": [
+        "onboard",
+        "on-board"
+      ],
+      "team_radio": [
+        "team radio"
+      ]
+    }
   }
 }
