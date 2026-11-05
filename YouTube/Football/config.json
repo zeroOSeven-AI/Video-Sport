@@ -1,3 +1,4 @@
+
 {
   "leagues": [
     {
@@ -129,28 +130,28 @@
       "enabled": true
     },
     {
-      "name": "Liga Portugal Official",
+      "name": "VSPORTS - Liga Portugal",
       "league_name": "Liga Portugal",
-      "channel_id": "UC_CHANNEL_ID_POR",
+      "channel_id": "UCuIlu5oGIj1RzHOYmeSV5Eg",
       "enabled": true
     },
     {
-      "name": "Eredivisie Official",
+      "name": "VriendenLoterij Eredivisie",
       "league_name": "Eredivisie",
-      "channel_id": "UC_CHANNEL_ID_NED",
+      "channel_id": "UCxyoiD-bwrmapdivXCFvmaw",
       "enabled": true
     },
     {
-      "name": "Süper Lig / beIN SPORTS Türkiye",
+      "name": "beIN SPORTS Türkiye",
       "league_name": "Süper Lig",
-      "channel_id": "UC_CHANNEL_ID_TUR",
+      "channel_id": "UCPe9vNjHF1kEExT5kHwc7aw",
       "enabled": true
     },
     {
       "name": "SuperSport HNL / MaxSport",
       "league_name": "HNL",
-      "channel_id": "UC_CHANNEL_ID_CRO",
-      "enabled": true
+      "channel_id": "",
+      "enabled": false
     },
     {
       "name": "UEFA Official",
