@@ -1,18 +1,35 @@
 {
   "date": "2026-11-05",
-  "total_used": 2,
-  "fallback_used": 0,
+  "total_used": 10,
+  "fallback_used": 8,
   "domain_used": {
-    "Football": 2,
-    "F1": 0
+    "Football": 8,
+    "F1": 2
   },
   "domain_fallback_used": {
-    "Football": 0,
-    "F1": 0
+    "Football": 6,
+    "F1": 2
   },
   "last_query": {
     "football:Europa League:8004399:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T05:08:48.092692-08:00",
-    "football:Conference League:8004596:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T05:08:48.761658-08:00"
+    "football:Conference League:8004596:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T05:08:48.761658-08:00",
+    "f1:fallback:latest_news:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-05T07:49:05.810085-08:00",
+    "f1:fallback:technical:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-05T07:49:06.119724-08:00",
+    "football:fallback:Champions League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T07:49:06.502706-08:00",
+    "football:fallback:Premier League:UCNAf1k0yIjyGu3k9BwAg3lg": "2026-11-05T07:49:06.681204-08:00",
+    "football:fallback:Europa League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T07:49:06.940222-08:00",
+    "football:fallback:Bundesliga:UC6UL29enLNe4xmWfUzm7Cjg": "2026-11-05T07:49:07.327720-08:00",
+    "football:fallback:LaLiga:UC14UlmYlSNiQCBe9Eookf_A": "2026-11-05T07:49:07.524157-08:00",
+    "football:fallback:Serie A:UCBJeMCIeGG4XNFk57Z4M1gQ": "2026-11-05T07:49:07.799983-08:00"
   },
-  "last_fallback": {}
+  "last_fallback": {
+    "f1:fallback:latest_news:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-05T07:49:05.810085-08:00",
+    "f1:fallback:technical:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-05T07:49:06.119724-08:00",
+    "football:fallback:Champions League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T07:49:06.502706-08:00",
+    "football:fallback:Premier League:UCNAf1k0yIjyGu3k9BwAg3lg": "2026-11-05T07:49:06.681204-08:00",
+    "football:fallback:Europa League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-05T07:49:06.940222-08:00",
+    "football:fallback:Bundesliga:UC6UL29enLNe4xmWfUzm7Cjg": "2026-11-05T07:49:07.327720-08:00",
+    "football:fallback:LaLiga:UC14UlmYlSNiQCBe9Eookf_A": "2026-11-05T07:49:07.524157-08:00",
+    "football:fallback:Serie A:UCBJeMCIeGG4XNFk57Z4M1gQ": "2026-11-05T07:49:07.799983-08:00"
+  }
 }

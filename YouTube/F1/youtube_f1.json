@@ -1,8 +1,329 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-04T19:52:06.981792+00:00",
+    "updated_at": "2026-11-05T15:49:06.501400+00:00",
     "videos": [
+        {
+            "video_id": "eMBI0isVJbo",
+            "title": "Drivers React After The Race | 2026 Mexico Grand Prix",
+            "published_at": "2026-11-02T03:34:45Z",
+            "published_ts": 1793590485,
+            "thumbnail": "https://i.ytimg.com/vi/eMBI0isVJbo/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=eMBI0isVJbo"
+        },
+        {
+            "video_id": "XySlwrlLaXE",
+            "title": "LIVE: Mexico City Grand Prix Post-Race Show",
+            "published_at": "2026-11-01T23:57:56Z",
+            "published_ts": 1793577476,
+            "thumbnail": "https://i.ytimg.com/vi/XySlwrlLaXE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=XySlwrlLaXE"
+        },
+        {
+            "video_id": "tIiRK7hKScU",
+            "title": "Race Highlights | 2026 Mexico City Grand Prix",
+            "published_at": "2026-11-01T23:24:08Z",
+            "published_ts": 1793575448,
+            "thumbnail": "https://i.ytimg.com/vi/tIiRK7hKScU/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=tIiRK7hKScU"
+        },
+        {
+            "video_id": "Xb64S2OK3pU",
+            "title": "Lewis & Charles Go Wheel-To-Wheel! 😱",
+            "published_at": "2026-11-01T20:29:43Z",
+            "published_ts": 1793564983,
+            "thumbnail": "https://i.ytimg.com/vi/Xb64S2OK3pU/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=Xb64S2OK3pU"
+        },
+        {
+            "video_id": "2J4PA64Gn3s",
+            "title": "Lewis Hamilton's Pole Lap | 2026 Mexico City Grand Prix | Pirelli",
+            "published_at": "2026-11-01T01:15:11Z",
+            "published_ts": 1793495711,
+            "thumbnail": "https://i.ytimg.com/vi/2J4PA64Gn3s/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=2J4PA64Gn3s"
+        },
+        {
+            "video_id": "O9kbG2tTX10",
+            "title": "Qualifying Highlights | 2026 Mexico City Grand Prix",
+            "published_at": "2026-10-31T22:41:17Z",
+            "published_ts": 1793486477,
+            "thumbnail": "https://i.ytimg.com/vi/O9kbG2tTX10/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=O9kbG2tTX10"
+        },
+        {
+            "video_id": "BH33XWkjtBI",
+            "title": "FP3 Highlights | 2026 Mexico City Grand Prix",
+            "published_at": "2026-10-31T19:54:25Z",
+            "published_ts": 1793476465,
+            "thumbnail": "https://i.ytimg.com/vi/BH33XWkjtBI/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=BH33XWkjtBI"
+        },
+        {
+            "video_id": "0sspCZ4fxUA",
+            "title": "How Teams Have Modified Their Cars For Mexico | F1 TV Tech Talk",
+            "published_at": "2026-10-31T01:20:41Z",
+            "published_ts": 1793409641,
+            "thumbnail": "https://i.ytimg.com/vi/0sspCZ4fxUA/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=0sspCZ4fxUA"
+        },
+        {
+            "video_id": "tEEGnZna3Gc",
+            "title": "FP2 Highlights | 2026 Mexico City Grand Prix",
+            "published_at": "2026-10-31T00:26:19Z",
+            "published_ts": 1793406379,
+            "thumbnail": "https://i.ytimg.com/vi/tEEGnZna3Gc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights",
+                "race",
+                "qualifying"
+            ],
+            "type": "highlight",
+            "link": "https://www.youtube.com/watch?v=tEEGnZna3Gc"
+        },
+        {
+            "video_id": "n5rDuMyO3OM",
+            "title": "That Shouldn't Be There 😳",
+            "published_at": "2026-10-31T00:06:08Z",
+            "published_ts": 1793405168,
+            "thumbnail": "https://i.ytimg.com/vi/n5rDuMyO3OM/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=n5rDuMyO3OM"
+        },
+        {
+            "video_id": "QTwZskmStvE",
+            "title": "Weekend Warm-Up | 2026 Mexico City Grand Prix",
+            "published_at": "2026-10-30T00:30:11Z",
+            "published_ts": 1793320211,
+            "thumbnail": "https://i.ytimg.com/vi/QTwZskmStvE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=QTwZskmStvE"
+        },
+        {
+            "video_id": "chf-Q8nWpwM",
+            "title": "Verstappen & Leclerc's Opening Lap Battle & The Key Strategies In Austin | F1 TV Palmer's Analysis",
+            "published_at": "2026-10-27T18:00:34Z",
+            "published_ts": 1793124034,
+            "thumbnail": "https://i.ytimg.com/vi/chf-Q8nWpwM/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race",
+                "analysis"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=chf-Q8nWpwM"
+        },
+        {
+            "video_id": "q03CkMtY9CE",
+            "title": "Drivers React After The Race | 2026 United States Grand Prix",
+            "published_at": "2026-10-26T02:34:20Z",
+            "published_ts": 1792982060,
+            "thumbnail": "https://i.ytimg.com/vi/q03CkMtY9CE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=q03CkMtY9CE"
+        },
+        {
+            "video_id": "Fh_-PjYSrFA",
+            "title": "What Upgrades Have Teams Brought To Texas? | F1 TV Tech Talk",
+            "published_at": "2026-10-24T00:57:06Z",
+            "published_ts": 1792803426,
+            "thumbnail": "https://i.ytimg.com/vi/Fh_-PjYSrFA/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=Fh_-PjYSrFA"
+        },
+        {
+            "video_id": "UjVcLXIrlkY",
+            "title": "A Closer Look At The Race Start & Strategies In Singapore | F1 TV Palmer's Analysis",
+            "published_at": "2026-10-13T16:00:10Z",
+            "published_ts": 1791907210,
+            "thumbnail": "https://i.ytimg.com/vi/UjVcLXIrlkY/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race",
+                "analysis"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=UjVcLXIrlkY"
+        },
+        {
+            "video_id": "LXUtsQ6fYsU",
+            "title": "Drivers React After the Race | 2026 Singapore Grand Prix",
+            "published_at": "2026-10-11T17:14:58Z",
+            "published_ts": 1791738898,
+            "thumbnail": "https://i.ytimg.com/vi/LXUtsQ6fYsU/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=LXUtsQ6fYsU"
+        },
+        {
+            "video_id": "sFdxNKt7eFY",
+            "title": "No Radio. No Problem. 📻",
+            "published_at": "2026-10-11T16:00:25Z",
+            "published_ts": 1791734425,
+            "thumbnail": "https://i.ytimg.com/vi/sFdxNKt7eFY/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=sFdxNKt7eFY"
+        },
+        {
+            "video_id": "EMbBoiiFFG0",
+            "title": "George Has Strict Rules 🤣",
+            "published_at": "2026-10-10T18:00:10Z",
+            "published_ts": 1791655210,
+            "thumbnail": "https://i.ytimg.com/vi/EMbBoiiFFG0/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [],
+            "type": "video",
+            "link": "https://www.youtube.com/watch?v=EMbBoiiFFG0"
+        },
+        {
+            "video_id": "Z0CGbRnh-zI",
+            "title": "George Crashes Out Of The Sprint! 😱",
+            "published_at": "2026-10-10T09:59:11Z",
+            "published_ts": 1791626351,
+            "thumbnail": "https://i.ytimg.com/vi/Z0CGbRnh-zI/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "sprint"
+            ],
+            "type": "sprint",
+            "link": "https://www.youtube.com/watch?v=Z0CGbRnh-zI"
+        },
+        {
+            "video_id": "ZhVDL7e9i4E",
+            "title": "Are Mercedes' Upgrades Working? And Modified Red Bull Racing Parts | F1 TV Tech Talk",
+            "published_at": "2026-10-09T18:30:10Z",
+            "published_ts": 1791570610,
+            "thumbnail": "https://i.ytimg.com/vi/ZhVDL7e9i4E/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "link": "https://www.youtube.com/watch?v=ZhVDL7e9i4E"
+        },
         {
             "video_id": "rx41vYOBLFE",
             "title": "Qualifying Highlights | 2026 British Grand Prix",
