@@ -62,8 +62,6 @@ def youtube_search(candidate):
 
     query = (candidate.get("query") or "").strip()
 
-    # q je opcionalan. Ako je prazan, tražimo
-    # najnovije videozapise s odabranog kanala.
     if query:
         params["q"] = query
 
@@ -72,9 +70,7 @@ def youtube_search(candidate):
         f"{query if query else '(bez ključne riječi - najnoviji videozapisi)'}"
     )
 
-    print(
-        f"[YouTube] Kanal: {params['channelId']}"
-    )
+    print(f"[YouTube] Kanal: {params['channelId']}")
 
     response = requests.get(
         API_URL,
@@ -100,7 +96,6 @@ def youtube_search(candidate):
         f"{len(original_items)}"
     )
 
-    # Filtriranje i dohvat trajanja.
     filtered_items, stats = filter_videos(
         original_items,
         candidate["domain"],
@@ -110,29 +105,40 @@ def youtube_search(candidate):
     data["items"] = filtered_items
 
     print("[Filter] Rezultati:")
+
     print(
         f"[Filter] Prihvaćeno: "
-        f"{stats['accepted']}/{stats['received']}"
+        f"{stats.get('accepted', 0)}/{stats.get('received', 0)}"
     )
+
     print(
         f"[Filter] Prekratki videozapisi: "
-        f"{stats['too_short']}"
+        f"{stats.get('too_short', 0)}"
     )
+
     print(
         f"[Filter] Shorts: "
-        f"{stats['shorts']}"
+        f"{stats.get('shorts', 0)}"
     )
+
     print(
         f"[Filter] Isključujuće ključne riječi: "
-        f"{stats['excluded_keyword']}"
+        f"{stats.get('excluded_keyword', 0)}"
     )
+
     print(
-        f"[Filter] Bez odgovarajućih ključnih riječi: "
-        f"{stats['missing_include_keyword']}"
+        f"[Filter] Ostalo (Other): "
+        f"{stats.get('other', 0)}"
     )
+
+    print(
+        f"[Filter] Kategorizirano: "
+        f"{stats.get('categorized', 0)}"
+    )
+
     print(
         f"[Filter] Trajanje nije dostupno: "
-        f"{stats['missing_duration']}"
+        f"{stats.get('missing_duration', 0)}"
     )
 
     return data
@@ -204,26 +210,12 @@ def get_video_type(title, tags, domain="Football"):
         domain
     )
 
-    if video_type != "video":
+    if video_type != "other":
         return video_type
 
-    # Rezervna klasifikacija na temelju već poznatih oznaka.
-    if "highlights" in tags:
-        return "highlight"
-
-    if "goals" in tags:
-        return "goals"
-
-    if "analysis" in tags:
-        return "analysis"
-
-    if "qualifying" in tags:
-        return "qualifying"
-
-    if "race" in tags:
-        return "race"
-
-    return "video"
+    # Ako je video već klasificiran kao other,
+    # zadržavamo other umjesto generičke kategorije video.
+    return "other"
 
 
 # --------------------------------------------------
@@ -322,6 +314,15 @@ def load_existing_archive(path):
                 domain
             )
 
+            video_type = video.get("type")
+
+            if not video_type:
+                video_type = get_video_type(
+                    title,
+                    tags,
+                    domain
+                )
+
             videos.append({
                 "video_id": video_id,
                 "title": title,
@@ -339,7 +340,7 @@ def load_existing_archive(path):
                     if is_f1 else ""
                 ),
                 "tags": tags,
-                "type": get_video_type(title, tags, domain),
+                "type": video_type,
                 "link": f"https://www.youtube.com/watch?v={video_id}"
             })
 
@@ -388,12 +389,17 @@ def save_results(candidate, data):
 
         published_at = snippet.get("publishedAt")
 
-        tags = item.get("filter_tags", [])
+        # Koristimo oznake iz filtra.
+        tags = item.get("filter_tags", ["other"])
 
         video_type = item.get(
             "video_type",
-            "video"
+            "other"
         )
+
+        # Za svaki slučaj: nepoznata kategorija postaje other.
+        if not video_type or video_type == "video":
+            video_type = "other"
 
         video = {
             "video_id": video_id,
@@ -447,13 +453,9 @@ def save_results(candidate, data):
             indent=4
         )
 
-    print(
-        f"[Arhiva] Novi videozapisi: {new_count}"
-    )
-
-    print(
-        f"[Arhiva] Već postojeći ažurirani: {updated_count}"
-    )
+    print(f"[Arhiva] Novi videozapisi: {new_count}")
+    print(f"[Arhiva] Već postojeći ažurirani: {updated_count}")
+    print(f"[Arhiva] Ukupno u arhivi: {len(merged_videos)}")
 
     return saved_count
 
@@ -464,8 +466,8 @@ def save_results(candidate, data):
 
 def build_football_fallback():
     """
-    Fallback pretrage za sve uključene lige
-    iz Football/config.json.
+    Fallback pretrage za uključene lige.
+    Svaki YouTube kanal pretražuje se samo jednom.
     """
 
     if not FOOTBALL_CONFIG.exists():
@@ -481,6 +483,8 @@ def build_football_fallback():
         config = json.load(f)
 
     result = []
+    seen_channels = set()
+    included_leagues = set()
 
     for league in config.get("leagues", []):
         league_name = league.get("name")
@@ -509,10 +513,7 @@ def build_football_fallback():
             continue
 
         for source in sources:
-            channel_id = source.get(
-                "channel_id",
-                ""
-            )
+            channel_id = source.get("channel_id", "")
 
             if not CHANNEL_ID_PATTERN.fullmatch(channel_id):
                 print(
@@ -522,12 +523,24 @@ def build_football_fallback():
                 )
                 continue
 
+            # Isti kanal ne pretražujemo dvaput.
+            if channel_id in seen_channels:
+                print(
+                    f"[Fallback Football] Preskačem dupli kanal: "
+                    f"{source.get('name', league_name)} "
+                    f"({league_name})"
+                )
+                continue
+
+            seen_channels.add(channel_id)
+            included_leagues.add(league_name)
+
             result.append({
                 "domain": "Football",
                 "key": (
                     f"football:fallback:{league_name}:{channel_id}"
                 ),
-                "query": f'"{league_name}"',
+                "query": "",
                 "channel_id": channel_id,
                 "source_name": source.get(
                     "name",
@@ -546,7 +559,12 @@ def build_football_fallback():
 
     print(
         f"[Fallback Football] Uključene lige: "
-        f"{len({item['league'] for item in result})}"
+        f"{len(included_leagues)}"
+    )
+
+    print(
+        f"[Fallback Football] Jedinstvenih kanala: "
+        f"{len(result)}"
     )
 
     print(
@@ -561,11 +579,6 @@ def build_football_fallback():
 # --------------------------------------------------
 
 def build_fallback_candidates():
-    """
-    Priprema F1 fallback i fallback za sve
-    uključene nogometne lige.
-    """
-
     result = []
 
     try:
@@ -579,9 +592,7 @@ def build_fallback_candidates():
         )
 
     except Exception as exc:
-        print(
-            f"[Fallback F1] Greška: {exc}"
-        )
+        print(f"[Fallback F1] Greška: {exc}")
 
     try:
         football_fallback = build_football_fallback()
@@ -589,9 +600,7 @@ def build_fallback_candidates():
         result.extend(football_fallback)
 
     except Exception as exc:
-        print(
-            f"[Fallback Football] Greška: {exc}"
-        )
+        print(f"[Fallback Football] Greška: {exc}")
 
     print(
         f"[Fallback] Ukupno pripremljenih kandidata: "
@@ -608,7 +617,6 @@ def build_fallback_candidates():
 def deduplicate_candidates(candidates):
     """
     Uklanja duplikate prema candidate key vrijednosti.
-    Zadržava prvi pronađeni kandidat.
     """
 
     result = []
@@ -617,10 +625,7 @@ def deduplicate_candidates(candidates):
     for candidate in candidates:
         key = candidate.get("key")
 
-        if not key:
-            continue
-
-        if key in seen:
+        if not key or key in seen:
             continue
 
         seen.add(key)
@@ -651,9 +656,7 @@ def main():
     try:
         football_candidates = football.candidates()
 
-        all_candidates.extend(
-            football_candidates
-        )
+        all_candidates.extend(football_candidates)
 
         print(
             f"[Football] Kandidata za događaje: "
@@ -661,9 +664,7 @@ def main():
         )
 
     except Exception as exc:
-        print(
-            f"[Football] Greška: {exc}"
-        )
+        print(f"[Football] Greška: {exc}")
 
     # ----------------------------------------------
     # 2. F1 EVENT CANDIDATES
@@ -672,9 +673,7 @@ def main():
     try:
         f1_candidates = f1.candidates()
 
-        all_candidates.extend(
-            f1_candidates
-        )
+        all_candidates.extend(f1_candidates)
 
         print(
             f"[F1] Kandidata za događaje i vikend markere: "
@@ -682,42 +681,29 @@ def main():
         )
 
     except Exception as exc:
-        print(
-            f"[F1] Greška: {exc}"
-        )
+        print(f"[F1] Greška: {exc}")
 
     # ----------------------------------------------
-    # 3. ALWAYS PREPARE FALLBACK CANDIDATES
+    # 3. FALLBACK CANDIDATES
     # ----------------------------------------------
 
     print()
-    print(
-        "[System] Pripremam fallback kandidate."
-    )
+    print("[System] Pripremam fallback kandidate.")
 
     fallback_candidates = build_fallback_candidates()
 
-    all_candidates.extend(
-        fallback_candidates
-    )
+    all_candidates.extend(fallback_candidates)
 
     # ----------------------------------------------
     # 4. DEDUPLICATION
     # ----------------------------------------------
 
-    all_candidates = deduplicate_candidates(
-        all_candidates
-    )
+    all_candidates = deduplicate_candidates(all_candidates)
 
     print()
-    print(
-        "[System] ------------------------------"
-    )
+    print("[System] ------------------------------")
 
-    print(
-        f"[System] Ukupno kandidata: "
-        f"{len(all_candidates)}"
-    )
+    print(f"[System] Ukupno kandidata: {len(all_candidates)}")
 
     print(
         f"[System] Stvarni Football/F1 kandidati: "
@@ -734,14 +720,10 @@ def main():
         f"{sum(1 for c in all_candidates if c.get('skip_search', False))}"
     )
 
-    print(
-        "[System] ------------------------------"
-    )
+    print("[System] ------------------------------")
 
     if not all_candidates:
-        print(
-            "[System] Nema kandidata za pretraživanje."
-        )
+        print("[System] Nema kandidata za pretraživanje.")
         return
 
     # ----------------------------------------------
@@ -760,9 +742,7 @@ def main():
     )
 
     if not selected:
-        print(
-            "[System] Nema pretraga za ovo pokretanje."
-        )
+        print("[System] Nema pretraga za ovo pokretanje.")
         return
 
     # ----------------------------------------------
@@ -773,10 +753,7 @@ def main():
         domain = candidate["domain"]
         key = candidate["key"]
 
-        is_fallback = candidate.get(
-            "fallback",
-            False
-        )
+        is_fallback = candidate.get("fallback", False)
 
         print()
         print(
@@ -818,9 +795,7 @@ def main():
                 )
 
         except requests.HTTPError as exc:
-            print(
-                f"[{domain}] YouTube HTTP greška: {exc}"
-            )
+            print(f"[{domain}] YouTube HTTP greška: {exc}")
 
             if exc.response is not None:
                 print(
@@ -829,14 +804,10 @@ def main():
                 )
 
         except requests.RequestException as exc:
-            print(
-                f"[{domain}] Mrežna greška: {exc}"
-            )
+            print(f"[{domain}] Mrežna greška: {exc}")
 
         except Exception as exc:
-            print(
-                f"[{domain}] Greška: {exc}"
-            )
+            print(f"[{domain}] Greška: {exc}")
 
         finally:
             save_state(state)
@@ -846,9 +817,7 @@ def main():
     # ----------------------------------------------
 
     print()
-    print(
-        "[System] Završno stanje kvote:"
-    )
+    print("[System] Završno stanje kvote:")
 
     print(
         json.dumps(
