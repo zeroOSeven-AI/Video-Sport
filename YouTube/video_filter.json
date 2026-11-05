@@ -1,3 +1,4 @@
+
 {
   "global": {
     "exclude_shorts": true,
@@ -5,7 +6,13 @@
     "shorts_keywords": [
       "#shorts",
       "shorts",
-      "short video"
+      "short video",
+      "youtube shorts",
+      "#ytshorts"
+    ],
+    "check_fields": [
+      "title",
+      "description"
     ]
   },
   "football": {
@@ -24,7 +31,28 @@
       "every goal",
       "best moments",
       "key moments",
-      "goals"
+      "goals",
+      "zusammenfassung",
+      "spielbericht",
+      "spielanalyse",
+      "tore",
+      "résumé",
+      "résumé du match",
+      "analyse",
+      "analyse tactique",
+      "buts",
+      "resumen",
+      "resumen del partido",
+      "goles",
+      "análisis",
+      "sintesi",
+      "sintesi partita",
+      "analisi",
+      "gol",
+      "resumo",
+      "resumo do jogo",
+      "golos",
+      "análise"
     ],
     "exclude_keywords": [
       "watch along",
@@ -41,7 +69,10 @@
       "gaming",
       "gameplay",
       "funny",
-      "compilation"
+      "compilation",
+      "livestream",
+      "live stream",
+      "press conference"
     ]
   },
   "f1": {
@@ -62,7 +93,18 @@
       "grand prix review",
       "race review",
       "post race analysis",
-      "post-race analysis"
+      "post-race analysis",
+      "rennhighlights",
+      "rennzusammenfassung",
+      "zusammenfassung",
+      "rennanalyse",
+      "analyse",
+      "résumé de course",
+      "analyse de course",
+      "resumen de carrera",
+      "análisis de carrera",
+      "sintesi gara",
+      "analisi gara"
     ],
     "exclude_keywords": [
       "watch along",
@@ -79,7 +121,9 @@
       "gaming",
       "gameplay",
       "funny",
-      "compilation"
+      "compilation",
+      "livestream",
+      "live stream"
     ]
   }
 }
