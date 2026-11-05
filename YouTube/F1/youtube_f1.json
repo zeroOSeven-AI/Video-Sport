@@ -1,7 +1,7 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-05T17:41:48.667874+00:00",
+    "updated_at": "2026-11-05T17:52:01.778319+00:00",
     "videos": [
         {
             "video_id": "tIiRK7hKScU",
@@ -22,6 +22,26 @@
                 "race highlights"
             ],
             "link": "https://www.youtube.com/watch?v=tIiRK7hKScU"
+        },
+        {
+            "video_id": "mZQwMnnFeG0",
+            "title": "Drivers React To Qualifying | 2026 Mexico City Grand Prix",
+            "published_at": "2026-11-01T02:00:00Z",
+            "published_ts": 1793498400,
+            "duration_seconds": 553,
+            "thumbnail": "https://i.ytimg.com/vi/mZQwMnnFeG0/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "qualifying"
+            ],
+            "type": "qualifying",
+            "matched_keywords": [
+                "qualifying"
+            ],
+            "link": "https://www.youtube.com/watch?v=mZQwMnnFeG0"
         },
         {
             "video_id": "O9kbG2tTX10",
