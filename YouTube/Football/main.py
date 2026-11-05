@@ -84,30 +84,119 @@ def normalize_name(value):
 
 
 def find_matchday_ids(data):
+    """
+    Pronalazi matchday ID-jeve u više mogućih
+    OneFootball struktura JSON feeda.
+
+    Podržava:
+    - matchdayId
+    - matchday_id
+    - matchday.id
+    - matchdays[].id
+    - matchdayOverview[].id
+    - objekte čiji kontekst ili naziv označava matchday.
+    """
+
     found = set()
 
-    def walk(obj):
-        if isinstance(obj, dict):
-            for key, value in obj.items():
-                normalized = key.lower().replace("_", "")
+    id_keys = {
+        "matchdayid",
+        "matchday_id",
+        "matchday",
+        "match_day_id"
+    }
 
-                if normalized == "matchdayid" and value is not None:
-                    found.add(str(value))
+    matchday_container_keys = {
+        "matchday",
+        "matchdays",
+        "matchdayoverview",
+        "matchdaysoverview",
+        "matchday_overview",
+        "matchday_list"
+    }
+
+    def walk(obj, path=""):
+        if isinstance(obj, dict):
+            normalized_items = {
+                re.sub(r"[^a-z0-9]", "", str(key).lower()): (
+                    key, value
+                )
+                for key, value in obj.items()
+            }
+
+            # Bez obzira na dubinu, traži eksplicitni matchday ID.
+            for normalized_key, (original_key, value) in normalized_items.items():
+                if normalized_key in {
+                    "matchdayid",
+                    "matchday_id",
+                    "matchday"
+                }:
+                    if isinstance(value, (str, int)):
+                        if str(value).strip():
+                            found.add(str(value).strip())
+
+                    elif isinstance(value, dict):
+                        possible_id = (
+                            value.get("id")
+                            or value.get("matchdayId")
+                            or value.get("matchday_id")
+                        )
+
+                        if possible_id is not None:
+                            found.add(str(possible_id))
+
+            # Ako se nalazimo unutar matchday objekta,
+            # njegov obični "id" također može biti ID kola.
+            path_lower = path.lower()
+
+            in_matchday_context = any(
+                word in path_lower
+                for word in (
+                    "matchday",
+                    "matchdays",
+                    "matchdayoverview"
+                )
+            )
+
+            if in_matchday_context:
+                possible_id = obj.get("id")
+
+                if possible_id is not None:
+                    if isinstance(possible_id, (str, int)):
+                        found.add(str(possible_id))
+
+            # Rekurzivni obilazak svih vrijednosti.
+            for key, value in obj.items():
+                normalized_key = re.sub(
+                    r"[^a-z0-9]",
+                    "",
+                    str(key).lower()
+                )
+
+                next_path = (
+                    f"{path}.{normalized_key}"
+                    if path
+                    else normalized_key
+                )
 
                 if (
-                    normalized == "matchday"
+                    normalized_key in matchday_container_keys
                     and isinstance(value, dict)
                 ):
-                    matchday_id = value.get("id")
+                    possible_id = (
+                        value.get("id")
+                        or value.get("matchdayId")
+                        or value.get("matchday_id")
+                    )
 
-                    if matchday_id is not None:
-                        found.add(str(matchday_id))
+                    if possible_id is not None:
+                        found.add(str(possible_id))
 
-                walk(value)
+                walk(value, next_path)
 
         elif isinstance(obj, list):
             for item in obj:
-                walk(item)
+                walk(item, path)
 
     walk(data)
 
@@ -156,6 +245,7 @@ def extract_matches(data):
                     or obj.get("startDate")
                     or obj.get("utcDate")
                     or obj.get("startTime")
+                    or obj.get("kickoffTime")
                 )
 
                 event_time = parse_time(time_value)
@@ -194,7 +284,6 @@ def valid_channel_id(channel_id):
     if not isinstance(channel_id, str):
         return False
 
-    # Standardni format: UC + 22 znaka.
     return bool(
         re.fullmatch(r"UC[A-Za-z0-9_-]{22}", channel_id)
     )
@@ -224,6 +313,50 @@ def get_sources(config, league_name):
         sources.append(source)
 
     return sources
+
+
+def print_feed_diagnostics(feed, league_name):
+    """
+    Ispisuje strukturu feeda kada ID kola nije pronađen.
+    Ne ispisuje cijeli feed kako log ne bi postao prevelik.
+    """
+
+    print(
+        f"[Football][Debug] Struktura feeda za {league_name}:"
+    )
+
+    if isinstance(feed, dict):
+        print(
+            "[Football][Debug] Top-level ključevi: "
+            + ", ".join(str(key) for key in list(feed.keys())[:40])
+        )
+
+        for key, value in feed.items():
+            if isinstance(value, list):
+                print(
+                    f"[Football][Debug] {key}: lista "
+                    f"({len(value)} elemenata)"
+                )
+
+                if value and isinstance(value[0], dict):
+                    print(
+                        f"[Football][Debug] {key}[0] ključevi: "
+                        + ", ".join(
+                            str(k) for k in list(value[0].keys())[:30]
+                        )
+                    )
+
+            elif isinstance(value, dict):
+                print(
+                    f"[Football][Debug] {key}: objekt "
+                    f"({', '.join(str(k) for k in list(value.keys())[:20])})"
+                )
+
+    else:
+        print(
+            f"[Football][Debug] Neočekivani tip feeda: "
+            f"{type(feed).__name__}"
+        )
 
 
 def candidates(now=None):
@@ -283,9 +416,17 @@ def candidates(now=None):
 
         if not matchday_ids:
             print(
-                f"[Football] Nema matchday ID-jeva: {league_name}"
+                f"[Football] Nema pronađenih matchday ID-jeva: "
+                f"{league_name}"
             )
+
+            print_feed_diagnostics(feed, league_name)
             continue
+
+        print(
+            f"[Football] {league_name}: "
+            f"pronađeno {len(matchday_ids)} matchday ID-jeva."
+        )
 
         for matchday_id in matchday_ids:
             try:
@@ -303,9 +444,18 @@ def candidates(now=None):
 
             matches = extract_matches(matchday)
 
+            if not matches:
+                print(
+                    f"[Football] Matchday {matchday_id}: "
+                    f"nisu pronađene utakmice."
+                )
+                continue
+
             active_matches = [
                 match for match in matches
-                if now - after <= match["event_time"] <= now + before
+                if now - after
+                <= match["event_time"]
+                <= now + before
             ]
 
             if not active_matches:
@@ -314,7 +464,6 @@ def candidates(now=None):
             for source in sources:
                 channel_id = source["channel_id"]
 
-                # Jedna grupirana pretraga za matchday i kanal.
                 match_names = [
                     f'"{match["home"]}" "{match["away"]}"'
                     for match in active_matches
@@ -344,7 +493,6 @@ def candidates(now=None):
 
                 seen.add(key)
 
-                # Najvažnija utakmica određuje prioritet.
                 importance = float(
                     league.get("importance", 1.0)
                 )
@@ -352,7 +500,9 @@ def candidates(now=None):
                 closest_match = min(
                     active_matches,
                     key=lambda match: abs(
-                        (match["event_time"] - now).total_seconds()
+                        (
+                            match["event_time"] - now
+                        ).total_seconds()
                     )
                 )
 
