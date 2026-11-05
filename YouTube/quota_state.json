@@ -1,9 +1,9 @@
 {
   "date": "2026-11-04",
-  "total_used": 8,
-  "fallback_used": 8,
+  "total_used": 15,
+  "fallback_used": 15,
   "domain_used": {
-    "Football": 5,
+    "Football": 12,
     "F1": 3
   },
   "last_query": {
@@ -14,7 +14,14 @@
     "football:fallback:Serie A:UCBJeMCIeGG4XNFk57Z4M1gQ": "2026-11-04T16:18:02.160692-08:00",
     "f1:fallback:latest_news:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:02.618886-08:00",
     "f1:fallback:technical:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:02.867366-08:00",
-    "f1:fallback:interviews:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:03.157728-08:00"
+    "f1:fallback:interviews:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:03.157728-08:00",
+    "football:fallback:Europa League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-04T16:45:29.881263-08:00",
+    "football:fallback:Conference League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-04T16:45:30.261158-08:00",
+    "football:fallback:Ligue 1:UC58_wznnp2-rZ-p55v2i9vA": "2026-11-04T16:45:30.538316-08:00",
+    "football:fallback:Liga Portugal:UCuIlu5oGIj1RzHOYmeSV5Eg": "2026-11-04T16:45:30.854672-08:00",
+    "football:fallback:Eredivisie:UCxyoiD-bwrmapdivXCFvmaw": "2026-11-04T16:45:31.113848-08:00",
+    "football:fallback:Süper Lig:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-04T16:45:31.324958-08:00",
+    "football:fallback:HNL:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-04T16:45:31.610583-08:00"
   },
   "last_fallback": {
     "football:fallback:Champions League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-04T16:18:00.492548-08:00",
@@ -24,6 +31,13 @@
     "football:fallback:Serie A:UCBJeMCIeGG4XNFk57Z4M1gQ": "2026-11-04T16:18:02.160692-08:00",
     "f1:fallback:latest_news:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:02.618886-08:00",
     "f1:fallback:technical:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:02.867366-08:00",
-    "f1:fallback:interviews:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:03.157728-08:00"
+    "f1:fallback:interviews:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-04T16:18:03.157728-08:00",
+    "football:fallback:Europa League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-04T16:45:29.881263-08:00",
+    "football:fallback:Conference League:UCfhr44Y0zRjvh0R8rJtD1gQ": "2026-11-04T16:45:30.261158-08:00",
+    "football:fallback:Ligue 1:UC58_wznnp2-rZ-p55v2i9vA": "2026-11-04T16:45:30.538316-08:00",
+    "football:fallback:Liga Portugal:UCuIlu5oGIj1RzHOYmeSV5Eg": "2026-11-04T16:45:30.854672-08:00",
+    "football:fallback:Eredivisie:UCxyoiD-bwrmapdivXCFvmaw": "2026-11-04T16:45:31.113848-08:00",
+    "football:fallback:Süper Lig:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-04T16:45:31.324958-08:00",
+    "football:fallback:HNL:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-04T16:45:31.610583-08:00"
   }
 }
