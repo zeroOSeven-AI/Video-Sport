@@ -1,8 +1,48 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-05T18:56:44.849069+00:00",
+    "updated_at": "2026-11-05T19:08:49.249956+00:00",
     "videos": [
+        {
+            "video_id": "eMBI0isVJbo",
+            "title": "Drivers React After The Race | 2026 Mexico Grand Prix",
+            "published_at": "2026-11-02T03:34:45Z",
+            "published_ts": 1793590485,
+            "duration_seconds": 610,
+            "thumbnail": "https://i.ytimg.com/vi/eMBI0isVJbo/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=eMBI0isVJbo"
+        },
+        {
+            "video_id": "XySlwrlLaXE",
+            "title": "LIVE: Mexico City Grand Prix Post-Race Show",
+            "published_at": "2026-11-01T23:57:56Z",
+            "published_ts": 1793577476,
+            "duration_seconds": 3491,
+            "thumbnail": "https://i.ytimg.com/vi/XySlwrlLaXE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=XySlwrlLaXE"
+        },
         {
             "video_id": "tIiRK7hKScU",
             "title": "Race Highlights | 2026 Mexico City Grand Prix",
@@ -15,11 +55,12 @@
             "priority": 3,
             "logo": "logo/formula_1.png",
             "tags": [
-                "highlights"
+                "race"
             ],
-            "type": "highlights",
+            "type": "race",
             "matched_keywords": [
-                "race highlights"
+                "race highlights",
+                "race"
             ],
             "link": "https://www.youtube.com/watch?v=tIiRK7hKScU"
         },
