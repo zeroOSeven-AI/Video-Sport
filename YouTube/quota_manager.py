@@ -29,10 +29,7 @@ def empty_state():
         "date": today(),
         "total_used": 0,
         "fallback_used": 0,
-        "domain_used": {
-            "Football": 0,
-            "F1": 0
-        },
+        "domain_used": {"Football": 0, "F1": 0},
         "last_query": {},
         "last_fallback": {}
     }
@@ -49,7 +46,6 @@ def load_state():
     else:
         state = {}
 
-    # YouTube dnevna kvota resetira se prema pacifičkom datumu.
     if state.get("date") != today():
         state = empty_state()
 
@@ -67,7 +63,6 @@ def load_state():
 
 def save_state(state):
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-
     STATE_FILE.write_text(
         json.dumps(state, indent=2, ensure_ascii=False),
         encoding="utf-8"
@@ -77,11 +72,9 @@ def save_state(state):
 def remaining_quota(state, config):
     limit = int(config.get("daily_limit", 100))
     reserve = int(config.get("reserve", 10))
+    used = int(state.get("total_used", 0))
 
-    return max(
-        0,
-        limit - reserve - int(state.get("total_used", 0))
-    )
+    return max(0, limit - reserve - used)
 
 
 def can_search(state, config):
@@ -97,17 +90,16 @@ def is_fallback_key(query_key):
 
 def record_success(state, domain, query_key, fallback=False):
     """
-    Evidentira jedan pokušaj YouTube search.list poziva.
-
-    Poziva se prije HTTP zahtjeva kako lokalni brojač
-    ne bi podcijenio potrošnju kod mrežne greške.
+    Evidentira pokušaj YouTube search.list poziva.
+    Poziva se prije HTTP zahtjeva radi konzervativnog
+    praćenja potrošnje kvote.
     """
 
     fallback = fallback or is_fallback_key(query_key)
 
-    state["total_used"] = (
-        int(state.get("total_used", 0)) + 1
-    )
+    state["total_used"] = int(
+        state.get("total_used", 0)
+    ) + 1
 
     state.setdefault("domain_used", {})
     state["domain_used"].setdefault(domain, 0)
@@ -119,9 +111,9 @@ def record_success(state, domain, query_key, fallback=False):
     state["last_query"][query_key] = timestamp
 
     if fallback:
-        state["fallback_used"] = (
-            int(state.get("fallback_used", 0)) + 1
-        )
+        state["fallback_used"] = int(
+            state.get("fallback_used", 0)
+        ) + 1
 
         state.setdefault("last_fallback", {})
         state["last_fallback"][query_key] = timestamp
@@ -170,13 +162,6 @@ def fallback_cooldown_passed(state, query_key, hours):
 
 
 def is_f1_weekend(candidates):
-    """
-    F1 vikend prepoznaje preko internog markera
-    koji generira F1/main.py.
-
-    Marker ne predstavlja YouTube pretragu.
-    """
-
     return any(
         candidate.get("domain") == "F1"
         and candidate.get("f1_weekend", False)
@@ -236,17 +221,14 @@ def candidate_score(candidate, now):
 
 def select_candidates(candidates, state, config, now=None):
     """
-    Odabir kandidata uz poštovanje:
-
-    - YouTube dnevne kvote i rezerve
-    - maksimalnog broja pretraga po pokretanju
+    Odabir kandidata uz strogo poštovanje:
+    - dnevne YouTube kvote i rezerve
+    - max_per_run
     - općeg cooldowna
-    - posebnog fallback cooldowna
-    - dnevnog fallback budžeta
-    - F1 dnevnog budžeta tijekom cijelog GP vikenda
+    - fallback cooldowna
+    - fallback_budget
+    - f1_race_budget tijekom GP vikenda
     - prioriteta nogometa izvan F1 vikenda
-
-    Interni F1 vikend markeri nikad se ne šalju YouTube API-ju.
     """
 
     available = remaining_quota(state, config)
@@ -267,13 +249,9 @@ def select_candidates(candidates, state, config, now=None):
     else:
         now = now.astimezone(PACIFIC)
 
-    # Prepoznaj F1 vikend prije uklanjanja internih markera.
     active_f1 = is_f1_weekend(candidates)
 
-    cooldown = int(
-        config.get("cooldown_minutes", 180)
-    )
-
+    cooldown = int(config.get("cooldown_minutes", 180))
     fallback_cooldown = int(
         config.get("fallback_cooldown_hours", 12)
     )
@@ -294,8 +272,6 @@ def select_candidates(candidates, state, config, now=None):
     eligible = []
 
     for candidate in candidates:
-
-        # Interni markeri služe samo za prepoznavanje vikenda.
         if candidate.get("skip_search", False):
             continue
 
@@ -306,16 +282,10 @@ def select_candidates(candidates, state, config, now=None):
 
         is_fallback = candidate.get("fallback", False)
 
-        # Opći cooldown.
         if not cooldown_passed(state, key, cooldown):
             continue
 
-        # Posebna ograničenja za fallback.
         if is_fallback:
-
-            if fallback_remaining <= 0:
-                continue
-
             if not fallback_cooldown_passed(
                 state,
                 key,
@@ -323,12 +293,17 @@ def select_candidates(candidates, state, config, now=None):
             ):
                 continue
 
-        candidate["_score"] = candidate_score(
-            candidate,
+            # Ako je dnevni fallback budžet potrošen,
+            # ne dodajemo fallback kandidata.
+            if fallback_remaining <= 0:
+                continue
+
+        candidate_copy = candidate.copy()
+        candidate_copy["_score"] = candidate_score(
+            candidate_copy,
             now
         )
-
-        eligible.append(candidate)
+        eligible.append(candidate_copy)
 
     if not eligible:
         print(
@@ -337,7 +312,6 @@ def select_candidates(candidates, state, config, now=None):
         )
         return []
 
-    # Ako postoje aktualni događaji, fallback se ne koristi.
     has_events = any(
         not candidate.get("fallback", False)
         for candidate in eligible
@@ -345,20 +319,17 @@ def select_candidates(candidates, state, config, now=None):
 
     if has_events:
         eligible = [
-            candidate
-            for candidate in eligible
+            candidate for candidate in eligible
             if not candidate.get("fallback", False)
         ]
 
     football_candidates = [
-        candidate
-        for candidate in eligible
+        candidate for candidate in eligible
         if candidate.get("domain") == "Football"
     ]
 
     f1_candidates = [
-        candidate
-        for candidate in eligible
+        candidate for candidate in eligible
         if candidate.get("domain") == "F1"
     ]
 
@@ -375,7 +346,6 @@ def select_candidates(candidates, state, config, now=None):
     selected = []
 
     if active_f1:
-        # Tijekom F1 vikenda F1 ima vlastiti dnevni budžet.
         f1_budget = int(
             config.get("f1_race_budget", 10)
         )
@@ -390,32 +360,25 @@ def select_candidates(candidates, state, config, now=None):
         )
 
         selected.extend(
-            f1_candidates[
-                :min(f1_remaining, slots)
-            ]
+            f1_candidates[:min(f1_remaining, slots)]
         )
 
         remaining_slots = slots - len(selected)
 
-        # Preostala mjesta popunjava nogomet.
         selected.extend(
             football_candidates[:remaining_slots]
         )
 
         remaining_slots = slots - len(selected)
 
-        # Ako nema dovoljno nogometnih kandidata,
-        # iskoristi preostala slobodna mjesta za F1.
         if remaining_slots > 0:
-            already_selected = {
-                item["key"]
-                for item in selected
+            selected_keys = {
+                item["key"] for item in selected
             }
 
             remaining_f1 = [
-                item
-                for item in f1_candidates
-                if item["key"] not in already_selected
+                item for item in f1_candidates
+                if item["key"] not in selected_keys
             ]
 
             selected.extend(
@@ -423,7 +386,6 @@ def select_candidates(candidates, state, config, now=None):
             )
 
     else:
-        # Izvan F1 vikenda nogomet ima prednost.
         selected.extend(
             football_candidates[:slots]
         )
@@ -435,7 +397,25 @@ def select_candidates(candidates, state, config, now=None):
                 f1_candidates[:remaining_slots]
             )
 
-    # Ukloni interni score prije vraćanja kandidata.
+    # Dodatna završna zaštita:
+    # broj odabranih fallback pretraga nikad ne smije
+    # biti veći od preostalog dnevnog fallback budžeta.
+    final_selection = []
+    selected_fallback_count = 0
+
+    for candidate in selected:
+        is_fallback = candidate.get("fallback", False)
+
+        if is_fallback:
+            if selected_fallback_count >= fallback_remaining:
+                continue
+
+            selected_fallback_count += 1
+
+        final_selection.append(candidate)
+
+    selected = final_selection
+
     for candidate in selected:
         candidate.pop("_score", None)
 
@@ -455,8 +435,18 @@ def select_candidates(candidates, state, config, now=None):
     )
 
     print(
+        f"[Quota] Fallback preostalo: "
+        f"{max(0, fallback_budget - int(state.get('fallback_used', 0)))}"
+    )
+
+    print(
         f"[Quota] F1 vikend aktivan: "
         f"{'DA' if active_f1 else 'NE'}"
+    )
+
+    print(
+        f"[Quota] Odabrani fallback kandidati: "
+        f"{selected_fallback_count}"
     )
 
     return selected
