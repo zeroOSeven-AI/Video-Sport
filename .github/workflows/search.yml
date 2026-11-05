@@ -42,8 +42,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add YouTube/quota_state.json
-          git add YouTube/Football/youtube_football.jsonl
-          git add YouTube/F1/youtube_f1.jsonl
+
+          [ -f YouTube/quota_state.json ] && git add YouTube/quota_state.json || true
+          [ -f YouTube/Football/youtube_football.jsonl ] && git add YouTube/Football/youtube_football.jsonl || true
+          [ -f YouTube/F1/youtube_f1.jsonl ] && git add YouTube/F1/youtube_f1.jsonl || true
+
           git diff --cached --quiet || git commit -m "Update YouTube highlights"
           git push
