@@ -110,7 +110,6 @@ def find_matchday_ids(data):
             for normalized_key, (original_key, value) in normalized_items.items():
                 if normalized_key in {
                     "matchdayid",
-                    "matchday_id",
                     "matchday"
                 }:
                     if isinstance(value, (str, int)):
@@ -198,18 +197,42 @@ def get_team_name(team):
 
 
 def extract_matches(data):
+    """
+    Parsira OneFootball Matchday API.
+
+    Stvarna struktura:
+    kickoffs[]
+      kickoff
+      groups[]
+        matches[]
+          team_home.name
+          team_away.name
+
+    Vrijeme kickoffa nasljeđuje se iz roditeljskog objekta.
+    """
+
     matches = []
 
-    def walk(obj):
+    def walk(obj, inherited_kickoff=None):
         if isinstance(obj, dict):
+
+            # OneFootball kickoff objekt sadrži vrijeme
+            # koje vrijedi za sve utakmice unutar groups/matches.
+            current_kickoff = (
+                parse_time(obj.get("kickoff"))
+                or inherited_kickoff
+            )
+
             home_obj = (
-                obj.get("homeTeam")
+                obj.get("team_home")
+                or obj.get("homeTeam")
                 or obj.get("home")
                 or obj.get("home_team")
             )
 
             away_obj = (
-                obj.get("awayTeam")
+                obj.get("team_away")
+                or obj.get("awayTeam")
                 or obj.get("away")
                 or obj.get("away_team")
             )
@@ -218,30 +241,37 @@ def extract_matches(data):
             away = get_team_name(away_obj)
 
             if home and away:
-                time_value = (
-                    obj.get("kickoff")
-                    or obj.get("date")
-                    or obj.get("startDate")
-                    or obj.get("utcDate")
-                    or obj.get("startTime")
-                    or obj.get("kickoffTime")
-                )
+                event_time = current_kickoff
 
-                event_time = parse_time(time_value)
+                if event_time is None:
+                    time_value = (
+                        obj.get("date")
+                        or obj.get("startDate")
+                        or obj.get("utcDate")
+                        or obj.get("startTime")
+                        or obj.get("kickoffTime")
+                    )
+
+                    event_time = parse_time(time_value)
 
                 if event_time:
                     matches.append({
                         "home": home,
                         "away": away,
-                        "event_time": event_time
+                        "event_time": event_time,
+                        "match_id": obj.get("id"),
+                        "period": obj.get("period"),
+                        "score_home": obj.get("score_home"),
+                        "score_away": obj.get("score_away")
                     })
 
             for value in obj.values():
-                walk(value)
+                if isinstance(value, (dict, list)):
+                    walk(value, current_kickoff)
 
         elif isinstance(obj, list):
             for item in obj:
-                walk(item)
+                walk(item, inherited_kickoff)
 
     walk(data)
 
@@ -358,17 +388,6 @@ def print_matchday_diagnostics(matchday_id, response, data):
             list(data.keys())[:50]
         )
 
-    elif isinstance(data, list):
-        print(
-            f"[Football][Debug] Top-level list length: {len(data)}"
-        )
-
-        if data and isinstance(data[0], dict):
-            print(
-                "[Football][Debug] First item keys:",
-                list(data[0].keys())[:50]
-            )
-
     print("[Football][Debug] JSON SAMPLE:")
 
     try:
@@ -459,8 +478,9 @@ def candidates(now=None):
             f"pronađeno {len(matchday_ids)} matchday ID-jeva."
         )
 
-        # Jedan dijagnostički ispis po ligi.
         debug_printed = False
+        league_match_count = 0
+        league_active_count = 0
 
         for matchday_id in matchday_ids:
             try:
@@ -482,6 +502,7 @@ def candidates(now=None):
                 continue
 
             matches = extract_matches(matchday)
+            league_match_count += len(matches)
 
             if not matches:
                 print(
@@ -506,6 +527,8 @@ def candidates(now=None):
                 <= match["event_time"]
                 <= now + before
             ]
+
+            league_active_count += len(active_matches)
 
             if not active_matches:
                 continue
@@ -579,6 +602,12 @@ def candidates(now=None):
                     "event_times": match_keys,
                     "importance": importance
                 })
+
+        print(
+            f"[Football] {league_name}: "
+            f"ukupno utakmica {league_match_count}, "
+            f"u aktivnom prozoru {league_active_count}."
+        )
 
     print(
         f"[Football] Kandidata: {len(result)}"
