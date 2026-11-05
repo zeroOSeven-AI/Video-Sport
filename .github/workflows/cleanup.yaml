@@ -1,0 +1,65 @@
+name: Ultimate Auto Cleanup
+on:
+  workflow_dispatch: # Omogućuje ti ručno pokretanje na gumb
+  schedule:
+    - cron: '0 0 * * 0' # Automatski svake nedjelje u 00:00
+
+jobs:
+  delete-runs:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Cleanup Workflow History
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            
+            console.log(`Starting cleanup for ${owner}/${repo}...`);
+            
+            let hasRuns = true;
+            let totalDeleted = 0;
+
+            while (hasRuns) {
+              // Dohvaćamo zadnjih 100 pokretanja
+              const response = await github.rest.actions.listWorkflowRunsForRepo({
+                owner,
+                repo,
+                per_page: 100
+              });
+              
+              const runs = response.data.workflow_runs;
+              
+              // Ako nema više ničega osim ovog trenutnog pokretanja, stani
+              if (runs.length <= 1) {
+                hasRuns = false;
+                break;
+              }
+              
+              for (const run of runs) {
+                // Preskačemo trenutni workflow koji upravo radi čišćenje
+                if (run.id === context.runId) continue;
+                
+                try {
+                  await github.rest.actions.deleteWorkflowRun({
+                    owner,
+                    repo,
+                    run_id: run.id
+                  });
+                  totalDeleted++;
+                  if (totalDeleted % 50 === 0) {
+                    console.log(`Obrisano ${totalDeleted} pokretanja...`);
+                  }
+                } catch (error) {
+                  // Ako je run "in_progress", GitHub ga nekad ne da obrisati
+                  continue; 
+                }
+              }
+              
+              // Mala pauza da ne preopteretimo API prebrzo
+              await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+            console.log(`Gotovo! Ukupno obrisano: ${totalDeleted} zapisa.`);
