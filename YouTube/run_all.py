@@ -1,3 +1,4 @@
+
 import os
 import json
 import requests
@@ -16,19 +17,21 @@ from quota_manager import (
     save_state
 )
 
-BASE = Path(__file__).resolve().parent
 
-print("RADNA MAPA:", Path.cwd())
-print("BASE:", BASE)
-print("FOOTBALL CONFIG:", BASE / "Football" / "config.json")
-print("FOOTBALL CONFIG POSTOJI:",
-      (BASE / "Football" / "config.json").exists())
-print("F1 CONFIG POSTOJI:",
-      (BASE / "F1" / "config.json").exists())
+BASE = Path(__file__).resolve().parent
+FOOTBALL_CONFIG = BASE / "Football" / "config.json"
 
 API_URL = "https://www.googleapis.com/youtube/v3/search"
-
 API_KEY = os.environ.get("YOUTUBE_API_KEY")
+
+
+FALLBACK_LEAGUES = [
+    "Premier League",
+    "LaLiga",
+    "Bundesliga",
+    "Serie A",
+    "Champions League"
+]
 
 
 def youtube_search(candidate):
@@ -67,18 +70,20 @@ def output_file(domain):
 
 def save_results(candidate, data):
     path = output_file(candidate["domain"])
+    path.parent.mkdir(parents=True, exist_ok=True)
 
     record = {
         "domain": candidate["domain"],
-        "event": candidate["event_name"],
+        "event": candidate.get("event_name"),
         "league": candidate.get("league"),
-        "source": candidate["source_name"],
-        "channel_id": candidate["channel_id"],
-        "query": candidate["query"],
-        "event_time": candidate["event_time"],
+        "source": candidate.get("source_name"),
+        "channel_id": candidate.get("channel_id"),
+        "query": candidate.get("query"),
+        "event_time": candidate.get("event_time"),
         "searched_at": datetime.now(
             timezone.utc
         ).isoformat(),
+        "fallback": candidate.get("fallback", False),
         "videos": []
     }
 
@@ -106,28 +111,146 @@ def save_results(candidate, data):
         )
 
 
+def build_football_fallback():
+    """
+    Fallback za top nogometne lige.
+    Jedna pretraga po ligi i uključenom kanalu.
+    """
+
+    if not FOOTBALL_CONFIG.exists():
+        print("[Fallback] Football config ne postoji.")
+        return []
+
+    with FOOTBALL_CONFIG.open("r", encoding="utf-8") as f:
+        config = json.load(f)
+
+    result = []
+
+    for league in config.get("leagues", []):
+        league_name = league.get("name")
+
+        if league_name not in FALLBACK_LEAGUES:
+            continue
+
+        sources = football.get_sources(
+            config,
+            league_name
+        )
+
+        for source in sources:
+            channel_id = source["channel_id"]
+
+            result.append({
+                "domain": "Football",
+                "key": (
+                    f"football:fallback:{league_name}:"
+                    f"{channel_id}"
+                ),
+                "query": (
+                    f'"{league_name}" latest highlights '
+                    f"football analysis"
+                ),
+                "channel_id": channel_id,
+                "source_name": source.get(
+                    "name",
+                    league_name
+                ),
+                "league": league_name,
+                "event_name": (
+                    f"{league_name} - Latest Content"
+                ),
+                "event_time": None,
+                "importance": float(
+                    league.get("importance", 1.0)
+                ),
+                "fallback": True
+            })
+
+    print(
+        f"[Fallback Football] Kandidata: {len(result)}"
+    )
+
+    return result
+
+
+def build_fallback_candidates():
+    """
+    Poziva se samo kada nema današnjih Football
+    utakmica ni aktualnih F1 sesija.
+    """
+
+    result = []
+
+    try:
+        f1_fallback = f1.fallback_candidates()
+        result.extend(f1_fallback)
+
+        print(
+            f"[Fallback F1] Kandidata: {len(f1_fallback)}"
+        )
+
+    except Exception as exc:
+        print(f"[Fallback F1] Greška: {exc}")
+
+    try:
+        football_fallback = build_football_fallback()
+        result.extend(football_fallback)
+
+    except Exception as exc:
+        print(f"[Fallback Football] Greška: {exc}")
+
+    return result
+
+
 def main():
     if not API_KEY:
-        raise RuntimeError("GitHub Secret YOUTUBE_API_KEY nije postavljen.")
+        raise RuntimeError(
+            "GitHub Secret YOUTUBE_API_KEY nije postavljen."
+        )
 
     all_candidates = []
 
+    # 1. Football događaji
     try:
         football_candidates = football.candidates()
+
         all_candidates.extend(football_candidates)
+
         print(
-            f"[Football] Kandidata: {len(football_candidates)}"
+            f"[Football] Kandidata: "
+            f"{len(football_candidates)}"
         )
+
     except Exception as exc:
         print(f"[Football] Greška: {exc}")
 
+    # 2. F1 događaji
     try:
         f1_candidates = f1.candidates()
+
         all_candidates.extend(f1_candidates)
-        print(f"[F1] Kandidata: {len(f1_candidates)}")
+
+        print(
+            f"[F1] Kandidata: {len(f1_candidates)}"
+        )
+
     except Exception as exc:
         print(f"[F1] Greška: {exc}")
 
+    # 3. Fallback samo kada nema događaja
+    if not all_candidates:
+        print(
+            "[Fallback] Nema današnjih događaja. "
+            "Pokrećem F1 i top nogometne lige."
+        )
+
+        all_candidates = build_fallback_candidates()
+
+    if not all_candidates:
+        print("[System] Nema kandidata za pretraživanje.")
+        return
+
+    # 4. Kvota
     config = load_config()
     state = load_state()
     now = datetime.now(timezone.utc)
@@ -135,8 +258,7 @@ def main():
     selected = select_candidates(
         all_candidates,
         state,
-        config,
-        now
+        config
     )
 
     print(
@@ -144,12 +266,23 @@ def main():
         f"{len(all_candidates)} kandidata."
     )
 
+    # 5. YouTube pretrage
     for candidate in selected:
         domain = candidate["domain"]
+        key = candidate["key"]
 
         print(
             f"[{domain}] {candidate['event_name']} "
             f"| {candidate['source_name']}"
+        )
+
+        # Evidentiramo pokušaj prije slanja zahtjeva.
+        # Time nećemo slučajno prekoračiti lokalni budžet
+        # ako API primi zahtjev, a odgovor ne stigne.
+        record_success(
+            state,
+            domain,
+            key
         )
 
         try:
@@ -157,34 +290,33 @@ def main():
 
             save_results(candidate, data)
 
-            record_success(
-                state,
-                candidate,
-                datetime.now(timezone.utc)
-            )
-
-            save_state(state)
-
             print(
                 f"[{domain}] Spremljeno "
                 f"{len(data.get('items', []))} videa."
             )
 
         except requests.HTTPError as exc:
-            print(f"[{domain}] YouTube HTTP greška: {exc}")
+            print(
+                f"[{domain}] YouTube HTTP greška: {exc}"
+            )
 
             if exc.response is not None:
                 print(exc.response.text[:1000])
 
-            # Kod greške kvota se ne troši u lokalnom stanju.
-            # Ako je API ipak obradio zahtjev, stvarna kvota
-            # može biti potrošena.
-
         except Exception as exc:
             print(f"[{domain}] Greška: {exc}")
 
+        finally:
+            save_state(state)
+
     print("\nZavršno stanje kvote:")
-    print(json.dumps(state, indent=2, ensure_ascii=False))
+    print(
+        json.dumps(
+            state,
+            indent=2,
+            ensure_ascii=False
+        )
+    )
 
 
 if __name__ == "__main__":
