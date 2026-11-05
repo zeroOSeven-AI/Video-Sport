@@ -1,1 +1,27 @@
-
+{
+    "source": "Ligue 1 McDonald's",
+    "priority": 1.1,
+    "updated_at": "2026-11-05T17:41:50.334394+00:00",
+    "videos": [
+        {
+            "video_id": "CXk8Er7Yf9w",
+            "title": "HIGHLIGHTS | FC BARCELONA 3 vs 0 ASTON VILLA | UEFA CHAMPIONS LEAGUE 🔵🔴",
+            "published_at": "2026-11-04T22:00:36Z",
+            "published_ts": 1793829636,
+            "duration_seconds": 246,
+            "thumbnail": "https://i.ytimg.com/vi/CXk8Er7Yf9w/hqdefault.jpg",
+            "source": "LALIGA EA SPORTS",
+            "source_key": "laliga_ea_sports",
+            "priority": 1.3,
+            "logo": "logo/laliga_ea_sports.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=CXk8Er7Yf9w"
+        }
+    ]
+}
