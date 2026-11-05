@@ -1,0 +1,85 @@
+{
+  "global": {
+    "exclude_shorts": true,
+    "min_duration_seconds": 180,
+    "shorts_keywords": [
+      "#shorts",
+      "shorts",
+      "short video"
+    ]
+  },
+  "football": {
+    "include_keywords": [
+      "highlights",
+      "extended highlights",
+      "full highlights",
+      "match highlights",
+      "match recap",
+      "game recap",
+      "match review",
+      "post match analysis",
+      "post-match analysis",
+      "tactical analysis",
+      "all goals",
+      "every goal",
+      "best moments",
+      "key moments",
+      "goals"
+    ],
+    "exclude_keywords": [
+      "watch along",
+      "watchalong",
+      "live watch",
+      "reaction",
+      "reacts",
+      "prediction",
+      "predictions",
+      "preview",
+      "transfer news",
+      "transfer update",
+      "podcast",
+      "gaming",
+      "gameplay",
+      "funny",
+      "compilation"
+    ]
+  },
+  "f1": {
+    "include_keywords": [
+      "race highlights",
+      "race recap",
+      "full race",
+      "highlights",
+      "best moments",
+      "key moments",
+      "team radio",
+      "onboard",
+      "on-board",
+      "race analysis",
+      "technical analysis",
+      "qualifying highlights",
+      "qualifying recap",
+      "grand prix review",
+      "race review",
+      "post race analysis",
+      "post-race analysis"
+    ],
+    "exclude_keywords": [
+      "watch along",
+      "watchalong",
+      "live watch",
+      "reaction",
+      "reacts",
+      "prediction",
+      "predictions",
+      "preview",
+      "rumours",
+      "rumors",
+      "podcast",
+      "gaming",
+      "gameplay",
+      "funny",
+      "compilation"
+    ]
+  }
+}
