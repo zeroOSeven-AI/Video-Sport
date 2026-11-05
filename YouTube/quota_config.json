@@ -1,6 +1,6 @@
 {
   "daily_limit": 100,
-  "reserve": 10,
+  "reserve": 0,
   "max_per_run": 8,
   "cooldown_minutes": 180,
   "event_window_hours_before": 6,
