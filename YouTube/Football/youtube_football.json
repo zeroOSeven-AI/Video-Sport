@@ -1,8 +1,68 @@
 {
-    "source": "UEFA Conference League",
-    "priority": 1.2,
-    "updated_at": "2026-11-05T18:46:33.438964+00:00",
+    "source": "Ligue 1 Official",
+    "priority": 1.1,
+    "updated_at": "2026-11-05T18:56:47.988447+00:00",
     "videos": [
+        {
+            "video_id": "aZRvc8Bd57A",
+            "title": "INTER-COMO 4-0 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-11-05T16:00:25Z",
+            "published_ts": 1793894425,
+            "duration_seconds": 754,
+            "thumbnail": "https://i.ytimg.com/vi/aZRvc8Bd57A/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=aZRvc8Bd57A"
+        },
+        {
+            "video_id": "OVcoVweCVuY",
+            "title": "EVERY Champions League Goal From Matchday 4 | Highlights",
+            "published_at": "2026-11-05T13:11:15Z",
+            "published_ts": 1793884275,
+            "duration_seconds": 1919,
+            "thumbnail": "https://i.ytimg.com/vi/OVcoVweCVuY/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=OVcoVweCVuY"
+        },
+        {
+            "video_id": "9UgnDeat_dg",
+            "title": "NAPOLI-LAZIO 0-2 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-11-05T12:00:12Z",
+            "published_ts": 1793880012,
+            "duration_seconds": 768,
+            "thumbnail": "https://i.ytimg.com/vi/9UgnDeat_dg/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=9UgnDeat_dg"
+        },
         {
             "video_id": "CXk8Er7Yf9w",
             "title": "HIGHLIGHTS | FC BARCELONA 3 vs 0 ASTON VILLA | UEFA CHAMPIONS LEAGUE 🔵🔴",
@@ -22,6 +82,348 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=CXk8Er7Yf9w"
+        },
+        {
+            "video_id": "qO_3oepajYc",
+            "title": "ALL ROUND 9 HIGHLIGHTS ⚽ | PRIMAVERA 1 2026/27",
+            "published_at": "2026-11-04T17:23:20Z",
+            "published_ts": 1793813000,
+            "duration_seconds": 1894,
+            "thumbnail": "https://i.ytimg.com/vi/qO_3oepajYc/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=qO_3oepajYc"
+        },
+        {
+            "video_id": "rZ4GM52uHlg",
+            "title": "JUVE STEAL THE SHOW 🎬 | JUVENTUS-NAPOLI CINEMATIC HIGHLIGHTS | Serie A 2026/27",
+            "published_at": "2026-11-04T14:00:27Z",
+            "published_ts": 1793800827,
+            "duration_seconds": 256,
+            "thumbnail": "https://i.ytimg.com/vi/rZ4GM52uHlg/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=rZ4GM52uHlg"
+        },
+        {
+            "video_id": "9cGah8J8gyM",
+            "title": "TODOS LOS GOLES de la JORNADA 11 | LALIGA EA SPORTS 2026/27",
+            "published_at": "2026-11-04T09:08:21Z",
+            "published_ts": 1793783301,
+            "duration_seconds": 651,
+            "thumbnail": "https://i.ytimg.com/vi/9cGah8J8gyM/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goles",
+                "todos los goles"
+            ],
+            "link": "https://www.youtube.com/watch?v=9cGah8J8gyM"
+        },
+        {
+            "video_id": "4AJmJR_4fGI",
+            "title": "Manchester United v Roma! | Classic Champions League Goals",
+            "published_at": "2026-11-03T17:00:16Z",
+            "published_ts": 1793725216,
+            "duration_seconds": 505,
+            "thumbnail": "https://i.ytimg.com/vi/4AJmJR_4fGI/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=4AJmJR_4fGI"
+        },
+        {
+            "video_id": "NCAR_WAlF-I",
+            "title": "JUVENTUS-NAPOLI 2-0 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-03T10:00:40Z",
+            "published_ts": 1793700040,
+            "duration_seconds": 1214,
+            "thumbnail": "https://i.ytimg.com/vi/NCAR_WAlF-I/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=NCAR_WAlF-I"
+        },
+        {
+            "video_id": "9OVyb99w73s",
+            "title": "🌟 GOAL SERIE A | MOREIRA the Man of the Moment! | Goal Collection | Round 10 | Serie A 2026/27",
+            "published_at": "2026-11-03T07:00:07Z",
+            "published_ts": 1793689207,
+            "duration_seconds": 577,
+            "thumbnail": "https://i.ytimg.com/vi/9OVyb99w73s/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "every goal"
+            ],
+            "link": "https://www.youtube.com/watch?v=9OVyb99w73s"
+        },
+        {
+            "video_id": "WJrU4WAl7J8",
+            "title": "TOUS LES BUTS de la 9ème journée | Ligue 1 McDonald's 26/27",
+            "published_at": "2026-11-02T23:13:55Z",
+            "published_ts": 1793661235,
+            "duration_seconds": 688,
+            "thumbnail": "https://i.ytimg.com/vi/WJrU4WAl7J8/hqdefault.jpg",
+            "source": "Ligue 1 Official",
+            "source_key": "ligue_1_official",
+            "priority": 1.1,
+            "logo": "logo/ligue_1_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "buts"
+            ],
+            "link": "https://www.youtube.com/watch?v=WJrU4WAl7J8"
+        },
+        {
+            "video_id": "YSToP57dISM",
+            "title": "Drama All Over Der Klassiker! | FC BAYERN - BORUSSIA DORTMUND | Highlights | Matchday 8 – Bundesliga",
+            "published_at": "2026-11-02T13:00:40Z",
+            "published_ts": 1793624440,
+            "duration_seconds": 279,
+            "thumbnail": "https://i.ytimg.com/vi/YSToP57dISM/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=YSToP57dISM"
+        },
+        {
+            "video_id": "X7cfE6kMmYc",
+            "title": "Stuttgart Stun Leverkusen! | BAYER 04 LEVERKUSEN - VFB STUTTGART | Highlights | MD 8 – Bundesliga",
+            "published_at": "2026-11-01T23:00:38Z",
+            "published_ts": 1793574038,
+            "duration_seconds": 250,
+            "thumbnail": "https://i.ytimg.com/vi/X7cfE6kMmYc/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=X7cfE6kMmYc"
+        },
+        {
+            "video_id": "fqK5_aR7pgs",
+            "title": "TOUS LES BUTS de la 9ème journée | Ligue 1 McDonald's 26/27",
+            "published_at": "2026-11-01T23:00:25Z",
+            "published_ts": 1793574025,
+            "duration_seconds": 651,
+            "thumbnail": "https://i.ytimg.com/vi/fqK5_aR7pgs/hqdefault.jpg",
+            "source": "Ligue 1 Official",
+            "source_key": "ligue_1_official",
+            "priority": 1.1,
+            "logo": "logo/ligue_1_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "buts"
+            ],
+            "link": "https://www.youtube.com/watch?v=fqK5_aR7pgs"
+        },
+        {
+            "video_id": "5b8exJOW5Sk",
+            "title": "It's Always HIM! | WERDER BREMEN - HOFFENHEIM | Highlights | Matchday 8 – Bundesliga 2026/27",
+            "published_at": "2026-11-01T23:00:15Z",
+            "published_ts": 1793574015,
+            "duration_seconds": 183,
+            "thumbnail": "https://i.ytimg.com/vi/5b8exJOW5Sk/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=5b8exJOW5Sk"
+        },
+        {
+            "video_id": "8VI0XHF8Ows",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 08",
+            "published_at": "2026-11-01T23:00:14Z",
+            "published_ts": 1793574014,
+            "duration_seconds": 1923,
+            "thumbnail": "https://i.ytimg.com/vi/8VI0XHF8Ows/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=8VI0XHF8Ows"
+        },
+        {
+            "video_id": "CtiveS-84LE",
+            "title": "BORUSSIA M'GLADBACH - SC PADERBORN | Highlights | Matchday 8 – Bundesliga 2026/27",
+            "published_at": "2026-11-01T23:00:13Z",
+            "published_ts": 1793574013,
+            "duration_seconds": 182,
+            "thumbnail": "https://i.ytimg.com/vi/CtiveS-84LE/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=CtiveS-84LE"
+        },
+        {
+            "video_id": "sjpjQmQyEYw",
+            "title": "Chaos! Woodwork And Pen Miss! | FC BAYERN - BORUSSIA DORTMUND | Highlights | Matchday 8 – Bundesliga",
+            "published_at": "2026-11-01T23:00:07Z",
+            "published_ts": 1793574007,
+            "duration_seconds": 238,
+            "thumbnail": "https://i.ytimg.com/vi/sjpjQmQyEYw/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=sjpjQmQyEYw"
+        },
+        {
+            "video_id": "mNL39XEVv8A",
+            "title": "Huge Step! | EINTRACHT FRANKFURT - HAMBURGER SV | Highlights | Matchday 8 – Bundesliga 26/27",
+            "published_at": "2026-11-01T23:00:03Z",
+            "published_ts": 1793574003,
+            "duration_seconds": 239,
+            "thumbnail": "https://i.ytimg.com/vi/mNL39XEVv8A/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=mNL39XEVv8A"
+        },
+        {
+            "video_id": "FE-9LM2Iaek",
+            "title": "EVERY Weekend Goal | Matchweek 9 | 2026/27 Premier League Highlights",
+            "published_at": "2026-11-01T22:01:28Z",
+            "published_ts": 1793570488,
+            "duration_seconds": 212,
+            "thumbnail": "https://i.ytimg.com/vi/FE-9LM2Iaek/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=FE-9LM2Iaek"
+        },
+        {
+            "video_id": "DJ2O5zybN4M",
+            "title": "EVERY Women's Champions League Goal From Matchday 3",
+            "published_at": "2026-11-01T09:16:40Z",
+            "published_ts": 1793524600,
+            "duration_seconds": 826,
+            "thumbnail": "https://i.ytimg.com/vi/DJ2O5zybN4M/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "every goal"
+            ],
+            "link": "https://www.youtube.com/watch?v=DJ2O5zybN4M"
         }
     ]
 }
