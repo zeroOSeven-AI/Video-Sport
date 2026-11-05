@@ -50,6 +50,7 @@ def get_json(url):
         headers=HEADERS,
         timeout=25
     )
+
     response.raise_for_status()
     return response.json()
 
@@ -84,27 +85,7 @@ def normalize_name(value):
 
 
 def find_matchday_ids(data):
-    """
-    Pronalazi matchday ID-jeve u više mogućih
-    OneFootball struktura JSON feeda.
-
-    Podržava:
-    - matchdayId
-    - matchday_id
-    - matchday.id
-    - matchdays[].id
-    - matchdayOverview[].id
-    - objekte čiji kontekst ili naziv označava matchday.
-    """
-
     found = set()
-
-    id_keys = {
-        "matchdayid",
-        "matchday_id",
-        "matchday",
-        "match_day_id"
-    }
 
     matchday_container_keys = {
         "matchday",
@@ -118,13 +99,14 @@ def find_matchday_ids(data):
     def walk(obj, path=""):
         if isinstance(obj, dict):
             normalized_items = {
-                re.sub(r"[^a-z0-9]", "", str(key).lower()): (
-                    key, value
-                )
+                re.sub(
+                    r"[^a-z0-9]",
+                    "",
+                    str(key).lower()
+                ): (key, value)
                 for key, value in obj.items()
             }
 
-            # Bez obzira na dubinu, traži eksplicitni matchday ID.
             for normalized_key, (original_key, value) in normalized_items.items():
                 if normalized_key in {
                     "matchdayid",
@@ -145,8 +127,6 @@ def find_matchday_ids(data):
                         if possible_id is not None:
                             found.add(str(possible_id))
 
-            # Ako se nalazimo unutar matchday objekta,
-            # njegov obični "id" također može biti ID kola.
             path_lower = path.lower()
 
             in_matchday_context = any(
@@ -165,7 +145,6 @@ def find_matchday_ids(data):
                     if isinstance(possible_id, (str, int)):
                         found.add(str(possible_id))
 
-            # Rekurzivni obilazak svih vrijednosti.
             for key, value in obj.items():
                 normalized_key = re.sub(
                     r"[^a-z0-9]",
@@ -316,11 +295,6 @@ def get_sources(config, league_name):
 
 
 def print_feed_diagnostics(feed, league_name):
-    """
-    Ispisuje strukturu feeda kada ID kola nije pronađen.
-    Ne ispisuje cijeli feed kako log ne bi postao prevelik.
-    """
-
     print(
         f"[Football][Debug] Struktura feeda za {league_name}:"
     )
@@ -328,7 +302,9 @@ def print_feed_diagnostics(feed, league_name):
     if isinstance(feed, dict):
         print(
             "[Football][Debug] Top-level ključevi: "
-            + ", ".join(str(key) for key in list(feed.keys())[:40])
+            + ", ".join(
+                str(key) for key in list(feed.keys())[:40]
+            )
         )
 
         for key, value in feed.items():
@@ -342,7 +318,8 @@ def print_feed_diagnostics(feed, league_name):
                     print(
                         f"[Football][Debug] {key}[0] ključevi: "
                         + ", ".join(
-                            str(k) for k in list(value[0].keys())[:30]
+                            str(k)
+                            for k in list(value[0].keys())[:30]
                         )
                     )
 
@@ -357,6 +334,60 @@ def print_feed_diagnostics(feed, league_name):
             f"[Football][Debug] Neočekivani tip feeda: "
             f"{type(feed).__name__}"
         )
+
+
+def print_matchday_diagnostics(matchday_id, response, data):
+    print("\n" + "=" * 70)
+    print(f"[Football][Debug] MATCHDAY ID: {matchday_id}")
+    print(f"[Football][Debug] HTTP status: {response.status_code}")
+    print(f"[Football][Debug] URL: {response.url}")
+
+    print(
+        "[Football][Debug] Content-Type: "
+        f"{response.headers.get('Content-Type')}"
+    )
+
+    print(
+        "[Football][Debug] Response type: "
+        f"{type(data).__name__}"
+    )
+
+    if isinstance(data, dict):
+        print(
+            "[Football][Debug] Top-level keys:",
+            list(data.keys())[:50]
+        )
+
+    elif isinstance(data, list):
+        print(
+            f"[Football][Debug] Top-level list length: {len(data)}"
+        )
+
+        if data and isinstance(data[0], dict):
+            print(
+                "[Football][Debug] First item keys:",
+                list(data[0].keys())[:50]
+            )
+
+    print("[Football][Debug] JSON SAMPLE:")
+
+    try:
+        sample = json.dumps(
+            data,
+            ensure_ascii=False,
+            indent=2,
+            default=str
+        )
+
+        print(sample[:12000])
+
+    except Exception as exc:
+        print(
+            f"[Football][Debug] JSON serialization error: {exc}"
+        )
+        print(response.text[:12000])
+
+    print("=" * 70 + "\n")
 
 
 def candidates(now=None):
@@ -428,13 +459,21 @@ def candidates(now=None):
             f"pronađeno {len(matchday_ids)} matchday ID-jeva."
         )
 
+        # Jedan dijagnostički ispis po ligi.
+        debug_printed = False
+
         for matchday_id in matchday_ids:
             try:
-                matchday = get_json(
+                response = requests.get(
                     MATCHDAY_URL.format(
                         matchday_id=matchday_id
-                    )
+                    ),
+                    headers=HEADERS,
+                    timeout=25
                 )
+
+                response.raise_for_status()
+                matchday = response.json()
 
             except Exception as exc:
                 print(
@@ -449,6 +488,16 @@ def candidates(now=None):
                     f"[Football] Matchday {matchday_id}: "
                     f"nisu pronađene utakmice."
                 )
+
+                if not debug_printed:
+                    print_matchday_diagnostics(
+                        matchday_id,
+                        response,
+                        matchday
+                    )
+
+                    debug_printed = True
+
                 continue
 
             active_matches = [
