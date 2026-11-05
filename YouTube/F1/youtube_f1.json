@@ -1,8 +1,44 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-05T17:01:40.533329+00:00",
+    "updated_at": "2026-11-05T17:25:06.194368+00:00",
     "videos": [
+        {
+            "video_id": "eMBI0isVJbo",
+            "title": "Drivers React After The Race | 2026 Mexico Grand Prix",
+            "published_at": "2026-11-02T03:34:45Z",
+            "published_ts": 1793590485,
+            "duration_seconds": 610,
+            "thumbnail": "https://i.ytimg.com/vi/eMBI0isVJbo/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=eMBI0isVJbo"
+        },
+        {
+            "video_id": "XySlwrlLaXE",
+            "title": "LIVE: Mexico City Grand Prix Post-Race Show",
+            "published_at": "2026-11-01T23:57:56Z",
+            "published_ts": 1793577476,
+            "duration_seconds": 3491,
+            "thumbnail": "https://i.ytimg.com/vi/XySlwrlLaXE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=XySlwrlLaXE"
+        },
         {
             "video_id": "tIiRK7hKScU",
             "title": "Race Highlights | 2026 Mexico City Grand Prix",
@@ -17,7 +53,7 @@
             "tags": [
                 "highlights"
             ],
-            "type": "highlight",
+            "type": "highlights",
             "matched_keywords": [
                 "race highlights",
                 "highlights"
@@ -36,10 +72,9 @@
             "priority": 3,
             "logo": "logo/formula_1.png",
             "tags": [
-                "highlights",
-                "qualifying"
+                "highlights"
             ],
-            "type": "highlight",
+            "type": "highlights",
             "matched_keywords": [
                 "highlights",
                 "qualifying highlights"
@@ -58,14 +93,31 @@
             "priority": 3,
             "logo": "logo/formula_1.png",
             "tags": [
-                "highlights",
-                "qualifying"
+                "highlights"
             ],
-            "type": "highlight",
+            "type": "highlights",
             "matched_keywords": [
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=BH33XWkjtBI"
+        },
+        {
+            "video_id": "0sspCZ4fxUA",
+            "title": "How Teams Have Modified Their Cars For Mexico | F1 TV Tech Talk",
+            "published_at": "2026-10-31T01:20:41Z",
+            "published_ts": 1793409641,
+            "duration_seconds": 923,
+            "thumbnail": "https://i.ytimg.com/vi/0sspCZ4fxUA/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=0sspCZ4fxUA"
         },
         {
             "video_id": "tEEGnZna3Gc",
@@ -79,14 +131,103 @@
             "priority": 3,
             "logo": "logo/formula_1.png",
             "tags": [
-                "highlights",
-                "qualifying"
+                "highlights"
             ],
-            "type": "highlight",
+            "type": "highlights",
             "matched_keywords": [
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=tEEGnZna3Gc"
+        },
+        {
+            "video_id": "QTwZskmStvE",
+            "title": "Weekend Warm-Up | 2026 Mexico City Grand Prix",
+            "published_at": "2026-10-30T00:30:11Z",
+            "published_ts": 1793320211,
+            "duration_seconds": 2073,
+            "thumbnail": "https://i.ytimg.com/vi/QTwZskmStvE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=QTwZskmStvE"
+        },
+        {
+            "video_id": "Fh_-PjYSrFA",
+            "title": "What Upgrades Have Teams Brought To Texas? | F1 TV Tech Talk",
+            "published_at": "2026-10-24T00:57:06Z",
+            "published_ts": 1792803426,
+            "duration_seconds": 1315,
+            "thumbnail": "https://i.ytimg.com/vi/Fh_-PjYSrFA/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=Fh_-PjYSrFA"
+        },
+        {
+            "video_id": "ZhVDL7e9i4E",
+            "title": "Are Mercedes' Upgrades Working? And Modified Red Bull Racing Parts | F1 TV Tech Talk",
+            "published_at": "2026-10-09T18:30:10Z",
+            "published_ts": 1791570610,
+            "duration_seconds": 767,
+            "thumbnail": "https://i.ytimg.com/vi/ZhVDL7e9i4E/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=ZhVDL7e9i4E"
+        },
+        {
+            "video_id": "svYHZNsU9pc",
+            "title": "Analysing Red Bull's Improvements At Sepang | Jolyon Palmer's F1 TV Analysis",
+            "published_at": "2026-10-06T17:15:14Z",
+            "published_ts": 1791306914,
+            "duration_seconds": 745,
+            "thumbnail": "https://i.ytimg.com/vi/svYHZNsU9pc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=svYHZNsU9pc"
+        },
+        {
+            "video_id": "wqZMYExxLas",
+            "title": "Drivers React After The Race | 2026 Bahrain Grand Prix in Malaysia",
+            "published_at": "2026-10-04T15:00:18Z",
+            "published_ts": 1791126018,
+            "duration_seconds": 926,
+            "thumbnail": "https://i.ytimg.com/vi/wqZMYExxLas/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "other"
+            ],
+            "type": "other",
+            "matched_keywords": [],
+            "link": "https://www.youtube.com/watch?v=wqZMYExxLas"
         }
     ]
 }
