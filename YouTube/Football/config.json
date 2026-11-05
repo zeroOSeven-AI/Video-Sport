@@ -102,43 +102,43 @@
     {
       "name": "Premier League Official",
       "league_name": "Premier League",
-      "channel_id": "UCNAf1k0yIjyGu3k9BwAg3lg",
+      "channel_id": "UCG5qGWdu8nIRZqJ_GgDwQ-w",
       "enabled": true
     },
     {
       "name": "Bundesliga Official",
       "league_name": "Bundesliga",
-      "channel_id": "UC6UL29enLNe4xmWfUzm7Cjg",
+      "channel_id": "UC6UL29enLNe4mqwTfAyeNuw",
       "enabled": true
     },
     {
-      "name": "LALIGA EA SPORTS",
+      "name": "LaLiga Official",
       "league_name": "LaLiga",
-      "channel_id": "UC14UlmYlSNiQCBe9Eookf_A",
+      "channel_id": "UCTv-XvfzLX3i4IGWAm4sbmA",
       "enabled": true
     },
     {
       "name": "Serie A Official",
       "league_name": "Serie A",
-      "channel_id": "UCBJeMCIeGG4XNFk57Z4M1gQ",
+      "channel_id": "UCBJeMCIeLQos7wacox4hmLQ",
       "enabled": true
     },
     {
-      "name": "Ligue 1 McDonald's",
+      "name": "Ligue 1 Official",
       "league_name": "Ligue 1",
-      "channel_id": "UC58_wznnp2-rZ-p55v2i9vA",
+      "channel_id": "UCQsH5XtIc9hONE1BQjucM0g",
       "enabled": true
     },
     {
-      "name": "VSPORTS - Liga Portugal",
+      "name": "Liga Portugal",
       "league_name": "Liga Portugal",
-      "channel_id": "UCuIlu5oGIj1RzHOYmeSV5Eg",
+      "channel_id": "UCnr9M2KCziVCcQHNrHj-qiw",
       "enabled": true
     },
     {
-      "name": "VriendenLoterij Eredivisie",
+      "name": "Eredivisie",
       "league_name": "Eredivisie",
-      "channel_id": "UCxyoiD-bwrmapdivXCFvmaw",
+      "channel_id": "UCbw_H0qCrwYFKMXrUMxpy0g",
       "enabled": true
     },
     {
@@ -148,7 +148,7 @@
       "enabled": true
     },
     {
-      "name": "MAXSport",
+      "name": "SuperSport HNL",
       "league_name": "HNL",
       "channel_id": "UCdZuGHA8fV0oKQRCE4AYV0A",
       "enabled": true
@@ -156,19 +156,19 @@
     {
       "name": "UEFA Official",
       "league_name": "Champions League",
-      "channel_id": "UCfhr44Y0zRjvh0R8rJtD1gQ",
+      "channel_id": "UCyGa1YEx9ST66rYrJTGIKOw",
       "enabled": true
     },
     {
       "name": "UEFA Europa League",
       "league_name": "Europa League",
-      "channel_id": "UCfhr44Y0zRjvh0R8rJtD1gQ",
+      "channel_id": "UCyGa1YEx9ST66rYrJTGIKOw",
       "enabled": true
     },
     {
       "name": "UEFA Conference League",
       "league_name": "Conference League",
-      "channel_id": "UCfhr44Y0zRjvh0R8rJtD1gQ",
+      "channel_id": "UCyGa1YEx9ST66rYrJTGIKOw",
       "enabled": true
     }
   ]
