@@ -1,7 +1,7 @@
 {
-    "source": "SuperSport HNL",
-    "priority": 1.0,
-    "updated_at": "2026-11-06T13:03:15.683815+00:00",
+    "source": "Liga Portugal",
+    "priority": 1.1,
+    "updated_at": "2026-11-06T15:59:15.630153+00:00",
     "videos": [
         {
             "video_id": "aZRvc8Bd57A",
@@ -426,6 +426,46 @@
             "link": "https://www.youtube.com/watch?v=DJ2O5zybN4M"
         },
         {
+            "video_id": "bigxu9WNRdo",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 07",
+            "published_at": "2026-10-25T23:00:06Z",
+            "published_ts": 1792969206,
+            "duration_seconds": 2183,
+            "thumbnail": "https://i.ytimg.com/vi/bigxu9WNRdo/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=bigxu9WNRdo"
+        },
+        {
+            "video_id": "o46cVQj12zI",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 06",
+            "published_at": "2026-10-18T22:00:40Z",
+            "published_ts": 1792360840,
+            "duration_seconds": 1725,
+            "thumbnail": "https://i.ytimg.com/vi/o46cVQj12zI/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=o46cVQj12zI"
+        },
+        {
             "video_id": "zgQ2kzXaxbw",
             "title": "İstanbulspor - Antalyaspor | 11. Hafta Maç ÖZETİ | Trendyol 1. Lig - 2026/27",
             "published_at": "2026-10-18T18:35:19Z",
@@ -586,6 +626,146 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=NhBI6JBE2ss"
+        },
+        {
+            "video_id": "VsTj78eKcoA",
+            "title": "THRILLER At Goodison! 🍿 | Everton v Chelsea | Classic Premier League Highlights",
+            "published_at": "2026-10-14T10:03:38Z",
+            "published_ts": 1791972218,
+            "duration_seconds": 1508,
+            "thumbnail": "https://i.ytimg.com/vi/VsTj78eKcoA/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=VsTj78eKcoA"
+        },
+        {
+            "video_id": "fDnhyuTT5u8",
+            "title": "LAZIO ARE JUST UNSTOPPABLE 🔥 | LAZIO-MONZA CINEMATIC HIGHLIGHTS | Serie A 2026/27",
+            "published_at": "2026-10-13T18:00:10Z",
+            "published_ts": 1791914410,
+            "duration_seconds": 254,
+            "thumbnail": "https://i.ytimg.com/vi/fDnhyuTT5u8/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=fDnhyuTT5u8"
+        },
+        {
+            "video_id": "Jvvsm0wuvNA",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 05",
+            "published_at": "2026-10-11T22:00:15Z",
+            "published_ts": 1791756015,
+            "duration_seconds": 1849,
+            "thumbnail": "https://i.ytimg.com/vi/Jvvsm0wuvNA/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=Jvvsm0wuvNA"
+        },
+        {
+            "video_id": "O8YkprjM3ls",
+            "title": "EVERY Weekend Goal | Matchweek 6 | 2026/27 Premier League Highlights",
+            "published_at": "2026-10-11T21:43:29Z",
+            "published_ts": 1791755009,
+            "duration_seconds": 257,
+            "thumbnail": "https://i.ytimg.com/vi/O8YkprjM3ls/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=O8YkprjM3ls"
+        },
+        {
+            "video_id": "pylM06MXxRw",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 04",
+            "published_at": "2026-09-20T23:21:27Z",
+            "published_ts": 1789946487,
+            "duration_seconds": 1997,
+            "thumbnail": "https://i.ytimg.com/vi/pylM06MXxRw/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=pylM06MXxRw"
+        },
+        {
+            "video_id": "GrFdChgyvKA",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 03",
+            "published_at": "2026-09-13T22:00:07Z",
+            "published_ts": 1789336807,
+            "duration_seconds": 1830,
+            "thumbnail": "https://i.ytimg.com/vi/GrFdChgyvKA/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=GrFdChgyvKA"
+        },
+        {
+            "video_id": "eaezZE4BJXs",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 02",
+            "published_at": "2026-09-06T22:00:37Z",
+            "published_ts": 1788732037,
+            "duration_seconds": 2255,
+            "thumbnail": "https://i.ytimg.com/vi/eaezZE4BJXs/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=eaezZE4BJXs"
         }
     ]
 }
