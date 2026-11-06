@@ -1,7 +1,7 @@
 {
-    "source": "Ligue 1 Official",
-    "priority": 1.1,
-    "updated_at": "2026-11-05T23:41:10.742005+00:00",
+    "source": "SuperSport HNL",
+    "priority": 1.0,
+    "updated_at": "2026-11-06T13:03:15.683815+00:00",
     "videos": [
         {
             "video_id": "aZRvc8Bd57A",
@@ -424,6 +424,168 @@
                 "every goal"
             ],
             "link": "https://www.youtube.com/watch?v=DJ2O5zybN4M"
+        },
+        {
+            "video_id": "zgQ2kzXaxbw",
+            "title": "İstanbulspor - Antalyaspor | 11. Hafta Maç ÖZETİ | Trendyol 1. Lig - 2026/27",
+            "published_at": "2026-10-18T18:35:19Z",
+            "published_ts": 1792348519,
+            "duration_seconds": 234,
+            "thumbnail": "https://i.ytimg.com/vi/zgQ2kzXaxbw/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "maç özeti",
+                "mac ozeti"
+            ],
+            "link": "https://www.youtube.com/watch?v=zgQ2kzXaxbw"
+        },
+        {
+            "video_id": "4ngSK8o7P-c",
+            "title": "Başakşehir - Gaziantep FK  - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-18T18:25:13Z",
+            "published_ts": 1792347913,
+            "duration_seconds": 569,
+            "thumbnail": "https://i.ytimg.com/vi/4ngSK8o7P-c/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=4ngSK8o7P-c"
+        },
+        {
+            "video_id": "YDqPFEyBekQ",
+            "title": "Kayserispor - Batman Petrolspor | 11. Hafta Maç ÖZETİ | Trendyol 1. Lig - 2026/27",
+            "published_at": "2026-10-18T15:57:41Z",
+            "published_ts": 1792339061,
+            "duration_seconds": 310,
+            "thumbnail": "https://i.ytimg.com/vi/YDqPFEyBekQ/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "maç özeti",
+                "mac ozeti"
+            ],
+            "link": "https://www.youtube.com/watch?v=YDqPFEyBekQ"
+        },
+        {
+            "video_id": "syz8dLcgHzo",
+            "title": "Kasımpaşa - Samsunspor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-18T13:17:18Z",
+            "published_ts": 1792329438,
+            "duration_seconds": 451,
+            "thumbnail": "https://i.ytimg.com/vi/syz8dLcgHzo/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=syz8dLcgHzo"
+        },
+        {
+            "video_id": "OWXkEebMKVE",
+            "title": "Fenerbahçe - Alanyaspor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-17T18:19:43Z",
+            "published_ts": 1792261183,
+            "duration_seconds": 538,
+            "thumbnail": "https://i.ytimg.com/vi/OWXkEebMKVE/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=OWXkEebMKVE"
+        },
+        {
+            "video_id": "c2kj3l0FhIc",
+            "title": "Gençlerbirliği - Galatasaray - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-17T15:38:51Z",
+            "published_ts": 1792251531,
+            "duration_seconds": 497,
+            "thumbnail": "https://i.ytimg.com/vi/c2kj3l0FhIc/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=c2kj3l0FhIc"
+        },
+        {
+            "video_id": "ozhs2eMH2IM",
+            "title": "Amed SF - Konyaspor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-17T15:35:09Z",
+            "published_ts": 1792251309,
+            "duration_seconds": 319,
+            "thumbnail": "https://i.ytimg.com/vi/ozhs2eMH2IM/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=ozhs2eMH2IM"
+        },
+        {
+            "video_id": "NhBI6JBE2ss",
+            "title": "Çorum FK - Çaykur Rizespor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-16T19:50:02Z",
+            "published_ts": 1792180202,
+            "duration_seconds": 432,
+            "thumbnail": "https://i.ytimg.com/vi/NhBI6JBE2ss/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=NhBI6JBE2ss"
         }
     ]
 }
