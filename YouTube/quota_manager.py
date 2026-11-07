@@ -349,7 +349,7 @@ def select_candidates(candidates, state, config, now=None):
         now = now.astimezone(PACIFIC)
 
     cooldown = int(
-        config.get("cooldown_minutes", 180)
+        config.get("cooldown_minutes", 0)
     )
 
     fallback_cooldown = int(
