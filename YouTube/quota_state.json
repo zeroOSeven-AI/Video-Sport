@@ -1,10 +1,10 @@
 {
   "date": "2026-11-07",
-  "total_used": 14,
+  "total_used": 22,
   "fallback_used": 0,
   "domain_used": {
-    "Football": 11,
-    "F1": 3
+    "Football": 18,
+    "F1": 4
   },
   "domain_fallback_used": {
     "Football": 0,
@@ -13,13 +13,15 @@
   "last_query": {
     "f1:Brazilian Grand Prix:ThirdPractice:2026-11-07T14:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-07T08:30:30.880086-08:00",
     "football:Süper Lig:7981062:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-07T00:52:11.775766-08:00",
-    "football:Premier League:7970660:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-07T08:30:31.808164-08:00",
-    "football:Bundesliga:7977449:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-07T08:30:32.334727-08:00",
-    "football:LaLiga:7976517:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-07T08:30:32.901898-08:00",
+    "football:Premier League:7970660:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-07T11:48:08.491889-08:00",
+    "football:Bundesliga:7977449:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-07T11:48:09.360626-08:00",
+    "football:LaLiga:7976517:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-07T11:48:06.529733-08:00",
     "football:HNL:7962993:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-07T08:30:33.913973-08:00",
-    "f1:Brazilian Grand Prix:Qualifying:2026-11-07T18:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-07T08:30:31.306718-08:00",
-    "football:Serie A:7963621:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-07T08:30:33.403481-08:00",
-    "football:Liga Portugal:7977704:UCnr9M2KCziVCcQHNrHj-qiw": "2026-11-07T08:30:34.430412-08:00"
+    "f1:Brazilian Grand Prix:Qualifying:2026-11-07T18:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-07T11:48:05.985830-08:00",
+    "football:Serie A:7963621:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-07T11:48:10.944251-08:00",
+    "football:Liga Portugal:7977704:UCnr9M2KCziVCcQHNrHj-qiw": "2026-11-07T11:48:07.548632-08:00",
+    "football:Ligue 1:7966136:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-07T11:48:07.057279-08:00",
+    "football:Eredivisie:7965831:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-07T11:48:07.877474-08:00"
   },
   "last_fallback": {}
 }

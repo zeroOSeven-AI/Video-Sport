@@ -1,7 +1,7 @@
 {
-    "source": "Liga Portugal",
-    "priority": 1.1,
-    "updated_at": "2026-11-07T16:30:34.745754+00:00",
+    "source": "Serie A Official",
+    "priority": 1.3,
+    "updated_at": "2026-11-07T19:48:11.581472+00:00",
     "videos": [
         {
             "video_id": "aZRvc8Bd57A",
@@ -989,6 +989,27 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=O8YkprjM3ls"
+        },
+        {
+            "video_id": "JNlLd6phJIM",
+            "title": "GENOA-COMO 1-4 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-09-27T09:00:38Z",
+            "published_ts": 1790499638,
+            "duration_seconds": 1316,
+            "thumbnail": "https://i.ytimg.com/vi/JNlLd6phJIM/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=JNlLd6phJIM"
         },
         {
             "video_id": "pylM06MXxRw",
