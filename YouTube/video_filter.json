@@ -129,7 +129,7 @@
       ]
     }
   },
-  "f1": {
+    "f1": {
     "include_keywords": [
       "race highlights",
       "race recap",
@@ -152,7 +152,14 @@
       "highlights gara",
       "resumo da corrida",
       "qualifications highlights",
-      "course highlights"
+      "course highlights",
+      "fp1 highlights",
+      "fp2 highlights",
+      "fp3 highlights",
+      "practice highlights",
+      "fp1",
+      "fp2",
+      "fp3"
     ],
     "exclude_keywords": [
       "watch along",
