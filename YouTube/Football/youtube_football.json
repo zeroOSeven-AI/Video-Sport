@@ -1,7 +1,7 @@
 {
-    "source": "Eredivisie",
-    "priority": 1.1,
-    "updated_at": "2026-11-06T20:26:28.386629+00:00",
+    "source": "SuperSport HNL",
+    "priority": 1.0,
+    "updated_at": "2026-11-07T08:52:15.018003+00:00",
     "videos": [
         {
             "video_id": "aZRvc8Bd57A",
@@ -466,6 +466,166 @@
             "link": "https://www.youtube.com/watch?v=o46cVQj12zI"
         },
         {
+            "video_id": "GdZlemofc6w",
+            "title": "Hard-fought Point At Home! | UNION BERLIN - BORUSSIA DORTMUND | Highlights | Matchday 6 – Bundesliga",
+            "published_at": "2026-10-18T22:00:36Z",
+            "published_ts": 1792360836,
+            "duration_seconds": 186,
+            "thumbnail": "https://i.ytimg.com/vi/GdZlemofc6w/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=GdZlemofc6w"
+        },
+        {
+            "video_id": "ZLodZlpthrg",
+            "title": "FOUR Penalties In One Game! | SV ELVERSBERG - FC AUGSBURG | Highlights | Matchday 6 – Bundesliga",
+            "published_at": "2026-10-18T22:00:33Z",
+            "published_ts": 1792360833,
+            "duration_seconds": 244,
+            "thumbnail": "https://i.ytimg.com/vi/ZLodZlpthrg/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=ZLodZlpthrg"
+        },
+        {
+            "video_id": "h82jd-71LEU",
+            "title": "Füllkrug Brace Saves Point! | WERDER BREMEN - SC PADERBORN | Highlights | Matchday 6 – Bundesliga",
+            "published_at": "2026-10-18T22:00:28Z",
+            "published_ts": 1792360828,
+            "duration_seconds": 188,
+            "thumbnail": "https://i.ytimg.com/vi/h82jd-71LEU/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=h82jd-71LEU"
+        },
+        {
+            "video_id": "9YCHxJGmjB8",
+            "title": "Muheim Wins It LATE! | HAMBURGER SV - VFB STUTTGART | Highlights | Matchday 6 – Bundesliga 2026/27",
+            "published_at": "2026-10-18T22:00:26Z",
+            "published_ts": 1792360826,
+            "duration_seconds": 188,
+            "thumbnail": "https://i.ytimg.com/vi/9YCHxJGmjB8/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=9YCHxJGmjB8"
+        },
+        {
+            "video_id": "FG_Be7Iv4Ak",
+            "title": "Frankfurt Leave It Late! | EINTRACHT FRANKFURT - 1. FC KÖLN | Highlights | Matchday 6 – Bundesliga",
+            "published_at": "2026-10-18T22:00:10Z",
+            "published_ts": 1792360810,
+            "duration_seconds": 241,
+            "thumbnail": "https://i.ytimg.com/vi/FG_Be7Iv4Ak/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=FG_Be7Iv4Ak"
+        },
+        {
+            "video_id": "h0rpQpv_J6U",
+            "title": "SCHICK Making HISTORY! | BAYER 04 LEVERKUSEN - SC FREIBURG | Highlights | MD 6 – Bundesliga 2026/27",
+            "published_at": "2026-10-18T22:00:01Z",
+            "published_ts": 1792360801,
+            "duration_seconds": 240,
+            "thumbnail": "https://i.ytimg.com/vi/h0rpQpv_J6U/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=h0rpQpv_J6U"
+        },
+        {
+            "video_id": "b-N55HGj9Uk",
+            "title": "Another Away Win For Mainz! | SCHALKE 04 - MAINZ 05 | Highlights | Matchday 6 – Bundesliga 2026/27",
+            "published_at": "2026-10-18T22:00:00Z",
+            "published_ts": 1792360800,
+            "duration_seconds": 182,
+            "thumbnail": "https://i.ytimg.com/vi/b-N55HGj9Uk/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=b-N55HGj9Uk"
+        },
+        {
+            "video_id": "q8QhLLocpt8",
+            "title": "EVERY Weekend Goal | Matchweek 7 | 2026/27 Premier League Highlights",
+            "published_at": "2026-10-18T21:00:37Z",
+            "published_ts": 1792357237,
+            "duration_seconds": 204,
+            "thumbnail": "https://i.ytimg.com/vi/q8QhLLocpt8/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=q8QhLLocpt8"
+        },
+        {
             "video_id": "zgQ2kzXaxbw",
             "title": "İstanbulspor - Antalyaspor | 11. Hafta Maç ÖZETİ | Trendyol 1. Lig - 2026/27",
             "published_at": "2026-10-18T18:35:19Z",
@@ -528,6 +688,26 @@
             "link": "https://www.youtube.com/watch?v=YDqPFEyBekQ"
         },
         {
+            "video_id": "uBttZuTWOI8",
+            "title": "Kocaelispor - Göztepe - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-18T15:48:25Z",
+            "published_ts": 1792338505,
+            "duration_seconds": 365,
+            "thumbnail": "https://i.ytimg.com/vi/uBttZuTWOI8/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=uBttZuTWOI8"
+        },
+        {
             "video_id": "syz8dLcgHzo",
             "title": "Kasımpaşa - Samsunspor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
             "published_at": "2026-10-18T13:17:18Z",
@@ -568,6 +748,27 @@
             "link": "https://www.youtube.com/watch?v=OWXkEebMKVE"
         },
         {
+            "video_id": "Qc7kMOvbcb8",
+            "title": "Sivasspor - Sarıyer | 11. Hafta Maç ÖZETİ | Trendyol 1. Lig - 2026/27",
+            "published_at": "2026-10-17T15:51:05Z",
+            "published_ts": 1792252265,
+            "duration_seconds": 310,
+            "thumbnail": "https://i.ytimg.com/vi/Qc7kMOvbcb8/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "maç özeti",
+                "mac ozeti"
+            ],
+            "link": "https://www.youtube.com/watch?v=Qc7kMOvbcb8"
+        },
+        {
             "video_id": "c2kj3l0FhIc",
             "title": "Gençlerbirliği - Galatasaray - Highlights/Özet | Trendyol Süper Lig - 2026/27",
             "published_at": "2026-10-17T15:38:51Z",
@@ -606,6 +807,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=ozhs2eMH2IM"
+        },
+        {
+            "video_id": "J0r9INHYE3w",
+            "title": "Erzurumspor FK - Eyüpspor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-17T12:49:21Z",
+            "published_ts": 1792241361,
+            "duration_seconds": 406,
+            "thumbnail": "https://i.ytimg.com/vi/J0r9INHYE3w/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=J0r9INHYE3w"
         },
         {
             "video_id": "NhBI6JBE2ss",

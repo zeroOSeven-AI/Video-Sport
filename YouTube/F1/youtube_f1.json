@@ -1,7 +1,7 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-06T20:26:21.065471+00:00",
+    "updated_at": "2026-11-07T08:52:11.775120+00:00",
     "videos": [
         {
             "video_id": "eMBI0isVJbo",
@@ -144,6 +144,27 @@
                 "qualifying"
             ],
             "link": "https://www.youtube.com/watch?v=tEEGnZna3Gc"
+        },
+        {
+            "video_id": "MK83clSv6-k",
+            "title": "Race Highlights | 2025 Sao Paulo Grand Prix",
+            "published_at": "2025-11-09T19:25:48Z",
+            "published_ts": 1762716348,
+            "duration_seconds": 488,
+            "thumbnail": "https://i.ytimg.com/vi/MK83clSv6-k/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=MK83clSv6-k"
         }
     ]
 }

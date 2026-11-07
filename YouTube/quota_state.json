@@ -1,27 +1,22 @@
 {
-  "date": "2026-11-06",
-  "total_used": 19,
+  "date": "2026-11-07",
+  "total_used": 6,
   "fallback_used": 0,
   "domain_used": {
-    "Football": 16,
-    "F1": 3
+    "Football": 5,
+    "F1": 1
   },
   "domain_fallback_used": {
     "Football": 0,
     "F1": 0
   },
   "last_query": {
-    "football:Eredivisie:7965831:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-06T12:26:26.696632-08:00",
-    "football:Süper Lig:7981062:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-06T05:03:14.040665-08:00",
-    "football:HNL:7962993:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-06T05:03:14.805334-08:00",
-    "f1:Brazilian Grand Prix:FirstPractice:2026-11-06T15:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-06T05:03:15.686093-08:00",
-    "f1:Brazilian Grand Prix:SecondPractice:2026-11-06T19:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-06T12:26:20.653460-08:00",
-    "football:Premier League:7970660:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-06T12:26:22.035103-08:00",
-    "football:Bundesliga:7977449:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-06T12:26:22.849992-08:00",
-    "football:LaLiga:7976517:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-06T12:26:23.952857-08:00",
-    "football:Serie A:7963621:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-06T12:26:24.622170-08:00",
-    "football:Ligue 1:7966136:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-06T12:26:25.664367-08:00",
-    "football:Liga Portugal:7977704:UCnr9M2KCziVCcQHNrHj-qiw": "2026-11-06T12:26:21.066290-08:00"
+    "f1:Brazilian Grand Prix:ThirdPractice:2026-11-07T14:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-07T00:52:11.370332-08:00",
+    "football:Süper Lig:7981062:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-07T00:52:11.775766-08:00",
+    "football:Premier League:7970660:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-07T00:52:12.189769-08:00",
+    "football:Bundesliga:7977449:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-07T00:52:13.006701-08:00",
+    "football:LaLiga:7976517:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-07T00:52:13.454528-08:00",
+    "football:HNL:7962993:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-07T00:52:14.098400-08:00"
   },
   "last_fallback": {}
 }
