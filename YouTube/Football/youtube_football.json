@@ -1,7 +1,7 @@
 {
-    "source": "SuperSport HNL",
-    "priority": 1.0,
-    "updated_at": "2026-11-07T08:52:15.018003+00:00",
+    "source": "Liga Portugal",
+    "priority": 1.1,
+    "updated_at": "2026-11-07T16:30:34.745754+00:00",
     "videos": [
         {
             "video_id": "aZRvc8Bd57A",
@@ -446,6 +446,26 @@
             "link": "https://www.youtube.com/watch?v=bigxu9WNRdo"
         },
         {
+            "video_id": "eUCGPEghrMA",
+            "title": "ALL ROUND 7 HIGHLIGHTS ⚽ | PRIMAVERA 1 2026/27",
+            "published_at": "2026-10-22T17:00:28Z",
+            "published_ts": 1792688428,
+            "duration_seconds": 1803,
+            "thumbnail": "https://i.ytimg.com/vi/eUCGPEghrMA/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=eUCGPEghrMA"
+        },
+        {
             "video_id": "o46cVQj12zI",
             "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 06",
             "published_at": "2026-10-18T22:00:40Z",
@@ -887,6 +907,48 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=fDnhyuTT5u8"
+        },
+        {
+            "video_id": "qZXnl3Uxwxc",
+            "title": "TODOS los GOLES de la JORNADA 8 de LALIGA EA SPORTS 2026/27",
+            "published_at": "2026-10-13T10:00:04Z",
+            "published_ts": 1791885604,
+            "duration_seconds": 728,
+            "thumbnail": "https://i.ytimg.com/vi/qZXnl3Uxwxc/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goles",
+                "todos los goles"
+            ],
+            "link": "https://www.youtube.com/watch?v=qZXnl3Uxwxc"
+        },
+        {
+            "video_id": "ko6Oqj289tg",
+            "title": "SASSUOLO-MILAN 1-1 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-10-13T09:00:01Z",
+            "published_ts": 1791882001,
+            "duration_seconds": 1215,
+            "thumbnail": "https://i.ytimg.com/vi/ko6Oqj289tg/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=ko6Oqj289tg"
         },
         {
             "video_id": "Jvvsm0wuvNA",
