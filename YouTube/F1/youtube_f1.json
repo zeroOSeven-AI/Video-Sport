@@ -1,8 +1,112 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-07T19:48:06.529040+00:00",
+    "updated_at": "2026-11-08T00:41:43.751438+00:00",
     "videos": [
+        {
+            "video_id": "Cn4C153hCLk",
+            "title": "Qualifying Highlights | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-07T21:16:28Z",
+            "published_ts": 1794086188,
+            "duration_seconds": 482,
+            "thumbnail": "https://i.ytimg.com/vi/Cn4C153hCLk/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "qualifying"
+            ],
+            "type": "qualifying",
+            "matched_keywords": [
+                "qualifying highlights",
+                "qualifying"
+            ],
+            "link": "https://www.youtube.com/watch?v=Cn4C153hCLk"
+        },
+        {
+            "video_id": "zKV-Jjio8Yk",
+            "title": "FP3 Highlights | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-07T16:48:35Z",
+            "published_ts": 1794070115,
+            "duration_seconds": 274,
+            "thumbnail": "https://i.ytimg.com/vi/zKV-Jjio8Yk/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp3 highlights",
+                "fp3"
+            ],
+            "link": "https://www.youtube.com/watch?v=zKV-Jjio8Yk"
+        },
+        {
+            "video_id": "h_IJImSl3r4",
+            "title": "FP2 Highlights | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-06T21:04:12Z",
+            "published_ts": 1793999052,
+            "duration_seconds": 241,
+            "thumbnail": "https://i.ytimg.com/vi/h_IJImSl3r4/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp2 highlights",
+                "fp2"
+            ],
+            "link": "https://www.youtube.com/watch?v=h_IJImSl3r4"
+        },
+        {
+            "video_id": "OwQ4ernSM00",
+            "title": "FP1 Highlights | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-06T18:22:52Z",
+            "published_ts": 1793989372,
+            "duration_seconds": 285,
+            "thumbnail": "https://i.ytimg.com/vi/OwQ4ernSM00/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp1 highlights",
+                "fp1"
+            ],
+            "link": "https://www.youtube.com/watch?v=OwQ4ernSM00"
+        },
+        {
+            "video_id": "8bREPkS5_vY",
+            "title": "Drivers Look Ahead To Race Weekend | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-05T23:15:25Z",
+            "published_ts": 1793920525,
+            "duration_seconds": 848,
+            "thumbnail": "https://i.ytimg.com/vi/8bREPkS5_vY/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=8bREPkS5_vY"
+        },
         {
             "video_id": "eMBI0isVJbo",
             "title": "Drivers React After The Race | 2026 Mexico Grand Prix",

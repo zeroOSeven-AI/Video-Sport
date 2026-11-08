@@ -1,8 +1,48 @@
 {
-    "source": "Serie A Official",
-    "priority": 1.3,
-    "updated_at": "2026-11-07T19:48:11.581472+00:00",
+    "source": "Ligue 1 Official",
+    "priority": 1.1,
+    "updated_at": "2026-11-08T00:41:46.997777+00:00",
     "videos": [
+        {
+            "video_id": "iu5lCqsYJqI",
+            "title": "FIORENTINA-JUVENTUS 1-1 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-11-06T12:00:32Z",
+            "published_ts": 1793966432,
+            "duration_seconds": 739,
+            "thumbnail": "https://i.ytimg.com/vi/iu5lCqsYJqI/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=iu5lCqsYJqI"
+        },
+        {
+            "video_id": "z6hJ7xCro4I",
+            "title": "ATLÉTICO DE MADRID vs FC BARCELONA: 10 AÑOS de goles y emoción en LALIGA EA SPORTS",
+            "published_at": "2026-11-05T23:00:21Z",
+            "published_ts": 1793919621,
+            "duration_seconds": 1098,
+            "thumbnail": "https://i.ytimg.com/vi/z6hJ7xCro4I/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goles"
+            ],
+            "link": "https://www.youtube.com/watch?v=z6hJ7xCro4I"
+        },
         {
             "video_id": "aZRvc8Bd57A",
             "title": "INTER-COMO 4-0 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
