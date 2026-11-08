@@ -1,7 +1,7 @@
 {
-    "source": "Ligue 1 Official",
-    "priority": 1.1,
-    "updated_at": "2026-11-08T01:29:27.302730+00:00",
+    "source": "SuperSport HNL",
+    "priority": 1.0,
+    "updated_at": "2026-11-08T09:03:16.843877+00:00",
     "videos": [
         {
             "video_id": "iu5lCqsYJqI",
@@ -466,6 +466,26 @@
             "link": "https://www.youtube.com/watch?v=DJ2O5zybN4M"
         },
         {
+            "video_id": "A277F5VD1jo",
+            "title": "Erzurumspor FK - Çorum FK - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-31T13:38:16Z",
+            "published_ts": 1793453896,
+            "duration_seconds": 419,
+            "thumbnail": "https://i.ytimg.com/vi/A277F5VD1jo/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=A277F5VD1jo"
+        },
+        {
             "video_id": "bigxu9WNRdo",
             "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 07",
             "published_at": "2026-10-25T23:00:06Z",
@@ -909,6 +929,26 @@
             "link": "https://www.youtube.com/watch?v=NhBI6JBE2ss"
         },
         {
+            "video_id": "Y-yq7qCBYCA",
+            "title": "MILAN-ATALANTA 2-3 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-10-15T15:00:27Z",
+            "published_ts": 1792076427,
+            "duration_seconds": 780,
+            "thumbnail": "https://i.ytimg.com/vi/Y-yq7qCBYCA/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=Y-yq7qCBYCA"
+        },
+        {
             "video_id": "VsTj78eKcoA",
             "title": "THRILLER At Goodison! 🍿 | Everton v Chelsea | Classic Premier League Highlights",
             "published_at": "2026-10-14T10:03:38Z",
@@ -991,6 +1031,46 @@
             "link": "https://www.youtube.com/watch?v=ko6Oqj289tg"
         },
         {
+            "video_id": "VEdLh8XkvWo",
+            "title": "TOUS LES BUTS de la 6ème journée | Ligue 1 McDonald's 26/27",
+            "published_at": "2026-10-11T22:30:28Z",
+            "published_ts": 1791757828,
+            "duration_seconds": 581,
+            "thumbnail": "https://i.ytimg.com/vi/VEdLh8XkvWo/hqdefault.jpg",
+            "source": "Ligue 1 Official",
+            "source_key": "ligue_1_official",
+            "priority": 1.1,
+            "logo": "logo/ligue_1_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "buts"
+            ],
+            "link": "https://www.youtube.com/watch?v=VEdLh8XkvWo"
+        },
+        {
+            "video_id": "K3HnXcBqM6w",
+            "title": "Ten-Man Freiburg go TOP! | SC FREIBURG - SCHALKE 04 | Highlights | Matchday 5 – Bundesliga",
+            "published_at": "2026-10-11T22:00:22Z",
+            "published_ts": 1791756022,
+            "duration_seconds": 247,
+            "thumbnail": "https://i.ytimg.com/vi/K3HnXcBqM6w/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=K3HnXcBqM6w"
+        },
+        {
             "video_id": "Jvvsm0wuvNA",
             "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 05",
             "published_at": "2026-10-11T22:00:15Z",
@@ -1009,6 +1089,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=Jvvsm0wuvNA"
+        },
+        {
+            "video_id": "qBn50tVlVaM",
+            "title": "Rollercoaster Ride! | MAINZ 05 - BAYER 04 LEVERKUSEN | Highlights | Matchday 5 – Bundesliga 2026/27",
+            "published_at": "2026-10-11T22:00:15Z",
+            "published_ts": 1791756015,
+            "duration_seconds": 181,
+            "thumbnail": "https://i.ytimg.com/vi/qBn50tVlVaM/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=qBn50tVlVaM"
         },
         {
             "video_id": "O8YkprjM3ls",
@@ -1070,6 +1170,66 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=pylM06MXxRw"
+        },
+        {
+            "video_id": "2dQlyDgvTFY",
+            "title": "BEAUTIFUL Comeback! | WERDER BREMEN - FC AUGSBURG | Highlights | Matchday 4 – Bundesliga 2026/27",
+            "published_at": "2026-09-20T22:00:26Z",
+            "published_ts": 1789941626,
+            "duration_seconds": 241,
+            "thumbnail": "https://i.ytimg.com/vi/2dQlyDgvTFY/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=2dQlyDgvTFY"
+        },
+        {
+            "video_id": "Yh8an_9wou8",
+            "title": "Schick Leads Bayer To Glory! | BAYER 04 LEVERKUSEN - RB LEIPZIG | Highlights | MD 4 – Bundesliga",
+            "published_at": "2026-09-20T22:00:19Z",
+            "published_ts": 1789941619,
+            "duration_seconds": 240,
+            "thumbnail": "https://i.ytimg.com/vi/Yh8an_9wou8/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=Yh8an_9wou8"
+        },
+        {
+            "video_id": "cr-iFkgzX9Q",
+            "title": "SCHALKE 04 - SV ELVERSBERG | Highlights | Matchday 4 – Bundesliga 2026/27",
+            "published_at": "2026-09-20T22:00:02Z",
+            "published_ts": 1789941602,
+            "duration_seconds": 238,
+            "thumbnail": "https://i.ytimg.com/vi/cr-iFkgzX9Q/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=cr-iFkgzX9Q"
         },
         {
             "video_id": "GrFdChgyvKA",
