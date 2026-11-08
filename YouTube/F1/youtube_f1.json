@@ -1,8 +1,49 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-08T01:29:24.249180+00:00",
+    "updated_at": "2026-11-08T22:11:19.579644+00:00",
     "videos": [
+        {
+            "video_id": "lkb5kqDJYXk",
+            "title": "Race Highlights | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-08T19:57:16Z",
+            "published_ts": 1794167836,
+            "duration_seconds": 492,
+            "thumbnail": "https://i.ytimg.com/vi/lkb5kqDJYXk/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=lkb5kqDJYXk"
+        },
+        {
+            "video_id": "5RyZGgxFI8A",
+            "title": "Drivers React After Qualifying | 2026 Sao Paulo Grand Prix",
+            "published_at": "2026-11-07T22:34:04Z",
+            "published_ts": 1794090844,
+            "duration_seconds": 546,
+            "thumbnail": "https://i.ytimg.com/vi/5RyZGgxFI8A/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "qualifying"
+            ],
+            "type": "qualifying",
+            "matched_keywords": [
+                "qualifying"
+            ],
+            "link": "https://www.youtube.com/watch?v=5RyZGgxFI8A"
+        },
         {
             "video_id": "Cn4C153hCLk",
             "title": "Qualifying Highlights | 2026 Sao Paulo Grand Prix",
