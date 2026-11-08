@@ -1,9 +1,9 @@
 {
   "date": "2026-11-08",
-  "total_used": 8,
+  "total_used": 16,
   "fallback_used": 0,
   "domain_used": {
-    "Football": 8,
+    "Football": 16,
     "F1": 0
   },
   "domain_fallback_used": {
@@ -11,14 +11,15 @@
     "F1": 0
   },
   "last_query": {
-    "football:Serie A:7963621:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-08T01:03:11.390227-08:00",
-    "football:Eredivisie:7965831:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-08T01:03:11.826836-08:00",
+    "football:Serie A:7963621:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-08T08:44:22.256066-08:00",
+    "football:Eredivisie:7965831:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-08T08:44:25.633043-08:00",
     "football:Süper Lig:7981062:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-08T01:03:12.218672-08:00",
-    "football:Premier League:7970660:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-08T01:03:12.709362-08:00",
-    "football:Bundesliga:7977449:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-08T01:03:13.193123-08:00",
-    "football:LaLiga:7976517:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-08T01:03:14.058905-08:00",
-    "football:Ligue 1:7966136:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-08T01:03:14.856098-08:00",
-    "football:HNL:7962993:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-08T01:03:15.819704-08:00"
+    "football:Premier League:7970660:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-08T08:44:23.212389-08:00",
+    "football:Bundesliga:7977449:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-08T08:44:23.700378-08:00",
+    "football:LaLiga:7976517:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-08T08:44:21.792964-08:00",
+    "football:Ligue 1:7966136:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-08T08:44:24.423886-08:00",
+    "football:HNL:7962993:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-08T08:44:22.692518-08:00",
+    "football:Liga Portugal:7977704:UCnr9M2KCziVCcQHNrHj-qiw": "2026-11-08T08:44:25.022023-08:00"
   },
   "last_fallback": {}
 }
