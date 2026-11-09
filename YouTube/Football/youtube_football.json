@@ -1,8 +1,50 @@
 {
     "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-09T09:52:20.847124+00:00",
+    "updated_at": "2026-11-09T20:49:28.325510+00:00",
     "videos": [
+        {
+            "video_id": "O2vD7ciyg6c",
+            "title": "INTER-COMO 2-0 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-09T16:00:10Z",
+            "published_ts": 1794240010,
+            "duration_seconds": 1220,
+            "thumbnail": "https://i.ytimg.com/vi/O2vD7ciyg6c/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=O2vD7ciyg6c"
+        },
+        {
+            "video_id": "X4X79n7Bfyw",
+            "title": "ROMA-SASSUOLO 3-0 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-09T12:00:36Z",
+            "published_ts": 1794225636,
+            "duration_seconds": 1221,
+            "thumbnail": "https://i.ytimg.com/vi/X4X79n7Bfyw/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=X4X79n7Bfyw"
+        },
         {
             "video_id": "gdRtRsSLbOU",
             "title": "Due Reti a Testa al Franchi | FIORENTINA-JUVENTUS | HIGHLIGHTS | SERIE A ENILIVE 2026/27",
