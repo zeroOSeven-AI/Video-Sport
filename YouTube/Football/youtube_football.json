@@ -1,8 +1,149 @@
 {
-    "source": "Liga Portugal",
+    "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-08T22:11:18.685761+00:00",
+    "updated_at": "2026-11-09T01:47:16.526781+00:00",
     "videos": [
+        {
+            "video_id": "ecqOQWXUHT4",
+            "title": "Backheel-Magic! | SC PADERBORN - EINTRACHT FRANKFURT | Highlights | Matchday 9 – Bundesliga 2026/27",
+            "published_at": "2026-11-08T23:00:36Z",
+            "published_ts": 1794178836,
+            "duration_seconds": 191,
+            "thumbnail": "https://i.ytimg.com/vi/ecqOQWXUHT4/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=ecqOQWXUHT4"
+        },
+        {
+            "video_id": "BWT27rhlHAw",
+            "title": "Comeback After Early Shock!! | RB LEIPZIG - FC AUGSBURG | Highlights | Matchday 9 – Bundesliga 26/27",
+            "published_at": "2026-11-08T23:00:28Z",
+            "published_ts": 1794178828,
+            "duration_seconds": 181,
+            "thumbnail": "https://i.ytimg.com/vi/BWT27rhlHAw/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=BWT27rhlHAw"
+        },
+        {
+            "video_id": "xgcG0s8R7Os",
+            "title": "Rocket From Kimmich! | MAINZ 05 - FC BAYERN | Highlights | Matchday 9 – Bundesliga 2026/27",
+            "published_at": "2026-11-08T23:00:22Z",
+            "published_ts": 1794178822,
+            "duration_seconds": 248,
+            "thumbnail": "https://i.ytimg.com/vi/xgcG0s8R7Os/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=xgcG0s8R7Os"
+        },
+        {
+            "video_id": "ChTwAKgrKhs",
+            "title": "Schick with the Away-Derby-Winner! | 1. FC KÖLN - BAYER 04 LEVERKUSEN | Highlights | MD 9 Bundesliga",
+            "published_at": "2026-11-08T23:00:14Z",
+            "published_ts": 1794178814,
+            "duration_seconds": 212,
+            "thumbnail": "https://i.ytimg.com/vi/ChTwAKgrKhs/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=ChTwAKgrKhs"
+        },
+        {
+            "video_id": "n3ICQ_r1pWw",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 09",
+            "published_at": "2026-11-08T23:00:12Z",
+            "published_ts": 1794178812,
+            "duration_seconds": 2105,
+            "thumbnail": "https://i.ytimg.com/vi/n3ICQ_r1pWw/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=n3ICQ_r1pWw"
+        },
+        {
+            "video_id": "SaUfb91EbFA",
+            "title": "Mittelstädt Fires One In! | VFB STUTTGART - WERDER BREMEN | Highlights | Matchday 9 – Bundesliga",
+            "published_at": "2026-11-08T23:00:12Z",
+            "published_ts": 1794178812,
+            "duration_seconds": 234,
+            "thumbnail": "https://i.ytimg.com/vi/SaUfb91EbFA/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=SaUfb91EbFA"
+        },
+        {
+            "video_id": "p4aNGqai4ec",
+            "title": "EVERY Goal | Matchweek 10 | 2026/27 Premier League Highlights",
+            "published_at": "2026-11-08T22:10:20Z",
+            "published_ts": 1794175820,
+            "duration_seconds": 264,
+            "thumbnail": "https://i.ytimg.com/vi/p4aNGqai4ec/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "every goal"
+            ],
+            "link": "https://www.youtube.com/watch?v=p4aNGqai4ec"
+        },
         {
             "video_id": "iu5lCqsYJqI",
             "title": "FIORENTINA-JUVENTUS 1-1 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
