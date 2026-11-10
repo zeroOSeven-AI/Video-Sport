@@ -1,8 +1,70 @@
 {
     "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-10T12:43:49.856388+00:00",
+    "updated_at": "2026-11-10T20:52:45.152114+00:00",
     "videos": [
+        {
+            "video_id": "Iazh_BIa7Aw",
+            "title": "DOUBLE JUVE COMEBACK 😱 | FIORENTINA-JUVENTUS CINEMATIC HIGHLIGHTS | Serie A 2026/27",
+            "published_at": "2026-11-10T15:00:11Z",
+            "published_ts": 1794322811,
+            "duration_seconds": 227,
+            "thumbnail": "https://i.ytimg.com/vi/Iazh_BIa7Aw/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=Iazh_BIa7Aw"
+        },
+        {
+            "video_id": "J-DnBMJ02p8",
+            "title": "TODOS LOS GOLES de la JORNADA 12 | LALIGA EA SPORTS 2026/27",
+            "published_at": "2026-11-10T11:00:16Z",
+            "published_ts": 1794308416,
+            "duration_seconds": 482,
+            "thumbnail": "https://i.ytimg.com/vi/J-DnBMJ02p8/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goles",
+                "todos los goles"
+            ],
+            "link": "https://www.youtube.com/watch?v=J-DnBMJ02p8"
+        },
+        {
+            "video_id": "15hGtRJ3aFk",
+            "title": "FIORENTINA-JUVENTUS 2-2 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-10T10:00:16Z",
+            "published_ts": 1794304816,
+            "duration_seconds": 1222,
+            "thumbnail": "https://i.ytimg.com/vi/15hGtRJ3aFk/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=15hGtRJ3aFk"
+        },
         {
             "video_id": "O2vD7ciyg6c",
             "title": "INTER-COMO 2-0 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
