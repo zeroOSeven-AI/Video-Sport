@@ -250,7 +250,14 @@
       "motogp full race",
       "motogp full sprint",
       "motogp full qualifying",
-      "race highlights",
+      "highlights gp",
+      "gp highlights",
+      "grand prix build gp",
+      "grand prix build up",
+      "grand prix build-up",
+      "build up",
+      "build-up",
+      "race highlights gp",
       "sprint",
       "qualifying"
     ],
@@ -268,7 +275,6 @@
       "analysis",
       "technical analysis",
       "explained",
-      "preview",
       "prediction",
       "predictions",
       "rumour",
@@ -315,7 +321,16 @@
         "race recap",
         "motogp full race",
         "motogp race",
-        "grand prix highlights"
+        "grand prix highlights",
+        "highlights gp",
+        "gp highlights"
+      ],
+      "build_up": [
+        "grand prix build gp",
+        "grand prix build up",
+        "grand prix build-up",
+        "build up",
+        "build-up"
       ],
       "highlights": [
         "motogp highlights",
