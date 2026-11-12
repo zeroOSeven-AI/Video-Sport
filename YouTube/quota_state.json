@@ -1,33 +1,33 @@
 {
   "date": "2026-11-11",
-  "total_used": 16,
-  "fallback_used": 16,
+  "total_used": 24,
+  "fallback_used": 24,
   "domain_used": {
-    "Football": 12,
-    "F1": 4
+    "Football": 18,
+    "F1": 6
   },
   "domain_fallback_used": {
-    "Football": 12,
-    "F1": 4
+    "Football": 18,
+    "F1": 6
   },
   "last_query": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-11T09:56:55.483266-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-11T09:56:55.922530-08:00",
-    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-11T09:56:56.349547-08:00",
-    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-11T09:56:56.779908-08:00",
-    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-11T09:56:57.297173-08:00",
-    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-11T09:56:57.782147-08:00",
-    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-11T09:56:58.370054-08:00",
-    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-11T09:56:58.820278-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-11T16:48:00.185243-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-11T16:48:00.736473-08:00",
+    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-11T16:48:01.154047-08:00",
+    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-11T16:48:01.552405-08:00",
+    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-11T16:48:02.060236-08:00",
+    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-11T16:48:02.446937-08:00",
+    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-11T16:48:03.106173-08:00",
+    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-11T16:48:03.559997-08:00"
   },
   "last_fallback": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-11T09:56:55.483266-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-11T09:56:55.922530-08:00",
-    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-11T09:56:56.349547-08:00",
-    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-11T09:56:56.779908-08:00",
-    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-11T09:56:57.297173-08:00",
-    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-11T09:56:57.782147-08:00",
-    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-11T09:56:58.370054-08:00",
-    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-11T09:56:58.820278-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-11T16:48:00.185243-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-11T16:48:00.736473-08:00",
+    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-11T16:48:01.154047-08:00",
+    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-11T16:48:01.552405-08:00",
+    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-11T16:48:02.060236-08:00",
+    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-11T16:48:02.446937-08:00",
+    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-11T16:48:03.106173-08:00",
+    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-11T16:48:03.559997-08:00"
   }
 }
