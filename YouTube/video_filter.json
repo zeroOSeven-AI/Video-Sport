@@ -129,7 +129,7 @@
       ]
     }
   },
-    "f1": {
+  "f1": {
     "include_keywords": [
       "race highlights",
       "race recap",
@@ -224,6 +224,104 @@
         "fp1 highlights",
         "fp2 highlights",
         "fp3 highlights"
+      ]
+    }
+  },
+  "motogp": {
+    "min_duration_seconds": 120,
+    "include_keywords": [
+      "motogp race highlights",
+      "motogp sprint highlights",
+      "motogp qualifying highlights",
+      "race highlights",
+      "sprint highlights",
+      "qualifying highlights",
+      "full race",
+      "full sprint",
+      "full qualifying",
+      "race recap",
+      "sprint recap",
+      "qualifying recap",
+      "grand prix highlights",
+      "motogp highlights",
+      "motogp race",
+      "motogp sprint",
+      "motogp qualifying",
+      "motogp full race",
+      "motogp full sprint",
+      "motogp full qualifying",
+      "race highlights",
+      "sprint",
+      "qualifying"
+    ],
+    "exclude_keywords": [
+      "news",
+      "breaking news",
+      "interview",
+      "interviews",
+      "reaction",
+      "reacts",
+      "watchalong",
+      "watch along",
+      "watch party",
+      "podcast",
+      "analysis",
+      "technical analysis",
+      "explained",
+      "preview",
+      "prediction",
+      "predictions",
+      "rumour",
+      "rumor",
+      "transfer",
+      "behind the scenes",
+      "team radio",
+      "onboard",
+      "on-board",
+      "crash compilation",
+      "compilation",
+      "funny",
+      "gameplay",
+      "gaming",
+      "press conference",
+      "post race show",
+      "post-race show",
+      "live stream",
+      "livestream"
+    ],
+    "categories": {
+      "sprint": [
+        "sprint highlights",
+        "motogp sprint highlights",
+        "sprint recap",
+        "full sprint",
+        "motogp full sprint",
+        "motogp sprint",
+        "sprint"
+      ],
+      "qualifying": [
+        "qualifying highlights",
+        "motogp qualifying highlights",
+        "qualifying recap",
+        "full qualifying",
+        "motogp full qualifying",
+        "motogp qualifying",
+        "qualifying"
+      ],
+      "race": [
+        "motogp race highlights",
+        "race highlights",
+        "full race",
+        "race recap",
+        "motogp full race",
+        "motogp race",
+        "grand prix highlights"
+      ],
+      "highlights": [
+        "motogp highlights",
+        "motogp race highlights",
+        "motogp sprint highlights",
+        "motogp qualifying highlights"
       ]
     }
   }
