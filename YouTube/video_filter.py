@@ -179,6 +179,9 @@ def classify_video(text, domain, config=None):
     F1:
       qualifying, race, highlights
 
+    MotoGP:
+      sprint, qualifying, race, highlights
+
     Neprepoznati video dobiva kategoriju other.
     """
 
@@ -219,6 +222,14 @@ def classify_video(text, domain, config=None):
             "highlights"
         ]
 
+    elif domain == "motogp":
+        priority = [
+            "sprint",
+            "qualifying",
+            "race",
+            "highlights"
+        ]
+
     else:
         priority = []
 
@@ -246,6 +257,11 @@ def filter_videos(items, domain, api_key):
     - nemaju isključujuće riječi u NASLOVU
     - odgovaraju dopuštenoj kategoriji
 
+    Minimalno trajanje:
+    - Football: 180 sekundi
+    - F1: 180 sekundi
+    - MotoGP: 120 sekundi
+
     Naslov se koristi za klasifikaciju i isključivanje.
     Opis se koristi samo za dodatnu provjeru Shortsa.
     """
@@ -264,10 +280,15 @@ def filter_videos(items, domain, api_key):
         {}
     )
 
+    # Disciplina može imati vlastiti minimum trajanja.
+    # Ako ga nema, koristi se globalna vrijednost.
     min_duration = int(
-        global_config.get(
+        domain_config.get(
             "min_duration_seconds",
-            180
+            global_config.get(
+                "min_duration_seconds",
+                180
+            )
         )
     )
 
