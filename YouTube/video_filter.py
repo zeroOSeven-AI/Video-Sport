@@ -25,7 +25,6 @@ def load_filter_config():
 
 def normalize_text(value):
     value = str(value or "").lower()
-
     value = unicodedata.normalize("NFKD", value)
 
     value = "".join(
@@ -55,11 +54,6 @@ def contains_keyword(text, keyword):
 
 
 def parse_duration(duration):
-    """
-    Pretvara ISO 8601 trajanje u sekunde.
-    Primjer: PT1H2M10S = 3730 sekundi.
-    """
-
     if not duration:
         return None
 
@@ -90,16 +84,10 @@ def parse_duration(duration):
 
 
 def get_video_durations(video_ids, api_key):
-    """
-    Dohvaća trajanja preko YouTube videos.list API-ja.
-    Maksimalno 50 ID-jeva po API pozivu.
-    """
-
     if not video_ids:
         return {}
 
     unique_ids = list(dict.fromkeys(video_ids))
-
     durations = {}
 
     for start in range(0, len(unique_ids), 50):
@@ -128,9 +116,7 @@ def get_video_durations(video_ids, api_key):
                 item.get("contentDetails", {}).get("duration")
             )
 
-            duration_seconds = parse_duration(
-                duration_iso
-            )
+            duration_seconds = parse_duration(duration_iso)
 
             if video_id and duration_seconds is not None:
                 durations[video_id] = duration_seconds
@@ -160,73 +146,41 @@ def get_description(item):
 
 
 def find_matching_keywords(text, keywords):
-    matches = []
-
-    for keyword in keywords:
-        if contains_keyword(text, keyword):
-            matches.append(keyword)
-
-    return matches
+    return [
+        keyword
+        for keyword in keywords
+        if contains_keyword(text, keyword)
+    ]
 
 
 def classify_video(text, domain, config=None):
-    """
-    Klasificira video prema naslovu.
-
-    Football:
-      highlights, goals, review
-
-    F1:
-      qualifying, race, highlights
-
-    MotoGP:
-      sprint, qualifying, race, highlights
-
-    Neprepoznati video dobiva kategoriju other.
-    """
-
     if config is None:
         config = load_filter_config()
 
     domain = domain.lower()
-
     domain_config = config.get(domain, {})
-
-    categories = domain_config.get(
-        "categories",
-        {}
-    )
+    categories = domain_config.get("categories", {})
 
     category_matches = {}
 
     for category, keywords in categories.items():
-        matches = find_matching_keywords(
-            text,
-            keywords
-        )
+        matches = find_matching_keywords(text, keywords)
 
         if matches:
             category_matches[category] = matches
 
     if domain == "football":
-        priority = [
-            "highlights",
-            "goals",
-            "review"
-        ]
+        priority = ["highlights", "goals", "review"]
 
     elif domain == "f1":
-        priority = [
-            "qualifying",
-            "race",
-            "highlights"
-        ]
+        priority = ["qualifying", "race", "highlights"]
 
     elif domain == "motogp":
         priority = [
             "sprint",
             "qualifying",
             "race",
+            "build_up",
             "highlights"
         ]
 
@@ -235,60 +189,23 @@ def classify_video(text, domain, config=None):
 
     for category in priority:
         if category in category_matches:
-            return (
-                [category],
-                category
-            )
+            return [category], category
 
-    return (
-        ["other"],
-        "other"
-    )
+    return ["other"], "other"
 
 
 def filter_videos(items, domain, api_key):
-    """
-    Strogi filter videozapisa.
-
-    Prihvaća samo videozapise koji:
-    - imaju poznato trajanje
-    - traju najmanje zadani broj sekundi
-    - nisu prepoznati kao Shorts
-    - nemaju isključujuće riječi u NASLOVU
-    - odgovaraju dopuštenoj kategoriji
-
-    Minimalno trajanje:
-    - Football: 180 sekundi
-    - F1: 180 sekundi
-    - MotoGP: 120 sekundi
-
-    Naslov se koristi za klasifikaciju i isključivanje.
-    Opis se koristi samo za dodatnu provjeru Shortsa.
-    """
-
     config = load_filter_config()
 
     domain = domain.lower()
 
-    global_config = config.get(
-        "global",
-        {}
-    )
+    global_config = config.get("global", {})
+    domain_config = config.get(domain, {})
 
-    domain_config = config.get(
-        domain,
-        {}
-    )
-
-    # Disciplina može imati vlastiti minimum trajanja.
-    # Ako ga nema, koristi se globalna vrijednost.
     min_duration = int(
         domain_config.get(
             "min_duration_seconds",
-            global_config.get(
-                "min_duration_seconds",
-                180
-            )
+            global_config.get("min_duration_seconds", 180)
         )
     )
 
@@ -359,17 +276,11 @@ def filter_videos(items, domain, api_key):
         title = get_title(item)
         description = get_description(item)
 
-        # Shorts provjera koristi naslov i opis.
         if exclude_shorts:
-            shorts_text = (
-                title + " " + description
-            )
+            shorts_text = title + " " + description
 
             is_short = any(
-                contains_keyword(
-                    shorts_text,
-                    keyword
-                )
+                contains_keyword(shorts_text, keyword)
                 for keyword in shorts_keywords
             )
 
@@ -377,12 +288,8 @@ def filter_videos(items, domain, api_key):
                 stats["shorts"] += 1
                 continue
 
-        # Isključujuće riječi provjeravaju se samo u naslovu.
         excluded = any(
-            contains_keyword(
-                title,
-                keyword
-            )
+            contains_keyword(title, keyword)
             for keyword in exclude_keywords
         )
 
@@ -390,7 +297,6 @@ def filter_videos(items, domain, api_key):
             stats["excluded_keyword"] += 1
             continue
 
-        # Uvjetne ključne riječi provjeravaju se samo u naslovu.
         matched_keywords = find_matching_keywords(
             title,
             include_keywords
@@ -400,7 +306,6 @@ def filter_videos(items, domain, api_key):
             stats["other"] += 1
             continue
 
-        # Klasifikacija također koristi samo naslov.
         tags, video_type = classify_video(
             title,
             domain,
