@@ -5,13 +5,5 @@
       "channel_id": "UC8pYaQzbBBXg9GIOHRvTmDQ",
       "enabled": true
     }
-  ],
-  "sessions": [
-    "FirstPractice",
-    "SecondPractice",
-    "ThirdPractice",
-    "Sprint",
-    "Qualifying",
-    "Race"
   ]
 }
