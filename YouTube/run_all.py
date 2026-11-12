@@ -1,7 +1,7 @@
-
 import os
 import json
 import re
+
 import requests
 
 from html import unescape
@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 
 import Football.main as football
 import F1.main as f1
+import MotoGP.main as motogp
 
 from video_filter import (
     filter_videos,
@@ -33,6 +34,7 @@ BASE = Path(__file__).resolve().parent
 
 FOOTBALL_CONFIG = BASE / "Football" / "config.json"
 F1_CONFIG = BASE / "F1" / "config.json"
+MOTOGP_CONFIG = BASE / "MotoGP" / "config.json"
 
 API_URL = "https://www.googleapis.com/youtube/v3/search"
 API_KEY = os.environ.get("YOUTUBE_API_KEY")
@@ -44,6 +46,13 @@ F1_ARCHIVE = {
     "priority": 3,
     "source_key": "formula_1",
     "logo": "logo/formula_1.png"
+}
+
+MOTOGP_ARCHIVE = {
+    "source": "MotoGP",
+    "priority": 2,
+    "source_key": "motogp",
+    "logo": "logo/motogp.png"
 }
 
 CHANNEL_ID_PATTERN = re.compile(r"^UC[A-Za-z0-9_-]{22}$")
@@ -87,79 +96,68 @@ def print_channel_diagnostics():
         "F1"
     )
 
+    motogp_config = load_json_config(
+        MOTOGP_CONFIG,
+        "MotoGP"
+    )
+
     print(f"[CONFIG] Football: {FOOTBALL_CONFIG}")
     print(f"[CONFIG] F1: {F1_CONFIG}")
+    print(f"[CONFIG] MotoGP: {MOTOGP_CONFIG}")
+
+    configurations = [
+        ("Football", football_config),
+        ("F1", f1_config),
+        ("MotoGP", motogp_config)
+    ]
+
+    channel_counts = {}
+
+    for domain, config in configurations:
+        print()
+        print(f"[CONFIG] {domain.upper()} CHANNELS")
+
+        channels = set()
+
+        for source in config.get("youtube_sources", []):
+            name = source.get("name", "Unknown")
+            channel_id = source.get("channel_id", "")
+            enabled = source.get("enabled", True)
+
+            valid = bool(
+                CHANNEL_ID_PATTERN.fullmatch(channel_id)
+            )
+
+            status = "OK" if valid else "NEISPRAVAN ID"
+
+            if not enabled:
+                status = "ISKLJUČEN"
+
+            print(
+                f"[CONFIG {domain}] {status} | "
+                f"{name} | {channel_id}"
+            )
+
+            if enabled and valid:
+                channels.add(channel_id)
+
+        channel_counts[domain] = len(channels)
 
     print()
-    print("[CONFIG] FOOTBALL CHANNELS")
 
-    football_channels = set()
-
-    for source in football_config.get("youtube_sources", []):
-        name = source.get("name", "Unknown")
-        league = source.get("league_name", "Unknown")
-        channel_id = source.get("channel_id", "")
-        enabled = source.get("enabled", True)
-
-        valid = bool(
-            CHANNEL_ID_PATTERN.fullmatch(channel_id)
-        )
-
-        status = "OK" if valid else "NEISPRAVAN ID"
-
-        if not enabled:
-            status = "ISKLJUČEN"
-
+    for domain, count in channel_counts.items():
         print(
-            f"[CONFIG Football] {status} | "
-            f"{name} | {league} | {channel_id}"
+            f"[CONFIG] Jedinstvenih {domain} kanala: {count}"
         )
-
-        if enabled and valid:
-            football_channels.add(channel_id)
-
-    print()
-    print("[CONFIG] F1 CHANNELS")
-
-    f1_channels = set()
-
-    for source in f1_config.get("youtube_sources", []):
-        name = source.get("name", "Unknown")
-        channel_id = source.get("channel_id", "")
-        enabled = source.get("enabled", True)
-
-        valid = bool(
-            CHANNEL_ID_PATTERN.fullmatch(channel_id)
-        )
-
-        status = "OK" if valid else "NEISPRAVAN ID"
-
-        if not enabled:
-            status = "ISKLJUČEN"
-
-        print(
-            f"[CONFIG F1] {status} | "
-            f"{name} | {channel_id}"
-        )
-
-        if enabled and valid:
-            f1_channels.add(channel_id)
-
-    print()
-    print(
-        f"[CONFIG] Jedinstvenih Football kanala: "
-        f"{len(football_channels)}"
-    )
-
-    print(
-        f"[CONFIG] Jedinstvenih F1 kanala: "
-        f"{len(f1_channels)}"
-    )
 
     print("=" * 60)
     print()
 
-    return football_config, f1_config
+    return (
+        football_config,
+        f1_config,
+        motogp_config
+    )
 
 
 # --------------------------------------------------
@@ -186,8 +184,13 @@ def youtube_search(candidate):
     if query:
         params["q"] = query
 
-    print(f"[YouTube] Upit: {query or '(bez ključne riječi)'}")
-    print(f"[YouTube] Kanal: {params['channelId']}")
+    print(
+        f"[YouTube] Upit: {query or '(bez ključne riječi)'}"
+    )
+
+    print(
+        f"[YouTube] Kanal: {params['channelId']}"
+    )
 
     response = requests.get(
         API_URL,
@@ -212,11 +215,17 @@ def youtube_search(candidate):
         f"{len(original_items)}"
     )
 
-    filtered_items, stats = filter_videos(
-        original_items,
-        candidate["domain"],
-        API_KEY
-    )
+    if candidate["domain"] == "MotoGP":
+        filtered_items, stats = motogp.filter_videos(
+            original_items,
+            API_KEY
+        )
+    else:
+        filtered_items, stats = filter_videos(
+            original_items,
+            candidate["domain"],
+            API_KEY
+        )
 
     data["items"] = filtered_items
 
@@ -272,6 +281,9 @@ def output_file(domain):
     if domain == "F1":
         return BASE / "F1" / "youtube_f1.json"
 
+    if domain == "MotoGP":
+        return BASE / "MotoGP" / "youtube_motogp.json"
+
     raise ValueError(
         f"Nepoznata domena: {domain}"
     )
@@ -282,8 +294,13 @@ def output_file(domain):
 # --------------------------------------------------
 
 def get_archive_metadata(candidate):
-    if candidate["domain"] == "F1":
+    domain = candidate["domain"]
+
+    if domain == "F1":
         return F1_ARCHIVE.copy()
+
+    if domain == "MotoGP":
+        return MOTOGP_ARCHIVE.copy()
 
     source_name = candidate.get(
         "source_name",
@@ -317,6 +334,10 @@ def get_video_tags(
         f"{title or ''} {description or ''}"
     )
 
+    if domain == "MotoGP":
+        tags, _ = motogp.classify_video(title or "")
+        return tags
+
     tags, _ = classify_video(
         text,
         domain
@@ -330,10 +351,15 @@ def get_video_type(
     tags,
     domain="Football"
 ):
-    _, video_type = classify_video(
-        title or "",
-        domain
-    )
+    if domain == "MotoGP":
+        _, video_type = motogp.classify_video(
+            title or ""
+        )
+    else:
+        _, video_type = classify_video(
+            title or "",
+            domain
+        )
 
     return (
         video_type
@@ -373,7 +399,7 @@ def published_timestamp(published_at):
 # LOAD EXISTING ARCHIVE
 # --------------------------------------------------
 
-def load_existing_archive(path):
+def load_existing_archive(path, domain):
     if not path.exists():
         return []
 
@@ -410,6 +436,15 @@ def load_existing_archive(path):
         except json.JSONDecodeError:
             continue
 
+        record_domain = record.get("domain", domain)
+
+        if record_domain not in (
+            "Football",
+            "F1",
+            "MotoGP"
+        ):
+            record_domain = domain
+
         for video in record.get("videos", []):
             video_id = video.get("video_id")
 
@@ -431,20 +466,10 @@ def load_existing_archive(path):
                 source_name.lower()
             ).strip("_")
 
-            is_f1 = (
-                record.get("domain") == "F1"
-            )
-
-            domain = (
-                "F1"
-                if is_f1
-                else "Football"
-            )
-
             tags = get_video_tags(
                 title,
                 description,
-                domain
+                record_domain
             )
 
             video_type = video.get("type")
@@ -453,8 +478,18 @@ def load_existing_archive(path):
                 video_type = get_video_type(
                     title,
                     tags,
-                    domain
+                    record_domain
                 )
+
+            if record_domain == "F1":
+                priority = 3
+                logo = "logo/formula_1.png"
+            elif record_domain == "MotoGP":
+                priority = 2
+                logo = "logo/motogp.png"
+            else:
+                priority = 1
+                logo = ""
 
             videos.append({
                 "video_id": video_id,
@@ -473,12 +508,8 @@ def load_existing_archive(path):
                 ),
                 "source": source_name,
                 "source_key": source_key,
-                "priority": 3 if is_f1 else 1,
-                "logo": (
-                    "logo/formula_1.png"
-                    if is_f1
-                    else ""
-                ),
+                "priority": priority,
+                "logo": logo,
                 "tags": tags,
                 "type": video_type,
                 "link": (
@@ -495,20 +526,21 @@ def load_existing_archive(path):
 # --------------------------------------------------
 
 def save_results(candidate, data):
-    path = output_file(
-        candidate["domain"]
-    )
+    domain = candidate["domain"]
+
+    path = output_file(domain)
 
     path.parent.mkdir(
         parents=True,
         exist_ok=True
     )
 
-    metadata = get_archive_metadata(
-        candidate
-    )
+    metadata = get_archive_metadata(candidate)
 
-    videos = load_existing_archive(path)
+    videos = load_existing_archive(
+        path,
+        domain
+    )
 
     videos_by_id = {
         video["video_id"]: video
@@ -592,7 +624,6 @@ def save_results(candidate, data):
 
         if video_id in videos_by_id:
             updated_count += 1
-
         else:
             new_count += 1
 
@@ -642,6 +673,10 @@ def save_results(candidate, data):
         f"{len(merged_videos)}"
     )
 
+    print(
+        f"[Arhiva] Datoteka: {path}"
+    )
+
     return saved_count
 
 
@@ -650,11 +685,6 @@ def save_results(candidate, data):
 # --------------------------------------------------
 
 def build_football_fallback():
-    """
-    Jedan fallback kandidat po jedinstvenom YouTube kanalu.
-    ID-jevi se čitaju iz Football/config.json.
-    """
-
     if not FOOTBALL_CONFIG.exists():
         print(
             "[Fallback Football] "
@@ -720,11 +750,8 @@ def build_football_fallback():
         entry = channels[channel_id]
 
         if league_name not in entry["leagues"]:
-            entry["leagues"].append(
-                league_name
-            )
+            entry["leagues"].append(league_name)
 
-    # Importance se uzima iz stvarnih liga.
     league_importance = {
         league.get("name"): float(
             league.get("importance", 1.0)
@@ -747,13 +774,7 @@ def build_football_fallback():
             ] or [1.0]
         )
 
-        if len(leagues) > 1:
-            league_label = " / ".join(
-                leagues
-            )
-
-        else:
-            league_label = leagues[0]
+        league_label = " / ".join(leagues)
 
         print(
             f"[DEBUG Football] KANDIDAT: "
@@ -764,9 +785,7 @@ def build_football_fallback():
 
         result.append({
             "domain": "Football",
-            "key": (
-                f"football:fallback:{channel_id}"
-            ),
+            "key": f"football:fallback:{channel_id}",
             "query": FOOTBALL_FALLBACK_QUERY,
             "channel_id": channel_id,
             "source_name": source["source_name"],
@@ -786,13 +805,7 @@ def build_football_fallback():
     )
 
     print(
-        f"[Fallback Football] Upit: "
-        f"{FOOTBALL_FALLBACK_QUERY}"
-    )
-
-    print(
-        f"[Fallback Football] Kandidata: "
-        f"{len(result)}"
+        f"[Fallback Football] Kandidata: {len(result)}"
     )
 
     return result
@@ -803,11 +816,6 @@ def build_football_fallback():
 # --------------------------------------------------
 
 def build_f1_fallback():
-    """
-    F1 fallback ograničen na utrke i kvalifikacije.
-    Izvor se čita iz F1.main konfiguracije.
-    """
-
     try:
         original_candidates = (
             f1.fallback_candidates()
@@ -845,6 +853,12 @@ def build_f1_fallback():
 
     result = []
 
+    slugs = [
+        "race-highlights",
+        "qualifying-highlights",
+        "full-race"
+    ]
+
     for channel_id, source in sources_by_channel.items():
         print(
             f"[DEBUG F1] {source.get('source_name')} | "
@@ -854,18 +868,13 @@ def build_f1_fallback():
         for index, query in enumerate(
             F1_FALLBACK_QUERIES
         ):
-            slug = [
-                "race-highlights",
-                "qualifying-highlights",
-                "full-race"
-            ][index]
-
             candidate = source.copy()
 
             candidate.update({
                 "domain": "F1",
                 "key": (
-                    f"f1:fallback:{channel_id}:{slug}"
+                    f"f1:fallback:{channel_id}:"
+                    f"{slugs[index]}"
                 ),
                 "query": query,
                 "channel_id": channel_id,
@@ -877,17 +886,28 @@ def build_f1_fallback():
             result.append(candidate)
 
     print(
-        f"[Fallback F1] Jedinstvenih kanala: "
-        f"{len(sources_by_channel)}"
+        f"[Fallback F1] Kandidata: {len(result)}"
     )
 
-    for query in F1_FALLBACK_QUERIES:
+    return result
+
+
+# --------------------------------------------------
+# MOTOGP FALLBACK
+# --------------------------------------------------
+
+def build_motogp_fallback():
+    try:
+        result = motogp.fallback_candidates()
+
+    except Exception as exc:
         print(
-            f"[Fallback F1] Upit: {query}"
+            f"[Fallback MotoGP] Greška: {exc}"
         )
+        return []
 
     print(
-        f"[Fallback F1] Kandidata: {len(result)}"
+        f"[Fallback MotoGP] Kandidata: {len(result)}"
     )
 
     return result
@@ -900,11 +920,17 @@ def build_f1_fallback():
 def build_fallback_candidates():
     result = []
 
-    f1_fallback = build_f1_fallback()
-    result.extend(f1_fallback)
+    result.extend(
+        build_f1_fallback()
+    )
 
-    football_fallback = build_football_fallback()
-    result.extend(football_fallback)
+    result.extend(
+        build_motogp_fallback()
+    )
+
+    result.extend(
+        build_football_fallback()
+    )
 
     print(
         f"[Fallback] Ukupno pripremljenih kandidata: "
@@ -944,7 +970,7 @@ def main():
             "GitHub Secret YOUTUBE_API_KEY nije postavljen."
         )
 
-    # 1. Provjeri konfiguracije prije pretraživanja.
+    # 1. Provjeri konfiguracije.
     print_channel_diagnostics()
 
     # 2. Učitaj kvote i stanje.
@@ -989,7 +1015,25 @@ def main():
             f"[F1] Greška: {exc}"
         )
 
-    # 5. FALLBACK CANDIDATES
+    # 5. MOTOGP EVENT CANDIDATES
+    try:
+        motogp_candidates = motogp.candidates()
+
+        all_candidates.extend(
+            motogp_candidates
+        )
+
+        print(
+            f"[MotoGP] Kandidata za sesije i vikend markere: "
+            f"{len(motogp_candidates)}"
+        )
+
+    except Exception as exc:
+        print(
+            f"[MotoGP] Greška: {exc}"
+        )
+
+    # 6. FALLBACK CANDIDATES
     print()
     print(
         "[System] Pripremam fallback kandidate."
@@ -1003,7 +1047,7 @@ def main():
         fallback_candidates
     )
 
-    # 6. DEDUPLICATION
+    # 7. DEDUPLICATION
     all_candidates = deduplicate_candidates(
         all_candidates
     )
@@ -1018,10 +1062,17 @@ def main():
         f"{len(all_candidates)}"
     )
 
-    print(
-        f"[System] Stvarni Football/F1 kandidati: "
-        f"{sum(1 for c in all_candidates if not c.get('fallback', False) and not c.get('skip_search', False))}"
-    )
+    for domain in ("Football", "F1", "MotoGP"):
+        count = sum(
+            1 for candidate in all_candidates
+            if candidate.get("domain") == domain
+            and not candidate.get("fallback", False)
+            and not candidate.get("skip_search", False)
+        )
+
+        print(
+            f"[System] Stvarni {domain} kandidati: {count}"
+        )
 
     print(
         f"[System] Fallback kandidati: "
@@ -1030,7 +1081,12 @@ def main():
 
     print(
         f"[System] F1 vikend markeri: "
-        f"{sum(1 for c in all_candidates if c.get('skip_search', False))}"
+        f"{sum(1 for c in all_candidates if c.get('f1_weekend', False))}"
+    )
+
+    print(
+        f"[System] MotoGP vikend markeri: "
+        f"{sum(1 for c in all_candidates if c.get('motogp_weekend', False))}"
     )
 
     print(
@@ -1043,7 +1099,7 @@ def main():
         )
         return
 
-    # 7. QUOTA AND PRIORITY SELECTION
+    # 8. QUOTA AND PRIORITY SELECTION
     selected = select_candidates(
         all_candidates,
         state,
@@ -1061,7 +1117,7 @@ def main():
         )
         return
 
-    # 8. YOUTUBE SEARCH + FILTER + SAVE
+    # 9. YOUTUBE SEARCH + FILTER + SAVE
     for candidate in selected:
         domain = candidate["domain"]
         key = candidate["key"]
@@ -1140,7 +1196,7 @@ def main():
         finally:
             save_state(state)
 
-    # 9. FINAL QUOTA STATE
+    # 10. FINAL QUOTA STATE
     print()
     print(
         "[System] Završno stanje kvote:"
