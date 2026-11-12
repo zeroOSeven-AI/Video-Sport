@@ -46,6 +46,7 @@ jobs:
                     [ -f YouTube/quota_state.json ] && git add YouTube/quota_state.json || true
           [ -f YouTube/Football/youtube_football.json ] && git add YouTube/Football/youtube_football.json || true
           [ -f YouTube/F1/youtube_f1.json ] && git add YouTube/F1/youtube_f1.json || true
+          [ -f YouTube/MotoGP/youtube_motogp.json ] && git add YouTube/MotoGP/youtube_motogp.json || true
 
           git diff --cached --quiet || git commit -m "Update YouTube highlights"
           git push
