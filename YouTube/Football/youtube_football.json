@@ -1,8 +1,28 @@
 {
     "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-12T09:54:26.730141+00:00",
+    "updated_at": "2026-11-12T18:23:29.982566+00:00",
     "videos": [
+        {
+            "video_id": "0JWH4OzYLMQ",
+            "title": "ALL ROUND 10 HIGHLIGHTS ⚽ | PRIMAVERA 1 2026/27",
+            "published_at": "2026-11-12T15:00:01Z",
+            "published_ts": 1794495601,
+            "duration_seconds": 2048,
+            "thumbnail": "https://i.ytimg.com/vi/0JWH4OzYLMQ/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=0JWH4OzYLMQ"
+        },
         {
             "video_id": "Iazh_BIa7Aw",
             "title": "DOUBLE JUVE COMEBACK 😱 | FIORENTINA-JUVENTUS CINEMATIC HIGHLIGHTS | Serie A 2026/27",
