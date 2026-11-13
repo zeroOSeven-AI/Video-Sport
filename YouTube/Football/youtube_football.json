@@ -1,7 +1,7 @@
 {
-    "source": "LaLiga Official",
-    "priority": 1.3,
-    "updated_at": "2026-11-13T10:41:40.923978+00:00",
+    "source": "Ligue 1 Official",
+    "priority": 1.1,
+    "updated_at": "2026-11-13T12:47:14.177890+00:00",
     "videos": [
         {
             "video_id": "0JWH4OzYLMQ",
@@ -22,6 +22,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=0JWH4OzYLMQ"
+        },
+        {
+            "video_id": "izNyEr9Yedo",
+            "title": "CRAZIEST Champions League Matches In Football History",
+            "published_at": "2026-11-10T17:00:14Z",
+            "published_ts": 1794330014,
+            "duration_seconds": 483,
+            "thumbnail": "https://i.ytimg.com/vi/izNyEr9Yedo/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=izNyEr9Yedo"
         },
         {
             "video_id": "Iazh_BIa7Aw",
@@ -81,9 +101,31 @@
             "type": "highlights",
             "matched_keywords": [
                 "highlights",
-                "extended highlights"
+                "extended highlights",
+                "goals"
             ],
             "link": "https://www.youtube.com/watch?v=15hGtRJ3aFk"
+        },
+        {
+            "video_id": "SkeFMwnSwQM",
+            "title": "The BEST Champions League Goals So Far In 2026/27",
+            "published_at": "2026-11-09T17:00:05Z",
+            "published_ts": 1794243605,
+            "duration_seconds": 1979,
+            "thumbnail": "https://i.ytimg.com/vi/SkeFMwnSwQM/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goals",
+                "best goals"
+            ],
+            "link": "https://www.youtube.com/watch?v=SkeFMwnSwQM"
         },
         {
             "video_id": "O2vD7ciyg6c",
@@ -102,7 +144,8 @@
             "type": "highlights",
             "matched_keywords": [
                 "highlights",
-                "extended highlights"
+                "extended highlights",
+                "goals"
             ],
             "link": "https://www.youtube.com/watch?v=O2vD7ciyg6c"
         },
@@ -126,6 +169,26 @@
                 "extended highlights"
             ],
             "link": "https://www.youtube.com/watch?v=X4X79n7Bfyw"
+        },
+        {
+            "video_id": "MZ3PJZEqvMo",
+            "title": "Résumé 10ème journée | Ligue 1 McDonald's 26/27",
+            "published_at": "2026-11-09T02:10:55Z",
+            "published_ts": 1794190255,
+            "duration_seconds": 956,
+            "thumbnail": "https://i.ytimg.com/vi/MZ3PJZEqvMo/hqdefault.jpg",
+            "source": "Ligue 1 Official",
+            "source_key": "ligue_1_official",
+            "priority": 1.1,
+            "logo": "logo/ligue_1_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "résumé"
+            ],
+            "link": "https://www.youtube.com/watch?v=MZ3PJZEqvMo"
         },
         {
             "video_id": "gdRtRsSLbOU",
@@ -263,7 +326,8 @@
             ],
             "type": "highlights",
             "matched_keywords": [
-                "highlights"
+                "highlights",
+                "goals"
             ],
             "link": "https://www.youtube.com/watch?v=n3ICQ_r1pWw"
         },
@@ -288,6 +352,26 @@
             "link": "https://www.youtube.com/watch?v=SaUfb91EbFA"
         },
         {
+            "video_id": "5mw7MJN7aXY",
+            "title": "Grönbaek With A Screamer! | HAMBURGER SV - BORUSSIA M'GLADBACH | HL | Matchday 9 – Bundesliga",
+            "published_at": "2026-11-08T23:00:11Z",
+            "published_ts": 1794178811,
+            "duration_seconds": 239,
+            "thumbnail": "https://i.ytimg.com/vi/5mw7MJN7aXY/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=5mw7MJN7aXY"
+        },
+        {
             "video_id": "p4aNGqai4ec",
             "title": "EVERY Goal | Matchweek 10 | 2026/27 Premier League Highlights",
             "published_at": "2026-11-08T22:10:20Z",
@@ -307,6 +391,68 @@
                 "every goal"
             ],
             "link": "https://www.youtube.com/watch?v=p4aNGqai4ec"
+        },
+        {
+            "video_id": "wdtYGRqHv-M",
+            "title": "ATLÉTICO DE MADRID 1 - 2 FC BARCELONA | RESUMEN LALIGA EA SPORTS",
+            "published_at": "2026-11-08T22:07:57Z",
+            "published_ts": 1794175677,
+            "duration_seconds": 195,
+            "thumbnail": "https://i.ytimg.com/vi/wdtYGRqHv-M/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "resumen"
+            ],
+            "link": "https://www.youtube.com/watch?v=wdtYGRqHv-M"
+        },
+        {
+            "video_id": "is8JWdOeinI",
+            "title": "Ronaldo's GREATEST Portugal Goals At The EURO",
+            "published_at": "2026-11-06T17:00:26Z",
+            "published_ts": 1793984426,
+            "duration_seconds": 331,
+            "thumbnail": "https://i.ytimg.com/vi/is8JWdOeinI/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goals",
+                "best goals"
+            ],
+            "link": "https://www.youtube.com/watch?v=is8JWdOeinI"
+        },
+        {
+            "video_id": "NCb3wtrrZSk",
+            "title": "The BEST Goals From Matchweek 4 (UCL, UEL, UECL)",
+            "published_at": "2026-11-06T12:31:43Z",
+            "published_ts": 1793968303,
+            "duration_seconds": 1513,
+            "thumbnail": "https://i.ytimg.com/vi/NCb3wtrrZSk/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goals",
+                "best goals"
+            ],
+            "link": "https://www.youtube.com/watch?v=NCb3wtrrZSk"
         },
         {
             "video_id": "iu5lCqsYJqI",
