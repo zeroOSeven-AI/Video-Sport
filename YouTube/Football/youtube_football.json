@@ -1,8 +1,28 @@
 {
     "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-13T13:31:17.973174+00:00",
+    "updated_at": "2026-11-13T17:47:48.136735+00:00",
     "videos": [
+        {
+            "video_id": "-P5ZYITth50",
+            "title": "EVERY Women's Champions League Goal From Matchday 4! | Highlights",
+            "published_at": "2026-11-13T14:04:32Z",
+            "published_ts": 1794578672,
+            "duration_seconds": 896,
+            "thumbnail": "https://i.ytimg.com/vi/-P5ZYITth50/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=-P5ZYITth50"
+        },
         {
             "video_id": "0JWH4OzYLMQ",
             "title": "ALL ROUND 10 HIGHLIGHTS ⚽ | PRIMAVERA 1 2026/27",
