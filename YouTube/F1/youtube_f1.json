@@ -1,7 +1,7 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-13T12:47:11.656300+00:00",
+    "updated_at": "2026-11-13T13:31:15.253558+00:00",
     "videos": [
         {
             "video_id": "_09gPxeE_gc",
@@ -79,7 +79,7 @@
             ],
             "type": "race",
             "matched_keywords": [
-                "grand prix"
+                "race"
             ],
             "link": "https://www.youtube.com/watch?v=jpwFNmUzWn8"
         },
@@ -99,8 +99,7 @@
             ],
             "type": "race",
             "matched_keywords": [
-                "grand prix",
-                "f1"
+                "race"
             ],
             "link": "https://www.youtube.com/watch?v=Ug4Ka9aqpWE"
         },
@@ -120,8 +119,8 @@
             ],
             "type": "race",
             "matched_keywords": [
-                "grand prix",
-                "race highlights"
+                "race highlights",
+                "race"
             ],
             "link": "https://www.youtube.com/watch?v=lkb5kqDJYXk"
         },
