@@ -13,6 +13,10 @@ FILTER_CONFIG = BASE / "video_filter.json"
 VIDEOS_API_URL = "https://www.googleapis.com/youtube/v3/videos"
 
 
+# ============================================================
+# CONFIGURATION
+# ============================================================
+
 def load_filter_config():
     if not FILTER_CONFIG.exists():
         raise FileNotFoundError(
@@ -23,12 +27,18 @@ def load_filter_config():
         return json.load(file)
 
 
+# ============================================================
+# TEXT NORMALIZATION
+# ============================================================
+
 def normalize_text(value):
     value = str(value or "").lower()
+
     value = unicodedata.normalize("NFKD", value)
 
     value = "".join(
-        char for char in value
+        char
+        for char in value
         if not unicodedata.combining(char)
     )
 
@@ -52,6 +62,18 @@ def contains_keyword(text, keyword):
 
     return re.search(pattern, text) is not None
 
+
+def find_matching_keywords(text, keywords):
+    return [
+        keyword
+        for keyword in keywords
+        if contains_keyword(text, keyword)
+    ]
+
+
+# ============================================================
+# VIDEO DURATION
+# ============================================================
 
 def parse_duration(duration):
     if not duration:
@@ -88,6 +110,7 @@ def get_video_durations(video_ids, api_key):
         return {}
 
     unique_ids = list(dict.fromkeys(video_ids))
+
     durations = {}
 
     for start in range(0, len(unique_ids), 50):
@@ -124,6 +147,10 @@ def get_video_durations(video_ids, api_key):
     return durations
 
 
+# ============================================================
+# YOUTUBE ITEM HELPERS
+# ============================================================
+
 def get_video_id(item):
     video_id = item.get("id", {})
 
@@ -145,67 +172,151 @@ def get_description(item):
     )
 
 
-def find_matching_keywords(text, keywords):
-    return [
-        keyword
-        for keyword in keywords
-        if contains_keyword(text, keyword)
+# ============================================================
+# SHORTS DETECTION
+# ============================================================
+
+def is_shorts_video(title, description, shorts_keywords):
+    title = normalize_text(title)
+    description = normalize_text(description)
+
+    # Strong indicators: explicit hashtags.
+    strong_keywords = [
+        "#shorts",
+        "#ytshorts"
     ]
 
+    for keyword in strong_keywords:
+        if contains_keyword(title, keyword):
+            return True
 
-def classify_video(text, domain, config=None):
+        if contains_keyword(description, keyword):
+            return True
+
+    # Generic Shorts expressions are checked in title only.
+    generic_keywords = [
+        keyword
+        for keyword in shorts_keywords
+        if normalize_text(keyword) not in [
+            "#shorts",
+            "#ytshorts"
+        ]
+    ]
+
+    for keyword in generic_keywords:
+        if contains_keyword(title, keyword):
+            return True
+
+    return False
+
+
+# ============================================================
+# CATEGORY CLASSIFICATION
+# ============================================================
+
+def get_category_priority(domain):
+    priorities = {
+        "football": [
+            "highlights",
+            "goals",
+            "review"
+        ],
+
+        "f1": [
+            "qualifying",
+            "race",
+            "highlights"
+        ],
+
+        "motogp": [
+            "sprint",
+            "qualifying",
+            "race",
+            "practice",
+            "highlights",
+            "build_up"
+        ]
+    }
+
+    return priorities.get(domain, [])
+
+
+def classify_video(title, description, domain, config=None):
     if config is None:
         config = load_filter_config()
 
     domain = domain.lower()
-    domain_config = config.get(domain, {})
-    categories = domain_config.get("categories", {})
 
-    category_matches = {}
+    domain_config = config.get(domain, {})
+
+    categories = domain_config.get(
+        "categories", {}
+    )
+
+    title = normalize_text(title)
+    description = normalize_text(description)
+
+    title_matches = {}
+    description_matches = {}
 
     for category, keywords in categories.items():
-        matches = find_matching_keywords(text, keywords)
 
-        if matches:
-            category_matches[category] = matches
+        title_found = find_matching_keywords(
+            title,
+            keywords
+        )
 
-    if domain == "football":
-        priority = ["highlights", "goals", "review"]
+        description_found = find_matching_keywords(
+            description,
+            keywords
+        )
 
-    elif domain == "f1":
-        priority = ["qualifying", "race", "highlights"]
+        if title_found:
+            title_matches[category] = title_found
 
-    elif domain == "motogp":
-        priority = [
-            "sprint",
-            "qualifying",
-            "race",
-            "build_up",
-            "highlights"
-        ]
+        if description_found:
+            description_matches[category] = description_found
 
-    else:
-        priority = []
+    priority = get_category_priority(domain)
 
+    # Title always has priority.
     for category in priority:
-        if category in category_matches:
+        if category in title_matches:
+            return [category], category
+
+    # Description is used as fallback.
+    for category in priority:
+        if category in description_matches:
             return [category], category
 
     return ["other"], "other"
 
 
+# ============================================================
+# VIDEO FILTER
+# ============================================================
+
 def filter_videos(items, domain, api_key):
+
     config = load_filter_config()
 
     domain = domain.lower()
 
     global_config = config.get("global", {})
+
     domain_config = config.get(domain, {})
+
+    # --------------------------------------------------------
+    # SETTINGS
+    # --------------------------------------------------------
 
     min_duration = int(
         domain_config.get(
             "min_duration_seconds",
-            global_config.get("min_duration_seconds", 180)
+            global_config.get(
+                "min_duration_seconds",
+                180
+            )
         )
     )
 
@@ -229,9 +340,19 @@ def filter_videos(items, domain, api_key):
         []
     )
 
+    require_include = global_config.get(
+        "require_include_keyword",
+        True
+    )
+
+    # --------------------------------------------------------
+    # GET VIDEO IDS
+    # --------------------------------------------------------
+
     video_ids = []
 
     for item in items:
+
         video_id = get_video_id(item)
 
         if video_id:
@@ -241,6 +362,10 @@ def filter_videos(items, domain, api_key):
         video_ids,
         api_key
     )
+
+    # --------------------------------------------------------
+    # STATISTICS
+    # --------------------------------------------------------
 
     accepted = []
 
@@ -255,7 +380,12 @@ def filter_videos(items, domain, api_key):
         "categorized": 0
     }
 
+    # --------------------------------------------------------
+    # PROCESS VIDEOS
+    # --------------------------------------------------------
+
     for item in items:
+
         video_id = get_video_id(item)
 
         if not video_id:
@@ -263,66 +393,136 @@ def filter_videos(items, domain, api_key):
 
         duration = durations.get(video_id)
 
+        # Missing duration.
         if duration is None:
+
             stats["missing_duration"] += 1
+
+            item["filter_rejection"] = "missing_duration"
+
             continue
 
         item["duration_seconds"] = duration
 
+        # Minimum duration.
         if duration < min_duration:
+
             stats["too_short"] += 1
+
+            item["filter_rejection"] = "too_short"
+
             continue
 
+        # Text.
         title = get_title(item)
+
         description = get_description(item)
 
+        # ----------------------------------------------------
+        # SHORTS
+        # ----------------------------------------------------
+
         if exclude_shorts:
-            shorts_text = title + " " + description
 
-            is_short = any(
-                contains_keyword(shorts_text, keyword)
-                for keyword in shorts_keywords
-            )
+            if is_shorts_video(
+                title,
+                description,
+                shorts_keywords
+            ):
 
-            if is_short:
                 stats["shorts"] += 1
+
+                item["filter_rejection"] = "shorts"
+
                 continue
 
-        excluded = any(
-            contains_keyword(title, keyword)
-            for keyword in exclude_keywords
+        # ----------------------------------------------------
+        # EXCLUDE KEYWORDS
+        # ----------------------------------------------------
+
+        excluded_matches = find_matching_keywords(
+            title,
+            exclude_keywords
         )
 
-        if excluded:
+        if excluded_matches:
+
             stats["excluded_keyword"] += 1
+
+            item["filter_rejection"] = "excluded_keyword"
+
+            item["excluded_keywords"] = excluded_matches
+
             continue
 
-        matched_keywords = find_matching_keywords(
+        # ----------------------------------------------------
+        # INCLUDE KEYWORDS
+        # ----------------------------------------------------
+
+        matched_title = find_matching_keywords(
             title,
             include_keywords
         )
 
-        if not matched_keywords:
+        matched_description = find_matching_keywords(
+            description,
+            include_keywords
+        )
+
+        matched_keywords = list(
+            dict.fromkeys(
+                matched_title + matched_description
+            )
+        )
+
+        if require_include and not matched_keywords:
+
             stats["other"] += 1
+
+            item["filter_rejection"] = "missing_include_keyword"
+
             continue
+
+        # ----------------------------------------------------
+        # CLASSIFICATION
+        # ----------------------------------------------------
 
         tags, video_type = classify_video(
             title,
+            description,
             domain,
             config
         )
 
         if video_type == "other":
+
             stats["other"] += 1
+
+            item["filter_rejection"] = "unclassified"
+
             continue
+
+        # ----------------------------------------------------
+        # ACCEPTED VIDEO
+        # ----------------------------------------------------
 
         stats["categorized"] += 1
 
         item["filter_tags"] = tags
+
         item["video_type"] = video_type
+
         item["matched_keywords"] = matched_keywords
 
+        item.pop("filter_rejection", None)
+
+        item.pop("excluded_keywords", None)
+
         accepted.append(item)
+
+    # --------------------------------------------------------
+    # FINAL STATISTICS
+    # --------------------------------------------------------
 
     stats["accepted"] = len(accepted)
 
