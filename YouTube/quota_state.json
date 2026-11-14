@@ -1,26 +1,26 @@
 {
   "date": "2026-11-14",
-  "total_used": 5,
-  "fallback_used": 2,
+  "total_used": 8,
+  "fallback_used": 4,
   "domain_used": {
     "Football": 0,
-    "F1": 2,
-    "MotoGP": 3
+    "F1": 4,
+    "MotoGP": 4
   },
   "domain_fallback_used": {
     "Football": 0,
-    "F1": 2,
+    "F1": 4,
     "MotoGP": 0
   },
   "last_query": {
     "motogp:4b3882a8-24b2-4321-aa12-d1847c989438:c57db23b-19a8-479b-a7bf-e71a02f9f3bf:UC8pYaQzbBBXg9GIOHRvTmDQ": "2026-11-14T03:26:50.142937-08:00",
     "motogp:4b3882a8-24b2-4321-aa12-d1847c989438:da48a0ce-febf-487b-9fc2-b609c3c71ea2:UC8pYaQzbBBXg9GIOHRvTmDQ": "2026-11-14T03:26:50.514306-08:00",
-    "motogp:4b3882a8-24b2-4321-aa12-d1847c989438:245ed850-b33b-4fc5-89e2-a759c9373ba5:UC8pYaQzbBBXg9GIOHRvTmDQ": "2026-11-14T03:26:50.824938-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-14T03:26:51.148500-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-14T03:26:51.508088-08:00"
+    "motogp:4b3882a8-24b2-4321-aa12-d1847c989438:245ed850-b33b-4fc5-89e2-a759c9373ba5:UC8pYaQzbBBXg9GIOHRvTmDQ": "2026-11-14T07:09:23.378519-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-14T07:09:23.747726-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-14T07:09:24.162607-08:00"
   },
   "last_fallback": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-14T03:26:51.148500-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-14T03:26:51.508088-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-14T07:09:23.747726-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-14T07:09:24.162607-08:00"
   }
 }
