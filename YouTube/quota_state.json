@@ -1,24 +1,36 @@
 {
   "date": "2026-11-15",
-  "total_used": 3,
-  "fallback_used": 2,
+  "total_used": 11,
+  "fallback_used": 10,
   "domain_used": {
-    "Football": 0,
-    "F1": 2,
+    "Football": 6,
+    "F1": 4,
     "MotoGP": 1
   },
   "domain_fallback_used": {
-    "Football": 0,
-    "F1": 2,
+    "Football": 6,
+    "F1": 4,
     "MotoGP": 0
   },
   "last_query": {
     "motogp:4b3882a8-24b2-4321-aa12-d1847c989438:c39523d9-4eea-4796-b7c2-f83c1e2a4154:UC8pYaQzbBBXg9GIOHRvTmDQ": "2026-11-15T01:31:24.733586-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-15T01:31:25.452219-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-15T01:31:26.313258-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-15T09:15:04.337987-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-15T09:15:04.803705-08:00",
+    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-15T09:15:05.242362-08:00",
+    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-15T09:15:05.628010-08:00",
+    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-15T09:15:06.048124-08:00",
+    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-15T09:15:06.508536-08:00",
+    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-15T09:15:06.858860-08:00",
+    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-15T09:15:07.306189-08:00"
   },
   "last_fallback": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-15T01:31:25.452219-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-15T01:31:26.313258-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-15T09:15:04.337987-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-15T09:15:04.803705-08:00",
+    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-15T09:15:05.242362-08:00",
+    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-15T09:15:05.628010-08:00",
+    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-15T09:15:06.048124-08:00",
+    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-15T09:15:06.508536-08:00",
+    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-15T09:15:06.858860-08:00",
+    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-15T09:15:07.306189-08:00"
   }
 }
