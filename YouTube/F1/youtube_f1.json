@@ -1,7 +1,7 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-20T03:21:26.625146+00:00",
+    "updated_at": "2026-11-20T21:52:33.578768+00:00",
     "videos": [
         {
             "video_id": "y23pvZMQCPI",
@@ -369,6 +369,48 @@
                 "qualifying"
             ],
             "link": "https://www.youtube.com/watch?v=OuXe2B6Hno4"
+        },
+        {
+            "video_id": "H2VWkcUoCqs",
+            "title": "Qualifying Highlights | 2025 Abu Dhabi Grand Prix",
+            "published_at": "2025-12-06T15:28:12Z",
+            "published_ts": 1765034892,
+            "duration_seconds": 451,
+            "thumbnail": "https://i.ytimg.com/vi/H2VWkcUoCqs/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "qualifying"
+            ],
+            "type": "qualifying",
+            "matched_keywords": [
+                "qualifying highlights",
+                "qualifying"
+            ],
+            "link": "https://www.youtube.com/watch?v=H2VWkcUoCqs"
+        },
+        {
+            "video_id": "HyyqwkEQfWw",
+            "title": "FP3 Highlights | 2025 Abu Dhabi Grand Prix",
+            "published_at": "2025-12-06T12:34:58Z",
+            "published_ts": 1765024498,
+            "duration_seconds": 248,
+            "thumbnail": "https://i.ytimg.com/vi/HyyqwkEQfWw/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp3 highlights",
+                "fp3"
+            ],
+            "link": "https://www.youtube.com/watch?v=HyyqwkEQfWw"
         },
         {
             "video_id": "BeaVJggQ2dc",

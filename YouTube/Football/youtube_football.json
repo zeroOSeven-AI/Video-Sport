@@ -1,7 +1,7 @@
 {
-    "source": "LaLiga Official",
-    "priority": 1.3,
-    "updated_at": "2026-11-19T10:26:13.133958+00:00",
+    "source": "Ligue 1 Official",
+    "priority": 1.1,
+    "updated_at": "2026-11-20T21:52:35.588039+00:00",
     "videos": [
         {
             "video_id": "iC3jrIN5bTQ",
@@ -1074,6 +1074,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=eUCGPEghrMA"
+        },
+        {
+            "video_id": "w12PXFUBu6s",
+            "title": "TOUS LES BUTS de la 7ème journée | Ligue 1 McDonald's 26/27",
+            "published_at": "2026-10-18T23:29:07Z",
+            "published_ts": 1792366147,
+            "duration_seconds": 717,
+            "thumbnail": "https://i.ytimg.com/vi/w12PXFUBu6s/hqdefault.jpg",
+            "source": "Ligue 1 Official",
+            "source_key": "ligue_1_official",
+            "priority": 1.1,
+            "logo": "logo/ligue_1_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "buts"
+            ],
+            "link": "https://www.youtube.com/watch?v=w12PXFUBu6s"
         },
         {
             "video_id": "o46cVQj12zI",
