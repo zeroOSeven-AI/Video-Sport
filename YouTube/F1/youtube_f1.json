@@ -1,7 +1,7 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-19T20:42:24.213919+00:00",
+    "updated_at": "2026-11-20T03:21:26.625146+00:00",
     "videos": [
         {
             "video_id": "y23pvZMQCPI",
@@ -371,6 +371,69 @@
             "link": "https://www.youtube.com/watch?v=OuXe2B6Hno4"
         },
         {
+            "video_id": "BeaVJggQ2dc",
+            "title": "Race Highlights | 2025 Qatar Grand Prix",
+            "published_at": "2025-11-30T18:13:22Z",
+            "published_ts": 1764526402,
+            "duration_seconds": 489,
+            "thumbnail": "https://i.ytimg.com/vi/BeaVJggQ2dc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=BeaVJggQ2dc"
+        },
+        {
+            "video_id": "uQc-pW3QLuI",
+            "title": "Race Highlights | 2025 Las Vegas Grand Prix",
+            "published_at": "2025-11-23T06:18:34Z",
+            "published_ts": 1763878714,
+            "duration_seconds": 484,
+            "thumbnail": "https://i.ytimg.com/vi/uQc-pW3QLuI/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=uQc-pW3QLuI"
+        },
+        {
+            "video_id": "GExKHjlBTfw",
+            "title": "FP2 Highlights | 2025 Las Vegas Grand Prix",
+            "published_at": "2025-11-21T06:14:12Z",
+            "published_ts": 1763705652,
+            "duration_seconds": 188,
+            "thumbnail": "https://i.ytimg.com/vi/GExKHjlBTfw/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp2 highlights",
+                "fp2"
+            ],
+            "link": "https://www.youtube.com/watch?v=GExKHjlBTfw"
+        },
+        {
             "video_id": "MK83clSv6-k",
             "title": "Race Highlights | 2025 Sao Paulo Grand Prix",
             "published_at": "2025-11-09T19:25:48Z",
@@ -390,6 +453,48 @@
                 "race"
             ],
             "link": "https://www.youtube.com/watch?v=MK83clSv6-k"
+        },
+        {
+            "video_id": "hTqxfkWRimk",
+            "title": "Race Highlights | 2025 Mexico City Grand Prix",
+            "published_at": "2025-10-26T22:39:45Z",
+            "published_ts": 1761518385,
+            "duration_seconds": 496,
+            "thumbnail": "https://i.ytimg.com/vi/hTqxfkWRimk/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=hTqxfkWRimk"
+        },
+        {
+            "video_id": "huYuU5dXXS8",
+            "title": "FP2 Highlights | 2025 Mexico City Grand Prix",
+            "published_at": "2025-10-25T00:08:49Z",
+            "published_ts": 1761350929,
+            "duration_seconds": 197,
+            "thumbnail": "https://i.ytimg.com/vi/huYuU5dXXS8/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp2 highlights",
+                "fp2"
+            ],
+            "link": "https://www.youtube.com/watch?v=huYuU5dXXS8"
         }
     ]
 }

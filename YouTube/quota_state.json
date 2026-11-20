@@ -1,10 +1,10 @@
 {
   "date": "2026-11-19",
-  "total_used": 11,
+  "total_used": 13,
   "fallback_used": 10,
   "domain_used": {
     "Football": 4,
-    "F1": 3,
+    "F1": 5,
     "MotoGP": 4
   },
   "domain_fallback_used": {
@@ -21,7 +21,8 @@
     "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-19T02:26:11.771982-08:00",
     "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-19T02:26:12.197427-08:00",
     "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-19T02:26:12.584936-08:00",
-    "f1:Las Vegas Grand Prix:FirstPractice:2026-11-20T00:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-19T12:42:23.742140-08:00"
+    "f1:Las Vegas Grand Prix:FirstPractice:2026-11-20T00:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-19T19:21:26.151187-08:00",
+    "f1:Las Vegas Grand Prix:SecondPractice:2026-11-20T04:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-19T19:21:25.687485-08:00"
   },
   "last_fallback": {
     "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-19T02:26:09.489466-08:00",
