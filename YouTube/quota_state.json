@@ -1,10 +1,10 @@
 {
   "date": "2026-11-20",
-  "total_used": 4,
+  "total_used": 6,
   "fallback_used": 0,
   "domain_used": {
     "Football": 3,
-    "F1": 1,
+    "F1": 3,
     "MotoGP": 0
   },
   "domain_fallback_used": {
@@ -13,10 +13,11 @@
     "MotoGP": 0
   },
   "last_query": {
-    "f1:Las Vegas Grand Prix:ThirdPractice:2026-11-21T00:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-20T13:52:33.166430-08:00",
+    "f1:Las Vegas Grand Prix:ThirdPractice:2026-11-21T00:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-20T19:16:06.847522-08:00",
     "football:Bundesliga:7977450:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-20T13:52:33.579801-08:00",
     "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-20T13:52:34.021990-08:00",
-    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-20T13:52:34.623949-08:00"
+    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-20T13:52:34.623949-08:00",
+    "f1:Las Vegas Grand Prix:Qualifying:2026-11-21T04:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-20T19:16:06.376711-08:00"
   },
   "last_fallback": {}
 }

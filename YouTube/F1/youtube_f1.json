@@ -1,8 +1,71 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-20T21:52:33.578768+00:00",
+    "updated_at": "2026-11-21T03:16:07.339570+00:00",
     "videos": [
+        {
+            "video_id": "tlr72TUMQxc",
+            "title": "FP3 Highlights | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-21T02:32:26Z",
+            "published_ts": 1795228346,
+            "duration_seconds": 287,
+            "thumbnail": "https://i.ytimg.com/vi/tlr72TUMQxc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp3 highlights",
+                "fp3"
+            ],
+            "link": "https://www.youtube.com/watch?v=tlr72TUMQxc"
+        },
+        {
+            "video_id": "sKe57Zn66FU",
+            "title": "FP2 Highlights | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-20T06:20:02Z",
+            "published_ts": 1795155602,
+            "duration_seconds": 313,
+            "thumbnail": "https://i.ytimg.com/vi/sKe57Zn66FU/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp2 highlights",
+                "fp2"
+            ],
+            "link": "https://www.youtube.com/watch?v=sKe57Zn66FU"
+        },
+        {
+            "video_id": "WLs_o7ClyM8",
+            "title": "FP1 Highlights | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-20T02:41:24Z",
+            "published_ts": 1795142484,
+            "duration_seconds": 268,
+            "thumbnail": "https://i.ytimg.com/vi/WLs_o7ClyM8/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "fp1 highlights",
+                "fp1"
+            ],
+            "link": "https://www.youtube.com/watch?v=WLs_o7ClyM8"
+        },
         {
             "video_id": "y23pvZMQCPI",
             "title": "Wild Race Start & Mercedes' Wet Weather Struggles In Interlagos | Jolyon Palmer's F1 TV Analysis",
