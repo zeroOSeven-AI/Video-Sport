@@ -1,8 +1,49 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-21T03:16:07.339570+00:00",
+    "updated_at": "2026-11-21T20:34:30.499309+00:00",
     "videos": [
+        {
+            "video_id": "3QgJip5ljEk",
+            "title": "Drivers React To Qualifying | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-21T08:00:15Z",
+            "published_ts": 1795248015,
+            "duration_seconds": 532,
+            "thumbnail": "https://i.ytimg.com/vi/3QgJip5ljEk/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "qualifying"
+            ],
+            "type": "qualifying",
+            "matched_keywords": [
+                "qualifying"
+            ],
+            "link": "https://www.youtube.com/watch?v=3QgJip5ljEk"
+        },
+        {
+            "video_id": "jiBlTDJ-mFw",
+            "title": "Qualifying Highlights | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-21T05:51:41Z",
+            "published_ts": 1795240301,
+            "duration_seconds": 481,
+            "thumbnail": "https://i.ytimg.com/vi/jiBlTDJ-mFw/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "qualifying"
+            ],
+            "type": "qualifying",
+            "matched_keywords": [
+                "qualifying highlights",
+                "qualifying"
+            ],
+            "link": "https://www.youtube.com/watch?v=jiBlTDJ-mFw"
+        },
         {
             "video_id": "tlr72TUMQxc",
             "title": "FP3 Highlights | 2026 Las Vegas Grand Prix",
