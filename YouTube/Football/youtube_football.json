@@ -1,7 +1,7 @@
 {
     "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-20T21:52:35.588039+00:00",
+    "updated_at": "2026-11-21T12:44:14.232009+00:00",
     "videos": [
         {
             "video_id": "iC3jrIN5bTQ",
@@ -1499,6 +1499,26 @@
             "link": "https://www.youtube.com/watch?v=NhBI6JBE2ss"
         },
         {
+            "video_id": "CLdZ9QgZUtA",
+            "title": "JUVENTUS-LAZIO 2-2 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-10-16T09:00:22Z",
+            "published_ts": 1792141222,
+            "duration_seconds": 783,
+            "thumbnail": "https://i.ytimg.com/vi/CLdZ9QgZUtA/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=CLdZ9QgZUtA"
+        },
+        {
             "video_id": "Y-yq7qCBYCA",
             "title": "MILAN-ATALANTA 2-3 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
             "published_at": "2026-10-15T15:00:27Z",
@@ -1601,6 +1621,26 @@
             "link": "https://www.youtube.com/watch?v=ko6Oqj289tg"
         },
         {
+            "video_id": "7-kcchY7fFg",
+            "title": "Eyüpspor - Göztepe - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-12T19:28:11Z",
+            "published_ts": 1791833291,
+            "duration_seconds": 391,
+            "thumbnail": "https://i.ytimg.com/vi/7-kcchY7fFg/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=7-kcchY7fFg"
+        },
+        {
             "video_id": "VEdLh8XkvWo",
             "title": "TOUS LES BUTS de la 6ème journée | Ligue 1 McDonald's 26/27",
             "published_at": "2026-10-11T22:30:28Z",
@@ -1699,6 +1739,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=O8YkprjM3ls"
+        },
+        {
+            "video_id": "fHqiupTmI9Q",
+            "title": "Konyaspor - Başakşehir - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-11T13:38:17Z",
+            "published_ts": 1791725897,
+            "duration_seconds": 299,
+            "thumbnail": "https://i.ytimg.com/vi/fHqiupTmI9Q/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=fHqiupTmI9Q"
         },
         {
             "video_id": "JNlLd6phJIM",
@@ -1822,6 +1882,46 @@
             "link": "https://www.youtube.com/watch?v=GrFdChgyvKA"
         },
         {
+            "video_id": "jbXc4VgoglA",
+            "title": "EVERY Weekend Goal | Matchweek 4 | 2026/27 Premier League Highlights",
+            "published_at": "2026-09-13T21:00:37Z",
+            "published_ts": 1789333237,
+            "duration_seconds": 201,
+            "thumbnail": "https://i.ytimg.com/vi/jbXc4VgoglA/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=jbXc4VgoglA"
+        },
+        {
+            "video_id": "zaivTrVc3B4",
+            "title": "On Top of the League | EINTRACHT FRANKFURT - FC AUGSBURG | Highlights | Matchday 2 – Bundesliga",
+            "published_at": "2026-09-06T22:00:39Z",
+            "published_ts": 1788732039,
+            "duration_seconds": 240,
+            "thumbnail": "https://i.ytimg.com/vi/zaivTrVc3B4/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=zaivTrVc3B4"
+        },
+        {
             "video_id": "eaezZE4BJXs",
             "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 02",
             "published_at": "2026-09-06T22:00:37Z",
@@ -1840,6 +1940,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=eaezZE4BJXs"
+        },
+        {
+            "video_id": "G_jKROGpWHM",
+            "title": "UNBELIEVABLE Comeback! | BORUSSIA M'GLADBACH - SV ELVERSBERG | Highlights | Matchday 2 – Bundesliga",
+            "published_at": "2026-09-06T22:00:09Z",
+            "published_ts": 1788732009,
+            "duration_seconds": 242,
+            "thumbnail": "https://i.ytimg.com/vi/G_jKROGpWHM/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=G_jKROGpWHM"
         }
     ]
 }

@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-20",
-  "total_used": 6,
+  "date": "2026-11-21",
+  "total_used": 8,
   "fallback_used": 0,
   "domain_used": {
-    "Football": 3,
-    "F1": 3,
+    "Football": 8,
+    "F1": 0,
     "MotoGP": 0
   },
   "domain_fallback_used": {
@@ -13,11 +13,14 @@
     "MotoGP": 0
   },
   "last_query": {
-    "f1:Las Vegas Grand Prix:ThirdPractice:2026-11-21T00:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-20T19:16:06.847522-08:00",
-    "football:Bundesliga:7977450:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-20T13:52:33.579801-08:00",
-    "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-20T13:52:34.021990-08:00",
-    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-20T13:52:34.623949-08:00",
-    "f1:Las Vegas Grand Prix:Qualifying:2026-11-21T04:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-20T19:16:06.376711-08:00"
+    "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-21T04:44:10.140790-08:00",
+    "football:Süper Lig:7981063:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-21T04:44:10.553390-08:00",
+    "football:Premier League:7970661:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-21T04:44:11.045113-08:00",
+    "football:Bundesliga:7977450:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-21T04:44:11.529839-08:00",
+    "football:Serie A:7963622:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-21T04:44:12.036527-08:00",
+    "football:Eredivisie:7965832:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-21T04:44:12.466958-08:00",
+    "football:HNL:7962994:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-21T04:44:12.836425-08:00",
+    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-21T04:44:13.238248-08:00"
   },
   "last_fallback": {}
 }
