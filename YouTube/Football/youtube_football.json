@@ -1,7 +1,7 @@
 {
-    "source": "Ligue 1 Official",
-    "priority": 1.1,
-    "updated_at": "2026-11-22T02:18:13.881719+00:00",
+    "source": "SuperSport HNL",
+    "priority": 1.0,
+    "updated_at": "2026-11-22T09:58:02.575997+00:00",
     "videos": [
         {
             "video_id": "Z5jPiXu4jvg",
@@ -1862,6 +1862,46 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=O8YkprjM3ls"
+        },
+        {
+            "video_id": "l9hEQ4Pp1-4",
+            "title": "Beşiktaş - Kocaelispor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-11T18:41:32Z",
+            "published_ts": 1791744092,
+            "duration_seconds": 495,
+            "thumbnail": "https://i.ytimg.com/vi/l9hEQ4Pp1-4/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=l9hEQ4Pp1-4"
+        },
+        {
+            "video_id": "rTYVfiM-g8I",
+            "title": "Gaziantep FK - Çorum FK - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-10-11T15:46:02Z",
+            "published_ts": 1791733562,
+            "duration_seconds": 408,
+            "thumbnail": "https://i.ytimg.com/vi/rTYVfiM-g8I/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=rTYVfiM-g8I"
         },
         {
             "video_id": "fHqiupTmI9Q",

@@ -1,43 +1,26 @@
 {
-  "date": "2026-11-21",
-  "total_used": 22,
-  "fallback_used": 10,
+  "date": "2026-11-22",
+  "total_used": 8,
+  "fallback_used": 0,
   "domain_used": {
-    "Football": 18,
-    "F1": 4,
+    "Football": 8,
+    "F1": 0,
     "MotoGP": 0
   },
   "domain_fallback_used": {
-    "Football": 6,
-    "F1": 4,
+    "Football": 0,
+    "F1": 0,
     "MotoGP": 0
   },
   "last_query": {
-    "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-21T12:34:27.377310-08:00",
-    "football:Süper Lig:7981063:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-21T04:44:10.553390-08:00",
-    "football:Premier League:7970661:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-21T04:44:11.045113-08:00",
-    "football:Bundesliga:7977450:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-21T04:44:11.529839-08:00",
-    "football:Serie A:7963622:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-21T12:34:27.858925-08:00",
-    "football:Eredivisie:7965832:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-21T12:34:29.264103-08:00",
-    "football:HNL:7962994:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-21T04:44:12.836425-08:00",
-    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-21T12:34:28.742560-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-21T18:18:10.484184-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-21T18:18:10.955407-08:00",
-    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-21T18:18:11.318501-08:00",
-    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-21T18:18:11.769250-08:00",
-    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-21T18:18:12.241433-08:00",
-    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-21T18:18:12.647418-08:00",
-    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-21T18:18:13.067054-08:00",
-    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-21T18:18:13.496390-08:00"
+    "football:Süper Lig:7981063:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-22T01:57:57.141027-08:00",
+    "football:Serie A:7963622:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-22T01:57:57.584699-08:00",
+    "football:Eredivisie:7965832:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-22T01:57:57.965943-08:00",
+    "football:Premier League:7970661:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-22T01:57:58.482280-08:00",
+    "football:Bundesliga:7977450:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-22T01:57:59.466482-08:00",
+    "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-22T01:58:00.550607-08:00",
+    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-22T01:58:01.049986-08:00",
+    "football:HNL:7962994:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-22T01:58:01.673606-08:00"
   },
-  "last_fallback": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-21T18:18:10.484184-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-21T18:18:10.955407-08:00",
-    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-21T18:18:11.318501-08:00",
-    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-21T18:18:11.769250-08:00",
-    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-21T18:18:12.241433-08:00",
-    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-21T18:18:12.647418-08:00",
-    "football:fallback:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-21T18:18:13.067054-08:00",
-    "football:fallback:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-21T18:18:13.496390-08:00"
-  }
+  "last_fallback": {}
 }
