@@ -1,8 +1,28 @@
 {
-    "source": "Eredivisie",
+    "source": "Ligue 1 Official",
     "priority": 1.1,
-    "updated_at": "2026-11-21T20:34:29.616981+00:00",
+    "updated_at": "2026-11-22T02:18:13.881719+00:00",
     "videos": [
+        {
+            "video_id": "Z5jPiXu4jvg",
+            "title": "EVERY Women's Champions League Goal From Matchday 5 | Highlights",
+            "published_at": "2026-11-20T14:20:01Z",
+            "published_ts": 1795184401,
+            "duration_seconds": 892,
+            "thumbnail": "https://i.ytimg.com/vi/Z5jPiXu4jvg/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=Z5jPiXu4jvg"
+        },
         {
             "video_id": "9vMCXlx7P4A",
             "title": "NAPOLI-TORINO 2-1 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
@@ -24,6 +44,26 @@
             "link": "https://www.youtube.com/watch?v=9vMCXlx7P4A"
         },
         {
+            "video_id": "XhOUBlJbpNQ",
+            "title": "PARMA-ROMA 2-3 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-11-19T10:00:32Z",
+            "published_ts": 1795082432,
+            "duration_seconds": 760,
+            "thumbnail": "https://i.ytimg.com/vi/XhOUBlJbpNQ/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=XhOUBlJbpNQ"
+        },
+        {
             "video_id": "iC3jrIN5bTQ",
             "title": "Ordenamos los 10 GOLES de LAMINE YAMAL en LALIGA EA SPORTS 2026/27",
             "published_at": "2026-11-18T11:00:39Z",
@@ -42,6 +82,69 @@
                 "goles"
             ],
             "link": "https://www.youtube.com/watch?v=iC3jrIN5bTQ"
+        },
+        {
+            "video_id": "3W120AZvL8Y",
+            "title": "FROSINONE-SASSUOLO 4-2 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-18T10:00:03Z",
+            "published_ts": 1794996003,
+            "duration_seconds": 1243,
+            "thumbnail": "https://i.ytimg.com/vi/3W120AZvL8Y/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=3W120AZvL8Y"
+        },
+        {
+            "video_id": "dMWYFhOlJGI",
+            "title": "COMO-SASSUOLO 2-0 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-17T10:00:09Z",
+            "published_ts": 1794909609,
+            "duration_seconds": 1157,
+            "thumbnail": "https://i.ytimg.com/vi/dMWYFhOlJGI/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=dMWYFhOlJGI"
+        },
+        {
+            "video_id": "0IrU9n0UvZs",
+            "title": "ROMA-CAGLIARI 4-2 | EXTENDED HIGHLIGHTS | SERIE A 2026/27",
+            "published_at": "2026-11-16T10:00:01Z",
+            "published_ts": 1794823201,
+            "duration_seconds": 1227,
+            "thumbnail": "https://i.ytimg.com/vi/0IrU9n0UvZs/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights",
+                "extended highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=0IrU9n0UvZs"
         },
         {
             "video_id": "QkOcOcMXTSY",
