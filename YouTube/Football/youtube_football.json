@@ -1,7 +1,7 @@
 {
     "source": "SuperSport HNL",
     "priority": 1.0,
-    "updated_at": "2026-11-22T09:58:02.575997+00:00",
+    "updated_at": "2026-11-22T17:54:04.071730+00:00",
     "videos": [
         {
             "video_id": "Z5jPiXu4jvg",
@@ -613,6 +613,26 @@
                 "resumen"
             ],
             "link": "https://www.youtube.com/watch?v=wdtYGRqHv-M"
+        },
+        {
+            "video_id": "jVGdLIiWpcQ",
+            "title": "Eyüpspor - Kocaelispor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-11-07T14:13:23Z",
+            "published_ts": 1794060803,
+            "duration_seconds": 383,
+            "thumbnail": "https://i.ytimg.com/vi/jVGdLIiWpcQ/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=jVGdLIiWpcQ"
         },
         {
             "video_id": "is8JWdOeinI",
@@ -1784,6 +1804,26 @@
             "link": "https://www.youtube.com/watch?v=VEdLh8XkvWo"
         },
         {
+            "video_id": "7iEEjBQDNfE",
+            "title": "Red Card Turns Game Around! | HOFFENHEIM - HAMBURGER SV | Highlights | Matchday 5 – Bundesliga",
+            "published_at": "2026-10-11T22:00:39Z",
+            "published_ts": 1791756039,
+            "duration_seconds": 186,
+            "thumbnail": "https://i.ytimg.com/vi/7iEEjBQDNfE/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=7iEEjBQDNfE"
+        },
+        {
             "video_id": "K3HnXcBqM6w",
             "title": "Ten-Man Freiburg go TOP! | SC FREIBURG - SCHALKE 04 | Highlights | Matchday 5 – Bundesliga",
             "published_at": "2026-10-11T22:00:22Z",
@@ -1963,6 +2003,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=pylM06MXxRw"
+        },
+        {
+            "video_id": "ofUcybZlWBE",
+            "title": "Beier Fires BVB To The Top! | VFB STUTTGART - BORUSSIA DORTMUND | Highlights | MD 4 – Bundesliga",
+            "published_at": "2026-09-20T22:00:37Z",
+            "published_ts": 1789941637,
+            "duration_seconds": 243,
+            "thumbnail": "https://i.ytimg.com/vi/ofUcybZlWBE/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=ofUcybZlWBE"
         },
         {
             "video_id": "2dQlyDgvTFY",
