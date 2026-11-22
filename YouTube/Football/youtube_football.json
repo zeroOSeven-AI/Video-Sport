@@ -1,8 +1,228 @@
 {
-    "source": "SuperSport HNL",
-    "priority": 1.0,
-    "updated_at": "2026-11-22T17:54:04.071730+00:00",
+    "source": "LaLiga Official",
+    "priority": 1.3,
+    "updated_at": "2026-11-22T23:40:20.434887+00:00",
     "videos": [
+        {
+            "video_id": "SlfD9fhbfK0",
+            "title": "Third Win In A Row! | SV ELVERSBERG - SC FREIBURG | Highlights | Matchday 10 – Bundesliga 2026/27",
+            "published_at": "2026-11-22T23:00:38Z",
+            "published_ts": 1795388438,
+            "duration_seconds": 181,
+            "thumbnail": "https://i.ytimg.com/vi/SlfD9fhbfK0/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=SlfD9fhbfK0"
+        },
+        {
+            "video_id": "TIeusIZuHr4",
+            "title": "RB Shows No Mercy! | UNION BERLIN - RB LEIPZIG | Highlights | Matchday 10 – Bundesliga 2026/27",
+            "published_at": "2026-11-22T23:00:37Z",
+            "published_ts": 1795388437,
+            "duration_seconds": 186,
+            "thumbnail": "https://i.ytimg.com/vi/TIeusIZuHr4/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=TIeusIZuHr4"
+        },
+        {
+            "video_id": "chOt8WAx6Jo",
+            "title": "Gregoritsch Is On Fire! | FC AUGSBURG - MAINZ 05 | Highlights | Matchday 10 – Bundesliga 2026/27",
+            "published_at": "2026-11-22T23:00:35Z",
+            "published_ts": 1795388435,
+            "duration_seconds": 241,
+            "thumbnail": "https://i.ytimg.com/vi/chOt8WAx6Jo/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=chOt8WAx6Jo"
+        },
+        {
+            "video_id": "4wcq2of-eEI",
+            "title": "Dream Combination Earns Köln A Draw! | FC BAYERN - 1. FC KÖLN | Highlights | MD 10 – Bundesliga",
+            "published_at": "2026-11-22T23:00:35Z",
+            "published_ts": 1795388435,
+            "duration_seconds": 242,
+            "thumbnail": "https://i.ytimg.com/vi/4wcq2of-eEI/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=4wcq2of-eEI"
+        },
+        {
+            "video_id": "SiEqo0jnp7Q",
+            "title": "Magical Performance! | BAYER 04 LEVERKUSEN - SC PADERBORN | Highlights | Matchday 10 – Bundesliga",
+            "published_at": "2026-11-22T23:00:28Z",
+            "published_ts": 1795388428,
+            "duration_seconds": 187,
+            "thumbnail": "https://i.ytimg.com/vi/SiEqo0jnp7Q/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=SiEqo0jnp7Q"
+        },
+        {
+            "video_id": "YxsFVuJQNag",
+            "title": "TWO Missed Penalties! | EINTRACHT FRANKFURT - HOFFENHEIM | Highlights | Matchday 10 – Bundesliga",
+            "published_at": "2026-11-22T23:00:26Z",
+            "published_ts": 1795388426,
+            "duration_seconds": 181,
+            "thumbnail": "https://i.ytimg.com/vi/YxsFVuJQNag/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=YxsFVuJQNag"
+        },
+        {
+            "video_id": "CcMEOKUjJak",
+            "title": "Another Draw At Home! | SCHALKE 04 - VFB STUTTGART | Highlights | Matchday 10 – Bundesliga 2026/27",
+            "published_at": "2026-11-22T23:00:25Z",
+            "published_ts": 1795388425,
+            "duration_seconds": 244,
+            "thumbnail": "https://i.ytimg.com/vi/CcMEOKUjJak/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=CcMEOKUjJak"
+        },
+        {
+            "video_id": "mWFkG18O6qM",
+            "title": "ALL HIGHLIGHTS | BUNDESLIGA | MATCHDAY 10",
+            "published_at": "2026-11-22T23:00:22Z",
+            "published_ts": 1795388422,
+            "duration_seconds": 2015,
+            "thumbnail": "https://i.ytimg.com/vi/mWFkG18O6qM/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=mWFkG18O6qM"
+        },
+        {
+            "video_id": "J9a2R2Zrfsw",
+            "title": "Quickfire Brace In The Nordderby! | WERDER BREMEN - HAMBURGER SV | Highlights | MD 10 – Bundesliga",
+            "published_at": "2026-11-22T23:00:12Z",
+            "published_ts": 1795388412,
+            "duration_seconds": 244,
+            "thumbnail": "https://i.ytimg.com/vi/J9a2R2Zrfsw/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=J9a2R2Zrfsw"
+        },
+        {
+            "video_id": "UCTzDuPO_SM",
+            "title": "Dortmund Is On Top Of The League! | BORUSSIA M'GLADBACH - BORUSSIA DORTMUND | Highlights | MD 10",
+            "published_at": "2026-11-22T23:00:07Z",
+            "published_ts": 1795388407,
+            "duration_seconds": 244,
+            "thumbnail": "https://i.ytimg.com/vi/UCTzDuPO_SM/hqdefault.jpg",
+            "source": "Bundesliga Official",
+            "source_key": "bundesliga_official",
+            "priority": 1.3,
+            "logo": "logo/bundesliga_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=UCTzDuPO_SM"
+        },
+        {
+            "video_id": "jGoR3l7RW6I",
+            "title": "EVERY Weekend Goal | Matchweek 11 | 2026/27 Premier League Highlights",
+            "published_at": "2026-11-22T22:00:17Z",
+            "published_ts": 1795384817,
+            "duration_seconds": 233,
+            "thumbnail": "https://i.ytimg.com/vi/jGoR3l7RW6I/hqdefault.jpg",
+            "source": "Premier League Official",
+            "source_key": "premier_league_official",
+            "priority": 1.5,
+            "logo": "logo/premier_league_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=jGoR3l7RW6I"
+        },
         {
             "video_id": "Z5jPiXu4jvg",
             "title": "EVERY Women's Champions League Goal From Matchday 5 | Highlights",

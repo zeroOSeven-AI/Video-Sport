@@ -1,8 +1,109 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-22T02:18:11.317507+00:00",
+    "updated_at": "2026-11-22T23:40:17.890235+00:00",
     "videos": [
+        {
+            "video_id": "eKgjER6mhys",
+            "title": "The Las Vegas LEGO Race!",
+            "published_at": "2026-11-22T15:00:32Z",
+            "published_ts": 1795359632,
+            "duration_seconds": 236,
+            "thumbnail": "https://i.ytimg.com/vi/eKgjER6mhys/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=eKgjER6mhys"
+        },
+        {
+            "video_id": "GwwlbV_hG7c",
+            "title": "Drivers React After The Race | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-22T09:08:06Z",
+            "published_ts": 1795338486,
+            "duration_seconds": 742,
+            "thumbnail": "https://i.ytimg.com/vi/GwwlbV_hG7c/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=GwwlbV_hG7c"
+        },
+        {
+            "video_id": "Vyk_6bNm7lo",
+            "title": "Race Highlights | 2026 Las Vegas Grand Prix",
+            "published_at": "2026-11-22T07:03:23Z",
+            "published_ts": 1795331003,
+            "duration_seconds": 494,
+            "thumbnail": "https://i.ytimg.com/vi/Vyk_6bNm7lo/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=Vyk_6bNm7lo"
+        },
+        {
+            "video_id": "Q017RPSWImU",
+            "title": "LIVE: Las Vegas Grand Prix Post-Race Show",
+            "published_at": "2026-11-22T07:00:42Z",
+            "published_ts": 1795330842,
+            "duration_seconds": 3075,
+            "thumbnail": "https://i.ytimg.com/vi/Q017RPSWImU/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=Q017RPSWImU"
+        },
+        {
+            "video_id": "XawJHpDkuPE",
+            "title": "LIVE: Las Vegas Grand Prix Build-Up, Drivers' Parade & LEGO Race",
+            "published_at": "2026-11-22T02:42:02Z",
+            "published_ts": 1795315322,
+            "duration_seconds": 2520,
+            "thumbnail": "https://i.ytimg.com/vi/XawJHpDkuPE/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=XawJHpDkuPE"
+        },
         {
             "video_id": "3QgJip5ljEk",
             "title": "Drivers React To Qualifying | 2026 Las Vegas Grand Prix",
