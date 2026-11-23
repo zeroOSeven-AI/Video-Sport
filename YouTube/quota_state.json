@@ -1,43 +1,30 @@
 {
-  "date": "2026-11-22",
-  "total_used": 32,
-  "fallback_used": 16,
+  "date": "2026-11-23",
+  "total_used": 7,
+  "fallback_used": 4,
   "domain_used": {
-    "Football": 24,
-    "F1": 4,
-    "MotoGP": 4
+    "Football": 3,
+    "F1": 2,
+    "MotoGP": 2
   },
   "domain_fallback_used": {
-    "Football": 8,
-    "F1": 4,
-    "MotoGP": 4
+    "Football": 0,
+    "F1": 2,
+    "MotoGP": 2
   },
   "last_query": {
-    "football:Süper Lig:7981063:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-22T09:54:02.220772-08:00",
-    "football:Serie A:7963622:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-22T09:54:00.231047-08:00",
-    "football:Eredivisie:7965832:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-22T09:54:01.162670-08:00",
-    "football:Premier League:7970661:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-22T09:53:58.047529-08:00",
-    "football:Bundesliga:7977450:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-22T09:53:58.656779-08:00",
-    "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-22T09:53:59.768785-08:00",
-    "football:Ligue 1:7966137:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-22T09:54:00.735023-08:00",
-    "football:HNL:7962994:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-22T09:54:03.021304-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-22T23:44:33.751352-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-22T23:44:34.184769-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-22T23:44:34.605480-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-22T23:44:35.059954-08:00",
-    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-22T23:44:35.456549-08:00",
-    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-22T23:44:35.967253-08:00",
-    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-22T23:44:36.436885-08:00",
-    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-22T23:44:36.821560-08:00"
+    "football:Premier League:7970661:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-23T12:17:59.137959-08:00",
+    "football:LaLiga:7976518:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-23T12:17:59.914047-08:00",
+    "football:Serie A:7963622:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-23T12:18:00.665719-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-23T12:18:01.435025-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-23T12:18:01.793210-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-23T12:18:02.158787-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-23T12:18:02.552833-08:00"
   },
   "last_fallback": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-22T23:44:33.751352-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-22T23:44:34.184769-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-22T23:44:34.605480-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-22T23:44:35.059954-08:00",
-    "football:fallback:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-22T23:44:35.456549-08:00",
-    "football:fallback:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-22T23:44:35.967253-08:00",
-    "football:fallback:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-22T23:44:36.436885-08:00",
-    "football:fallback:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-22T23:44:36.821560-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-23T12:18:01.435025-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-23T12:18:01.793210-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-23T12:18:02.158787-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-23T12:18:02.552833-08:00"
   }
 }
