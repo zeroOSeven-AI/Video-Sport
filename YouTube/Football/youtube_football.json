@@ -1,7 +1,7 @@
 {
-    "source": "LaLiga Official",
-    "priority": 1.3,
-    "updated_at": "2026-11-24T04:52:42.683994+00:00",
+    "source": "UEFA Official",
+    "priority": 1.6,
+    "updated_at": "2026-11-24T17:51:05.587424+00:00",
     "videos": [
         {
             "video_id": "SlfD9fhbfK0",
@@ -2363,6 +2363,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=jbXc4VgoglA"
+        },
+        {
+            "video_id": "DLOUfAVwuXA",
+            "title": "EVERY Champions League Goal From Matchday 1 | Highlights",
+            "published_at": "2026-09-11T14:00:06Z",
+            "published_ts": 1789135206,
+            "duration_seconds": 1449,
+            "thumbnail": "https://i.ytimg.com/vi/DLOUfAVwuXA/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=DLOUfAVwuXA"
         },
         {
             "video_id": "zaivTrVc3B4",
