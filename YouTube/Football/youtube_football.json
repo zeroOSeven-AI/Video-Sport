@@ -1,8 +1,49 @@
 {
-    "source": "UEFA Official",
-    "priority": 1.6,
-    "updated_at": "2026-11-24T17:51:05.587424+00:00",
+    "source": "LaLiga Official",
+    "priority": 1.3,
+    "updated_at": "2026-11-25T02:34:02.842064+00:00",
     "videos": [
+        {
+            "video_id": "rdH-60e-48Q",
+            "title": "Ordenamos los 10+1 GOLES de ZABIRI en LALIGA",
+            "published_at": "2026-11-24T17:00:11Z",
+            "published_ts": 1795539611,
+            "duration_seconds": 512,
+            "thumbnail": "https://i.ytimg.com/vi/rdH-60e-48Q/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goles"
+            ],
+            "link": "https://www.youtube.com/watch?v=rdH-60e-48Q"
+        },
+        {
+            "video_id": "iR0ZsDF-oAU",
+            "title": "TODOS LOS GOLES de la JORNADA 13 | LALIGA EA SPORTS 2026/27",
+            "published_at": "2026-11-24T11:00:00Z",
+            "published_ts": 1795518000,
+            "duration_seconds": 597,
+            "thumbnail": "https://i.ytimg.com/vi/iR0ZsDF-oAU/hqdefault.jpg",
+            "source": "LaLiga Official",
+            "source_key": "laliga_official",
+            "priority": 1.3,
+            "logo": "logo/laliga_official.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "goles",
+                "todos los goles"
+            ],
+            "link": "https://www.youtube.com/watch?v=iR0ZsDF-oAU"
+        },
         {
             "video_id": "SlfD9fhbfK0",
             "title": "Third Win In A Row! | SV ELVERSBERG - SC FREIBURG | Highlights | Matchday 10 – Bundesliga 2026/27",
