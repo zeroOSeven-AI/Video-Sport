@@ -1,8 +1,28 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-25T02:33:59.833211+00:00",
+    "updated_at": "2026-11-25T14:28:24.270255+00:00",
     "videos": [
+        {
+            "video_id": "llLO5hoShFs",
+            "title": "How Max Won An Incredibly Complicated Race & More In Las Vegas | Jolyon Palmer's F1 TV Analysis",
+            "published_at": "2026-11-24T18:03:52Z",
+            "published_ts": 1795543432,
+            "duration_seconds": 867,
+            "thumbnail": "https://i.ytimg.com/vi/llLO5hoShFs/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=llLO5hoShFs"
+        },
         {
             "video_id": "eKgjER6mhys",
             "title": "The Las Vegas LEGO Race!",
