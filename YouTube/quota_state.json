@@ -1,28 +1,29 @@
 {
   "date": "2026-11-26",
-  "total_used": 5,
-  "fallback_used": 4,
+  "total_used": 11,
+  "fallback_used": 8,
   "domain_used": {
-    "Football": 1,
-    "F1": 2,
-    "MotoGP": 2
+    "Football": 3,
+    "F1": 4,
+    "MotoGP": 4
   },
   "domain_fallback_used": {
     "Football": 0,
-    "F1": 2,
-    "MotoGP": 2
+    "F1": 4,
+    "MotoGP": 4
   },
   "last_query": {
-    "football:Conference League:8004597:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-26T02:58:33.455442-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-26T02:58:33.940542-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-26T02:58:34.396807-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-26T02:58:34.843184-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-26T02:58:35.248325-08:00"
+    "football:Conference League:8004597:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-26T13:38:39.840295-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-26T13:38:40.502122-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-26T13:38:41.072123-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-26T13:38:41.557920-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-26T13:38:42.162499-08:00",
+    "football:Europa League:8004400:UCyGa1YEx9ST66rYrJTGIKOw": "2026-11-26T13:38:39.152522-08:00"
   },
   "last_fallback": {
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-26T02:58:33.940542-08:00",
-    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-26T02:58:34.396807-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-26T02:58:34.843184-08:00",
-    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-26T02:58:35.248325-08:00"
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:race-highlights": "2026-11-26T13:38:40.502122-08:00",
+    "f1:fallback:UCB_qr75-ydFVKSF9Dmo6izg:qualifying-highlights": "2026-11-26T13:38:41.072123-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:race-highlights": "2026-11-26T13:38:41.557920-08:00",
+    "motogp:fallback:UC8pYaQzbBBXg9GIOHRvTmDQ:sprint-highlights": "2026-11-26T13:38:42.162499-08:00"
   }
 }
