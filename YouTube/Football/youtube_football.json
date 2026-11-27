@@ -1,8 +1,28 @@
 {
-    "source": "UEFA Conference League",
-    "priority": 1.2,
-    "updated_at": "2026-11-26T21:38:40.499829+00:00",
+    "source": "LaLiga Official",
+    "priority": 1.3,
+    "updated_at": "2026-11-27T04:19:26.088164+00:00",
     "videos": [
+        {
+            "video_id": "uJUN2WCrxuU",
+            "title": "EVERY Champions League Goal From Matchday 5 | Highlights",
+            "published_at": "2026-11-26T14:10:25Z",
+            "published_ts": 1795702225,
+            "duration_seconds": 1417,
+            "thumbnail": "https://i.ytimg.com/vi/uJUN2WCrxuU/hqdefault.jpg",
+            "source": "UEFA Official",
+            "source_key": "uefa_official",
+            "priority": 1.6,
+            "logo": "logo/uefa_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=uJUN2WCrxuU"
+        },
         {
             "video_id": "rdH-60e-48Q",
             "title": "Ordenamos los 10+1 GOLES de ZABIRI en LALIGA",
