@@ -1,7 +1,7 @@
 {
-    "source": "LaLiga Official",
+    "source": "Serie A Official",
     "priority": 1.3,
-    "updated_at": "2026-11-27T04:19:26.088164+00:00",
+    "updated_at": "2026-11-27T16:44:33.466462+00:00",
     "videos": [
         {
             "video_id": "uJUN2WCrxuU",
@@ -283,6 +283,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=jGoR3l7RW6I"
+        },
+        {
+            "video_id": "sqcfFd7nbOk",
+            "title": "Kasımpaşa - Alanyaspor - Highlights/Özet | Trendyol Süper Lig - 2026/27",
+            "published_at": "2026-11-22T15:39:18Z",
+            "published_ts": 1795361958,
+            "duration_seconds": 320,
+            "thumbnail": "https://i.ytimg.com/vi/sqcfFd7nbOk/hqdefault.jpg",
+            "source": "beIN SPORTS Türkiye",
+            "source_key": "bein_sports_t_rkiye",
+            "priority": 1.1,
+            "logo": "logo/bein_sports_t_rkiye.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=sqcfFd7nbOk"
         },
         {
             "video_id": "Z5jPiXu4jvg",
@@ -1963,6 +1983,26 @@
             "link": "https://www.youtube.com/watch?v=Y-yq7qCBYCA"
         },
         {
+            "video_id": "XL5vfcEh1Lw",
+            "title": "BOLOGNA-INTER 3-3 | CLASSIC HIGHLIGHTS SERIE A 2025/26",
+            "published_at": "2026-10-15T09:03:44Z",
+            "published_ts": 1792055024,
+            "duration_seconds": 705,
+            "thumbnail": "https://i.ytimg.com/vi/XL5vfcEh1Lw/hqdefault.jpg",
+            "source": "Serie A Official",
+            "source_key": "serie_a_official",
+            "priority": 1.3,
+            "logo": "logo/serie_a_official.png",
+            "tags": [
+                "highlights"
+            ],
+            "type": "highlights",
+            "matched_keywords": [
+                "highlights"
+            ],
+            "link": "https://www.youtube.com/watch?v=XL5vfcEh1Lw"
+        },
+        {
             "video_id": "VsTj78eKcoA",
             "title": "THRILLER At Goodison! 🍿 | Everton v Chelsea | Classic Premier League Highlights",
             "published_at": "2026-10-14T10:03:38Z",
@@ -2504,6 +2544,26 @@
                 "highlights"
             ],
             "link": "https://www.youtube.com/watch?v=G_jKROGpWHM"
+        },
+        {
+            "video_id": "_NjKvPkQfHg",
+            "title": "Zahavi trifft vom Punkt, drei Tore aberkannt | PSV Eindhoven - FC Groningen",
+            "published_at": "2021-04-26T14:48:53Z",
+            "published_ts": 1619448533,
+            "duration_seconds": 238,
+            "thumbnail": "https://i.ytimg.com/vi/_NjKvPkQfHg/hqdefault.jpg",
+            "source": "Eredivisie",
+            "source_key": "eredivisie",
+            "priority": 1.1,
+            "logo": "logo/eredivisie.png",
+            "tags": [
+                "goals"
+            ],
+            "type": "goals",
+            "matched_keywords": [
+                "tore"
+            ],
+            "link": "https://www.youtube.com/watch?v=_NjKvPkQfHg"
         }
     ]
 }
