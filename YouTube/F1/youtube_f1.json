@@ -1,7 +1,7 @@
 {
     "source": "Formula 1",
     "priority": 3,
-    "updated_at": "2026-11-27T16:44:27.673496+00:00",
+    "updated_at": "2026-11-28T10:31:20.854909+00:00",
     "videos": [
         {
             "video_id": "llLO5hoShFs",
@@ -594,6 +594,27 @@
                 "qualifying"
             ],
             "link": "https://www.youtube.com/watch?v=OuXe2B6Hno4"
+        },
+        {
+            "video_id": "mAe5mMx0LRc",
+            "title": "F2 Sprint Race Highlights | 2026 Australian Grand Prix",
+            "published_at": "2026-03-07T06:52:44Z",
+            "published_ts": 1772866364,
+            "duration_seconds": 525,
+            "thumbnail": "https://i.ytimg.com/vi/mAe5mMx0LRc/hqdefault.jpg",
+            "source": "Formula 1",
+            "source_key": "formula_1",
+            "priority": 3,
+            "logo": "logo/formula_1.png",
+            "tags": [
+                "race"
+            ],
+            "type": "race",
+            "matched_keywords": [
+                "race highlights",
+                "race"
+            ],
+            "link": "https://www.youtube.com/watch?v=mAe5mMx0LRc"
         },
         {
             "video_id": "H2VWkcUoCqs",

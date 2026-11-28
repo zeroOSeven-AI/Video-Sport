@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "total_used": 8,
   "fallback_used": 0,
   "domain_used": {
@@ -13,14 +13,14 @@
     "MotoGP": 0
   },
   "last_query": {
-    "f1:Qatar Grand Prix:SecondPractice:2026-11-27T17:00:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-27T08:44:27.316811-08:00",
-    "football:Süper Lig:7981064:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-27T08:44:27.674626-08:00",
-    "football:HNL:7962995:UCdZuGHA8fV0oKQRCE4AYV0A": "2026-11-27T08:44:28.126260-08:00",
-    "football:Bundesliga:7977451:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-27T08:44:29.114206-08:00",
-    "football:Eredivisie:7965833:UCbw_H0qCrwYFKMXrUMxpy0g": "2026-11-27T08:44:30.261919-08:00",
-    "football:Premier League:7970662:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-27T08:44:31.017636-08:00",
-    "football:LaLiga:7976519:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-27T08:44:31.876364-08:00",
-    "football:Serie A:7963623:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-27T08:44:32.449740-08:00"
+    "f1:Qatar Grand Prix:ThirdPractice:2026-11-28T14:30:00+00:00:UCB_qr75-ydFVKSF9Dmo6izg": "2026-11-28T02:31:20.484159-08:00",
+    "football:LaLiga:7976519:UCTv-XvfzLX3i4IGWAm4sbmA": "2026-11-28T02:31:20.856066-08:00",
+    "football:Süper Lig:7981064:UCPe9vNjHF1kEExT5kHwc7aw": "2026-11-28T02:31:21.324852-08:00",
+    "football:Premier League:7970662:UCG5qGWdu8nIRZqJ_GgDwQ-w": "2026-11-28T02:31:21.670995-08:00",
+    "football:Bundesliga:7977451:UC6UL29enLNe4mqwTfAyeNuw": "2026-11-28T02:31:22.077340-08:00",
+    "football:Serie A:7963623:UCBJeMCIeLQos7wacox4hmLQ": "2026-11-28T02:31:22.548446-08:00",
+    "football:Ligue 1:7966138:UCQsH5XtIc9hONE1BQjucM0g": "2026-11-28T02:31:23.578609-08:00",
+    "football:Liga Portugal:7977705:UCnr9M2KCziVCcQHNrHj-qiw": "2026-11-28T02:31:24.492912-08:00"
   },
   "last_fallback": {}
 }
